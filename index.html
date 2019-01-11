@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kroki!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Kroki
+      </h1>
+      <p class="subtitle">
+        Convert <strong>plain text</strong> diagrams to <strong>images</strong> !
+      </p>
+      <div class="content">
+        <p>
+          Kroki provides a unified API with support for AsciiToSVG, BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag), Ditaa, Erd, GraphViz, Mermaid, Msc, PlantUML, Shaape, SvgBob, Syntrax, UMLet, Vega, Vega-Lite and WaveDrom.
+        </p>
+        <p>
+          Kroki use a simple algorithm (deflate + base64) to encode your diagram in the URL:
+          <pre>GET https://kroki.io/plantuml/png/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000</pre>
+        </p>
+        <p>
+          You can also call Kroki with <code>POST</code>:
+          <pre>POST https://kroki.io</pre>
+          <pre>{
+  "digram_source": "Bob -> Alice : hello",
+  "diagram_type": "plantuml",
+  "output_format": "png"
+}</pre>
+          In this case, you don't need to encode your diagram.
+        </p>
+      </div>
+      <h2 class="title">
+        Features
+      </h2>
+      <div class="content">
+        <dl>
+          <dt><strong>Save time</strong></dt>
+          <dd>Diagrams libraries are written in a variety of languages: Haskell, Python, JavaScript, Go, PHP, Java... some also have C bindings.
+Trust us, you have better things to do than install all the requirements to use them!
+          </dd>
+        </dl>
+        <dl>
+          <dt><strong>Simple unified API</strong></dt>
+          <dd>Kroki provides a unified API for all the diagram libraries. Learn once convert anywhere!</dd>
+        </dl>
+        <dl>
+          <dt><strong>Fast</strong></dt>
+          <dd>Built using a modern architecture, Kroki offers great performance.</dd>
+        </dl>
+        <dl>
+          <dt><strong>Cache with CDN (coming soon)</strong></dt>
+          <dd>Near-instant response time if your diagram has already been generated.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
