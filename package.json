@@ -1,0 +1,30 @@
+{
+  "name": "kroki.io",
+  "version": "0.1.0",
+  "homepage": "https://kroki.io",
+  "author": {
+    "name": "Guillaume Grossetie",
+    "email": "hello@kroki.io",
+    "url": "https://yuzutech.fr"
+  },
+  "devDependencies": {
+    "autoprefixer": "9.4.5",
+    "clean-css-cli": "4.2.1",
+    "node-sass": "4.11.0",
+    "postcss-cli": "6.1.1",
+    "rimraf": "2.6.3"
+  },
+  "scripts": {
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/main.css css/main.css",
+    "build-cleancss": "cleancss -o css/main.min.css css/main.css",
+    "build-sass": "node-sass --output-style expanded --source-map true main.sass css/main.css",
+    "build-clean": "rimraf css",
+    "deploy": "npm run build",
+    "start": "npm run build-sass -- --watch"
+  },
+  "dependencies": {
+    "bulma": "^0.7.2",
+    "bulma-pricingtable": "^0.2.0"
+  }
+}
