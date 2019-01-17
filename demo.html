@@ -1134,9 +1134,6 @@ Person *--1 Location</pre>
                 </g>
             </svg>
 
-
-
-
             <h3 class="title is-3">
                 Conjugate prior relationships
             </h3>
@@ -1180,6 +1177,265 @@ Person *--1 Location</pre>
                     <text x="203" y="181" font-family="sans-serif" font-size="16" stroke="none" fill="#000000"><![CDATA[tau]]></text>
                     <text x="462" y="181" font-family="sans-serif" font-size="16" stroke="none" fill="#000000"><![CDATA[lambda]]></text>
                     <text x="484" y="237" font-family="sans-serif" font-size="16" stroke="none" fill="#000000"><![CDATA[beta]]></text>
+                </g>
+            </svg>
+
+
+            <h3 class="title is-3">
+                State machine
+            </h3>
+            <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;umlet_diagram&gt;
+    &lt;element&gt;
+        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;
+        &lt;coordinates&gt;
+            &lt;x&gt;431&lt;/x&gt;
+            &lt;y&gt;90&lt;/y&gt;
+            &lt;w&gt;258&lt;/w&gt;
+            &lt;h&gt;110&lt;/h&gt;
+        &lt;/coordinates&gt;
+        &lt;panel_attributes&gt;lt=&amp;lt;
+            handle()
+            passenger.addMiles(flight.miles)
+        &lt;/panel_attributes&gt;
+        &lt;additional_attributes&gt;129;90;129;20&lt;/additional_attributes&gt;
+    &lt;/element&gt;
+    &lt;element&gt;
+        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;
+        &lt;coordinates&gt;
+            &lt;x&gt;294&lt;/x&gt;
+            &lt;y&gt;6&lt;/y&gt;
+            &lt;w&gt;232&lt;/w&gt;
+            &lt;h&gt;94&lt;/h&gt;
+        &lt;/coordinates&gt;
+        &lt;panel_attributes&gt;lt=&amp;lt;-
+            transfer [Class &amp;lt;&amp;gt; Economy]
+        &lt;/panel_attributes&gt;
+        &lt;additional_attributes&gt;96;74;116;74;116;34;66;34;66;64&lt;/additional_attributes&gt;
+    &lt;/element&gt;
+    &lt;element&gt;
+        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;
+        &lt;coordinates&gt;
+            &lt;x&gt;280&lt;/x&gt;
+            &lt;y&gt;90&lt;/y&gt;
+            &lt;w&gt;297&lt;/w&gt;
+            &lt;h&gt;110&lt;/h&gt;
+        &lt;/coordinates&gt;
+        &lt;panel_attributes&gt;lt=&amp;lt;-
+            r2=cancel()
+        &lt;/panel_attributes&gt;
+        &lt;additional_attributes&gt;277;90;27;90;27;20&lt;/additional_attributes&gt;
+    &lt;/element&gt;
+    &lt;element&gt;
+        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;
+        &lt;coordinates&gt;
+            &lt;x&gt;70&lt;/x&gt;
+            &lt;y&gt;90&lt;/y&gt;
+            &lt;w&gt;507&lt;/w&gt;
+            &lt;h&gt;110&lt;/h&gt;
+        &lt;/coordinates&gt;
+        &lt;panel_attributes&gt;lt=&amp;lt;-
+            r2=cancel()
+        &lt;/panel_attributes&gt;
+        &lt;additional_attributes&gt;487;90;27;90;27;20&lt;/additional_attributes&gt;
+    &lt;/element&gt;
+    &lt;element&gt;
+        &lt;type&gt;com.umlet.element.custom.State&lt;/type&gt;
+        &lt;coordinates&gt;
+            &lt;x&gt;80&lt;/x&gt;
+            &lt;y&gt;70&lt;/y&gt;
+            &lt;w&gt;100&lt;/w&gt;
+            &lt;h&gt;40&lt;/h&gt;
+        &lt;/coordinates&gt;
+        &lt;panel_attributes&gt;reserved&lt;/panel_attributes&gt;
+        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;
+    &lt;/element&gt;
+    &lt;element&gt;
+        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;
+        &lt;coordinates&gt;
+            &lt;x&gt;160&lt;/x&gt;
+            &lt;y&gt;60&lt;/y&gt;
+            &lt;w&gt;150&lt;/w&gt;
+            &lt;h&gt;54&lt;/h&gt;
+        &lt;/coordinates&gt;
+        &lt;panel_attributes&gt;lt=&amp;lt;-
+            pay()
+        &lt;/panel_attributes&gt;
+        &lt;additional_attributes&gt;130;34;20;34&lt;/additional_attributes&gt;
+    &lt;/element&gt;
+    &lt;element&gt;
+        &lt;type&gt;com.umlet.element.custom.SeqDestroyMark&lt;/type&gt;
+        &lt;coordinates&gt;
+            &lt;x&gt;550&lt;/x&gt;
+            &lt;y&gt;170&lt;/y&gt;
+            &lt;w&gt;20&lt;/w&gt;
+            &lt;h&gt;20&lt;/h&gt;
+        &lt;/coordinates&gt;
+        &lt;panel_attributes&gt;&lt;/panel_attributes&gt;
+        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;
+    &lt;/element&gt;
+    &lt;element&gt;
+        &lt;type&gt;com.umlet.element.custom.State&lt;/type&gt;
+        &lt;coordinates&gt;
+            &lt;x&gt;290&lt;/x&gt;
+            &lt;y&gt;70&lt;/y&gt;
+            &lt;w&gt;100&lt;/w&gt;
+            &lt;h&gt;40&lt;/h&gt;
+        &lt;/coordinates&gt;
+        &lt;panel_attributes&gt;booked&lt;/panel_attributes&gt;
+        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;
+    &lt;/element&gt;
+    &lt;element&gt;
+        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;
+        &lt;coordinates&gt;
+            &lt;x&gt;370&lt;/x&gt;
+            &lt;y&gt;60&lt;/y&gt;
+            &lt;w&gt;150&lt;/w&gt;
+            &lt;h&gt;54&lt;/h&gt;
+        &lt;/coordinates&gt;
+        &lt;panel_attributes&gt;lt=&amp;lt;-
+            start()
+        &lt;/panel_attributes&gt;
+        &lt;additional_attributes&gt;130;34;20;34&lt;/additional_attributes&gt;
+    &lt;/element&gt;
+    &lt;element&gt;
+        &lt;type&gt;com.umlet.element.custom.State&lt;/type&gt;
+        &lt;coordinates&gt;
+            &lt;x&gt;500&lt;/x&gt;
+            &lt;y&gt;70&lt;/y&gt;
+            &lt;w&gt;100&lt;/w&gt;
+            &lt;h&gt;40&lt;/h&gt;
+        &lt;/coordinates&gt;
+        &lt;panel_attributes&gt;started&lt;/panel_attributes&gt;
+        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;
+    &lt;/element&gt;
+&lt;/umlet_diagram&gt;</pre>
+            <pre>GET https://demo.kroki.io/umlet/svg/eNrVlkuPmzAUhff5FSiLUWYRwOYVhPEs-tjNptOuqmrkwA1BYzC1nZnw74ujgBSlU5FOiqYbW1wu1v3OOSBm5G5fcesZpCpFnc6R7c4tqDORl3WRzr99_bxcze8o2VUc9GNeskKyihLgUEGtKdFtAzQTlX1osI91e80U2F-AM92dSpxDF8mEkN2xTIOiZE99DxFnT0lLY5c4LSUvFAcr4rxQsqUIdbUtJc7JQw2rgT8yrWW53pkK1-kN18lsy-qcw-J21jCloC5A2izP70sOarHhZbHVdmUubolzdgbpOkszJzspIxwnsZuYDXez_L6JOIMS15AEx_5RkrBXxMNHRcyt0YIsZ1qyWm1AWt8_8E4Ty1RvCp1YnzJRi6r9MV6JOEwiP0Fo2Dw_Cfs19KfSZuWexSWO_iouy5nEacbqDPjigkTgKDKJwP06WSyiM_LAnZTcX_0D8myndFd80N3Ir4APlkc9OHLdI7g_iluCAvkM-XjWw4vTMNmN-NCNmpmOdMO4goncRmFPHQ7UQU8dXPYVaFh7ic_Ic81rjc16RYfh50dQWor2nsmnV6iDoKdGg9m4p8ajvH4nHo_INY7fHOy1EE__Vay96HqxVppJ_Q6C_QeLA_fNFh8oJ_PYOf3F-wXqHJzU</pre>
+            <svg fill-opacity="1" color-rendering="auto" color-interpolation="auto" text-rendering="auto" stroke="black" stroke-linecap="square" width="659" stroke-miterlimit="10"
+                 shape-rendering="auto" stroke-opacity="1" fill="black" stroke-dasharray="none" font-weight="normal" stroke-width="1" viewBox="50 -14 659 234" height="234"
+                 xmlns="http://www.w3.org/2000/svg" font-family="'Dialog'" font-style="normal" stroke-linejoin="miter" font-size="12px" stroke-dashoffset="0" image-rendering="auto">
+                <defs id="genericDefs"/>
+                <g>
+                    <defs id="defs1">
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1">
+                            <path d="M0 0 L2147483647 0 L2147483647 2147483647 L0 2147483647 L0 0 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath2">
+                            <path d="M0 0 L0 40 L100 40 L100 0 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3">
+                            <path d="M-0.5 -0.5 L-0.5 39.5 L99.5 39.5 L99.5 -0.5 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath4">
+                            <path d="M0 0 L0 20 L20 20 L20 0 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath5">
+                            <path d="M-0.5 -0.5 L-0.5 19.5 L19.5 19.5 L19.5 -0.5 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath6">
+                            <path d="M0 0 L0 54 L150 54 L150 0 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath7">
+                            <path d="M-0.5 -0.5 L-0.5 53.5 L149.5 53.5 L149.5 -0.5 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath8">
+                            <path d="M0 0 L0 110 L507 110 L507 0 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath9">
+                            <path d="M-0.5 -0.5 L-0.5 109.5 L506.5 109.5 L506.5 -0.5 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath10">
+                            <path d="M0 0 L0 110 L297 110 L297 0 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath11">
+                            <path d="M-0.5 -0.5 L-0.5 109.5 L296.5 109.5 L296.5 -0.5 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath12">
+                            <path d="M0 0 L0 94 L232 94 L232 0 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath13">
+                            <path d="M-0.5 -0.5 L-0.5 93.5 L231.5 93.5 L231.5 -0.5 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath14">
+                            <path d="M0 0 L0 110 L258 110 L258 0 Z"/>
+                        </clipPath>
+                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath15">
+                            <path d="M-0.5 -0.5 L-0.5 109.5 L257.5 109.5 L257.5 -0.5 Z"/>
+                        </clipPath>
+                    </defs>
+                    <g font-size="14px" transform="translate(500.5,70.5)" fill-opacity="0" fill="rgb(255,255,255)" font-family="sans-serif" stroke="rgb(255,255,255)" stroke-opacity="0">
+                        <rect x="0" y="0" clip-path="url(#clipPath3)" width="99" rx="15" opacity="0" ry="15" height="39" stroke="none"/>
+                    </g>
+                    <g font-family="sans-serif" font-size="14px" transform="translate(500.5,70.5)">
+                        <rect x="0" y="0" clip-path="url(#clipPath3)" fill="none" width="99" rx="15" ry="15" height="39"/>
+                        <text x="28" xml:space="preserve" y="26" clip-path="url(#clipPath3)" stroke="none">started</text>
+                    </g>
+                    <g font-size="14px" transform="translate(290.5,70.5)" fill-opacity="0" fill="rgb(255,255,255)" font-family="sans-serif" stroke="rgb(255,255,255)" stroke-opacity="0">
+                        <rect x="0" y="0" clip-path="url(#clipPath3)" width="99" rx="15" opacity="0" ry="15" height="39" stroke="none"/>
+                    </g>
+                    <g font-family="sans-serif" font-size="14px" transform="translate(290.5,70.5)">
+                        <rect x="0" y="0" clip-path="url(#clipPath3)" fill="none" width="99" rx="15" ry="15" height="39"/>
+                        <text x="27" xml:space="preserve" y="26" clip-path="url(#clipPath3)" stroke="none">booked</text>
+                    </g>
+                    <g transform="translate(550.5,170.5)">
+                        <line y2="19" fill="none" x1="0" clip-path="url(#clipPath5)" x2="19" y1="0"/>
+                        <line y2="19" fill="none" x1="19" clip-path="url(#clipPath5)" x2="0" y1="0"/>
+                    </g>
+                    <g font-size="14px" transform="translate(80.5,70.5)" fill-opacity="0" fill="rgb(255,255,255)" font-family="sans-serif" stroke="rgb(255,255,255)" stroke-opacity="0">
+                        <rect x="0" y="0" clip-path="url(#clipPath3)" width="99" rx="15" opacity="0" ry="15" height="39" stroke="none"/>
+                    </g>
+                    <g font-family="sans-serif" font-size="14px" transform="translate(80.5,70.5)">
+                        <rect x="0" y="0" clip-path="url(#clipPath3)" fill="none" width="99" rx="15" ry="15" height="39"/>
+                        <text x="23" xml:space="preserve" y="26" clip-path="url(#clipPath3)" stroke="none">reserved</text>
+                    </g>
+                    <g font-family="sans-serif" font-size="14px" transform="translate(370.5,60.5)">
+                        <line y2="34" fill="none" x1="130" clip-path="url(#clipPath7)" x2="75" y1="34"/>
+                        <line y2="34" fill="none" x1="75" clip-path="url(#clipPath7)" x2="20" y1="34"/>
+                        <line y2="40" fill="none" x1="129" clip-path="url(#clipPath7)" x2="117" y1="34"/>
+                        <line y2="28" fill="none" x1="129" clip-path="url(#clipPath7)" x2="117" y1="34"/>
+                        <text x="56" xml:space="preserve" y="31" clip-path="url(#clipPath7)" stroke="none">start()</text>
+                    </g>
+                    <g font-family="sans-serif" font-size="14px" transform="translate(160.5,60.5)">
+                        <line y2="34" fill="none" x1="130" clip-path="url(#clipPath7)" x2="75" y1="34"/>
+                        <line y2="34" fill="none" x1="75" clip-path="url(#clipPath7)" x2="20" y1="34"/>
+                        <line y2="40" fill="none" x1="129" clip-path="url(#clipPath7)" x2="117" y1="34"/>
+                        <line y2="28" fill="none" x1="129" clip-path="url(#clipPath7)" x2="117" y1="34"/>
+                        <text x="59" xml:space="preserve" y="31" clip-path="url(#clipPath7)" stroke="none">pay()</text>
+                    </g>
+                    <g font-family="sans-serif" font-size="14px" transform="translate(70.5,90.5)">
+                        <line y2="90" fill="none" x1="487" clip-path="url(#clipPath9)" x2="27" y1="90"/>
+                        <line y2="55" fill="none" x1="27" clip-path="url(#clipPath9)" x2="27" y1="90"/>
+                        <line y2="20" fill="none" x1="27" clip-path="url(#clipPath9)" x2="27" y1="55"/>
+                        <line y2="96" fill="none" x1="486" clip-path="url(#clipPath9)" x2="474" y1="90"/>
+                        <line y2="84" fill="none" x1="486" clip-path="url(#clipPath9)" x2="474" y1="90"/>
+                        <text x="3" xml:space="preserve" y="45" clip-path="url(#clipPath9)" stroke="none">cancel()</text>
+                    </g>
+                    <g font-family="sans-serif" font-size="14px" transform="translate(280.5,90.5)">
+                        <line y2="90" fill="none" x1="277" clip-path="url(#clipPath11)" x2="27" y1="90"/>
+                        <line y2="55" fill="none" x1="27" clip-path="url(#clipPath11)" x2="27" y1="90"/>
+                        <line y2="20" fill="none" x1="27" clip-path="url(#clipPath11)" x2="27" y1="55"/>
+                        <line y2="96" fill="none" x1="276" clip-path="url(#clipPath11)" x2="264" y1="90"/>
+                        <line y2="84" fill="none" x1="276" clip-path="url(#clipPath11)" x2="264" y1="90"/>
+                        <text x="3" xml:space="preserve" y="45" clip-path="url(#clipPath11)" stroke="none">cancel()</text>
+                    </g>
+                    <g font-family="sans-serif" font-size="14px" transform="translate(294.5,6.5)">
+                        <line y2="74" fill="none" x1="96" clip-path="url(#clipPath13)" x2="116" y1="74"/>
+                        <line y2="34" fill="none" x1="116" clip-path="url(#clipPath13)" x2="116" y1="74"/>
+                        <line y2="34" fill="none" x1="116" clip-path="url(#clipPath13)" x2="91" y1="34"/>
+                        <line y2="34" fill="none" x1="91" clip-path="url(#clipPath13)" x2="66" y1="34"/>
+                        <line y2="64" fill="none" x1="66" clip-path="url(#clipPath13)" x2="66" y1="34"/>
+                        <line y2="68" fill="none" x1="96" clip-path="url(#clipPath13)" x2="108" y1="74"/>
+                        <line y2="80" fill="none" x1="96" clip-path="url(#clipPath13)" x2="108" y1="74"/>
+                        <text x="29" xml:space="preserve" y="31" clip-path="url(#clipPath13)" stroke="none">transfer [Class &lt;&gt; Economy]</text>
+                    </g>
+                    <g font-family="sans-serif" font-size="14px" transform="translate(431.5,90.5)">
+                        <line y2="55" fill="none" x1="129" clip-path="url(#clipPath15)" x2="129" y1="90"/>
+                        <line y2="20" fill="none" x1="129" clip-path="url(#clipPath15)" x2="129" y1="55"/>
+                        <line y2="77" fill="none" x1="129" clip-path="url(#clipPath15)" x2="123" y1="89"/>
+                        <line y2="77" fill="none" x1="129" clip-path="url(#clipPath15)" x2="135" y1="89"/>
+                        <text x="103" xml:space="preserve" y="52" clip-path="url(#clipPath15)" stroke="none">handle()</text>
+                        <text x="30" xml:space="preserve" y="69" clip-path="url(#clipPath15)" stroke="none">passenger.addMiles(flight.miles)</text>
+                    </g>
                 </g>
             </svg>
 
