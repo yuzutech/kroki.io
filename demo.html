@@ -10,9 +10,7 @@
 <body>
 <section class="section">
     <div class="container">
-        <h1 class="title is-1">
-            Kroki
-        </h1>
+        <h1 class="title is-1 has-brand-font">Kroki</h1>
         <p class="subtitle">Convert <strong>plain text</strong> diagrams to <strong>images</strong> ! </p>
         <div class="content">
             <p>
@@ -20,18 +18,15 @@
                 more to come!
             </p>
         </div>
-    </div>
-</section>
-<section class="section examples">
-    <div class="container">
         <h2 class="title is-2">Examples</h2>
         <div class="content">
             <p>Here's a list of example to get you inspired.</p>
         </div>
+
         <h3 class="title is-3"> Block diagram</h3>
         <h4 class="subtitle is-4">BlockDiag</h4>
         <div class="content">
-            <pre>blockdiag {
+            <pre class="diagram-source">blockdiag {
   blockdiag -&gt; generates -&gt; "block-diagrams";
   blockdiag -&gt; is -&gt; "very easy!";
 
@@ -40,7 +35,7 @@
   "very easy!" [color = "orange"];
 }</pre>
             <pre>GET https://demo.kroki.io/blockdiag/svg/eNpdzEEKgzAQheF9TjFm7wmKXkRcTO0jBGNGJqUllN5dowuDy8f_8cwzyDS_PDv6GbpG25NDhPIbqQx7pLY05SXZxw37U32gmcApN7uoyTBJEKWOrFMgZoQgXzvuN_fniq4-zqepfqsuytGhiL_ZAMihQIU=</pre>
-            <svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape">
+            <svg class="kroki-output" viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape">
                 <defs id="defs_block">
                     <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
                         <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2"/>
@@ -131,7 +126,7 @@
         <h3 class="title is-3">Sequence diagram</h3>
         <h4 class="subtitle is-4">SeqDiag</h4>
         <div class="content">
-            <pre>seqdiag {
+            <pre class="diagram-source">seqdiag {
   browser  -&gt; webserver [label = "GET /index.html"];
   browser &lt;-- webserver;
   browser  -&gt; webserver [label = "POST /blog/comment"];
@@ -140,7 +135,7 @@
   browser &lt;-- webserver;
 }</pre>
             <pre>GET https://demo.kroki.io/seqdiag/svg/eNrjKk4tTMlMTFeo5lJQSCrKLy9OLVJQ0LVTKE9NAjLLgLzonMSk1BwFWwUld9cQBf3MvJTUCr2MktwcpVhrJE02uroITdZEmBbgHww0LiknP10_OT83NzWvBGIgMkDoA5mSkliSmJRYnIpkiKdfsGtQiAIRBoDcBzMAj7truQAcvVPG=</pre>
-            <svg viewBox="0 0 640 489" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape">
+            <svg class="kroki-output" viewBox="0 0 640 489" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape">
                 <defs id="defs_block">
                     <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
                         <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2"/>
@@ -258,7 +253,7 @@
         <h3 class="title is-3">Activity diagram</h3>
         <h4 class="subtitle is-4">ActDiag</h4>
         <div class="content">
-            <pre>actdiag {
+            <pre class="diagram-source">actdiag {
   write -&gt; convert -&gt; image
 
   lane user {
@@ -271,7 +266,7 @@
   }
 }</pre>
             <pre>GET https://demo.kroki.io/actdiag/svg/eNrjquZSUCgvyixJVdC1U0jOzytLLSoBMTNzE9NTuYCSOYl5qQqlxalFCiClCiCBpNQcBVsFpVCgoBJEDGJCNFwqHMjPzEtXKEoNDlGKtYYoAhuJpMg9tUQhJTMxvSgxV8HT19HdFaKyFmZpYnIJSBpmL8xxCAOcoSIgWxRK8hU8QRbADKnlAgCssECm</pre>
-            <svg viewBox="0 0 448 360" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape">
+            <svg class="kroki-output" viewBox="0 0 448 360" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape">
                 <defs id="defs_block">
                     <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
                         <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2"/>
@@ -366,7 +361,7 @@
         <h3 class="title is-3"> Network diagram</h3>
         <h4 class="subtitle is-4">NwDiag</h4>
         <div class="content">
-            <pre>nwdiag {
+            <pre class="diagram-source">nwdiag {
   network dmz {
     address = "210.x.x.x/24"
 
@@ -383,7 +378,7 @@
   }
 }</pre>
             <pre>GET https://demo.kroki.io/nwdiag/svg/eNrjyitPyUxMV6jmUlDISy0pzy_KVkjJrQLzQSAxJaUotbhYwVZBycjQQK8CBPWNTJS4oPLlqUkGhgrRWJQZKsVaIykywqrICKKoFsn2zLyS1KK8xBxsTjA0N0I4wRq3G2Dq8LoBpsgIoSgFaBAS2wjitlouAESTS2A=</pre>
-            <svg viewBox="0 0 760 444" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape">
+            <svg class="kroki-output" viewBox="0 0 760 444" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape">
                 <defs id="defs_block">
                     <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
                         <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2"/>
@@ -532,7 +527,7 @@
         <h3 class="title is-3"> Object Oriented Graphs</h3>
         <h4 class="subtitle is-4">GraphViz</h4>
         <div class="content">
-            <pre>digraph "unix" {
+            <pre class="diagram-source">digraph "unix" {
   graph [ fontname = "Helvetica-Oblique",
           fontsize = 36,
           label = "\n\n\n\nObject Oriented Graphs\nStephen North, 3/19/93",
@@ -637,7 +632,7 @@
   "System V.2" -> "System V.3";
 }</pre>
             <pre>GET https://demo.kroki.io/graphviz/svg/eNqFWEtv3DYQvvtXCLr6EXL4RuEe0hRpgbYJ4MYJEPQgr2ivallyJG2cbdH_3tGbpKSNTzaHmhl-8_rGZ2n2UCXP-yg-FNm3OPr3LIr6g89RdF8WTZE82eg6in-x-VfbZLvk8t1dnn052PgCr_Z36uyf9g6T_VGe3Nm8_eYMf97d_W13TfSuymzR2DR62yqvz24a-7y3RfRHWTX7i4i9ouaVYYPOQV8sL2Qc_fUDnhVlaluP6n3y3Iqey_z4UBbj9dTWeMj7P9OsblBrVhatDnJFBq1l50KyFNSP9sU_2ZV5WeHRyz5r7HCpOeat5fssz206v30Fn0OTZ4UdPI9Fs49-TrPWbBx97ny9NheOl9do2DDJBI8vXCevQV90vl3Hl-SKgtRU443Ot-s6yZ_KAnoTcsWECE0A08pAYILS0QT6YIRhYrKQWvtcPx7v8oPtrbz_-DqiCNFoQYcWCDWSycCCMs4jOCcc-GTiocxTW1Rl2r_jt5tPGwDhp9JoUDRECFyEjODdA3vld4cqP76Uo_KYRq9v3kzOqwU8UhC9iICc4eGESWE832mv-fesyKIPXfl8DhBhhukQEddnLikFMiutrC2ONs_Ll071xxJ_LTDRH7bDClrI0G_JHBtEguZyjmtSPdY26Ux1Rn7FuqzSpElC7yVwQlmgWjiQUBQbR3OZPtiqTZgBmBaTV3_eROxU1ihGmQ6tcPcBGhCmObDNHr_PLcxZCY5-GeoXBighgX7GHf2KGpDGA6jMs6-2g4j1ZtRKiVGyCIbRnKowGGJGjFHMIjWZ2u1L_CVphgrTnpGgAIxRxCyiQbxAU0pn5c2h-nIos9oOT2Bwu53-WmlBw0ylZvYcYTRk7g51Y23ehrpXfqt-30KldV0S4CYMATi1Jb2-UCRfj0MG5U2VfbukND6hXjJGF1VGiYM6XgCxWgG8s_PJYqZuZOhl-71C9EPo3TpWkiiYK2FXVkk-1cD7_FCfb0OvtOaLAmBu2xTQlvDpBDUrCbowhZUmTVgLwslPIbBDG_8dgwE41T_b7KNEyrBBa-50Cxw_ju67PCl2e5t2gywdbFzpwUqgHJjhEA4v7igngmHpTcrz7GHfDNOLjrrNum7NGdOh48otLNn2uTl_ki-H5CmpcMYPPYh50Ky0BUE1hLBTd7oLhsU7T_fcIia7fXaPDKM3wT0TYoG-UsAWXQ7cLkcwhZRfBBjd4mHEh1_RDexBUrVooNpJGsIRfh_7fohNquEkQm0QiGKLFuF1N0OwTiDwHzFK-WiEfc8IaVEOjShnoBktCNDVMIDXkBgscZKcAwm1g0OwGFGaySX7YS6_gu3qlZwYtV1hXRvSXMwx3h2TIX0-3LwduFvQe4Q2fFFXTmdGBqO1dIp2ZIM_ve4oT0Tjbc7GOLabU9qVVETMaX-fVfauynaPs9Ow5jSq7dq5F0YXB8mVFE473idVU9lDbbnvPJwoWpyHPeFeH1pdRZFT5G2ywk5YMQaAhaMFnLkLQlLisNqsxt2Le_zq_PwE--GCL7oylS4jYZgDk_4n_PpYlfVEr968x-kb3Rzr6PZEpEEqJcPc584IRu4O7oBMUtu4TBFDzRah7przkNFbjR8tUxHiAz7_XMt8RoQwIW9WzigkmJp09rjvlZUdJhVq5Q7rXGMlyAQJPdnRBAgntLsqe6rHfo-AN_YpunVsLJZGbFVCyM2Vpe0HYHAB2e75kxXYziDsiVQs6InLzxmSIwEb9IQHltgJCiG1EiqMifC2YE2oE5R-zI9UlK4s3Jc_-uvx-o1xtV1u0yjFtXT1fNgo12XzTrgqnxe7VfG0kvn7WavY3amW0nEbWkpUCIIKXdbfvdFuEKsSpP_rX8z8fVXe8e6NL0fePK4XK-p0-JEJnzBQmlYGc7TAOR0Yp08_V2x5spFLzntVB49zNt_l8yl3Tq-c7JmoVy-BDYnnqydZhG5iXL1G5n4Hizcim_H_wzPXxJpkJBM-awnTb-YcrWSmC0vZOOdDXuF-B3E4uF0pi8OB65TK-fmq1JtsPt8YnWLuU9gkCSpw_hfEqtQbQidvTBaG4RLO-FAUPMgVjeOpPXdGyWK0eHKIF0PBk7co_3f2P7OJU2Y=</pre>
-            <svg viewBox="0.00 0.00 432.00 387.93" xmlns="http://www.w3.org/2000/svg">
+            <svg class="kroki-output" viewBox="0.00 0.00 432.00 387.93" xmlns="http://www.w3.org/2000/svg">
                 <g id="graph0" class="graph" transform="scale(.3227 .3227) rotate(0) translate(4 1198.0048)">
                     <title>unix</title>
                     <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-1198.0048 1334.5523,-1198.0048 1334.5523,4 -4,4"/>
@@ -1236,7 +1231,7 @@
         <h3 class="title is-3">Entity Relationship Diagram</h3>
         <h4 class="subtitle is-4">Erd</h4>
         <div class="content">
-            <pre>
+            <pre class="diagram-source">
 [Person]
 *name
 height
@@ -1251,7 +1246,7 @@ country
 
 Person *--1 Location</pre>
             <pre>GET https://demo.kroki.io/erd/svg/eNrjig5ILSrOz4vl0spLzE3lykjNTM8o4SqHUNpJmUUlGfE5-cmJJZn5efGZKVxc0T5QHlALkJ-cWVLJVVySWJLKlZxfmldSVMnFBTFSQUtX11ABppoLAK1IJCs=</pre>
-            <svg viewBox="0.00 0.00 300.00 144.00" xmlns="http://www.w3.org/2000/svg">
+            <svg class="kroki-output" viewBox="0.00 0.00 300.00 144.00" xmlns="http://www.w3.org/2000/svg">
                 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 140)">
                     <title>Entity Relationship</title>
                     <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-140 296,-140 296,4 -4,4"/>
@@ -1297,7 +1292,7 @@ Person *--1 Location</pre>
         <h3 class="title is-3">Conjugate prior relationships </h3>
         <h4 class="subtitle is-4">Ditaa</h4>
         <div class="content">
-            <pre>
+            <pre class="diagram-source">
                           +-------------+
                           |             |
                           | Exponential |
@@ -1324,7 +1319,7 @@ Person *--1 Location</pre>
                                      +-------+
 </pre>
             <pre>GET https://demo.kroki.io/ditaa/svg/eNqVU80KwjAMvvcpei--gXgTLyI-gZDhkMHaiuvEQx7ebmO29jfLTl3S5PtpGM-G2PkhWL4S_0_FyuPnqVWrTAd9pZLak46T0KwH2dwhmL4p6vPfLICcJ1OgiZFcBsaUdI5VJKo9n_VD6Ze0bnB07Q9z5QmkhLly71LIr7obBq1cj4xtQcbjE-LYogcWbc8bd7OfQ9a0BgpXFinRyyH_la86x09WkPCEnFjqt2cDcbOmuKxW0jertjQJb5DwyBfJ14lypN1AAtMENsG-et_GDg==</pre>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 406" version="1.0" shape-rendering="geometricPrecision">
+            <svg class="kroki-output" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 406" version="1.0" shape-rendering="geometricPrecision">
                 <defs>
                     <style type="text/css">@font-face {
                         font-family: sans-serif;
@@ -1386,7 +1381,7 @@ Person *--1 Location</pre>
         <h3 class="title is-3">Use case</h3>
         <h4 class="subtitle is-4">PlantUML</h4>
         <div class="content">
-            <pre>@startuml
+            <pre class="diagram-source">@startuml
 left to right direction
 skinparam packageStyle rectangle
 actor customer
@@ -1400,7 +1395,7 @@ rectangle checkout {
 @enduml
 </pre>
             <pre>GET https://demo.kroki.io/plantuml/svg/eNpVj00KgzAQRvc5xbe0C3sAF8U79ARDnGrIL8kEKqV3b0RUuny8x8eMGotQluqdcvwSSEQ28yKYTGYtJgZVrAmJMnkk0pZmfsrqGJumMDtWpCVm6Fokes4HOs5WnRH0wtrGKvgonC36Ht1hbk1cgPsDXaLVc2gwwATt6sRbs7BLu7_qAfwWDlP5H2n7-yFfNTa7vfkD1H1SaA==</pre>
-            <svg xmlns="http://www.w3.org/2000/svg" contentScriptType="application/ecmascript" contentStyleType="text/css" preserveAspectRatio="none" version="1.1"
+            <svg class="kroki-output" xmlns="http://www.w3.org/2000/svg" contentScriptType="application/ecmascript" contentStyleType="text/css" preserveAspectRatio="none" version="1.1"
                  viewBox="0 0 309 256" width="309px" zoomAndPan="magnify">
                 <defs>
                     <filter height="300%" id="f17ywiozhuz786" width="300%" x="-1" y="-1">
@@ -1451,7 +1446,7 @@ rectangle checkout {
         <h3 class="title is-3">State machine</h3>
         <h4 class="subtitle is-4">UMlet</h4>
         <div class="content">
-            <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            <pre class="diagram-source">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
     &lt;umlet_diagram&gt;
         &lt;element&gt;
             &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;
@@ -1578,7 +1573,7 @@ rectangle checkout {
         &lt;/element&gt;
     &lt;/umlet_diagram&gt;</pre>
             <pre>GET https://demo.kroki.io/umlet/svg/eNrVlkuPmzAUhff5FSiLUWYRwOYVhPEs-tjNptOuqmrkwA1BYzC1nZnw74ujgBSlU5FOiqYbW1wu1v3OOSBm5G5fcesZpCpFnc6R7c4tqDORl3WRzr99_bxcze8o2VUc9GNeskKyihLgUEGtKdFtAzQTlX1osI91e80U2F-AM92dSpxDF8mEkN2xTIOiZE99DxFnT0lLY5c4LSUvFAcr4rxQsqUIdbUtJc7JQw2rgT8yrWW53pkK1-kN18lsy-qcw-J21jCloC5A2izP70sOarHhZbHVdmUubolzdgbpOkszJzspIxwnsZuYDXez_L6JOIMS15AEx_5RkrBXxMNHRcyt0YIsZ1qyWm1AWt8_8E4Ty1RvCp1YnzJRi6r9MV6JOEwiP0Fo2Dw_Cfs19KfSZuWexSWO_iouy5nEacbqDPjigkTgKDKJwP06WSyiM_LAnZTcX_0D8myndFd80N3Ir4APlkc9OHLdI7g_iluCAvkM-XjWw4vTMNmN-NCNmpmOdMO4goncRmFPHQ7UQU8dXPYVaFh7ic_Ic81rjc16RYfh50dQWor2nsmnV6iDoKdGg9m4p8ajvH4nHo_INY7fHOy1EE__Vay96HqxVppJ_Q6C_QeLA_fNFh8oJ_PYOf3F-wXqHJzU</pre>
-            <svg fill-opacity="1" color-rendering="auto" color-interpolation="auto" text-rendering="auto" stroke="black" stroke-linecap="square" width="659" stroke-miterlimit="10"
+            <svg class="kroki-output" fill-opacity="1" color-rendering="auto" color-interpolation="auto" text-rendering="auto" stroke="black" stroke-linecap="square" width="659" stroke-miterlimit="10"
                  shape-rendering="auto" stroke-opacity="1" fill="black" stroke-dasharray="none" font-weight="normal" stroke-width="1" viewBox="50 -14 659 234" height="234"
                  xmlns="http://www.w3.org/2000/svg" font-family="'Dialog'" font-style="normal" stroke-linejoin="miter" font-size="12px" stroke-dashoffset="0"
                  image-rendering="auto">
@@ -1712,5 +1707,12 @@ rectangle checkout {
         </div>
     </div>
 </section>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong class="has-brand-font">Kroki</strong> by <a href="https://yuzutech.fr">Yuzu tech</a>.
+        </p>
+    </div>
+</footer>
 </body>
 </html>
