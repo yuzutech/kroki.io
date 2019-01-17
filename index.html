@@ -13,33 +13,33 @@
         <h1 class="title is-1">
             Kroki
         </h1>
-        <p class="subtitle">
-            Convert <strong>plain text</strong> diagrams to <strong>images</strong> !
-        </p>
+        <p class="subtitle">Convert <strong>plain text</strong> diagrams to <strong>images</strong> !</p>
         <div class="content">
             <p>
                 Kroki provides a unified API with support for AsciiToSVG, BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag), Ditaa, Erd, GraphViz, PlantUML, SvgBob and UMLet... and
                 more to come!
             </p>
-            <p>
-                Kroki uses a simple algorithm (deflate + base64) to encode your diagram in the URL:
+        </div>
+    </div>
+</section>
+<section class="usage">
+    <div class="container">
+        <h2 class="title is-2">Usage</h2>
+
+        <div class="content">
+            <p>Kroki uses a simple algorithm (deflate + base64) to encode your diagram in the URL:</p>
             <pre>GET /plantuml/png/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000</pre>
-            </p>
-            <p>
-                You can also call Kroki with <code>POST</code>:
+            <p>You can also call Kroki with <code>POST</code>:</p>
             <pre>POST /</pre>
             <pre>{
   "digram_source": "Bob -> Alice : hello",
   "diagram_type": "plantuml",
   "output_format": "png"
 }</pre>
-            In this case, you don't need to encode your diagram.
-            </p>
+            <p>In this case, you don't need to encode your diagram.</p>
         </div>
 
-        <h2 class="title is-2">
-            Support
-        </h2>
+        <h2 class="title is-2">Support</h2>
         <div class="content">
             <p>
                 The following diagram types and output formats are available:
@@ -210,17 +210,14 @@
             </p>
         </div>
 
-        <h2 class="title is-2">
-            Install
-        </h2>
+        <h2 class="title is-2">Install</h2>
         <div class="content">
             <p>
                 Please refer to the <a href="#">documentation</a> to install Kroki on your server.
             </p>
         </div>
-        <h3 class="title is-3">
-            Hosting
-        </h3>
+
+        <h3 class="title is-3">Hosting</h3>
         <div class="content">
             <p>
                 We provide a server for demonstration purpose at: <a href="https://demo.kroki.io">https://demo.kroki.io</a>.
@@ -283,10 +280,7 @@
             </div>
         </div>
 
-        <p>
-            If you want to know more, please <a href="mailto:hello@kroki.io">contact us</a>.
-        </p>
-    </div>
+        <p>If you want to know more, please <a href="mailto:hello@kroki.io">contact us</a>. </p>
     </div>
 </section>
 </body>
