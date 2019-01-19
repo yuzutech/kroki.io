@@ -10842,6 +10842,26 @@ svg.kroki-output {
   display: block;
 }
 
+svg.kroki-output.kroki-output-erd {
+  max-width: 25rem;
+}
+
+svg.kroki-output.kroki-output-plantuml-use-case {
+  max-width: 25rem;
+}
+
+svg.kroki-output.kroki-output-activity-diagram {
+  max-width: 30rem;
+}
+
+svg.kroki-output.kroki-output-component-diagram {
+  max-width: 30rem;
+}
+
+svg.kroki-output.kroki-output-context-diagram {
+  max-width: 30rem;
+}
+
 pre.diagram-source {
   max-height: 25rem;
 }
