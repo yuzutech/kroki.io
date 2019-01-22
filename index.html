@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kroki!</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
 <body>
@@ -22,20 +22,20 @@
         <h2 class="title is-2">Usage</h2>
         <div class="content">
             <p>Kroki uses a simple algorithm (deflate + base64) to encode your diagram in the URL:</p>
-            <pre>GET /plantuml/png/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000</pre>
+            <pre><code class="language-http">GET /plantuml/png/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000</code></pre>
             <p>You can also call Kroki with <code>POST</code>:</p>
-            <pre>POST /</pre>
-            <pre>{
+            <pre><code class="language-http">POST /</code></pre>
+            <pre><code class="language-json">{
   "diagram_source": "Bob -> Alice : hello",
   "diagram_type": "plantuml",
   "output_format": "png"
-}</pre>
+}</code></pre>
             <p>In this case, you don't need to encode your diagram.</p>
         </div>
 
         <h2 class="title is-2">Examples</h2>
         <div class="content">
-            <p>Looking for inspiration? Visit the <a href="/examples.html">examples</a> page.</p>
+            <p>Looking for inspiration? Visit the <a href="./examples.html">examples</a> page.</p>
         </div>
         <h2 class="title is-2">Support</h2>
         <div class="content">
@@ -284,5 +284,6 @@
         </p>
     </div>
 </footer>
+<script src="js/prism-core.js"></script>
 </body>
 </html>

@@ -1,7 +1,22 @@
 $section-padding: 1.5rem 1.5rem
 
-@import "node_modules/bulma/bulma"
+@import "node_modules/bulma/sass/utilities/_all"
+@import "node_modules/bulma/sass/base/_all"
+@import "node_modules/bulma/sass/elements/button"
+@import "node_modules/bulma/sass/elements/container"
+@import "node_modules/bulma/sass/elements/content"
+@import "node_modules/bulma/sass/elements/image"
+@import "node_modules/bulma/sass/elements/table"
+@import "node_modules/bulma/sass/elements/title"
+@import "node_modules/bulma/sass/elements/tag"
+@import "node_modules/bulma/sass/elements/notification"
+@import "node_modules/bulma/sass/components/_all"
+@import "node_modules/bulma/sass/grid/_all"
+@import "node_modules/bulma/sass/layout/_all"
 @import "node_modules/bulma-pricingtable/src/sass/index"
+@import "node_modules/primer-support/index"
+@import "node_modules/primer-tooltips/lib/tooltips"
+@import "./prism"
 
 h1.title.is-1
   font-size: 4rem
@@ -13,18 +28,97 @@ svg.kroki-output
   max-width: 50rem
   margin: auto
   display: block
+
   &.kroki-output-erd
     max-width: 25rem
+
   &.kroki-output-plantuml-use-case
     max-width: 25rem
+
   &.kroki-output-activity-diagram
     max-width: 30rem
+
   &.kroki-output-component-diagram
     max-width: 30rem
+
   &.kroki-output-context-diagram
     max-width: 30rem
+
   &.kroki-output-ascii-internet
     max-width: 25rem
 
+// code
+
 pre.diagram-source
   max-height: 25rem
+
+.content pre
+  -webkit-overflow-scrolling: touch
+  overflow-x: auto
+  padding: 1em
+  white-space: pre
+  word-wrap: normal
+
+pre
+  margin: 0
+  font-size: 1rem
+
+pre[class*="language-"]
+  margin: 0
+  font-size: 1rem
+
+code.language-http
+  .token.verb-get
+    color: white
+    border-radius: 0.25rem
+    padding: 0.1rem 0.25rem
+    background-color: hsl(204, 86%, 53%)
+
+  .token.verb-post
+    color: white
+    border-radius: 0.25rem
+    padding: 0.1rem 0.25rem
+    background-color: hsl(348, 100%, 61%)
+
+  .token.host
+    color: #616161
+
+.highlight
+  position: relative
+  margin-bottom: 1rem
+
+  &.bd-is-hovering
+    border-radius: 2px
+    box-shadow: 0 0 0 2px hsl(204, 86%, 53%)
+
+  pre:not(:last-child)
+    margin-bottom: 0
+
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted
+  color: hsl(348, 100%, 61%)
+
+// copy
+
+.highlight .bd-copy:hover, .highlight .bd-expand:hover
+  background-color: hsl(204, 86%, 53%)
+  color: white
+
+.highlight .bd-copy:active, .highlight .bd-copy:focus, .highlight .bd-expand:active, .highlight .bd-expand:focus
+  box-shadow: none
+
+.bd-copy
+  background: white 0 0
+  border: none
+  color: #212121
+  cursor: pointer
+  font-size: .625rem
+  outline: 0
+  padding-bottom: 0
+  padding-top: 0
+  position: absolute
+  right: .25rem
+  top: .25rem
+
+  svg
+    height: 1rem
+    margin-right: 0.25rem
