@@ -10862,6 +10862,10 @@ svg.kroki-output.kroki-output-context-diagram {
   max-width: 30rem;
 }
 
+svg.kroki-output.kroki-output-ascii-internet {
+  max-width: 25rem;
+}
+
 pre.diagram-source {
   max-height: 25rem;
 }
