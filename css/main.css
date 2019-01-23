@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gloria Hallelujah"), local("GloriaHallelujah"), url("../fonts/GloriaHallelujah.ttf") format("truetype");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
+}
+
 @-webkit-keyframes spinAround {
   from {
     -webkit-transform: rotate(0deg);
@@ -9548,7 +9557,7 @@ h1.title.is-1 {
 }
 
 .has-brand-font {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Gloria Hallelujah', 'Apple Chancery', 'Bradley Hand', 'Brush Script MT', 'Brush Script Std', 'Snell Roundhand', 'Comic Sans MS', 'Comic Sans', cursive;
 }
 
 svg.kroki-output {

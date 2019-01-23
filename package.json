@@ -18,16 +18,16 @@
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/main.css css/main.css",
     "build-cleancss": "cleancss -o css/main.min.css css/main.css",
-    "build-sass": "node-sass --output-style expanded --source-map true main.sass css/main.css",
+    "build-sass": "node-sass --output-style expanded --source-map true src/main.sass css/main.css",
     "build-clean": "rimraf css",
     "deploy": "npm run build",
     "start": "npm run build-sass -- --watch"
   },
   "dependencies": {
-    "bulma": "^0.7.2",
-    "bulma-pricingtable": "^0.2.0",
-    "clipboard": "^2.0.4",
-    "primer-tooltips": "^1.5.11",
-    "prismjs": "^1.15.0"
+    "bulma": "0.7.2",
+    "bulma-pricingtable": "0.2.0",
+    "clipboard": "2.0.4",
+    "primer-tooltips": "1.5.11",
+    "prismjs": "1.15.0"
   }
 }
