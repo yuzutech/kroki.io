@@ -1,13 +1,5 @@
 $section-padding: 1.5rem 1.5rem
 
-@font-face
-  font-family: 'Gloria Hallelujah'
-  font-style: normal
-  font-weight: 400
-  src: local('Gloria Hallelujah'), local('GloriaHallelujah'), url('../fonts/GloriaHallelujah.ttf') format('truetype')
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  font-display: swap
-
 @import "../node_modules/bulma/sass/utilities/_all"
 @import "../node_modules/bulma/sass/base/_all"
 @import "../node_modules/bulma/sass/elements/button"
@@ -26,8 +18,13 @@ $section-padding: 1.5rem 1.5rem
 @import "../node_modules/primer-tooltips/lib/tooltips"
 @import "./prism"
 
-h1.title.is-1
-  font-size: 4rem
+.footer
+  .logo
+    max-height: 1rem
+
+.logo
+  max-height: 4rem
+  margin-bottom: 0.5rem
 
 .has-brand-font
   font-family: 'Gloria Hallelujah', 'Apple Chancery', 'Bradley Hand', 'Brush Script MT', 'Brush Script Std', 'Snell Roundhand', 'Comic Sans MS', 'Comic Sans', cursive
@@ -81,12 +78,14 @@ code.language-http
     border-radius: 0.25rem
     padding: 0.1rem 0.25rem
     background-color: hsl(204, 86%, 53%)
+    font-weight: 600
 
   .token.verb-post
     color: white
     border-radius: 0.25rem
     padding: 0.1rem 0.25rem
     background-color: hsl(348, 100%, 61%)
+    font-weight: 600
 
   .token.host
     color: #616161
