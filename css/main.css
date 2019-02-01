@@ -9501,7 +9501,6 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
   color: #9a6e3a;
-  background: rgba(255, 255, 255, 0.5);
 }
 
 .token.atrule,
@@ -9540,7 +9539,6 @@ pre[class*="language-"] {
 
 .logo {
   max-height: 4rem;
-  margin-bottom: 0.5rem;
 }
 
 .has-brand-font {
@@ -9577,6 +9575,10 @@ svg.kroki-output.kroki-output-ascii-internet {
   max-width: 25rem;
 }
 
+.section {
+  min-height: calc(100vh - 174px);
+}
+
 pre.diagram-source {
   max-height: 25rem;
 }
@@ -9599,7 +9601,7 @@ pre[class*="language-"] {
   font-size: 1rem;
 }
 
-code.language-http .token.verb-get {
+.token.verb-get {
   color: white;
   border-radius: 0.25rem;
   padding: 0.1rem 0.25rem;
@@ -9607,7 +9609,7 @@ code.language-http .token.verb-get {
   font-weight: 600;
 }
 
-code.language-http .token.verb-post {
+.token.verb-post {
   color: white;
   border-radius: 0.25rem;
   padding: 0.1rem 0.25rem;
@@ -9615,7 +9617,7 @@ code.language-http .token.verb-post {
   font-weight: 600;
 }
 
-code.language-http .token.host {
+.token.host {
   color: #616161;
 }
 
@@ -9669,5 +9671,39 @@ code.language-http .token.host {
 .bd-copy svg {
   height: 1rem;
   margin-right: 0.25rem;
+}
+
+.table pre.services {
+  color: #000;
+  background: 0 0;
+  text-shadow: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  padding: 0;
+}
+
+.table td span.operational {
+  color: #28a745;
+}
+
+.table td span.operational::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 3px;
+  content: "";
+  vertical-align: text-bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 2l-8 8-4-4 1.5-1.5L4 7 10.5.5 12 2z' fill='%2328a745'/%3E%3C/svg%3e");
 }
 /*# sourceMappingURL=main.css.map */

@@ -9,7 +9,7 @@
 <body>
 <section class="section">
     <div class="container">
-        <img class="logo" src="assets/logo.svg" alt="logo"/>
+        <img class="title logo" src="assets/logo.svg" alt="logo"/>
         <h1 class="subtitle">Convert <strong>plain text</strong> diagrams to <strong>images</strong> !</h1>
         <div class="content">
             <p>
@@ -21,15 +21,38 @@
         <h2 class="title is-2">Usage</h2>
         <div class="content">
             <p>Kroki uses a simple algorithm (deflate + base64) to encode your diagram in the URL:</p>
-            <pre><code class="language-http">GET /plantuml/png/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000</code></pre>
+            <pre><code class="language-http">GET /plantuml/svg/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000</code></pre>
             <p>You can also call Kroki with <code>POST</code>:</p>
             <pre><code class="language-http">POST /</code></pre>
             <pre><code class="language-json">{
   "diagram_source": "Bob -> Alice : hello",
   "diagram_type": "plantuml",
-  "output_format": "png"
+  "output_format": "svg"
 }</code></pre>
             <p>In this case, you don't need to encode your diagram.</p>
+            <p>
+                It's also possible to send your diagram as plain text using the <code>Content-Type</code> header.
+                The output format will be specified using the <code>Accept</code> header and the diagram source will be sent as the request body:
+            </p>
+            <pre><code class="language-http">POST /plantuml</code></pre>
+            <pre><code class="language-request">Accept: image/svg+xml
+Content-Type: text/plain
+
+Bob -> Alice : hello</code></pre>
+            <p>
+                You can also define the output format in the URL if you don't want to add an <code>Accept</code> header:
+            </p>
+            <pre><code class="language-http">POST /plantuml/svg</code></pre>
+            <pre><code class="language-request">Content-Type: text/plain
+
+Bob -> Alice : hello</code></pre>
+            <p>
+                The same concept applies when sending the diagram as <code>JSON</code>:
+            </p>
+            <pre><code class="language-http">POST /plantuml/svg</code></pre>
+            <pre><code class="language-json">{
+  "diagram_source": "Bob -> Alice : hello"
+}</code></pre>
         </div>
 
         <h2 class="title is-2">Examples</h2>
@@ -279,7 +302,7 @@
 <footer class="footer">
     <div class="content has-text-centered">
         <p>
-            <strong class="has-brand-font">Kroki</strong> by <a href="https://yuzutech.fr">Yuzu tech</a>.
+            <img class="logo" src="assets/logo.svg" alt="logo"/> by <a href="https://yuzutech.fr">Yuzu tech</a>.
         </p>
     </div>
 </footer>
