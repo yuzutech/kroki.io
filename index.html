@@ -55,6 +55,36 @@ Bob -> Alice : hello</code></pre>
 }</code></pre>
         </div>
 
+        <h3 class="title is-3">Command Line Interface (CLI)</h3>
+        <div class="content">
+            <p>
+                Using <a href="https://curl.haxx.se/"><em>cURL</em></a> to interact with the API is straightforward, open a terminal and type:
+            </p>
+            <pre><code class="language-sh">curl https://demo.kroki.io/plantuml/svg --data-raw 'Bob -> Alice : hello'</code></pre>
+            <p>
+                Or if you are more familiar with <a href="https://httpie.org/"><em>HTTPie</em></a>, you can send a <code>JSON</code> request:
+            </p>
+            <pre><code class="language-sh">http https://demo.kroki.io/ diagram_type='plantuml' output_format='svg' diagram_source='Bob -> Alice : hello'</code></pre>
+            <p>
+                It's alos possible to send a file, for instance an Entity Relationship Diagram named  <code>project.erd</code>:
+            </p>
+            <pre><code class="language-plain">[Person]
+*name
+height
+weight
++birth_location_id
+
+[Location]
+*id
+city
+state
+country
+
+Person *--1 Location</code></pre>
+            <pre><code class="language-sh">curl https://demo.kroki.io/erd/svg --data-binary '@project.erd'</code></pre>
+            <pre><code class="language-sh">cat project.erd | http https://demo.kroki.io/erd/svg Content-Type:text/plain</code></pre>
+        </div>
+
         <h2 class="title is-2">Examples</h2>
         <div class="content">
             <p>Looking for inspiration? Visit the <a href="./examples.html">examples</a> page.</p>

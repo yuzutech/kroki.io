@@ -8,6 +8,29 @@
 .section
   min-height: calc(100vh - 174px)
 
+svg.kroki-output
+  max-width: 50rem
+  margin: auto
+  display: block
+
+  &.kroki-output-erd
+    max-width: 25rem
+
+  &.kroki-output-plantuml-use-case
+    max-width: 25rem
+
+  &.kroki-output-activity-diagram
+    max-width: 30rem
+
+  &.kroki-output-component-diagram
+    max-width: 30rem
+
+  &.kroki-output-context-diagram
+    max-width: 30rem
+
+  &.kroki-output-ascii-internet
+    max-width: 25rem
+
 // code
 
 pre.diagram-source
@@ -27,6 +50,13 @@ pre
 pre[class*="language-"]
   margin: 0
   font-size: 1rem
+
+.token.command
+  color: white
+  border-radius: 0.25rem
+  padding: 0.1rem 0.25rem
+  background-color: #363636
+  font-weight: 600
 
 .token.verb-get
   color: white
