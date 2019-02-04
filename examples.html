@@ -13,7 +13,7 @@
         <h1 class="subtitle">Convert <strong>plain text</strong> diagrams to <strong>images</strong> ! </h1>
         <div class="content">
             <p>
-                Kroki provides a unified API with support for BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag), C4 (with PlantUML), Ditaa, Erd, GraphViz, PlantUML, SvgBob and UMLet... and
+                Kroki provides a unified API with support for BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag), C4 (with PlantUML), Ditaa, Erd, GraphViz, Nomnoml, PlantUML, SvgBob and UMLet... and
                 more to come!
             </p>
         </div>
@@ -1430,6 +1430,118 @@ Person *--1 Location</code></pre>
                     <text x="462" y="181" font-family="sans-serif" font-size="16" stroke="none" fill="#000000"><![CDATA[lambda]]></text>
                     <text x="484" y="237" font-family="sans-serif" font-size="16" stroke="none" fill="#000000"><![CDATA[beta]]></text>
                 </g>
+            </svg>
+        </div>
+
+
+        <h3 class="title is-3">UML diagram</h3>
+        <h4 class="subtitle is-4">Nomnoml</h4>
+        <div class="content">
+            <pre class="diagram-source"><code class="language-nomnoml">[Pirate|eyeCount: Int|raid();pillage()|
+  [beard]--[parrot]
+  [beard]-:&gt;[foul mouth]
+]
+
+[&lt;abstract&gt;Marauder]&lt;:--[Pirate]
+[Pirate]- 0..7[mischief]
+[jollyness]-&gt;[Pirate]
+[jollyness]-&gt;[rum]
+[jollyness]-&gt;[singing]
+[Pirate]-&gt; *[rum|tastiness: Int|swig()]
+[Pirate]-&gt;[singing]
+[singing]<-&gt;[rum]
+
+[&lt;start&gt;st]-&gt;[&lt;state&gt;plunder]
+[plunder]-&gt;[&lt;choice&gt;more loot]
+[more loot]-&gt;[st]
+[more loot] no -&gt;[&lt;end&gt;e]
+
+[&lt;actor&gt;Sailor] - [&lt;usecase&gt;shiver me;timbers]
+</code></pre>
+            <div class="highlight">
+                <pre><code class="language-http">GET https://demo.kroki.io/nomnoml/svg/eNpdULFqwzAQ3fUVGpOCQ7eCY7R06hAodBQazvbFVpGlcHdqCfjja2FMnIKGp3fv3eOdsp-eQHDGO76nHKXWH1FmAt8fjuebDwEGPBxnpbVtEah3VWVvQJTE7bja2GvKQU8py-iUU8o20LIQdGIuQJB7JNfUi3nNc2oDlX49nd7s5LkbPV6XwXcK4R6R2VXmIX9iKU__KfZxWN5usdEvRTgLsPgiW7vxrx8Ox71u591Qs4UsRViAxLAUZfkImlvIsTRSdkNl1o3Jd2imRKhDKheyD1xinhkdky42jL3B9WSdJDJf4EMipyttm8zYAaPh0f8g6QnP4qcWiZ36A9RWnDM=</code></pre>
+                <button class="button is-small bd-copy" data-clipboard-text="https://demo.kroki.io/nomnoml/svg/eNpdULFqwzAQ3fUVGpOCQ7eCY7R06hAodBQazvbFVpGlcHdqCfjja2FMnIKGp3fv3eOdsp-eQHDGO76nHKXWH1FmAt8fjuebDwEGPBxnpbVtEah3VWVvQJTE7bja2GvKQU8py-iUU8o20LIQdGIuQJB7JNfUi3nNc2oDlX49nd7s5LkbPV6XwXcK4R6R2VXmIX9iKU__KfZxWN5usdEvRTgLsPgiW7vxrx8Ox71u591Qs4UsRViAxLAUZfkImlvIsTRSdkNl1o3Jd2imRKhDKheyD1xinhkdky42jL3B9WSdJDJf4EMipyttm8zYAaPh0f8g6QnP4qcWiZ36A9RWnDM=" title="Copy to clipboard">
+                    <svg fill="currentColor" viewBox="0 0 896 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>
+                    </svg> Copy
+                </button>
+            </div>
+
+            <svg  class="kroki-output kroki-output-nomnoml" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" version="1.1" baseProfile="full" viewbox="0 0 703 537" style="font-weight:bold; font-size:12pt; font-family:'Calibri', Helvetica, sans-serif;;stroke-width:3;stroke-linejoin:round;stroke-linecap:round">
+                <path d="M112.8 44.5 L112.8 64.5 L116.5 84.5 L116.5 84.5 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;"/>
+                <path d="M118.1 57.8 L112.8 57.8 L107.4 57.8 L112.8 44.5 Z" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <text x="43.8" y="352.5" style="font-weight:normal;">0..7</text>
+                <path d="M96.8 320.5 L89.8 340.5 L89.8 360.5 L89.8 360.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M289.8 41.5 L195.8 64.5 L187.5 84.5 L187.5 84.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M187.6 70.1 L190 78.3 L197.5 74.2 L187.5 84.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"/>
+                <path d="M360.1 44.5 L385 64.5 L385 411.5 L385 411.5 L359.1 431.5 L359.1 431.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M366.4 419.1 L364.4 427.4 L372.9 427.6 L359.1 431.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"/>
+                <path d="M331.3 44.5 L319 64.5 L319 340.5 L319 340.5 L307.7 360.5 L307.7 360.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M309.6 346.3 L311 354.7 L318.9 351.5 L307.7 360.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"/>
+                <text x="207" y="429.8" style="font-weight:normal;">*</text>
+                <path d="M170.4 320.5 L175.8 340.5 L175.8 411.5 L175.8 411.5 L224.5 437.8 L224.5 437.8 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M210.2 436.2 L218.6 434.6 L215.3 426.8 L224.5 437.8 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"/>
+                <path d="M258.6 320.5 L279 340.5 L290.3 360.5 L290.3 360.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M279.1 351.5 L287 354.7 L288.4 346.3 L290.3 360.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"/>
+                <path d="M299 391.5 L299 411.5 L299 431.5 L299 431.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M293.7 418.2 L299 424.8 L304.3 418.2 L299 431.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"/>
+                <path d="M304.3 404.8 L299 398.2 L293.7 404.8 L299 391.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"/>
+                <path d="M513.5 37.6 L466.8 64.5 L466.8 187 L466.8 187 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M461.4 173.7 L466.8 180.3 L472.1 173.7 L466.8 187 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"/>
+                <path d="M466.8 218 L466.8 340.5 L501.5 360.5 L501.5 360.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M487.3 358.5 L495.8 357.2 L492.6 349.2 L501.5 360.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"/>
+                <path d="M537.1 360.5 L548.3 340.5 L548.3 64.5 L548.3 64.5 L536.8 44 L536.8 44 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M548 53.1 L540.1 49.8 L538.7 58.2 L536.8 44 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"/>
+                <text x="536.5" y="411.5" style="font-weight:normal;">no</text>
+                <path d="M528.5 391.5 L528.5 411.5 L528.5 463 L528.5 463 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M523.2 449.7 L528.5 456.3 L533.8 449.7 L528.5 463 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;"/>
+                <path d="M639.5 44.5 L639.5 64.5 L639.5 179.5 L639.5 179.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <rect x="13.5" y="84.5" height="236" width="250" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <text x="110" y="106" style="">Pirate</text>
+                <path d="M13.5 115.5 L263.5 115.5" style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <text x="21.5" y="137" style="font-weight:normal;">eyeCount: Int</text>
+                <path d="M13.5 146.5 L263.5 146.5" style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <text x="21.5" y="168" style="font-weight:normal;">raid()</text>
+                <text x="21.5" y="183" style="font-weight:normal;">pillage()</text>
+                <path d="M13.5 192.5 L263.5 192.5" style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M100.2 236.5 L63 256.5 L63 276.5 L63 276.5 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;"/>
+                <path d="M157.8 236.5 L195 256.5 L195 276.5 L195 276.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M189.7 263.2 L195 263.2 L200.3 263.2 L195 276.5 Z" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <rect x="97.5" y="205.5" height="31" width="64" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;"/>
+                <text x="105.8" y="227" style="">beard</text>
+                <rect x="26.5" y="276.5" height="31" width="73" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;"/>
+                <text x="34.5" y="298" style="">parrot</text>
+                <rect x="139.5" y="276.5" height="31" width="111" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;"/>
+                <text x="147.5" y="298" style="">foul mouth</text>
+                <rect x="64.5" y="13.5" height="31" width="97" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <text x="72.8" y="35" style="font-weight:normal;font-style:italic;">Marauder</text>
+                <rect x="43.5" y="360.5" height="31" width="92" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <text x="51.5" y="382" style="">mischief</text>
+                <rect x="289.5" y="13.5" height="31" width="102" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <text x="297.8" y="35" style="">jollyness</text>
+                <rect x="224.5" y="431.5" height="93" width="149" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <text x="284.8" y="453" style="">rum</text>
+                <path d="M224.5 462.5 L373.5 462.5" style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <text x="232.5" y="484" style="font-weight:normal;">tastiness: Int</text>
+                <path d="M224.5 493.5 L373.5 493.5" style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <text x="232.5" y="515" style="font-weight:normal;">swig()</text>
+                <rect x="257.5" y="360.5" height="31" width="83" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <text x="265.8" y="382" style="">singing</text>
+                <circle r="12" cx="528.5" cy="29.5" style="stroke:none; fill:#33322E;"/>
+                <rect x="425.5" y="187.5" rx="15.5" ry="15.5" height="31" width="83" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <text x="433.8" y="209" style="font-weight:normal;">plunder</text>
+                <path d="M528.5 352.5 L587.5 376 L528.5 399.5 L469.5 376 Z" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <text x="485.8" y="382" style="font-weight:normal;">more loot</text>
+                <circle r="10" cx="528.5" cy="478.5" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <circle r="6" cx="528.5" cy="478.5" style="stroke:none; fill:#33322E;"/>
+                <circle r="4" cx="639.5" cy="11.5" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <path d="M639.5 15.5 L639.5 23.5" style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M635.5 19.5 L643.5 19.5" style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <path d="M635.5 27.5 L639.5 23.5 L643.5 27.5" style="stroke:#33322E;fill:none;stroke-dasharray:none;"/>
+                <text x="611.5" y="41" style="font-weight:normal;">Sailor</text>
+                <ellipse cx="639.5" cy="202.5" rx="51" ry="23" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;"/>
+                <text x="596.8" y="201" style="font-weight:normal;">shiver me</text>
+                <text x="606.3" y="216" style="font-weight:normal;">timbers</text>
             </svg>
         </div>
 
