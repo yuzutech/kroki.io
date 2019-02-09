@@ -146,3 +146,25 @@ pre[class*="language-"]
       background-repeat: no-repeat
       background-position: center center
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 2l-8 8-4-4 1.5-1.5L4 7 10.5.5 12 2z' fill='%2328a745'/%3E%3C/svg%3e")
+
+// FontAwesome
+
+svg:not(:root).svg-inline--fa
+  overflow: visible
+
+.svg-inline--fa.fa-w-16
+  width: 1em
+
+svg:not(:root)
+  overflow: hidden
+
+.svg-inline--fa
+  display: inline-block
+  font-size: inherit
+  height: 1em
+  overflow: visible
+  vertical-align: -0.125em
+
+.fa-fw
+  text-align: center
+  width: 1.25em
