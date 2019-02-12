@@ -73,13 +73,61 @@
 
         <h2 class="title is-2">Usage</h2>
         <div class="content">
-            <p>Kroki uses a simple algorithm (deflate + base64) to encode your diagram in the URL:</p>
-            <pre><code class="language-http">GET /plantuml/svg/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000</code></pre>
-            <p>You can also call Kroki with <code>POST</code>:</p>
+            <p>
+                Kroki handles both <code>GET</code> and <code>POST</code> requests.
+                When using <code>GET</code> requests, your diagram must be encoded in the URL using a deflate + base64 algorithm.
+                But don't worry, if you're not familiar with deflate or base64 (or if you don't want to use them),
+                you can also send your diagram as plain text using a <code>POST</code> request (<a href="#post-request">see below</a>).
+            </p>
+            <p>
+                Let's take an example with a <em>GraphViz</em> "Hello World":
+            </p>
+            <code class="snippet-name">hello.txt</code>
+            <pre><code class="language-graphviz">digraph G {
+  Hello->World
+}</code></pre>
+            <p>
+                Here we are using a Python one-liner to encode our diagram using deflate + base64:
+            </p>
+            <pre><code class="language-sh">cat hello.txt | python -c "import sys; import base64; import zlib; print(base64.urlsafe_b64encode(zlib.compress(sys.stdin.read(), 9)))"</code></pre>
+            <p>
+                The above command will return <code>eNpLyUwvSizIUHBXqPZIzcnJ17ULzy_KSanlAgB1EAjQ</code>.
+                We can then copy this value in the URL:
+            </p>
+            <pre><code class="language-http">GET /graphviz/svg/eNpLyUwvSizIUHBXqPZIzcnJ17ULzy_KSanlAgB1EAjQ</code></pre>
+            <p>
+                And here's the result:
+            </p>
+            <svg class="kroki-output" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74pt" height="116pt" viewBox="0.00 0.00 74.29 116.00">
+                <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+                    <title>G</title>
+                    <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-112 70.2941,-112 70.2941,4 -4,4"/>
+                    <!-- Hello -->
+                    <g id="node1" class="node">
+                        <title>Hello</title>
+                        <ellipse fill="none" stroke="#000000" cx="33.1471" cy="-90" rx="30.5947" ry="18"/>
+                        <text text-anchor="middle" x="33.1471" y="-86.3" font-family="Times,serif" font-size="14.00" fill="#000000">Hello</text>
+                    </g>
+                    <!-- World -->
+                    <g id="node2" class="node">
+                        <title>World</title>
+                        <ellipse fill="none" stroke="#000000" cx="33.1471" cy="-18" rx="33.2948" ry="18"/>
+                        <text text-anchor="middle" x="33.1471" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">World</text>
+                    </g>
+                    <!-- Hello&#45;&gt;World -->
+                    <g id="edge1" class="edge">
+                        <title>Hello-&gt;World</title>
+                        <path fill="none" stroke="#000000" d="M33.1471,-71.8314C33.1471,-64.131 33.1471,-54.9743 33.1471,-46.4166"/>
+                        <polygon fill="#000000" stroke="#000000" points="36.6472,-46.4132 33.1471,-36.4133 29.6472,-46.4133 36.6472,-46.4132"/>
+                    </g>
+                </g>
+            </svg>
+
+            <p id="post-request">You can also call Kroki with <code>POST</code>:</p>
             <pre><code class="language-http">POST /</code></pre>
             <pre><code class="language-json">{
-  "diagram_source": "Bob -> Alice : hello",
-  "diagram_type": "plantuml",
+  "diagram_source": "digraph G {Hello->World}",
+  "diagram_type": "graphviz",
   "output_format": "svg"
 }</code></pre>
             <p>In this case, you don't need to encode your diagram.</p>
@@ -87,24 +135,28 @@
                 It's also possible to send your diagram as plain text using the <code>Content-Type</code> header.
                 The output format will be specified using the <code>Accept</code> header and the diagram source will be sent as the request body:
             </p>
-            <pre><code class="language-http">POST /plantuml</code></pre>
+            <pre><code class="language-http">POST /graphviz</code></pre>
             <pre><code class="language-request">Accept: image/svg+xml
 Content-Type: text/plain
 
-Bob -> Alice : hello</code></pre>
+digraph G {
+  Hello->World
+}</code></pre>
             <p>
                 You can also define the output format in the URL if you don't want to add an <code>Accept</code> header:
             </p>
-            <pre><code class="language-http">POST /plantuml/svg</code></pre>
+            <pre><code class="language-http">POST /graphviz/svg</code></pre>
             <pre><code class="language-request">Content-Type: text/plain
 
-Bob -> Alice : hello</code></pre>
+digraph G {
+  Hello->World
+}</code></pre>
             <p>
                 The same concept applies when sending the diagram as <code>JSON</code>:
             </p>
-            <pre><code class="language-http">POST /plantuml/svg</code></pre>
+            <pre><code class="language-http">POST /graphviz/svg</code></pre>
             <pre><code class="language-json">{
-  "diagram_source": "Bob -> Alice : hello"
+  "diagram_source": "digraph G {Hello->World}"
 }</code></pre>
         </div>
 
@@ -113,13 +165,13 @@ Bob -> Alice : hello</code></pre>
             <p>
                 Using <a href="https://curl.haxx.se/"><em>cURL</em></a> to interact with the API is straightforward, open a terminal and type:
             </p>
-            <pre><code class="language-sh">curl https://demo.kroki.io/plantuml/svg --data-raw 'Bob -> Alice : hello'</code></pre>
+            <pre><code class="language-sh">curl https://demo.kroki.io/graphviz/svg --data-raw 'digraph G {Hello->World}'</code></pre>
             <p>
                 Or if you are more familiar with <a href="https://httpie.org/"><em>HTTPie</em></a>, you can send a <code>JSON</code> request:
             </p>
-            <pre><code class="language-sh">http https://demo.kroki.io/ diagram_type='plantuml' output_format='svg' diagram_source='Bob -> Alice : hello'</code></pre>
+            <pre><code class="language-sh">http https://demo.kroki.io/ diagram_type='graphviz' output_format='svg' diagram_source='digraph G {Hello->World}'</code></pre>
             <p>
-                It's also possible to send a file, for instance an Entity Relationship Diagram named  <code>project.erd</code>:
+                It's also possible to send a file, for instance an Entity Relationship Diagram named <code>project.erd</code>:
             </p>
             <pre><code class="language-plain">[Person]
 *name

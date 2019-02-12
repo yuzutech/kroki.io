@@ -643,11 +643,11 @@ Prism.languages.json = {
 Prism.languages.request = {
   'null': /\n.*$/i,
   'operator': /[a-zA-Z\-]+:/i,
-  'keyword': /[a-zA-Z\\/+]+/i,
+  'keyword': /image\/svg\+xml|text\/plain/i,
 }
 Prism.languages.sh = {
   'keyword': /'[^']+'|"[^"]+"|text\/plain/i,
   'host': /(http)s?:\/\/[^\/]+/,
   'operator': /-[a-zA-Z]+ |[a-z_A-Z]+=|--[a-zA-Z\-]+|Content-Type/g,
-  'command': /http|curl/i
+  'command': /http|curl|python/i
 }
