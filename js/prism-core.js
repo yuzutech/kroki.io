@@ -649,5 +649,5 @@ Prism.languages.sh = {
   'keyword': /'[^']+'|"[^"]+"|text\/plain/i,
   'host': /(http)s?:\/\/[^\/]+/,
   'operator': /-[a-zA-Z]+ |[a-z_A-Z]+=|--[a-zA-Z\-]+|Content-Type/g,
-  'command': /http|curl|python/i
+  'command': /http|curl|python|kroki/i
 }
