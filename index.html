@@ -106,8 +106,7 @@
             </p>
             <pre><code class="language-sh">cat hello.dot | python -c "import sys; import base64; import zlib; print(base64.urlsafe_b64encode(zlib.compress(sys.stdin.read(), 9)))"</code></pre>
             <p>
-                The above command will return <code>eNpLyUwvSizIUHBXqPZIzcnJ17ULzy_KSanlAgB1EAjQ</code>.
-                We can then copy this value in the URL:
+                The above command will return a value that you can copy in the URL:
             </p>
             <pre><code class="language-http">GET /graphviz/svg/eNpLyUwvSizIUHBXqPZIzcnJ17ULzy_KSanlAgB1EAjQ</code></pre>
             <p>
