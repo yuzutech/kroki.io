@@ -1483,26 +1483,17 @@ Person *--1 Location</code></pre>
         <h3 id="mermaid-seqdiag" class="title is-3">Sequence diagram</h3>
         <h4 class="subtitle is-4">Mermaid</h4>
         <div class="content">
-            <pre class="diagram-source"><code class="language-nomnoml">[Pirate|eyeCount: Int|raid();pillage()|
-  [beard]--[parrot]
-  [beard]-:&gt;[foul mouth]
-]
-
-[&lt;abstract&gt;Marauder]&lt;:--[Pirate]
-[Pirate]- 0..7[mischief]
-[jollyness]-&gt;[Pirate]
-[jollyness]-&gt;[rum]
-[jollyness]-&gt;[singing]
-[Pirate]-&gt; *[rum|tastiness: Int|swig()]
-[Pirate]-&gt;[singing]
-[singing]<-&gt;[rum]
-
-[&lt;start&gt;st]-&gt;[&lt;state&gt;plunder]
-[plunder]-&gt;[&lt;choice&gt;more loot]
-[more loot]-&gt;[st]
-[more loot] no -&gt;[&lt;end&gt;e]
-
-[&lt;actor&gt;Sailor] - [&lt;usecase&gt;shiver me;timbers]
+            <pre class="diagram-source"><code class="language-mermaid">sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
 </code></pre>
             <div class="highlight">
                 <pre><code class="language-http">GET https://demo.kroki.io/mermaid/svg/eNpljzFuwzAMRXefgtlrZzcKBymCtMjQoTegZdYiwoqqTLfw7SMrSDKEi4j_H6nPaqLfmYKjA-OY8KeCXBGTseOIwWAv7OhJfdO-aMWtu5P60MIHiSis_Qt4_QdMBIvOu0KKaswEinnnyZ2LuNbK3zYcefQGOCKHycAvUZ3XMCTGglMYyvupRpAKq99wHf1CYw0oYF7n7Ezw2qdtFxP9IUvTNNX9s7orsVt4T4S2eRhdPiufsUbvdbZH-KzXt4wnFVlgVB021QUIImOl</code></pre>
