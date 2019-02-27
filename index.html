@@ -18,7 +18,22 @@
             </p>
         </div>
 
-        <h2 class="title is-2">Install</h2>
+
+        <aside class="menu">
+            <p class="menu-label">
+                Menu
+            </p>
+            <ul class="menu-list">
+                <li><a href="#install">Install</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#try">Try</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#saas">SaaS Features</a></li>
+            </ul>
+        </aside>
+
+        <h2 id="install" class="title is-2">Install</h2>
         <div class="content">
             <p>
                 Kroki is available as both a Self-Managed instance and a SaaS offering:
@@ -71,7 +86,7 @@
             </article>
         </div>
 
-        <h2 class="title is-2">Usage</h2>
+        <h2 id="usage" class="title is-2">Usage</h2>
         <div class="content">
             <p>
                 Kroki handles both <code>GET</code> and <code>POST</code> requests.
@@ -98,7 +113,7 @@
             <p>
                 And here's the result:
             </p>
-            <svg class="kroki-output" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74pt" height="116pt" viewBox="0.00 0.00 74.29 116.00">
+            <svg class="kroki-output" xmlns="http://www.w3.org/2000/svg" width="74pt" height="116pt" viewBox="0.00 0.00 74.29 116.00">
                 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
                     <title>G</title>
                     <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-112 70.2941,-112 70.2941,4 -4,4"/>
@@ -229,11 +244,150 @@ Person *--1 Location</code></pre>
             <pre><code class="language-sh">cat project.erd | http https://demo.kroki.io/erd/svg Content-Type:text/plain</code></pre>
         </div>
 
-        <h2 class="title is-2">Examples</h2>
+        <h2 id="try" class="title is-2">Try</h2>
+
+        <div class="field">
+            <label class="label">Diagram</label>
+            <div class="control">
+                <div class="select">
+                    <select id="select-diagram" aria-label="Diagram">
+                        <option value="blockdiag">BlockDiag</option>
+                        <option value="seqdiag">SeqDiag</option>
+                        <option value="actdiag">ActDiag</option>
+                        <option value="nwdiag">NwDiag</option>
+                        <option value="c4plantuml">C4 with PlantUML</option>
+                        <option value="ditaa">Ditaa</option>
+                        <option value="erd">Erd</option>
+                        <option value="graphviz">GraphViz</option>
+                        <option value="mermaid">Mermaid</option>
+                        <option selected value="plantuml">PlantUML</option>
+                        <option value="svgbob">Svgbob</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="columns try-columns">
+                <div class="column">
+                    <div class="field">
+                        <div class="control">
+                            <textarea id="diagram-source" class="textarea code" placeholder="User -> Kroki: Hello" rows="25">skinparam monochrome true
+skinparam ranksep 20
+skinparam dpi 150
+skinparam arrowThickness 0.7
+skinparam packageTitleAlignment left
+skinparam usecaseBorderThickness 0.4
+skinparam defaultFontSize 12
+skinparam rectangleBorderThickness 1
+
+rectangle "Main" {
+  (main.view)
+  (singleton)
+}
+rectangle "Base" {
+  (base.component)
+  (component)
+  (model)
+}
+rectangle "<b>main.ts</b>" as main_ts
+
+(component) ..> (base.component)
+main_ts ==> (main.view)
+(main.view) --> (component)
+(main.view) ...> (singleton)
+(singleton) ---> (model)</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="diagram-result" class="diagram-plantuml">
+                        <svg xmlns="http://www.w3.org/2000/svg" contentscripttype="application/ecmascript" contentstyletype="text/css" height="492.1875px"
+                             preserveAspectRatio="none" style="width:340px;height:492px;" version="1.1" viewBox="0 0 340 492" width="340.625px" zoomAndPan="magnify">
+                            <defs>
+                                <filter height="300%" id="f1dwx3iaec31et" width="300%" x="-1" y="-1">
+                                    <feGaussianBlur result="blurOut" stdDeviation="3.125"></feGaussianBlur>
+                                    <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"></feColorMatrix>
+                                    <feOffset dx="6.25" dy="6.25" in="blurOut2" result="blurOut3"></feOffset>
+                                    <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"></feBlend>
+                                </filter>
+                            </defs>
+                            <g><!--cluster Main-->
+                                <rect fill="#FFFFFF" filter="url(#f1dwx3iaec31et)" height="196.875" style="stroke: #000000; stroke-width: 1.5625;" width="153.125" x="21.875"
+                                      y="78.125"></rect>
+                                <text fill="#000000" font-family="sans-serif" font-size="18.75" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="42.1875" x="26.5625"
+                                      y="100.0001">Main
+                                </text><!--cluster Base-->
+                                <rect fill="#FFFFFF" filter="url(#f1dwx3iaec31et)" height="167.1875" style="stroke: #000000; stroke-width: 1.5625;" width="293.75" x="29.6875"
+                                      y="307.8125"></rect>
+                                <text fill="#000000" font-family="sans-serif" font-size="18.75" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="45.3125" x="34.375"
+                                      y="329.6876">Base
+                                </text>
+                                <ellipse cx="98.401" cy="137.785" fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" rx="63.2448" ry="20.5975"
+                                         style="stroke: #383838; stroke-width: 0.625;"></ellipse>
+                                <text fill="#000000" font-family="sans-serif" font-size="18.75" lengthAdjust="spacingAndGlyphs" textLength="82.8125" x="56.9948" y="143.5663">
+                                    main.view
+                                </text>
+                                <ellipse cx="93.792" cy="242.4725" fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" rx="55.5108" ry="20.5975"
+                                         style="stroke: #383838; stroke-width: 0.625;"></ellipse>
+                                <text fill="#000000" font-family="sans-serif" font-size="18.75" lengthAdjust="spacingAndGlyphs" textLength="71.875" x="57.8545" y="248.2538">
+                                    singleton
+                                </text>
+                                <ellipse cx="219.0594" cy="440.8431" fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" rx="91.7156" ry="22.0931"
+                                         style="stroke: #383838; stroke-width: 0.625;"></ellipse>
+                                <text fill="#000000" font-family="sans-serif" font-size="18.75" lengthAdjust="spacingAndGlyphs" textLength="132.8125" x="152.6531" y="446.6245">
+                                    base.component
+                                </text>
+                                <ellipse cx="243.9031" cy="367.4725" fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" rx="66.5593" ry="20.5975"
+                                         style="stroke: #383838; stroke-width: 0.625;"></ellipse>
+                                <text fill="#000000" font-family="sans-serif" font-size="18.75" lengthAdjust="spacingAndGlyphs" textLength="87.5" x="200.1531" y="373.2538">
+                                    component
+                                </text>
+                                <ellipse cx="83.0116" cy="367.4725" fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" rx="40.0428" ry="20.5975"
+                                         style="stroke: #383838; stroke-width: 0.625;"></ellipse>
+                                <text fill="#000000" font-family="sans-serif" font-size="18.75" lengthAdjust="spacingAndGlyphs" textLength="50" x="58.0116" y="373.2538">model
+                                </text><!--entity main_ts-->
+                                <rect fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" height="53.7502" style="stroke: #000000; stroke-width: 1.5625;" width="96.875" x="50"
+                                      y="12.5"></rect>
+                                <text fill="#000000" font-family="sans-serif" font-size="18.75" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="65.625" x="65.625"
+                                      y="46.8751">main.ts
+                                </text><!--link component to base.component-->
+                                <path d="M236.7861,387.6439 C234.3155,394.9013 231.4834,403.2208 228.8067,411.0833 " fill="none" id="component-base.component"
+                                      style="stroke: #383838; stroke-width: 1.09375; stroke-dasharray: 7.0,7.0;"></path>
+                                <polygon fill="#383838" points="226.2011,418.7373,236.6497,407.4394,228.7189,411.3417,224.8166,403.4109,226.2011,418.7373"
+                                         style="stroke: #383838; stroke-width: 1.5625;"></polygon><!--link main_ts to main.view-->
+                                <path d="M98.4375,65.9609 C98.4375,79.1605 98.4375,95.077 98.4375,108.5425 " fill="none" id="main_ts-main.view"
+                                      style="stroke: #383838; stroke-width: 3.125;"></path>
+                                <polygon fill="#383838" points="98.4375,116.5637,104.6875,102.5012,98.4375,108.7512,92.1875,102.5012,98.4375,116.5637"
+                                         style="stroke: #383838; stroke-width: 1.5625;"></polygon><!--link main.view to component-->
+                                <path d="M119.642,156.7719 C136.5806,172.9598 160.1238,197.3244 176.5625,221.875 C201.8642,259.662 222.2691,308.5056 233.7009,338.8372 " fill="none"
+                                      id="main.view-component" style="stroke: #383838; stroke-width: 1.09375;"></path>
+                                <polygon fill="#383838" points="236.6841,346.8767,237.6516,331.5183,233.9662,339.5522,225.9323,335.8669,236.6841,346.8767"
+                                         style="stroke: #383838; stroke-width: 1.5625;"></polygon><!--link main.view to singleton-->
+                                <path d="M97.5114,158.1828 C96.8052,173.9552 95.8239,195.8706 95.0406,213.3623 " fill="none" id="main.view-singleton"
+                                      style="stroke: #383838; stroke-width: 1.09375; stroke-dasharray: 7.0,7.0;"></path>
+                                <polygon fill="#383838" points="94.6742,221.5477,101.5475,207.7791,95.024,213.743,89.0601,207.2194,94.6742,221.5477"
+                                         style="stroke: #383838; stroke-width: 1.5625;"></polygon><!--link singleton to model-->
+                                <path d="M91.9439,262.8288 C90.1391,283.4561 87.3491,315.3414 85.3278,338.4402 " fill="none" id="singleton-model"
+                                      style="stroke: #383838; stroke-width: 1.09375;"></path>
+                                <polygon fill="#383838" points="84.6213,346.5156,92.0733,333.0515,85.3023,338.7329,79.6209,331.9618,84.6213,346.5156"
+                                         style="stroke: #383838; stroke-width: 1.5625;"></polygon>
+                            </g>
+                        </svg>
+                    </div>
+                    <article id="diagram-error" class="message is-danger is-invisible">
+                        <div id="diagram-error-message" class="message-body">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="examples" class="title is-2">Examples</h2>
         <div class="content">
             <p>Looking for inspiration? Visit the <a href="./examples.html">examples</a> page.</p>
         </div>
-        <h2 class="title is-2">Support</h2>
+
+        <h2 id="support" class="title is-2">Support</h2>
         <div class="content">
             <p>The following diagram types and output formats are available:</p>
             <div class="table-container">
@@ -408,7 +562,7 @@ Person *--1 Location</code></pre>
             <p>You don't see your favorite diagram tool in this list, please let us know <a href="mailto:hello@kroki.io">👋 hello@kroki.io</a>.</p>
         </div>
 
-        <h2 class="title is-2" id="saas">SaaS Features</h2>
+        <h2 id="saas" class="title is-2">SaaS Features</h2>
         <div class="content">
             <dl>
                 <dt><strong>Ready to use</strong></dt>
@@ -474,5 +628,7 @@ Person *--1 Location</code></pre>
     </div>
 </footer>
 <script src="js/prism-core.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pako-deflate.min.js"></script>
 </body>
 </html>
