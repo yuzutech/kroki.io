@@ -18,7 +18,6 @@
             </p>
         </div>
 
-
         <aside class="menu">
             <p class="menu-label">
                 Menu
@@ -29,7 +28,7 @@
                 <li><a href="#try">Try</a></li>
                 <li><a href="#examples">Examples</a></li>
                 <li><a href="#support">Support</a></li>
-                <li><a href="#saas">SaaS Features</a></li>
+                <li><a href="#features">Features</a></li>
             </ul>
         </aside>
 
@@ -71,7 +70,7 @@
                             <p>We provide production-grade service with great performance and SLA.</p>
                             <p>
                                 If you want to know more about our SaaS offering, please <a href="mailto:hello@kroki.io">👋 contact us</a>.
-                                You can also take a look at <a href="#saas">what's included</a>.
+                                You can also take a look at <a href="#features">what's included</a>.
                             </p>
                         </div>
                     </div>
@@ -89,6 +88,7 @@
         <h2 id="usage" class="title is-2">Usage</h2>
         <div class="content">
             <p>
+                Kroki provides an HTTP API to convert plain text diagrams to images.
                 Kroki handles both <code>GET</code> and <code>POST</code> requests.
                 When using <code>GET</code> requests, your diagram must be encoded in the URL using a deflate + base64 algorithm.
                 But don't worry, if you're not familiar with deflate or base64 (or if you don't want to use them),
@@ -172,75 +172,15 @@ digraph G {
             <pre><code class="language-json">{
   "diagram_source": "digraph G {Hello->World}"
 }</code></pre>
-        </div>
 
-        <h3 class="title is-3">Command Line Interface (CLI)</h3>
-        <div class="content">
             <p>
-                We provide a convenient CLI to interact with the API but you can use <strong>any HTTP client</strong>.<br/>
-                Below we demonstrate how to send requests to Kroki using <a href="#curl"><em>cURL</em></a> and <a href="#httpie"><em>HTTPie</em></a>.
-            </p>
-            <p>
-                To install Kroki CLI:
+                You can interact with the API using <strong>any HTTP client</strong>.<br/>
+                Please read the documentation to find out how to send requests to the Kroki API using:
             </p>
             <ul>
-                <li><a href="https://github.com/yuzutech/kroki-cli/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer">Download the latest version</a></li>
-                <li>Extract the <code>kroki</code> binary from the archive</li>
-                <li>Open a terminal and type:</li>
+                <li><a href="https://docs.kroki.io/kroki/setup/http-client/" target="_blank" rel="noopener noreferrer"><em>cURL</em> and <em>HTTPie</em></a></li>
+                <li><a href="https://docs.kroki.io/kroki/setup/kroki-cli/" target="_blank" rel="noopener noreferrer">Kroki CLI</a></li>
             </ul>
-            <pre><code class="language-sh">/path/to/kroki version</code></pre>
-            <p>
-                If installation was successful, the command should report the version of Kroki CLI:
-            </p>
-            <pre><code class="language-out">kroki 0.1.0 4afafe2e51df4d02a21661e1d8838a146b5cba66 [https://kroki.io]</code></pre>
-            <article class="message is-info">
-                <div class="message-body">
-                    We recommend to add <code>kroki</code> to your <code>PATH</code> so you can use the command without specifying the path.
-                </div>
-            </article>
-            <p>
-                By default the diagram type will be inferred from the diagram file extension and the default output format will be SVG.<br/>
-                So to convert a PlantUML diagram named <em>diagram.puml</em> to an SVG image, open a terminal and type:
-            </p>
-            <pre><code class="language-sh">kroki convert diagram.puml</code></pre>
-            <p>
-                A file named <em>diagram.svg</em> will be created.
-            </p>
-            <p>
-                If you want to learn more about Kroki CLI, please <a href="https://github.com/yuzutech/kroki-cli/blob/master/README.adoc" target="_blank" rel="noopener noreferrer">read the documentation</a>.
-                You can also run the "help" command: <code>kroki help convert</code>.
-            </p>
-            <article class="message is-warning">
-                <div class="message-body">
-                    By default Kroki CLI will use the demonstration server: <a href="https://demo.kroki.io">https://demo.kroki.io</a> and a timeout of 20 seconds.
-                </div>
-            </article>
-            <p id="curl">
-                Using <a href="https://curl.haxx.se/" target="_blank" rel="noopener noreferrer"><em>cURL</em></a> to interact with the API is straightforward, open a terminal and type:
-            </p>
-            <pre><code class="language-sh">curl https://demo.kroki.io/graphviz/svg --data-raw 'digraph G {Hello->World}'</code></pre>
-            <p id="httpie">
-                Or if you are more familiar with <a href="https://httpie.org/" target="_blank" rel="noopener noreferrer"><em>HTTPie</em></a>, you can send a <code>JSON</code> request:
-            </p>
-            <pre><code class="language-sh">http https://demo.kroki.io/ diagram_type='graphviz' output_format='svg' diagram_source='digraph G {Hello->World}'</code></pre>
-            <p>
-                It's also possible to send a file, for instance an Entity Relationship Diagram named <code>project.erd</code>:
-            </p>
-            <pre><code class="language-plain">[Person]
-*name
-height
-weight
-+birth_location_id
-
-[Location]
-*id
-city
-state
-country
-
-Person *--1 Location</code></pre>
-            <pre><code class="language-sh">curl https://demo.kroki.io/erd/svg --data-binary '@project.erd'</code></pre>
-            <pre><code class="language-sh">cat project.erd | http https://demo.kroki.io/erd/svg Content-Type:text/plain</code></pre>
         </div>
 
         <h2 id="try" class="title is-2">Try</h2>
@@ -561,7 +501,7 @@ main_ts ==> (main.view)
             <p>You don't see your favorite diagram tool in this list, please let us know <a href="mailto:hello@kroki.io">👋 hello@kroki.io</a>.</p>
         </div>
 
-        <h2 id="saas" class="title is-2">SaaS Features</h2>
+        <h2 id="features" class="title is-2">Features</h2>
         <div class="content">
             <dl>
                 <dt><strong>Ready to use</strong></dt>
