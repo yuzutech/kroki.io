@@ -76,6 +76,13 @@
                 Here we are using a Python one-liner to encode our diagram using deflate + base64:
             </p>
             <pre><code class="language-sh">cat hello.dot | python -c "import sys; import base64; import zlib; print(base64.urlsafe_b64encode(zlib.compress(sys.stdin.read(), 9)))"</code></pre>
+
+            <article class="message is-info">
+                <div class="message-body">
+                    In the <a href="https://docs.kroki.io/kroki/setup/encode-diagram/">documentation</a>, we provide code examples that demonstrate how to encode a diagram in Node.js, JavaScript, Java, Python and Go.
+                </div>
+            </article>
+
             <p>
                 The above command will return a value that you can copy in the URL:
             </p>
@@ -540,6 +547,7 @@ main_ts ==> (main.view)
 </footer>
 <script src="js/prism-core.js"></script>
 <script src="js/main.js"></script>
-<script src="js/pako-deflate.min.js"></script>
+<script src="https://unpkg.com/pako@1.0.10/dist/pako_deflate.min.js"></script>
+<!--script src="js/pako-deflate.min.js"></script-->
 </body>
 </html>
