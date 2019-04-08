@@ -8279,6 +8279,10 @@ pre[class*="language-"] {
   max-height: 1rem;
 }
 
+.footer img.vertical-exoscale {
+  max-width: 250px;
+}
+
 .menu {
   padding-bottom: 3rem;
 }
@@ -8288,6 +8292,15 @@ pre[class*="language-"] {
   padding-left: .25em;
   padding-right: .25em;
   margin-left: .25rem;
+}
+
+ul.sponsors {
+  list-style: none;
+  margin: 1em 0 0;
+}
+
+ul.sponsors li img.inline-exoscale {
+  max-width: 250px;
 }
 
 .tag.is-highlight {
