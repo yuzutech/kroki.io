@@ -90,9 +90,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var diagramType = selectDiagramElement.value
     var source = diagramSourceElement.value
     if (diagramType && source && source.trim() !== '') {
-      var url = 'https://demo.kroki.io/' + diagramType + '/svg/' + btoa(pako.deflate(textEncode(source), { level: 9, to: 'string' }))
+      var urlPath = diagramType + '/svg/' + btoa(pako.deflate(textEncode(source), { level: 9, to: 'string' }))
         .replace(/\+/g, '-')
         .replace(/\//g, '_')
+      var url = 'https://kroki.io/' + urlPath
+      diagramUrlPathElement.innerText = urlPath
+      diagramUrlButtonElement.setAttribute('data-clipboard-text', url)
       var req = new XMLHttpRequest()
       req.onreadystatechange = function () {
         if (this.readyState === XMLHttpRequest.DONE) {
@@ -119,6 +122,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var diagramErrorMessageElement = document.getElementById('diagram-error-message')
   var diagramSourceElement = document.getElementById('diagram-source')
   var selectDiagramElement = document.getElementById('select-diagram')
+  var diagramUrlElement = document.getElementById('diagram-url')
+  var diagramUrlPathElement = diagramUrlElement.querySelector("pre > code > span.path")
+  var diagramUrlButtonElement = diagramUrlElement.querySelector("button")
 
   if (diagramSourceElement && diagramResultElement && diagramErrorElement && diagramErrorMessageElement && selectDiagramElement) {
     diagramSourceElement.addEventListener('keyup', convert)
