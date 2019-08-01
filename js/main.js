@@ -278,6 +278,20 @@ document.addEventListener('DOMContentLoaded', function () {
           '  C --> D[ Reporting bugs ]\n' +
           '  C --> E[ Sharing ideas ]\n' +
           '  C --> F[ Advocating ]\n'
+      } else if (diagramType === 'nomnoml') {
+        diagramSourceElement.value = '[Pirate|eyeCount: Int|raid();pillage()|\n' +
+          '  [beard]--[parrot]\n' +
+          '  [beard]-:>[foul mouth]\n' +
+          ']\n' +
+          '\n' +
+          '[<abstract>Marauder]<:--[Pirate]\n' +
+          '[Pirate]- 0..7[mischief]\n' +
+          '[jollyness]->[Pirate]\n' +
+          '[jollyness]->[rum]\n' +
+          '[jollyness]->[singing]\n' +
+          '[Pirate]-> *[rum|tastiness: Int|swig()]\n' +
+          '[Pirate]->[singing]\n' +
+          '[singing]<->[rum]'
       } else if (diagramType === 'graphviz') {
         diagramSourceElement.value = 'digraph D {\n' +
           '  subgraph cluster_p {\n' +
