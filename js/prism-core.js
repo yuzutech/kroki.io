@@ -595,13 +595,14 @@ Prism.languages.plantuml = {
     pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)|@startuml|@enduml/,
     greedy: true
   },
-  'comment': /skinparam.*|title.*|!include.*/,
-  'variable': /LAYOUT_WITH_LEGEND/,
+  'comment': /skinparam.*|!include.*/,
+  'variable': /LAYOUT_WITH_LEGEND|LAYOUT_TOP_DOWN/,
   'number': /\b0x[\dA-Fa-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee][+-]?\d+)?/,
   'punctuation': /[{}[\])(;,]|(\.>)|(--)/,
   'operator': /:/g,
   'boolean': /\b(?:true|false)\b/i,
   'null': /\bnull\b/i,
+  'text': /(?:title)(.*)/,
   'property': /Container_Boundary|ContainerDb|Container|Rel_Back|Rel_Neighbor|Rel|System_Ext|System|Person|Component/
 };
 Prism.languages.http = {
