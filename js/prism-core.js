@@ -590,20 +590,39 @@ Prism.languages.xml = Prism.languages.markup;
 Prism.languages.html = Prism.languages.markup;
 Prism.languages.mathml = Prism.languages.markup;
 Prism.languages.svg = Prism.languages.markup;
-Prism.languages.plantuml = {
+Prism.languages.mermaid = {
   'string': {
-    pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)|@startuml|@enduml/,
+    pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,
     greedy: true
   },
+  'punctuation': /[{}[\])(;,]/,
+  'operator': /[:*+\-><]|participant|Note|right of|loop|end|sequenceDiagram/g,
+};
+Prism.languages.nomnoml = {
+  'punctuation': /[{}[\]|,]/,
+  'operator': /<choice>|<end>|<start>|<abstract>|<state>|<actor>|<usecase>|[:+\-<>]/g
+};
+Prism.languages.plantuml = {
+  'string': {
+    pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,
+    greedy: true
+  },
+  'symbol': /@startuml|@enduml|@startwbs|@endwbs|@startmindmap|@endmindmap/,
   'comment': /skinparam.*|!include.*/,
   'variable': /LAYOUT_WITH_LEGEND|LAYOUT_TOP_DOWN/,
-  'number': /\b0x[\dA-Fa-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee][+-]?\d+)?/,
-  'punctuation': /[{}[\])(;,]|(\.>)|(--)/,
-  'operator': /:/g,
+  'punctuation': /[{}[\])(;,]/,
+  'operator': /[:*+\-]|(\.>)|left to right direction|actor|rectangle/g,
   'boolean': /\b(?:true|false)\b/i,
   'null': /\bnull\b/i,
-  'text': /(?:title)(.*)/,
-  'property': /Container_Boundary|ContainerDb|Container|Rel_Back|Rel_Neighbor|Rel|System_Ext|System|Person|Component/
+  'text': {
+    pattern: /(?:title)(.*)/,
+    inside: {
+      'operator': {
+        pattern: /^title/,
+      }
+    }
+  },
+  'keyword': /System_Boundary|Container_Boundary|ContainerDb|Container|Rel_Back|Rel_Neighbor|Rel|System_Ext|System|Person|Component/
 };
 Prism.languages.http = {
   'verb-post': /^POST/i,
@@ -617,17 +636,19 @@ Prism.languages.erd = {
 Prism.languages.diag = {
   'property': /"(?:\\.|[^\\"\r\n])*"(?=\s*:)/i,
   'string': {
-    pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,
+    pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)|LSX|Interdata|Wollongong|V7M|Xenix/,
     greedy: true
   },
   'number': /\b0x[\dA-Fa-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee][+-]?\d+)?/,
   'punctuation': /[{}[\]);,]/,
-  'operator': /:/g,
+  'attr-value': /polygon|white|filled|salmon[0-9]?|deep|sky|golden|rod[0-9]?|bisque[0-9]?|orangered|crimson|orange[0-9]?|green[0-9]?|light|blue[0-9]?|burlywood[0-9]?|gold[0-9]?|green|yellow[0-9]?|dodger|thistle[0-9]?|dark|olive|blue|steel|turquoise[0-9]?|navy|sea|coral[0-9]?|chocolate|aqua|marine[0-9]?|lemon[0-9]?|chiffon[0-9]?|blanchedalmond|orchid[0-9]?|cyan|cadet|firebrick|mistyrose2|chartreuse4/,
+  'operator': /:|--?>|=|<-?-|node|digraph|graph|^nwdiag|network|lane|^actdiag|^seqdiag|^blockdiag/g,
   'boolean': /\b(?:true|false)\b/i,
   'null': /\bnull\b/i
 };
 Prism.languages.ascii = {
-  'number': /\b0x[\dA-Fa-f]+\b|-|\+|\||v|>|<|\^|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee][+-]?\d+)?/
+  'number': /\b0x[\dA-Fa-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee][+-]?\d+)?/,
+  'punctuation': /[-+|v><^]/,
 };
 Prism.languages.json = {
   'property': /"(?:\\.|[^\\"\r\n])*"(?=\s*:)/i,
