@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function textEncode(str) {
+  function textEncode (str) {
     if (window.TextEncoder) {
       return new TextEncoder('utf-8').encode(str);
     }
@@ -123,201 +123,202 @@ document.addEventListener('DOMContentLoaded', function () {
   var diagramSourceElement = document.getElementById('diagram-source')
   var selectDiagramElement = document.getElementById('select-diagram')
   var diagramUrlElement = document.getElementById('diagram-url')
-  var diagramUrlPathElement = diagramUrlElement.querySelector("pre > code > span.path")
-  var diagramUrlButtonElement = diagramUrlElement.querySelector("button")
-
-  if (diagramSourceElement && diagramResultElement && diagramErrorElement && diagramErrorMessageElement && selectDiagramElement) {
-    diagramSourceElement.addEventListener('keyup', convert)
-    diagramSourceElement.addEventListener('change', convert)
-    selectDiagramElement.addEventListener('change', (_) => {
-      diagramSourceElement.value = ''
-      diagramSourceElement.placeholder = ''
-      let diagramType = selectDiagramElement.value
-      if (diagramType === 'plantuml') {
-        diagramSourceElement.value = 'skinparam monochrome true\n' +
-          'skinparam ranksep 20\n' +
-          'skinparam dpi 150\n' +
-          'skinparam arrowThickness 0.7\n' +
-          'skinparam packageTitleAlignment left\n' +
-          'skinparam usecaseBorderThickness 0.4\n' +
-          'skinparam defaultFontSize 12\n' +
-          'skinparam rectangleBorderThickness 1\n' +
-          '\n' +
-          'rectangle "Main" {\n' +
-          '  (main.view)\n' +
-          '  (singleton)\n' +
-          '}\n' +
-          'rectangle "Base" {\n' +
-          '  (base.component)\n' +
-          '  (component)\n' +
-          '  (model)\n' +
-          '}\n' +
-          'rectangle "<b>main.ts</b>" as main_ts\n' +
-          '\n' +
-          '(component) ..> (base.component)\n' +
-          'main_ts ==> (main.view)\n' +
-          '(main.view) --> (component)\n' +
-          '(main.view) ...> (singleton)\n' +
-          '(singleton) ---> (model)'
-      } else if (diagramType === 'erd') {
-        diagramSourceElement.value = '[Person]\n' +
-          '*name\n' +
-          'height\n' +
-          'weight\n' +
-          '+birth_location_id\n' +
-          '\n' +
-          '[Location]\n' +
-          '*id\n' +
-          'city\n' +
-          'state\n' +
-          'country\n' +
-          '\n' +
-          'Person *--1 Location'
-      } else if (diagramType === 'blockdiag') {
-        diagramSourceElement.value = 'blockdiag {\n' +
-          '  Kroki -> generates -> "Block diagrams";\n' +
-          '  Kroki -> is -> "very easy!";\n' +
-          '\n' +
-          '  Kroki [color = "greenyellow"];\n' +
-          '  "Block diagrams" [color = "pink"];\n' +
-          '  "very easy!" [color = "orange"];\n' +
-          '}'
-      } else if (diagramType === 'seqdiag') {
-        diagramSourceElement.value = 'seqdiag {\n' +
-          '  browser  -> webserver [label = "GET /seqdiag/svg/base64"];\n' +
-          '  webserver  -> processor [label = "Convert text to image"];\n' +
-          '  webserver <-- processor;\n' +
-          '  browser <-- webserver;\n' +
-          '}'
-      } else if (diagramType === 'actdiag') {
-        diagramSourceElement.value = 'actdiag {\n' +
-          '  write -> convert -> image\n' +
-          '\n' +
-          '  lane user {\n' +
-          '    label = "User"\n' +
-          '    write [label = "Writing text"];\n' +
-          '    image [label = "Get diagram image"];\n' +
-          '  }\n' +
-          '  lane Kroki {\n' +
-          '    convert [label = "Convert text to image"];\n' +
-          '  }\n' +
-          '}'
-      } else if (diagramType === 'nwdiag') {
-        diagramSourceElement.value = 'nwdiag {\n' +
-          '  network dmz {\n' +
-          '    address = "210.x.x.x/24"\n' +
-          '\n' +
-          '    web01 [address = "210.x.x.1"];\n' +
-          '    web02 [address = "210.x.x.2"];\n' +
-          '  }\n' +
-          '  network internal {\n' +
-          '    address = "172.x.x.x/24";\n' +
-          '\n' +
-          '    web01 [address = "172.x.x.1"];\n' +
-          '    web02 [address = "172.x.x.2"];\n' +
-          '    db01;\n' +
-          '    db02;\n' +
-          '  }\n' +
-          '}'
-      } else if (diagramType === 'svgbob') {
-        diagramSourceElement.value = '                  .-,(  ),-.\n' +
-          '   ___  _      .-(          )-.\n' +
-          '  [___]|=| -->(                )      __________\n' +
-          '  /::/ |_|     \'-(          ).-\' --->[_...__... ]\n' +
-          '                  \'-.( ).-\'\n' +
-          '                          \\      ____   __\n' +
-          '                           \'--->|    | |==|\n' +
-          '                                |____| |  |\n' +
-          '                                /::::/ |__|'
-      } else if (diagramType === 'c4plantuml') {
-        diagramSourceElement.value = '@startuml\n' +
-          '!include C4_Context.puml\n' +
-          '\n' +
-          'title System Context diagram for Internet Banking System\n' +
-          '\n' +
-          'Person(customer, "Banking Customer", "A customer of the bank, with personal bank accounts.")\n' +
-          'System(banking_system, "Internet Banking System", "Allows customers to check their accounts.")\n' +
-          '\n' +
-          'System_Ext(mail_system, "E-mail system", "The internal Microsoft Exchange e-mail system.")\n' +
-          'System_Ext(mainframe, "Mainframe Banking System", "Stores all of the core banking information.")\n' +
-          '\n' +
-          'Rel(customer, banking_system, "Uses")\n' +
-          'Rel_Back(customer, mail_system, "Sends e-mails to")\n' +
-          'Rel_Neighbor(banking_system, mail_system, "Sends e-mails", "SMTP")\n' +
-          'Rel(banking_system, mainframe, "Uses")\n' +
-          '@enduml'
-      } else if (diagramType === 'ditaa') {
-        diagramSourceElement.value = '      +--------+\n' +
-          '      |        |\n' +
-          '      |  User  |\n' +
-          '      |        |\n' +
-          '      +--------+\n' +
-          '          ^\n' +
-          '  request |\n' +
-          '          v\n' +
-          '  +-------------+\n' +
-          '  |             |\n' +
-          '  |    Kroki    |\n' +
-          '  |             |---+\n' +
-          '  +-------------+   |\n' +
-          '       ^  ^         | inflate\n' +
-          '       |  |         |\n' +
-          '       v  +---------+\n' +
-          '  +-------------+\n' +
-          '  |             |\n' +
-          '  |    Ditaa    |\n' +
-          '  |             |----+\n' +
-          '  +-------------+    |\n' +
-          '             ^       | process\n' +
-          '             |       |\n' +
-          '             +-------+\n'
-      } else if (diagramType === 'mermaid') {
-        diagramSourceElement.value = 'graph TD\n' +
-          '  A[ Anyone ] -->|Can help | B( Go to github.com/yuzutech/kroki )\n' +
-          '  B --> C{ How to contribute? }\n' +
-          '  C --> D[ Reporting bugs ]\n' +
-          '  C --> E[ Sharing ideas ]\n' +
-          '  C --> F[ Advocating ]\n'
-      } else if (diagramType === 'nomnoml') {
-        diagramSourceElement.value = '[Pirate|eyeCount: Int|raid();pillage()|\n' +
-          '  [beard]--[parrot]\n' +
-          '  [beard]-:>[foul mouth]\n' +
-          ']\n' +
-          '\n' +
-          '[<abstract>Marauder]<:--[Pirate]\n' +
-          '[Pirate]- 0..7[mischief]\n' +
-          '[jollyness]->[Pirate]\n' +
-          '[jollyness]->[rum]\n' +
-          '[jollyness]->[singing]\n' +
-          '[Pirate]-> *[rum|tastiness: Int|swig()]\n' +
-          '[Pirate]->[singing]\n' +
-          '[singing]<->[rum]'
-      } else if (diagramType === 'graphviz') {
-        diagramSourceElement.value = 'digraph D {\n' +
-          '  subgraph cluster_p {\n' +
-          '    label = "Kroki";\n' +
-          '    subgraph cluster_c1 {\n' +
-          '      label = "Server";\n' +
-          '      Filebeat;\n' +
-          '      subgraph cluster_gc_1 {\n' +
-          '        label = "Docker/Server";\n' +
-          '        Java;\n' +
-          '      }\n' +
-          '      subgraph cluster_gc_2 {\n' +
-          '        label = "Docker/Mermaid";\n' +
-          '        "Node.js";\n' +
-          '        "Puppeteer";\n' +
-          '        "Chrome";\n' +
-          '      }\n' +
-          '    }\n' +
-          '    subgraph cluster_c2 {\n' +
-          '      label = "CLI";\n' +
-          '      Golang;\n' +
-          '    }\n' +
-          '  }\n' +
-          '}'
-      }
-      convert()
-    })
+  if (diagramUrlElement) {
+    var diagramUrlPathElement = diagramUrlElement.querySelector("pre > code > span.path")
+    var diagramUrlButtonElement = diagramUrlElement.querySelector("button")
+    if (diagramSourceElement && diagramResultElement && diagramErrorElement && diagramErrorMessageElement && selectDiagramElement) {
+      diagramSourceElement.addEventListener('keyup', convert)
+      diagramSourceElement.addEventListener('change', convert)
+      selectDiagramElement.addEventListener('change', (_) => {
+        diagramSourceElement.value = ''
+        diagramSourceElement.placeholder = ''
+        let diagramType = selectDiagramElement.value
+        if (diagramType === 'plantuml') {
+          diagramSourceElement.value = 'skinparam monochrome true\n' +
+            'skinparam ranksep 20\n' +
+            'skinparam dpi 150\n' +
+            'skinparam arrowThickness 0.7\n' +
+            'skinparam packageTitleAlignment left\n' +
+            'skinparam usecaseBorderThickness 0.4\n' +
+            'skinparam defaultFontSize 12\n' +
+            'skinparam rectangleBorderThickness 1\n' +
+            '\n' +
+            'rectangle "Main" {\n' +
+            '  (main.view)\n' +
+            '  (singleton)\n' +
+            '}\n' +
+            'rectangle "Base" {\n' +
+            '  (base.component)\n' +
+            '  (component)\n' +
+            '  (model)\n' +
+            '}\n' +
+            'rectangle "<b>main.ts</b>" as main_ts\n' +
+            '\n' +
+            '(component) ..> (base.component)\n' +
+            'main_ts ==> (main.view)\n' +
+            '(main.view) --> (component)\n' +
+            '(main.view) ...> (singleton)\n' +
+            '(singleton) ---> (model)'
+        } else if (diagramType === 'erd') {
+          diagramSourceElement.value = '[Person]\n' +
+            '*name\n' +
+            'height\n' +
+            'weight\n' +
+            '+birth_location_id\n' +
+            '\n' +
+            '[Location]\n' +
+            '*id\n' +
+            'city\n' +
+            'state\n' +
+            'country\n' +
+            '\n' +
+            'Person *--1 Location'
+        } else if (diagramType === 'blockdiag') {
+          diagramSourceElement.value = 'blockdiag {\n' +
+            '  Kroki -> generates -> "Block diagrams";\n' +
+            '  Kroki -> is -> "very easy!";\n' +
+            '\n' +
+            '  Kroki [color = "greenyellow"];\n' +
+            '  "Block diagrams" [color = "pink"];\n' +
+            '  "very easy!" [color = "orange"];\n' +
+            '}'
+        } else if (diagramType === 'seqdiag') {
+          diagramSourceElement.value = 'seqdiag {\n' +
+            '  browser  -> webserver [label = "GET /seqdiag/svg/base64"];\n' +
+            '  webserver  -> processor [label = "Convert text to image"];\n' +
+            '  webserver <-- processor;\n' +
+            '  browser <-- webserver;\n' +
+            '}'
+        } else if (diagramType === 'actdiag') {
+          diagramSourceElement.value = 'actdiag {\n' +
+            '  write -> convert -> image\n' +
+            '\n' +
+            '  lane user {\n' +
+            '    label = "User"\n' +
+            '    write [label = "Writing text"];\n' +
+            '    image [label = "Get diagram image"];\n' +
+            '  }\n' +
+            '  lane Kroki {\n' +
+            '    convert [label = "Convert text to image"];\n' +
+            '  }\n' +
+            '}'
+        } else if (diagramType === 'nwdiag') {
+          diagramSourceElement.value = 'nwdiag {\n' +
+            '  network dmz {\n' +
+            '    address = "210.x.x.x/24"\n' +
+            '\n' +
+            '    web01 [address = "210.x.x.1"];\n' +
+            '    web02 [address = "210.x.x.2"];\n' +
+            '  }\n' +
+            '  network internal {\n' +
+            '    address = "172.x.x.x/24";\n' +
+            '\n' +
+            '    web01 [address = "172.x.x.1"];\n' +
+            '    web02 [address = "172.x.x.2"];\n' +
+            '    db01;\n' +
+            '    db02;\n' +
+            '  }\n' +
+            '}'
+        } else if (diagramType === 'svgbob') {
+          diagramSourceElement.value = '                  .-,(  ),-.\n' +
+            '   ___  _      .-(          )-.\n' +
+            '  [___]|=| -->(                )      __________\n' +
+            '  /::/ |_|     \'-(          ).-\' --->[_...__... ]\n' +
+            '                  \'-.( ).-\'\n' +
+            '                          \\      ____   __\n' +
+            '                           \'--->|    | |==|\n' +
+            '                                |____| |  |\n' +
+            '                                /::::/ |__|'
+        } else if (diagramType === 'c4plantuml') {
+          diagramSourceElement.value = '@startuml\n' +
+            '!include C4_Context.puml\n' +
+            '\n' +
+            'title System Context diagram for Internet Banking System\n' +
+            '\n' +
+            'Person(customer, "Banking Customer", "A customer of the bank, with personal bank accounts.")\n' +
+            'System(banking_system, "Internet Banking System", "Allows customers to check their accounts.")\n' +
+            '\n' +
+            'System_Ext(mail_system, "E-mail system", "The internal Microsoft Exchange e-mail system.")\n' +
+            'System_Ext(mainframe, "Mainframe Banking System", "Stores all of the core banking information.")\n' +
+            '\n' +
+            'Rel(customer, banking_system, "Uses")\n' +
+            'Rel_Back(customer, mail_system, "Sends e-mails to")\n' +
+            'Rel_Neighbor(banking_system, mail_system, "Sends e-mails", "SMTP")\n' +
+            'Rel(banking_system, mainframe, "Uses")\n' +
+            '@enduml'
+        } else if (diagramType === 'ditaa') {
+          diagramSourceElement.value = '      +--------+\n' +
+            '      |        |\n' +
+            '      |  User  |\n' +
+            '      |        |\n' +
+            '      +--------+\n' +
+            '          ^\n' +
+            '  request |\n' +
+            '          v\n' +
+            '  +-------------+\n' +
+            '  |             |\n' +
+            '  |    Kroki    |\n' +
+            '  |             |---+\n' +
+            '  +-------------+   |\n' +
+            '       ^  ^         | inflate\n' +
+            '       |  |         |\n' +
+            '       v  +---------+\n' +
+            '  +-------------+\n' +
+            '  |             |\n' +
+            '  |    Ditaa    |\n' +
+            '  |             |----+\n' +
+            '  +-------------+    |\n' +
+            '             ^       | process\n' +
+            '             |       |\n' +
+            '             +-------+\n'
+        } else if (diagramType === 'mermaid') {
+          diagramSourceElement.value = 'graph TD\n' +
+            '  A[ Anyone ] -->|Can help | B( Go to github.com/yuzutech/kroki )\n' +
+            '  B --> C{ How to contribute? }\n' +
+            '  C --> D[ Reporting bugs ]\n' +
+            '  C --> E[ Sharing ideas ]\n' +
+            '  C --> F[ Advocating ]\n'
+        } else if (diagramType === 'nomnoml') {
+          diagramSourceElement.value = '[Pirate|eyeCount: Int|raid();pillage()|\n' +
+            '  [beard]--[parrot]\n' +
+            '  [beard]-:>[foul mouth]\n' +
+            ']\n' +
+            '\n' +
+            '[<abstract>Marauder]<:--[Pirate]\n' +
+            '[Pirate]- 0..7[mischief]\n' +
+            '[jollyness]->[Pirate]\n' +
+            '[jollyness]->[rum]\n' +
+            '[jollyness]->[singing]\n' +
+            '[Pirate]-> *[rum|tastiness: Int|swig()]\n' +
+            '[Pirate]->[singing]\n' +
+            '[singing]<->[rum]'
+        } else if (diagramType === 'graphviz') {
+          diagramSourceElement.value = 'digraph D {\n' +
+            '  subgraph cluster_p {\n' +
+            '    label = "Kroki";\n' +
+            '    subgraph cluster_c1 {\n' +
+            '      label = "Server";\n' +
+            '      Filebeat;\n' +
+            '      subgraph cluster_gc_1 {\n' +
+            '        label = "Docker/Server";\n' +
+            '        Java;\n' +
+            '      }\n' +
+            '      subgraph cluster_gc_2 {\n' +
+            '        label = "Docker/Mermaid";\n' +
+            '        "Node.js";\n' +
+            '        "Puppeteer";\n' +
+            '        "Chrome";\n' +
+            '      }\n' +
+            '    }\n' +
+            '    subgraph cluster_c2 {\n' +
+            '      label = "CLI";\n' +
+            '      Golang;\n' +
+            '    }\n' +
+            '  }\n' +
+            '}'
+        }
+        convert()
+      })
+    }
   }
 })
