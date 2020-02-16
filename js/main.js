@@ -101,6 +101,21 @@ document.addEventListener('DOMContentLoaded', function () {
         if (this.readyState === XMLHttpRequest.DONE) {
           if (this.status === 200) {
             diagramResultElement.innerHTML = this.responseText
+            if (diagramType !== 'ditaa') {
+              const svg = diagramResultElement.getElementsByTagName('svg')[0]
+              const height = svg.getAttribute('height')
+              const width = svg.getAttribute('width')
+              svg.setAttribute('height', '100%')
+              svg.setAttribute('width', '100%')
+              let style = 'width:100%;height:100%;'
+              if (height) {
+                style += 'max-height:' + height + ';'
+              }
+              if (width) {
+                style += 'max-width:' + width + ';'
+              }
+              svg.style = style
+            }
             diagramResultElement.className = 'diagram-' + diagramType
           } else {
             diagramResultElement.innerHTML = ''
@@ -219,7 +234,41 @@ document.addEventListener('DOMContentLoaded', function () {
             '    db02;\n' +
             '  }\n' +
             '}'
-        } else if (diagramType === 'svgbob') {
+        } else if (diagramType === 'packetdiag') {
+          diagramSourceElement.value = 'packetdiag {\n' +
+            '  colwidth = 32;\n' +
+            '  node_height = 72;\n' +
+            '\n' +
+            '  0-15: Source Port;\n' +
+            '  16-31: Destination Port;\n' +
+            '  32-63: Sequence Number;\n' +
+            '  64-95: Acknowledgment Number;\n' +
+            '  96-99: Data Offset;\n' +
+            '  100-105: Reserved;\n' +
+            '  106: URG [rotate = 270];\n' +
+            '  107: ACK [rotate = 270];\n' +
+            '  108: PSH [rotate = 270];\n' +
+            '  109: RST [rotate = 270];\n' +
+            '  110: SYN [rotate = 270];\n' +
+            '  111: FIN [rotate = 270];\n' +
+            '  112-127: Window;\n' +
+            '  128-143: Checksum;\n' +
+            '  144-159: Urgent Pointer;\n' +
+            '  160-191: (Options and Padding);\n' +
+            '  192-223: data [colheight = 3];\n' +
+            '}'
+        } else if (diagramType === 'rackdiag') {
+          diagramSourceElement.value = 'rackdiag {\n' +
+            '  16U;\n' +
+            '  1: UPS [2U];\n' +
+            '  3: DB Server;\n' +
+            '  4: Web Server;\n' +
+            '  5: Web Server;\n' +
+            '  6: Web Server;\n' +
+            '  7: Load Balancer;\n' +
+            '  8: L3 Switch;\n' +
+            '}'
+      } else if (diagramType === 'svgbob') {
           diagramSourceElement.value = '                  .-,(  ),-.\n' +
             '   ___  _      .-(          )-.\n' +
             '  [___]|=| -->(                )      __________\n' +

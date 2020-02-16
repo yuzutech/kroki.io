@@ -35,7 +35,7 @@
         <h1 class="subtitle">Creates <strong>diagrams</strong> from <strong>textual</strong> descriptions!</h1>
         <div class="content">
             <p>
-                Kroki provides a unified API with support for BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag), C4 (with PlantUML), Ditaa, Erd, GraphViz, Mermaid, Nomnoml, PlantUML, SvgBob and UMLet... and
+                Kroki provides a unified API with support for BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag, PacketDiag, RackDiag), C4 (with PlantUML), Ditaa, Erd, GraphViz, Mermaid, Nomnoml, PlantUML, SvgBob and UMLet... and
                 more to come!
             </p>
         </div>
@@ -199,6 +199,8 @@ digraph G {
                         <option value="seqdiag">SeqDiag</option>
                         <option value="actdiag">ActDiag</option>
                         <option value="nwdiag">NwDiag</option>
+                        <option value="packetdiag">PacketDiag</option>
+                        <option value="rackdiag">RackDiag</option>
                         <option value="c4plantuml">C4 with PlantUML</option>
                         <option value="ditaa">Ditaa</option>
                         <option value="erd">Erd</option>
@@ -246,8 +248,8 @@ main_ts ==> (main.view)
                 </div>
                 <div class="column">
                     <div id="diagram-result" class="diagram-plantuml">
-                        <svg xmlns="http://www.w3.org/2000/svg" contentscripttype="application/ecmascript" contentstyletype="text/css" height="492.1875px"
-                             preserveAspectRatio="none" style="width:340px;height:492px;" version="1.1" viewBox="0 0 340 492" width="340.625px" zoomAndPan="magnify">
+                        <svg xmlns="http://www.w3.org/2000/svg" contentscripttype="application/ecmascript" contentstyletype="text/css" height="100%"
+                             preserveAspectRatio="none" style="width:100%;height:100%;max-width:340px;max-height:492px;" version="1.1" viewBox="0 0 340 492" width="100%" zoomAndPan="magnify">
                             <defs>
                                 <filter height="300%" id="f1dwx3iaec31et" width="300%" x="-1" y="-1">
                                     <feGaussianBlur result="blurOut" stdDeviation="3.125"></feGaussianBlur>
@@ -382,6 +384,22 @@ main_ts ==> (main.view)
                     </tr>
                     <tr>
                         <td><a href="https://github.com/blockdiag/nwdiag">NwDiag</a></td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td></td>
+                        <td>✔️</td>
+                        <td>️</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/blockdiag/nwdiag">PacketDiag</a></td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td></td>
+                        <td>✔️</td>
+                        <td>️</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/blockdiag/nwdiag">RackDiag</a></td>
                         <td>✔️</td>
                         <td>✔️</td>
                         <td></td>

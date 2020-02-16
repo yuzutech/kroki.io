@@ -639,10 +639,10 @@ Prism.languages.diag = {
     pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)|LSX|Interdata|Wollongong|V7M|Xenix/,
     greedy: true
   },
-  'number': /\b0x[\dA-Fa-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee][+-]?\d+)?/,
+  'operator': /:|--?>|=|<-?-|node |digraph|graph |^nwdiag|network|lane|^actdiag|^seqdiag|^blockdiag|^packetdiag|^rackdiag|[0-9]+-[0-9]+:|[0-9]+:/g,
+  'number': /\b0x[\dA-Fa-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)\b(?:[Ee][+-]?\d+)?/,
   'punctuation': /[{}[\]);,]/,
   'attr-value': /polygon|white|filled|salmon[0-9]?|deep|sky|golden|rod[0-9]?|bisque[0-9]?|orangered|crimson|orange[0-9]?|green[0-9]?|light|blue[0-9]?|burlywood[0-9]?|gold[0-9]?|green|yellow[0-9]?|dodger|thistle[0-9]?|dark|olive|blue|steel|turquoise[0-9]?|navy|sea|coral[0-9]?|chocolate|aqua|marine[0-9]?|lemon[0-9]?|chiffon[0-9]?|blanchedalmond|orchid[0-9]?|cyan|cadet|firebrick|mistyrose2|chartreuse4/,
-  'operator': /:|--?>|=|<-?-|node|digraph|graph|^nwdiag|network|lane|^actdiag|^seqdiag|^blockdiag/g,
   'boolean': /\b(?:true|false)\b/i,
   'null': /\bnull\b/i
 };
