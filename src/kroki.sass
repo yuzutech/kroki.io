@@ -228,3 +228,35 @@ svg:not(:root)
 
 #diagram-url > pre
   overflow-x: scroll
+
+.container > .duo
+  display: flex
+  .lead
+    background-color: #fff
+    overflow: hidden
+    flex-grow: 1
+    flex-shrink: 1
+    margin-left: -3rem
+    padding: 0 3rem 3rem
+  aside.menu
+    display: none
+    +widescreen
+      display: block
+      position: relative
+      padding: 3rem 0 3rem 1.5rem
+      flex: 0 0 calc(14rem + 1.5rem)
+    .anchors.is-pinned
+      display: block
+      max-width: 14rem
+      padding: 1.5rem
+      position: fixed
+      top: 2rem
+      background-color: #fafafa
+
+.anchor-link
+  color: #a9a9a9
+  position: absolute
+  right: calc(100% + 1rem)
+
+hr.menu-divider
+  margin: 0.5rem

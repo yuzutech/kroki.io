@@ -596,4 +596,11 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     }
   }
+
+  var backToTopElement = document.getElementById('back-top');
+  if (backToTopElement) {
+    backToTopElement.onclick = function scrollToTop () {
+      window.scrollTo(0, 0);
+    }
+  }
 })
