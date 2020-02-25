@@ -35,8 +35,9 @@
         <h1 class="subtitle">Creates <strong>diagrams</strong> from <strong>textual</strong> descriptions!</h1>
         <div class="content">
             <p>
-                Kroki provides a unified API with support for BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag, PacketDiag, RackDiag), C4 (with PlantUML), Ditaa, Erd, GraphViz, Mermaid, Nomnoml, PlantUML, SvgBob and UMLet... and
-                more to come!
+                Kroki provides a unified API with support for BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag, PacketDiag, RackDiag),
+                C4 (with PlantUML), Ditaa, Erd, GraphViz, Mermaid, Nomnoml, PlantUML, SvgBob, UMLet, Vega, Vega-Lite...
+                and more to come!
             </p>
         </div>
         <h2 class="title is-2">Examples</h2>
@@ -76,6 +77,13 @@
                 <li><a href="#c4-context">Context diagram <small class="tag is-small is-highlight">PlantUML</small></a></li>
                 <li><a href="#c4-container">Container diagram <small class="tag is-small is-highlight">PlantUML</small></a></li>
                 <li><a href="#c4-component">Component diagram <small class="tag is-small is-highlight">PlantUML</small></a></li>
+            </ul>
+            <p class="menu-label">
+                Visualization
+            </p>
+            <ul class="menu-list">
+                <li><a href="#word-cloud">Word Cloud <small class="tag is-small is-highlight">Vega</small></a></li>
+                <li><a href="#diverging-stacked-bar-chart">Diverging Stacked Bar Chart <small class="tag is-small is-highlight">Vega-Lite</small></a></li>
             </ul>
             <p class="menu-label">
                 Drawing
@@ -1848,6 +1856,1092 @@ Person *--1 Location</code></pre>
                         <path fill="none" stroke="#7f7f7f" stroke-dasharray="5,2" d="M126.0617,-68C149.9644,-68 176.7286,-68 198.8534,-68"/>
                         <text text-anchor="start" x="191.8534" y="-56.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
                         <text text-anchor="start" x="126.0617" y="-56.8" font-family="Times,serif" font-size="14.00" fill="#000000">0..N</text>
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <h3 id="word-cloud" class="title is-3">Word Cloud</h3>
+        <h4 class="subtitle is-4">Vega-Lite</h4>
+        <div class="content">
+            <pre class="diagram-source"><code class="language-json">{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 800,
+  "height": 400,
+  "padding": 0,
+
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        "Declarative visualization grammars can accelerate development, facilitate retargeting across platforms, and allow language-level optimizations. However, existing declarative visualization languages are primarily concerned with visual encoding, and rely on imperative event handlers for interactive behaviors. In response, we introduce a model of declarative interaction design for data visualizations. Adopting methods from reactive programming, we model low-level events as composable data streams from which we form higher-level semantic signals. Signals feed predicates and scale inversions, which allow us to generalize interactive selections at the level of item geometry (pixels) into interactive queries over the data domain. Production rules then use these queries to manipulate the visualization’s appearance. To facilitate reuse and sharing, these constructs can be encapsulated as named interactors: standalone, purely declarative specifications of interaction techniques. We assess our model’s feasibility and expressivity by instantiating it with extensions to the Vega visualization grammar. Through a diverse range of examples, we demonstrate coverage over an established taxonomy of visualization interaction techniques.",
+        "We present Reactive Vega, a system architecture that provides the first robust and comprehensive treatment of declarative visual and interaction design for data visualization. Starting from a single declarative specification, Reactive Vega constructs a dataflow graph in which input data, scene graph elements, and interaction events are all treated as first-class streaming data sources. To support expressive interactive visualizations that may involve time-varying scalar, relational, or hierarchical data, Reactive Vega’s dataflow graph can dynamically re-write itself at runtime by extending or pruning branches in a data-driven fashion. We discuss both compile- and run-time optimizations applied within Reactive Vega, and share the results of benchmark studies that indicate superior interactive performance to both D3 and the original, non-reactive Vega system.",
+        "We present Vega-Lite, a high-level grammar that enables rapid specification of interactive data visualizations. Vega-Lite combines a traditional grammar of graphics, providing visual encoding rules and a composition algebra for layered and multi-view displays, with a novel grammar of interaction. Users specify interactive semantics by composing selections. In Vega-Lite, a selection is an abstraction that defines input event processing, points of interest, and a predicate function for inclusion testing. Selections parameterize visual encodings by serving as input data, defining scale extents, or by driving conditional logic. The Vega-Lite compiler automatically synthesizes requisite data flow and event handling logic, which users can override for further customization. In contrast to existing reactive specifications, Vega-Lite selections decompose an interaction design into concise, enumerable semantic units. We evaluate Vega-Lite through a range of examples, demonstrating succinct specification of both customized interaction methods and common techniques such as panning, zooming, and linked selection."
+      ],
+      "transform": [
+        {
+          "type": "countpattern",
+          "field": "data",
+          "case": "upper",
+          "pattern": "[\\w']{3,}",
+          "stopwords": "(i|me|my|myself|we|us|our|ours|ourselves|you|your|yours|yourself|yourselves|he|him|his|himself|she|her|hers|herself|it|its|itself|they|them|their|theirs|themselves|what|which|who|whom|whose|this|that|these|those|am|is|are|was|were|be|been|being|have|has|had|having|do|does|did|doing|will|would|should|can|could|ought|i'm|you're|he's|she's|it's|we're|they're|i've|you've|we've|they've|i'd|you'd|he'd|she'd|we'd|they'd|i'll|you'll|he'll|she'll|we'll|they'll|isn't|aren't|wasn't|weren't|hasn't|haven't|hadn't|doesn't|don't|didn't|won't|wouldn't|shan't|shouldn't|can't|cannot|couldn't|mustn't|let's|that's|who's|what's|here's|there's|when's|where's|why's|how's|a|an|the|and|but|if|or|because|as|until|while|of|at|by|for|with|about|against|between|into|through|during|before|after|above|below|to|from|up|upon|down|in|out|on|off|over|under|again|further|then|once|here|there|when|where|why|how|all|any|both|each|few|more|most|other|some|such|no|nor|not|only|own|same|so|than|too|very|say|says|said|shall)"
+        },
+        {
+          "type": "formula", "as": "angle",
+          "expr": "[-45, 0, 45][~~(random() * 3)]"
+        },
+        {
+          "type": "formula", "as": "weight",
+          "expr": "if(datum.text=='VEGA', 600, 300)"
+        }
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "table", "field": "text"},
+      "range": ["#d5a928", "#652c90", "#939597"]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "text",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "text": {"field": "text"},
+          "align": {"value": "center"},
+          "baseline": {"value": "alphabetic"},
+          "fill": {"scale": "color", "field": "text"}
+        },
+        "update": {
+          "fillOpacity": {"value": 1}
+        },
+        "hover": {
+          "fillOpacity": {"value": 0.5}
+        }
+      },
+      "transform": [
+        {
+          "type": "wordcloud",
+          "size": [800, 400],
+          "text": {"field": "text"},
+          "rotate": {"field": "datum.angle"},
+          "font": "Helvetica Neue, Arial",
+          "fontSize": {"field": "datum.count"},
+          "fontWeight": {"field": "datum.weight"},
+          "fontSizeRange": [12, 56],
+          "padding": 2
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+            <div class="highlight">
+                <pre><code class="language-http">GET https://kroki.io/vega/svg/eNqlWN2O3LYVvvdTEJMCYxez643tdWMDuTCQoilQtEXSxhfOXnBEzoiNJCokNVrZ2iCvkdfrk_T7DjU_mt0N0haYESXy8PD8fudIn54otfhdLEpb68VbtShTauPb5893dqsvty6V3frS-eeZQGaf764v_xV9s1hxa-9MKrHxi6sreS6t25YJE6-miVYb45otZvDMCaMTT_qAe6U-yRWzja4tz096XVlhLdM7XXU2Hshl7itbVDro5HZW7VzsdOU-4sk3aht0XesQVaEbpYvCVhZ0Vhm7s5Vva9ukldrowlUucT7YpMPWJsgH8uBjVG2l08aHOq6UbozSVeV7Velm2-mtvajISPk2uXo6M16qr32P6bBS9tZF4WUelXDPKSodrGqDg7iuGlThm8KGxhrVw-bTJmWbwtN4WZZgQQgerm7txBznNkmVWIWmUUFw5ZqE1UKW17bUO-cDhPxzg_2xhcB2pXpLsuBNV1ilVe0NtdrM5D7wwYnGRrdthD29N9cJzN8ZmgSK1zaV3kCQ4GucN4nRBi-eEU1wdj4Php3sKVrAIvCbr1sfGQL5oJjApJ749aUrSu6nf1SJOLNh4hARnE1yhaKcuoJI3-YbtbGwaRuscQU8HsWQsdAVFYTTIhVYTayzs7uokldb20B96GhnFo0IKbEJOCWVSqumkNgol2yNbR42CIN62rpbW8Vn3O1nLH7sbHCQxON44SCaGl9r11yqv4tXxOqhq0AGigYyWd7E424whcqu7SoGMtnMnPLvn3-BhG1r4U5E1qX6h58HPjmKLUoEIP2S2SMOYXMIkHNobRmDuo1yjKGLmKjmoBBi6y28BE668g1Cq-0kTE8jKba2cBvaX-xGU53EVrJF2TioBae9h0wxWqSh70IOE1FkY3V0awo_iND2Fh6N0e04sR7AjyIkpyUIXcpJZG-TbcTBtBZN9B3g62HIgIHK4LstgkAZx8CAkZCrluLaW1238IUEr7G12IhmLOhDTSL6EvaykfjlYgkTJX3rG18P5DA_8xH1D6gHjHvPrIFDkN3f7NOI0gMJVBwiQ02HokTMFQkWh3YIR-TZzpkcM2rjQkwq-HWHgUZjbgVb0iRgxsRKBMTzvJ-ghzt-MwQg3QCkYnzJVMiIeybxY2Gwmqt1GndaDtgwFeGctoQYU366pu2SrK6Qw0jQiQA5SU0myD6Veo8ssBCSOyudw1jMcwHpEGwZZQS4BXQQfAXDETkTu7b1IR0jbg4HcyDMXqg1A3LnK1rZ1fZip8NA5oQdjTKBBBF6Xa0UzFk6sKMvsTwpN7ONZMCZSZibZkAqchPSLdiLPiAYEPtAqA2xKXQNT2d6SCKwjvC4Fgu8XRMYkPM0bzb5hQk4Ez7WsRSnIgiNi0UHE609EooR5Cp7katR11zIAbNqSMyp3FTGwPk8eCfEyYgFi3ZVEkRYA2ZK5OEPcEZnBOBoS9dk3KYfgHtn5Q1TLAUEOGa4yPjVSzmE7H1wWydWbnxzEWbxlnPosZQjycVfYE-mGwvNVGYmsMiy2YZ1KgImWmfm0T3DuJ19uGgeDqFd165hcUKEauNycBxOAzPxuisQ4TnH6cCzHmEqF9K0THVUGCHwtxbOltSt9GADEwBUNWzvLnbO9vQy-p6BAEfg1DDYqbpzxL5U_4xsNrLGw1l5zHU4MuwmIRj5h6opjcjMvIc15Si90muC6wSOtLOxGzFOzv7c8cAKBdORhav1rknHsgIInlq3Y9lXm67JHHOHVFRdzOAr_Rrg61jWW-AVSjii7aM9t7GoBeV30jDGGSCJmPs0tznnCEk4EJuYWlwEzh38W_mtK1h47DwWmGOoJl1CS5CmBI9DwwINmRBw9sfORRJLXAksSFU8NoM8StjvW5tOXEbYYKkKqBJiik0XwDYo5DhOO6A5fARB4QaUDiTWoa895NC8pK9O5D9pkAD-EgFsNB6qJdIZsfF17Elt09WgYOt36OaAVCm3BZYvAvTk8aR0KNgPFOpjlRaXdEUBr6f7WZpxbdLezovHvpmdimc9q9bkWTIGWt00Eocfva8PvTo88APYHaxxuZiA5ubwagPhmkj8mr3dfDrckWRo5aWo8ADzVifI1pxAFig2zlaGJPJWNVsqdJTNqGA2zJf2rLD64fvv--XNp5eruzkJLNL2Phi-ey2eurG2Yz3gx_Iy9nbs4ogyyb_cYHpn4zj4jv8gl5iv3DAcSUo7lq7GP3KU1cg5G_iPcuGkS_jFMRe0EVE68FLz4kK-RpmZ-PbAilGCHVfPf81LtCBypMSy9Li4clbXI6ZRisZeYzeAY1zzZxtc4McRr04QC2ulNnzgnPH44TDjDG4407uqGnvfVQZqyIAkGwu5Y3hCi2VN_ZeBSi4jtV1SryVP5Sx14-iWOJCUGLCym1Z2XDGyYMjBCAdDEpMpDAggBSkwYBHXmIderkKF0cVmmagzB6gtg82PZX6k1nk0HKhtHuXqZLL3-QodeYOCnof9RKGna-NTNgWfa2QZx8pSdfqDFij9MvtuKa63spTHHr1qHqbHgTS-x1WPMDLoMJhx3cHIm9EHOK7QHX0bR3Y_FeOhsqPfjHD-ehiRbSMr3KjXHpv0VvPNAdtST78TkMYJVkbT8b0Ia9gEjhskDLftGCNA3BGk7HXHrsXPN7BQTw4jGePRbyARoBaCGO7kUeMEt5QcFGhbROWssKiblaWqVHQE9EPDYSRKjcDectzYfqwpUO0huBduEa-cI-FobDx-YaTZfVMNI0WKmqvUiybzfoRQA2blj2jUjgGFk54tDvl_t_p1PCJq4Y1wsVILLQCh2e3PAYQdswDMxavrlbpaqVfXNx9--ukpUA_vuk-fqd-rl89u_o8z-_yl6cFD3eYpALGrLxPq8JdfLr_745_eLVfq9RXkeHl1darqHpef7J9u8mcqKePx8Q9Vha_8EVYPYgIy2XMeF_KLPZY-7b987b9xnaA3xVwcLLCQgsajF5-Za_3mxRck_uz19YvizZXcvnn55vrNHxb3hGYH_YDMe-HkmMMpDN8H5DqKIW0PNx4dgjkkwmxKTXzJ6RGFhAi97zbbQT7qiQ0ztzndGnUL5dPOSXXVlhqJ6ooz8g0AWEjFYSeeuWfeh0IN1RHa23OFyPRvrS5cGmZifP4wk5KZ_lt5XF1e390Lv7v_pS1gfS4q35mz0o1Ohpv5SZafYW9W_7Wvgk-TVWYdBhIqZ_qZC9ArkuJrVmJ2rOqvtkNL9y64k0w4kH6b5bvHWrqcB1i_339SvrdjgoC7B4_4Zp9En79YqevXN2cd0P6r9Itfg4Ind_8BeFv4-A==</code></pre>
+                <button class="button is-small bd-copy" data-clipboard-text="https://kroki.io/vega/svg/eNqlWN2O3LYVvvdTEJMCYxez643tdWMDuTCQoilQtEXSxhfOXnBEzoiNJCokNVrZ2iCvkdfrk_T7DjU_mt0N0haYESXy8PD8fudIn54otfhdLEpb68VbtShTauPb5893dqsvty6V3frS-eeZQGaf764v_xV9s1hxa-9MKrHxi6sreS6t25YJE6-miVYb45otZvDMCaMTT_qAe6U-yRWzja4tz096XVlhLdM7XXU2Hshl7itbVDro5HZW7VzsdOU-4sk3aht0XesQVaEbpYvCVhZ0Vhm7s5Vva9ukldrowlUucT7YpMPWJsgH8uBjVG2l08aHOq6UbozSVeV7Velm2-mtvajISPk2uXo6M16qr32P6bBS9tZF4WUelXDPKSodrGqDg7iuGlThm8KGxhrVw-bTJmWbwtN4WZZgQQgerm7txBznNkmVWIWmUUFw5ZqE1UKW17bUO-cDhPxzg_2xhcB2pXpLsuBNV1ilVe0NtdrM5D7wwYnGRrdthD29N9cJzN8ZmgSK1zaV3kCQ4GucN4nRBi-eEU1wdj4Php3sKVrAIvCbr1sfGQL5oJjApJ749aUrSu6nf1SJOLNh4hARnE1yhaKcuoJI3-YbtbGwaRuscQU8HsWQsdAVFYTTIhVYTayzs7uokldb20B96GhnFo0IKbEJOCWVSqumkNgol2yNbR42CIN62rpbW8Vn3O1nLH7sbHCQxON44SCaGl9r11yqv4tXxOqhq0AGigYyWd7E424whcqu7SoGMtnMnPLvn3-BhG1r4U5E1qX6h58HPjmKLUoEIP2S2SMOYXMIkHNobRmDuo1yjKGLmKjmoBBi6y28BE668g1Cq-0kTE8jKba2cBvaX-xGU53EVrJF2TioBae9h0wxWqSh70IOE1FkY3V0awo_iND2Fh6N0e04sR7AjyIkpyUIXcpJZG-TbcTBtBZN9B3g62HIgIHK4LstgkAZx8CAkZCrluLaW1238IUEr7G12IhmLOhDTSL6EvaykfjlYgkTJX3rG18P5DA_8xH1D6gHjHvPrIFDkN3f7NOI0gMJVBwiQ02HokTMFQkWh3YIR-TZzpkcM2rjQkwq-HWHgUZjbgVb0iRgxsRKBMTzvJ-ghzt-MwQg3QCkYnzJVMiIeybxY2Gwmqt1GndaDtgwFeGctoQYU366pu2SrK6Qw0jQiQA5SU0myD6Veo8ssBCSOyudw1jMcwHpEGwZZQS4BXQQfAXDETkTu7b1IR0jbg4HcyDMXqg1A3LnK1rZ1fZip8NA5oQdjTKBBBF6Xa0UzFk6sKMvsTwpN7ONZMCZSZibZkAqchPSLdiLPiAYEPtAqA2xKXQNT2d6SCKwjvC4Fgu8XRMYkPM0bzb5hQk4Ez7WsRSnIgiNi0UHE609EooR5Cp7katR11zIAbNqSMyp3FTGwPk8eCfEyYgFi3ZVEkRYA2ZK5OEPcEZnBOBoS9dk3KYfgHtn5Q1TLAUEOGa4yPjVSzmE7H1wWydWbnxzEWbxlnPosZQjycVfYE-mGwvNVGYmsMiy2YZ1KgImWmfm0T3DuJ19uGgeDqFd165hcUKEauNycBxOAzPxuisQ4TnH6cCzHmEqF9K0THVUGCHwtxbOltSt9GADEwBUNWzvLnbO9vQy-p6BAEfg1DDYqbpzxL5U_4xsNrLGw1l5zHU4MuwmIRj5h6opjcjMvIc15Si90muC6wSOtLOxGzFOzv7c8cAKBdORhav1rknHsgIInlq3Y9lXm67JHHOHVFRdzOAr_Rrg61jWW-AVSjii7aM9t7GoBeV30jDGGSCJmPs0tznnCEk4EJuYWlwEzh38W_mtK1h47DwWmGOoJl1CS5CmBI9DwwINmRBw9sfORRJLXAksSFU8NoM8StjvW5tOXEbYYKkKqBJiik0XwDYo5DhOO6A5fARB4QaUDiTWoa895NC8pK9O5D9pkAD-EgFsNB6qJdIZsfF17Elt09WgYOt36OaAVCm3BZYvAvTk8aR0KNgPFOpjlRaXdEUBr6f7WZpxbdLezovHvpmdimc9q9bkWTIGWt00Eocfva8PvTo88APYHaxxuZiA5ubwagPhmkj8mr3dfDrckWRo5aWo8ADzVifI1pxAFig2zlaGJPJWNVsqdJTNqGA2zJf2rLD64fvv--XNp5eruzkJLNL2Phi-ey2eurG2Yz3gx_Iy9nbs4ogyyb_cYHpn4zj4jv8gl5iv3DAcSUo7lq7GP3KU1cg5G_iPcuGkS_jFMRe0EVE68FLz4kK-RpmZ-PbAilGCHVfPf81LtCBypMSy9Li4clbXI6ZRisZeYzeAY1zzZxtc4McRr04QC2ulNnzgnPH44TDjDG4407uqGnvfVQZqyIAkGwu5Y3hCi2VN_ZeBSi4jtV1SryVP5Sx14-iWOJCUGLCym1Z2XDGyYMjBCAdDEpMpDAggBSkwYBHXmIderkKF0cVmmagzB6gtg82PZX6k1nk0HKhtHuXqZLL3-QodeYOCnof9RKGna-NTNgWfa2QZx8pSdfqDFij9MvtuKa63spTHHr1qHqbHgTS-x1WPMDLoMJhx3cHIm9EHOK7QHX0bR3Y_FeOhsqPfjHD-ehiRbSMr3KjXHpv0VvPNAdtST78TkMYJVkbT8b0Ia9gEjhskDLftGCNA3BGk7HXHrsXPN7BQTw4jGePRbyARoBaCGO7kUeMEt5QcFGhbROWssKiblaWqVHQE9EPDYSRKjcDectzYfqwpUO0huBduEa-cI-FobDx-YaTZfVMNI0WKmqvUiybzfoRQA2blj2jUjgGFk54tDvl_t_p1PCJq4Y1wsVILLQCh2e3PAYQdswDMxavrlbpaqVfXNx9--ukpUA_vuk-fqd-rl89u_o8z-_yl6cFD3eYpALGrLxPq8JdfLr_745_eLVfq9RXkeHl1darqHpef7J9u8mcqKePx8Q9Vha_8EVYPYgIy2XMeF_KLPZY-7b987b9xnaA3xVwcLLCQgsajF5-Za_3mxRck_uz19YvizZXcvnn55vrNHxb3hGYH_YDMe-HkmMMpDN8H5DqKIW0PNx4dgjkkwmxKTXzJ6RGFhAi97zbbQT7qiQ0ztzndGnUL5dPOSXXVlhqJ6ooz8g0AWEjFYSeeuWfeh0IN1RHa23OFyPRvrS5cGmZifP4wk5KZ_lt5XF1e390Lv7v_pS1gfS4q35mz0o1Ohpv5SZafYW9W_7Wvgk-TVWYdBhIqZ_qZC9ArkuJrVmJ2rOqvtkNL9y64k0w4kH6b5bvHWrqcB1i_339SvrdjgoC7B4_4Zp9En79YqevXN2cd0P6r9Itfg4Ind_8BeFv4-A==" title="Copy to clipboard">
+                    <svg fill="currentColor" viewBox="0 0 896 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>
+                    </svg> Copy
+                </button>
+            </div>
+            <svg class="kroki-output marks" xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" version="1.1">
+                <g transform="translate(0,0)">
+                    <g class="mark-group role-frame root">
+                        <g transform="translate(0,0)">
+                            <path class="background" d="M0,0h800v400h-800Z" style="fill: none;"/>
+                            <g>
+                                <g class="mark-text role-mark">
+                                    <text text-anchor="middle" transform="translate(162,117) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 37px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        DECLARATIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        VISUALIZATION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        GRAMMARS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        ACCELERATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        DEVELOPMENT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(689,304) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        FACILITATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        RETARGETING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(34,265) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">ACROSS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(85,358) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        PLATFORMS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(145,314) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">ALLOW
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        LANGUAGE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(297,150)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 34px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">LEVEL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(587,89)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        OPTIMIZATIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(652,323) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">HOWEVER
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(576,115)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        EXISTING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(582,333)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        LANGUAGES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(473,51) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        PRIMARILY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(395,383)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        CONCERNED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(264,311) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 29px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">VISUAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(458,213) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        ENCODING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(397,272) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">RELY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        IMPERATIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(533,280) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 25px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">EVENT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(49,71) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        HANDLERS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(629,157)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 41px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        INTERACTIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        BEHAVIORS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        RESPONSE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        INTRODUCE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(235,269) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 25px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">MODEL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(413,168) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 44px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        INTERACTION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(159,212) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 25px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">DESIGN
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(275,118)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 53px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">DATA
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(674,250) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 25px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        VISUALIZATIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(371,366)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        ADOPTING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(689,181)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">METHODS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(415,218) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 41px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        REACTIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(299,388)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        PROGRAMMING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(391,93) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">LOW
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(97,255) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">EVENTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(659,383)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        COMPOSABLE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">STREAMS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(197,370)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">FORM
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">HIGHER
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(574,60)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        SEMANTIC
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(607,240) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">SIGNALS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(501,214) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">FEED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(469,331) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        PREDICATES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(330,193) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">SCALE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(465,358) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        INVERSIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(696,195)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        GENERALIZE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(533,240) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 29px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        SELECTIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(277,174) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">ITEM
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(698,68) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        GEOMETRY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(443,363) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">PIXELS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(65,125)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">QUERIES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(531,36)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">DOMAIN
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(711,239) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        PRODUCTION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(369,109) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">RULES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(511,190) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">USE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(49,330) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        MANIPULATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(752,353) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        APPEARANCE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(471,221) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">REUSE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(628,229) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">SHARING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(382,40)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        CONSTRUCTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        ENCAPSULATED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(501,115)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">NAMED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(242,289) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        INTERACTORS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(744,235) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        STANDALONE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(586,369) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">PURELY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(103,313) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        SPECIFICATIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(336,348)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 25px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        TECHNIQUES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(149,153) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">ASSESS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(751,46) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        FEASIBILITY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(50,355) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        EXPRESSIVITY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(52,173) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        INSTANTIATING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(652,365)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        EXTENSIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(221,196) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 56px; font-style: normal; font-weight: 600; fill: #652c90; fill-opacity: 1;">VEGA
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(359,317)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 29px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">GRAMMAR
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(106,194) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">DIVERSE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(117,64) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">RANGE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(599,290)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        EXAMPLES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(319,17)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        DEMONSTRATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        COVERAGE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        ESTABLISHED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        TAXONOMY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(505,340) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">PRESENT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(260,369)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">SYSTEM
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(707,121)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        ARCHITECTURE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        PROVIDES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(551,313)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">FIRST
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(39,86) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">ROBUST
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(478,12)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        COMPREHENSIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(198,389)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        TREATMENT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        STARTING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(686,28) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">SINGLE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(334,69)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 25px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        SPECIFICATION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(664,66) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        DATAFLOW
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(88,81) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 25px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">GRAPH
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(152,281) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 25px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">INPUT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(539,171)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">SCENE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        ELEMENTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(615,308)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">TREATED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(526,387)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">CLASS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(579,17)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        STREAMING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">SOURCES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(157,40)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">SUPPORT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(113,386)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        EXPRESSIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(361,134)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">MAY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(766,190) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">INVOLVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(449,276) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">TIME
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">VARYING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(768,72) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">SCALAR
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        RELATIONAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        HIERARCHICAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        DYNAMICALLY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">WRITE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">RUNTIME
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(50,22)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        EXTENDING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">PRUNING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        BRANCHES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(762,215) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">DRIVEN
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(747,108)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">FASHION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">DISCUSS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">COMPILE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(650,20) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">RUN
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(695,335) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">APPLIED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">WITHIN
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">SHARE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">RESULTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        BENCHMARK
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">STUDIES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        INDICATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        SUPERIOR
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        PERFORMANCE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        ORIGINAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(113,215) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">NON
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(196,233) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 37px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">LITE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(423,85)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">HIGH
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">ENABLES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(41,155) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">RAPID
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        COMBINES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        TRADITIONAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        GRAPHICS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        PROVIDING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        COMPOSITION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">ALGEBRA
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">LAYERED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(583,35)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">MULTI
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(122,356) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">VIEW
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        DISPLAYS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(712,29) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">NOVEL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(151,182) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">USERS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">SPECIFY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        SEMANTICS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        COMPOSING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(152,22)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        SELECTION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        ABSTRACTION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">DEFINES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        PROCESSING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">POINTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        INTEREST
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        PREDICATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        FUNCTION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        INCLUSION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">TESTING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        PARAMETERIZE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        ENCODINGS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">SERVING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        DEFINING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">EXTENTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">DRIVING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        CONDITIONAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(217,244) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">LOGIC
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        COMPILER
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        AUTOMATICALLY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        SYNTHESIZES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        REQUISITE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(768,293)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">FLOW
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        HANDLING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        OVERRIDE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        CUSTOMIZATION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        CONTRAST
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        DECOMPOSE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">CONCISE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        ENUMERABLE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(191,341) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">UNITS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        EVALUATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">
+                                        DEMONSTRATING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">
+                                        SUCCINCT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">
+                                        CUSTOMIZED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">COMMON
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #939597; fill-opacity: 1;">PANNING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #d5a928; fill-opacity: 1;">ZOOMING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0px; fill: #652c90; fill-opacity: 1;">LINKED
+                                    </text>
+                                </g>
+                            </g>
+                            <path class="foreground" d="" style="display: none; fill: none;"/>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <h3 id="diverging-stacked-bar-chart" class="title is-3">Diverging Stacked Bar Chart</h3>
+        <h4 class="subtitle is-4">Vega-Lite</h4>
+        <div class="content">
+            <pre class="diagram-source"><code class="language-json">{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A diverging stacked bar chart for sentiments towards a set of eight questions, displayed as percentages with neutral responses straddling the 0% mark",
+  "data": {
+    "values": [
+      {"question": "Question 1", "type": "Strongly disagree", "value": 24, "percentage": 0.7},
+      {"question": "Question 1", "type": "Disagree", "value": 294, "percentage": 9.1},
+      {"question": "Question 1", "type": "Neither agree nor disagree", "value": 594, "percentage": 18.5},
+      {"question": "Question 1", "type": "Agree", "value": 1927, "percentage": 59.9},
+      {"question": "Question 1", "type": "Strongly agree", "value": 376, "percentage": 11.7},
+      {"question": "Question 2", "type": "Strongly disagree", "value": 2, "percentage": 18.2},
+      {"question": "Question 2", "type": "Disagree", "value": 2, "percentage": 18.2},
+      {"question": "Question 2", "type": "Neither agree nor disagree", "value": 0, "percentage": 0},
+      {"question": "Question 2", "type": "Agree", "value": 7, "percentage": 63.6},
+      {"question": "Question 2", "type": "Strongly agree", "value": 11, "percentage": 0},
+      {"question": "Question 3", "type": "Strongly disagree", "value": 2, "percentage": 20},
+      {"question": "Question 3", "type": "Disagree", "value": 0, "percentage": 0},
+      {"question": "Question 3", "type": "Neither agree nor disagree", "value": 2, "percentage": 20},
+      {"question": "Question 3", "type": "Agree", "value": 4, "percentage": 40},
+      {"question": "Question 3", "type": "Strongly agree", "value": 2, "percentage": 20},
+      {"question": "Question 4", "type": "Strongly disagree", "value": 0, "percentage": 0},
+      {"question": "Question 4", "type": "Disagree", "value": 2, "percentage": 12.5},
+      {"question": "Question 4", "type": "Neither agree nor disagree", "value": 1, "percentage": 6.3},
+      {"question": "Question 4", "type": "Agree", "value": 7, "percentage": 43.8},
+      {"question": "Question 4", "type": "Strongly agree", "value": 6, "percentage": 37.5},
+      {"question": "Question 5", "type": "Strongly disagree", "value": 0, "percentage": 0},
+      {"question": "Question 5", "type": "Disagree", "value": 1, "percentage": 4.2},
+      {"question": "Question 5", "type": "Neither agree nor disagree", "value": 3, "percentage": 12.5},
+      {"question": "Question 5", "type": "Agree", "value": 16, "percentage": 66.7},
+      {"question": "Question 5", "type": "Strongly agree", "value": 4, "percentage": 16.7},
+      {"question": "Question 6", "type": "Strongly disagree", "value": 1, "percentage": 6.3},
+      {"question": "Question 6", "type": "Disagree", "value": 1, "percentage": 6.3},
+      {"question": "Question 6", "type": "Neither agree nor disagree", "value": 2, "percentage": 12.5},
+      {"question": "Question 6", "type": "Agree", "value": 9, "percentage": 56.3},
+      {"question": "Question 6", "type": "Strongly agree", "value": 3, "percentage": 18.8},
+      {"question": "Question 7", "type": "Strongly disagree", "value": 0, "percentage": 0},
+      {"question": "Question 7", "type": "Disagree", "value": 0, "percentage": 0},
+      {"question": "Question 7", "type": "Neither agree nor disagree", "value": 1, "percentage": 20},
+      {"question": "Question 7", "type": "Agree", "value": 4, "percentage": 80},
+      {"question": "Question 7", "type": "Strongly agree", "value": 0, "percentage": 0},
+      {"question": "Question 8", "type": "Strongly disagree", "value": 0, "percentage": 0},
+      {"question": "Question 8", "type": "Disagree", "value": 0, "percentage": 0},
+      {"question": "Question 8", "type": "Neither agree nor disagree", "value": 0, "percentage": 0},
+      {"question": "Question 8", "type": "Agree", "value": 0, "percentage": 0},
+      {"question": "Question 8", "type": "Strongly agree", "value": 2, "percentage": 100}
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.type === 'Strongly disagree',-2,0) + if(datum.type==='Disagree',-1,0) + if(datum.type =='Neither agree nor disagree',0,0) + if(datum.type ==='Agree',1,0) + if(datum.type ==='Strongly agree',2,0)",
+      "as": "q_order"
+    },
+    {
+      "calculate": "if(datum.type === 'Disagree' || datum.type === 'Strongly disagree', datum.percentage,0) + if(datum.type === 'Neither agree nor disagree', datum.percentage / 2,0)",
+      "as": "signed_percentage"
+    },
+    {"stack": "percentage", "as": ["v1", "v2"], "groupby": ["question"]},
+    {
+      "joinaggregate": [
+        {
+          "field": "signed_percentage",
+          "op": "sum",
+          "as": "offset"
+        }
+      ],
+      "groupby": ["question"]
+    },
+    {"calculate": "datum.v1 - datum.offset", "as": "nx"},
+    {"calculate": "datum.v2 - datum.offset", "as": "nx2"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "nx",
+      "type": "quantitative",
+      "axis": {
+        "title": "Percentage"
+      }
+    },
+    "x2": {"field": "nx2"},
+    "y": {
+      "field": "question",
+      "type": "nominal",
+      "axis": {
+        "title": "Question",
+        "offset": 5,
+        "ticks": false,
+        "minExtent": 60,
+        "domain": false
+      }
+    },
+    "color": {
+      "field": "type",
+      "type": "nominal",
+      "legend": {
+        "title": "Response"
+      },
+      "scale": {
+        "domain": ["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"],
+        "range": ["#c30d24", "#f3a583", "#cccccc", "#94c6da", "#1770ab"],
+        "type": "ordinal"
+      }
+    }
+  }
+}
+</code></pre>
+            <div class="highlight">
+                <pre><code class="language-http">GET https://kroki.io/vegalite/svg/eNq9WE1v4zYQve-vGDAt3KKKrG_bC-QQIL0W3fYYGAtaomVuZMkRaW-MbP77jmhZlk3FklynOTgUOZx58x7FIfX6CYD8IsIFW1LyGchCypX4PBxuWEzNmMvFembybLgzUL23CZdsuPHMbyJLiVHMj5gIc76SHDvQxz1EfMPymKcxCEnDJxbBjOYQLmguYZ7lIFgq-RJ_BMjsO80jARQ7JWRzYDxeSHheM1H4EwY6E6uEbtEJFbBieYjzaMwEfEd4kLK1zGkCORMrNMdugc9RlBTR5YKB9Sssaf5UIqWySPMV2_i0oQmGwedH9QzwSvZxizy-lG2wiQFEbles6P1X5lkaJ9sCF41zxopB5QlHHQ8fDhixxzJHb0YP9w9NXiea24lp93L7F0OyWA7KN6SoQRN8Xw9kj02_V6T7U6f2xBmdevUn5qSX14p1DbM7CjTMdjvpTndNGyhxerl_-BCv3SS1tAXZK4impiZl4JrBZWRrWG27N1j3chmdfs4frkKu21_B_wpck1B7x70Lab4GVK-zgP3J9vq_hE77buf1l1Bb14Hp9grT_hp6rjm-jGsNrbafuqN2VvwP1NFv01Hj12vfS_3-MrqXLBf_fHHUyA6C9uLldxNSL-YdfAedhbxkVQe9pezr9MJNtYuUwVkpJ9ohpy_0M4echtNC6-s--sBXcnT90ji6wr7q9IvSXhrH1mUsX4GP8QfKN76-fOP_42w6PqvetTjusFtY1pvyPMVfFYTgrTMVeLldVvfJ1zI2CWkSrhMqVRQ-_w1voeulWYSFu7s7GGjiDoxbx7B-hz_gyBqNBw8HE7vBBB0O3id_YFjNc-4G97tx-73xY3IGRoGP7NkltLhFk-evWR6xnKjekvrOJFSJwY8f0IGh0uYgyzvI4SwfmhcYQlNqgscpi77WFsFRkkR95ygMaxZGOfmRbNRdduOQKf6L82y9mm3VQLUop6d0fct4SmMEGe8o23-iOJgoszlnSdQM0KjbZStltF4ed--Sy-ZzwSSpBt7K1rQioRnzMQVHAu9o3dhwWzJcxthzQtIXcnamc2amQwqECh1R33awd0bz3SceloZZxNP48JnnpWrWCUMAVXr7HeB5TVPJJZV8w2or4IWLmovCnstETfj7ZD3suStTIwgVJ9aDOvu0ybYRVsWuBi7Nlrgkkk64vpx6gUplPJcY9RnhU-FkThPBav0Y6s8XiakVJzCrNhBlS8rT_YzGpMMsyfLG5FQq7YklLGZp9E5q_5Qf-irCq2kC1xE7nlWhfWyuoPXSd75mVcXmpEpMa9xgBVDV4ZHchK4VOeq-dTN3qT9WF-ibUP2p5sQLg4iqpj0aWXR25GlPDe6nippjnoua8-ntJ7dCWRo=</code></pre>
+                <button class="button is-small bd-copy" data-clipboard-text="https://kroki.io/vegalite/svg/eNq9WE1v4zYQve-vGDAt3KKKrG_bC-QQIL0W3fYYGAtaomVuZMkRaW-MbP77jmhZlk3FklynOTgUOZx58x7FIfX6CYD8IsIFW1LyGchCypX4PBxuWEzNmMvFembybLgzUL23CZdsuPHMbyJLiVHMj5gIc76SHDvQxz1EfMPymKcxCEnDJxbBjOYQLmguYZ7lIFgq-RJ_BMjsO80jARQ7JWRzYDxeSHheM1H4EwY6E6uEbtEJFbBieYjzaMwEfEd4kLK1zGkCORMrNMdugc9RlBTR5YKB9Sssaf5UIqWySPMV2_i0oQmGwedH9QzwSvZxizy-lG2wiQFEbles6P1X5lkaJ9sCF41zxopB5QlHHQ8fDhixxzJHb0YP9w9NXiea24lp93L7F0OyWA7KN6SoQRN8Xw9kj02_V6T7U6f2xBmdevUn5qSX14p1DbM7CjTMdjvpTndNGyhxerl_-BCv3SS1tAXZK4impiZl4JrBZWRrWG27N1j3chmdfs4frkKu21_B_wpck1B7x70Lab4GVK-zgP3J9vq_hE77buf1l1Bb14Hp9grT_hp6rjm-jGsNrbafuqN2VvwP1NFv01Hj12vfS_3-MrqXLBf_fHHUyA6C9uLldxNSL-YdfAedhbxkVQe9pezr9MJNtYuUwVkpJ9ohpy_0M4echtNC6-s--sBXcnT90ji6wr7q9IvSXhrH1mUsX4GP8QfKN76-fOP_42w6PqvetTjusFtY1pvyPMVfFYTgrTMVeLldVvfJ1zI2CWkSrhMqVRQ-_w1voeulWYSFu7s7GGjiDoxbx7B-hz_gyBqNBw8HE7vBBB0O3id_YFjNc-4G97tx-73xY3IGRoGP7NkltLhFk-evWR6xnKjekvrOJFSJwY8f0IGh0uYgyzvI4SwfmhcYQlNqgscpi77WFsFRkkR95ygMaxZGOfmRbNRdduOQKf6L82y9mm3VQLUop6d0fct4SmMEGe8o23-iOJgoszlnSdQM0KjbZStltF4ed--Sy-ZzwSSpBt7K1rQioRnzMQVHAu9o3dhwWzJcxthzQtIXcnamc2amQwqECh1R33awd0bz3SceloZZxNP48JnnpWrWCUMAVXr7HeB5TVPJJZV8w2or4IWLmovCnstETfj7ZD3suStTIwgVJ9aDOvu0ybYRVsWuBi7Nlrgkkk64vpx6gUplPJcY9RnhU-FkThPBav0Y6s8XiakVJzCrNhBlS8rT_YzGpMMsyfLG5FQq7YklLGZp9E5q_5Qf-irCq2kC1xE7nlWhfWyuoPXSd75mVcXmpEpMa9xgBVDV4ZHchK4VOeq-dTN3qT9WF-ibUP2p5sQLg4iqpj0aWXR25GlPDe6nippjnoua8-ntJ7dCWRo=" title="Copy to clipboard">
+                    <svg fill="currentColor" viewBox="0 0 896 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>
+                    </svg> Copy
+                </button>
+            </div>
+            <svg class="kroki-output marks" xmlns="http://www.w3.org/2000/svg" width="437" height="202" viewBox="0 0 437 202" version="1.1">
+                <rect width="437" height="202" style="fill: white;"/>
+                <g transform="translate(85,5)">
+                    <g class="mark-group role-frame root">
+                        <g transform="translate(0,0)">
+                            <path class="background" d="M0.5,0.5h200v160h-200Z" style="fill: none; stroke: #ddd;"/>
+                            <g>
+                                <g class="mark-group role-axis">
+                                    <g transform="translate(0.5,160.5)">
+                                        <path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/>
+                                        <g>
+                                            <g class="mark-rule role-axis-grid" style="pointer-events: none;">
+                                                <line transform="translate(0,0)" x2="0" y2="-160" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(29,0)" x2="0" y2="-160" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(57,0)" x2="0" y2="-160" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(86,0)" x2="0" y2="-160" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(114,0)" x2="0" y2="-160" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(143,0)" x2="0" y2="-160" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(171,0)" x2="0" y2="-160" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(200,0)" x2="0" y2="-160" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/>
+                                            </g>
+                                        </g>
+                                        <path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/>
+                                    </g>
+                                </g>
+                                <g class="mark-group role-axis">
+                                    <g transform="translate(0.5,160.5)">
+                                        <path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/>
+                                        <g>
+                                            <g class="mark-rule role-axis-tick" style="pointer-events: none;">
+                                                <line transform="translate(0,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(29,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(57,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(86,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(114,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(143,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(171,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/>
+                                                <line transform="translate(200,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/>
+                                            </g>
+                                            <g class="mark-text role-axis-label" style="pointer-events: none;">
+                                                <text text-anchor="start" transform="translate(0,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">
+                                                    -40
+                                                </text>
+                                                <text text-anchor="middle" transform="translate(28.57142857142857,15)"
+                                                      style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">-20
+                                                </text>
+                                                <text text-anchor="middle" transform="translate(57.14285714285714,15)"
+                                                      style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">0
+                                                </text>
+                                                <text text-anchor="middle" transform="translate(85.71428571428571,15)"
+                                                      style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">20
+                                                </text>
+                                                <text text-anchor="middle" transform="translate(114.28571428571428,15)"
+                                                      style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">40
+                                                </text>
+                                                <text text-anchor="middle" transform="translate(142.85714285714286,15)"
+                                                      style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">60
+                                                </text>
+                                                <text text-anchor="middle" transform="translate(171.42857142857142,15)"
+                                                      style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">80
+                                                </text>
+                                                <text text-anchor="end" transform="translate(200,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">
+                                                    100
+                                                </text>
+                                            </g>
+                                            <g class="mark-rule role-axis-domain" style="pointer-events: none;">
+                                                <line transform="translate(0,0)" x2="200" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/>
+                                            </g>
+                                            <g class="mark-text role-axis-title" style="pointer-events: none;">
+                                                <text text-anchor="middle" transform="translate(100,30)"
+                                                      style="font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #000; opacity: 1;">Percentage
+                                                </text>
+                                            </g>
+                                        </g>
+                                        <path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/>
+                                    </g>
+                                </g>
+                                <g class="mark-group role-axis">
+                                    <g transform="translate(-4.5,0.5)">
+                                        <path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/>
+                                        <g>
+                                            <g class="mark-text role-axis-label" style="pointer-events: none;">
+                                                <text text-anchor="end" transform="translate(-2,12.5)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">
+                                                    Question 1
+                                                </text>
+                                                <text text-anchor="end" transform="translate(-2,32.5)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">
+                                                    Question 2
+                                                </text>
+                                                <text text-anchor="end" transform="translate(-2,52.5)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">
+                                                    Question 3
+                                                </text>
+                                                <text text-anchor="end" transform="translate(-2,72.5)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">
+                                                    Question 4
+                                                </text>
+                                                <text text-anchor="end" transform="translate(-2,92.5)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">
+                                                    Question 5
+                                                </text>
+                                                <text text-anchor="end" transform="translate(-2,112.5)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">
+                                                    Question 6
+                                                </text>
+                                                <text text-anchor="end" transform="translate(-2,132.5)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">
+                                                    Question 7
+                                                </text>
+                                                <text text-anchor="end" transform="translate(-2,152.5)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">
+                                                    Question 8
+                                                </text>
+                                            </g>
+                                            <g class="mark-text role-axis-title" style="pointer-events: none;">
+                                                <text text-anchor="middle" transform="translate(-64,80) rotate(-90) translate(0,-2)"
+                                                      style="font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #000; opacity: 1;">Question
+                                                </text>
+                                            </g>
+                                        </g>
+                                        <path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/>
+                                    </g>
+                                </g>
+                                <g class="mark-rect role-mark marks">
+                                    <path d="M29.92857142857143,1h1.0000000000000036v18h-1.0000000000000036Z" style="fill: #c30d24;"/>
+                                    <path d="M30.928571428571434,1h12.999999999999996v18h-12.999999999999996Z" style="fill: #f3a583;"/>
+                                    <path d="M43.92857142857143,1h26.42857142857143v18h-26.42857142857143Z" style="fill: #cccccc;"/>
+                                    <path d="M70.35714285714286,1h85.57142857142856v18h-85.57142857142856Z" style="fill: #94c6da;"/>
+                                    <path d="M155.92857142857142,1h16.714285714285722v18h-16.714285714285722Z" style="fill: #1770ab;"/>
+                                    <path d="M5.142857142857145,21h26v18h-26Z" style="fill: #c30d24;"/>
+                                    <path d="M31.142857142857146,21h25.999999999999993v18h-25.999999999999993Z" style="fill: #f3a583;"/>
+                                    <path d="M57.14285714285714,21h0v18h0Z" style="fill: #cccccc;"/>
+                                    <path d="M57.14285714285714,21h90.85714285714286v18h-90.85714285714286Z" style="fill: #94c6da;"/>
+                                    <path d="M148,21h0v18h0Z" style="fill: #1770ab;"/>
+                                    <path d="M14.285714285714285,41h28.57142857142857v18h-28.57142857142857Z" style="fill: #c30d24;"/>
+                                    <path d="M42.857142857142854,41h0v18h0Z" style="fill: #f3a583;"/>
+                                    <path d="M42.857142857142854,41h28.571428571428577v18h-28.571428571428577Z" style="fill: #cccccc;"/>
+                                    <path d="M71.42857142857143,41h57.14285714285715v18h-57.14285714285715Z" style="fill: #94c6da;"/>
+                                    <path d="M128.57142857142858,41h28.571428571428555v18h-28.571428571428555Z" style="fill: #1770ab;"/>
+                                    <path d="M34.785714285714285,61h0v18h0Z" style="fill: #c30d24;"/>
+                                    <path d="M34.785714285714285,61h17.85714285714286v18h-17.85714285714286Z" style="fill: #f3a583;"/>
+                                    <path d="M52.642857142857146,61h9v18h-9Z" style="fill: #cccccc;"/>
+                                    <path d="M61.642857142857146,61h62.57142857142855v18h-62.57142857142855Z" style="fill: #94c6da;"/>
+                                    <path d="M124.2142857142857,61h53.571428571428584v18h-53.571428571428584Z" style="fill: #1770ab;"/>
+                                    <path d="M42.214285714285715,81h0v18h0Z" style="fill: #c30d24;"/>
+                                    <path d="M42.214285714285715,81h6v18h-6Z" style="fill: #f3a583;"/>
+                                    <path d="M48.214285714285715,81h17.857142857142854v18h-17.857142857142854Z" style="fill: #cccccc;"/>
+                                    <path d="M66.07142857142857,81h95.28571428571429v18h-95.28571428571429Z" style="fill: #94c6da;"/>
+                                    <path d="M161.35714285714286,81h23.85714285714286v18h-23.85714285714286Z" style="fill: #1770ab;"/>
+                                    <path d="M30.21428571428571,101h9.000000000000004v18h-9.000000000000004Z" style="fill: #c30d24;"/>
+                                    <path d="M39.214285714285715,101h9v18h-9Z" style="fill: #f3a583;"/>
+                                    <path d="M48.214285714285715,101h17.857142857142854v18h-17.857142857142854Z" style="fill: #cccccc;"/>
+                                    <path d="M66.07142857142857,101h80.42857142857143v18h-80.42857142857143Z" style="fill: #94c6da;"/>
+                                    <path d="M146.5,101h26.85714285714286v18h-26.85714285714286Z" style="fill: #1770ab;"/>
+                                    <path d="M42.857142857142854,121h0v18h0Z" style="fill: #c30d24;"/>
+                                    <path d="M42.857142857142854,121h0v18h0Z" style="fill: #f3a583;"/>
+                                    <path d="M42.857142857142854,121h28.571428571428577v18h-28.571428571428577Z" style="fill: #cccccc;"/>
+                                    <path d="M71.42857142857143,121h114.28571428571429v18h-114.28571428571429Z" style="fill: #94c6da;"/>
+                                    <path d="M185.71428571428572,121h0v18h0Z" style="fill: #1770ab;"/>
+                                    <path d="M57.14285714285714,141h0v18h0Z" style="fill: #c30d24;"/>
+                                    <path d="M57.14285714285714,141h0v18h0Z" style="fill: #f3a583;"/>
+                                    <path d="M57.14285714285714,141h0v18h0Z" style="fill: #cccccc;"/>
+                                    <path d="M57.14285714285714,141h0v18h0Z" style="fill: #94c6da;"/>
+                                    <path d="M57.14285714285714,141h142.85714285714286v18h-142.85714285714286Z" style="fill: #1770ab;"/>
+                                </g>
+                                <g class="mark-group role-legend">
+                                    <g transform="translate(218,0)">
+                                        <path class="background" d="M0,0h129v79h-129Z" style="pointer-events: none; fill: none;"/>
+                                        <g>
+                                            <g class="mark-group role-legend-entry">
+                                                <g transform="translate(0,16)">
+                                                    <path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/>
+                                                    <g>
+                                                        <g class="mark-group role-scope">
+                                                            <g transform="translate(0,0)">
+                                                                <path class="background" d="M0,0h129v11h-129Z" style="pointer-events: none; fill: none; opacity: 1;"/>
+                                                                <g>
+                                                                    <g class="mark-symbol role-legend-symbol" style="pointer-events: none;">
+                                                                        <path transform="translate(6,6)" d="M-5,-5h10v10h-10Z"
+                                                                              style="fill: #c30d24; stroke-width: 1.5; opacity: 1;"/>
+                                                                    </g>
+                                                                    <g class="mark-text role-legend-label" style="pointer-events: none;">
+                                                                        <text text-anchor="start" transform="translate(16,9)"
+                                                                              style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">Strongly disagree
+                                                                        </text>
+                                                                    </g>
+                                                                </g>
+                                                                <path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/>
+                                                            </g>
+                                                            <g transform="translate(0,13)">
+                                                                <path class="background" d="M0,0h129v11h-129Z" style="pointer-events: none; fill: none; opacity: 1;"/>
+                                                                <g>
+                                                                    <g class="mark-symbol role-legend-symbol" style="pointer-events: none;">
+                                                                        <path transform="translate(6,6)" d="M-5,-5h10v10h-10Z"
+                                                                              style="fill: #f3a583; stroke-width: 1.5; opacity: 1;"/>
+                                                                    </g>
+                                                                    <g class="mark-text role-legend-label" style="pointer-events: none;">
+                                                                        <text text-anchor="start" transform="translate(16,9)"
+                                                                              style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">Disagree
+                                                                        </text>
+                                                                    </g>
+                                                                </g>
+                                                                <path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/>
+                                                            </g>
+                                                            <g transform="translate(0,26)">
+                                                                <path class="background" d="M0,0h129v11h-129Z" style="pointer-events: none; fill: none; opacity: 1;"/>
+                                                                <g>
+                                                                    <g class="mark-symbol role-legend-symbol" style="pointer-events: none;">
+                                                                        <path transform="translate(6,6)" d="M-5,-5h10v10h-10Z"
+                                                                              style="fill: #cccccc; stroke-width: 1.5; opacity: 1;"/>
+                                                                    </g>
+                                                                    <g class="mark-text role-legend-label" style="pointer-events: none;">
+                                                                        <text text-anchor="start" transform="translate(16,9)"
+                                                                              style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">Neither agree nor disagree
+                                                                        </text>
+                                                                    </g>
+                                                                </g>
+                                                                <path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/>
+                                                            </g>
+                                                            <g transform="translate(0,39)">
+                                                                <path class="background" d="M0,0h129v11h-129Z" style="pointer-events: none; fill: none; opacity: 1;"/>
+                                                                <g>
+                                                                    <g class="mark-symbol role-legend-symbol" style="pointer-events: none;">
+                                                                        <path transform="translate(6,6)" d="M-5,-5h10v10h-10Z"
+                                                                              style="fill: #94c6da; stroke-width: 1.5; opacity: 1;"/>
+                                                                    </g>
+                                                                    <g class="mark-text role-legend-label" style="pointer-events: none;">
+                                                                        <text text-anchor="start" transform="translate(16,9)"
+                                                                              style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">Agree
+                                                                        </text>
+                                                                    </g>
+                                                                </g>
+                                                                <path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/>
+                                                            </g>
+                                                            <g transform="translate(0,52)">
+                                                                <path class="background" d="M0,0h129v11h-129Z" style="pointer-events: none; fill: none; opacity: 1;"/>
+                                                                <g>
+                                                                    <g class="mark-symbol role-legend-symbol" style="pointer-events: none;">
+                                                                        <path transform="translate(6,6)" d="M-5,-5h10v10h-10Z"
+                                                                              style="fill: #1770ab; stroke-width: 1.5; opacity: 1;"/>
+                                                                    </g>
+                                                                    <g class="mark-text role-legend-label" style="pointer-events: none;">
+                                                                        <text text-anchor="start" transform="translate(16,9)"
+                                                                              style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">Strongly agree
+                                                                        </text>
+                                                                    </g>
+                                                                </g>
+                                                                <path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                    <path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/>
+                                                </g>
+                                            </g>
+                                            <g class="mark-text role-legend-title" style="pointer-events: none;">
+                                                <text text-anchor="start" transform="translate(0,9)"
+                                                      style="font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #000; opacity: 1;">Response
+                                                </text>
+                                            </g>
+                                        </g>
+                                        <path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/>
+                                    </g>
+                                </g>
+                            </g>
+                            <path class="foreground" d="" style="display: none; fill: none;"/>
+                        </g>
                     </g>
                 </g>
             </svg>

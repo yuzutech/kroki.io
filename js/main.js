@@ -365,6 +365,232 @@ document.addEventListener('DOMContentLoaded', function () {
             '    }\n' +
             '  }\n' +
             '}'
+        } else if (diagramType === 'vega') {
+          diagramSourceElement.value = '{\n' +
+            '  "$schema": "https://vega.github.io/schema/vega/v5.json",\n' +
+            '  "width": 400,\n' +
+            '  "height": 200,\n' +
+            '  "padding": 5,\n' +
+            '\n' +
+            '  "data": [\n' +
+            '    {\n' +
+            '      "name": "table",\n' +
+            '      "values": [\n' +
+            '        {"category": "A", "amount": 28},\n' +
+            '        {"category": "B", "amount": 55},\n' +
+            '        {"category": "C", "amount": 43},\n' +
+            '        {"category": "D", "amount": 91},\n' +
+            '        {"category": "E", "amount": 81},\n' +
+            '        {"category": "F", "amount": 53},\n' +
+            '        {"category": "G", "amount": 19},\n' +
+            '        {"category": "H", "amount": 87}\n' +
+            '      ]\n' +
+            '    }\n' +
+            '  ],\n' +
+            '\n' +
+            '  "signals": [\n' +
+            '    {\n' +
+            '      "name": "tooltip",\n' +
+            '      "value": {},\n' +
+            '      "on": [\n' +
+            '        {"events": "rect:mouseover", "update": "datum"},\n' +
+            '        {"events": "rect:mouseout",  "update": "{}"}\n' +
+            '      ]\n' +
+            '    }\n' +
+            '  ],\n' +
+            '\n' +
+            '  "scales": [\n' +
+            '    {\n' +
+            '      "name": "xscale",\n' +
+            '      "type": "band",\n' +
+            '      "domain": {"data": "table", "field": "category"},\n' +
+            '      "range": "width",\n' +
+            '      "padding": 0.05,\n' +
+            '      "round": true\n' +
+            '    },\n' +
+            '    {\n' +
+            '      "name": "yscale",\n' +
+            '      "domain": {"data": "table", "field": "amount"},\n' +
+            '      "nice": true,\n' +
+            '      "range": "height"\n' +
+            '    }\n' +
+            '  ],\n' +
+            '\n' +
+            '  "axes": [\n' +
+            '    { "orient": "bottom", "scale": "xscale" },\n' +
+            '    { "orient": "left", "scale": "yscale" }\n' +
+            '  ],\n' +
+            '\n' +
+            '  "marks": [\n' +
+            '    {\n' +
+            '      "type": "rect",\n' +
+            '      "from": {"data":"table"},\n' +
+            '      "encode": {\n' +
+            '        "enter": {\n' +
+            '          "x": {"scale": "xscale", "field": "category"},\n' +
+            '          "width": {"scale": "xscale", "band": 1},\n' +
+            '          "y": {"scale": "yscale", "field": "amount"},\n' +
+            '          "y2": {"scale": "yscale", "value": 0}\n' +
+            '        },\n' +
+            '        "update": {\n' +
+            '          "fill": {"value": "steelblue"}\n' +
+            '        },\n' +
+            '        "hover": {\n' +
+            '          "fill": {"value": "red"}\n' +
+            '        }\n' +
+            '      }\n' +
+            '    },\n' +
+            '    {\n' +
+            '      "type": "text",\n' +
+            '      "encode": {\n' +
+            '        "enter": {\n' +
+            '          "align": {"value": "center"},\n' +
+            '          "baseline": {"value": "bottom"},\n' +
+            '          "fill": {"value": "#333"}\n' +
+            '        },\n' +
+            '        "update": {\n' +
+            '          "x": {"scale": "xscale", "signal": "tooltip.category", "band": 0.5},\n' +
+            '          "y": {"scale": "yscale", "signal": "tooltip.amount", "offset": -2},\n' +
+            '          "text": {"signal": "tooltip.amount"},\n' +
+            '          "fillOpacity": [\n' +
+            '            {"test": "datum === tooltip", "value": 0},\n' +
+            '            {"value": 1}\n' +
+            '          ]\n' +
+            '        }\n' +
+            '      }\n' +
+            '    }\n' +
+            '  ]\n' +
+            '}\n'
+        } else if (diagramType === 'vegalite') {
+          diagramSourceElement.value = '{\n' +
+            '  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",\n' +
+            '  "description": "Horizontally concatenated charts that show different types of discretizing scales.",\n' +
+            '  "data": {\n' +
+            '    "values": [\n' +
+            '      {"a": "A", "b": 28},\n' +
+            '      {"a": "B", "b": 55},\n' +
+            '      {"a": "C", "b": 43},\n' +
+            '      {"a": "D", "b": 91},\n' +
+            '      {"a": "E", "b": 81},\n' +
+            '      {"a": "F", "b": 53},\n' +
+            '      {"a": "G", "b": 19},\n' +
+            '      {"a": "H", "b": 87},\n' +
+            '      {"a": "I", "b": 52}\n' +
+            '    ]\n' +
+            '  },\n' +
+            '  "hconcat": [\n' +
+            '    {\n' +
+            '      "mark": "circle",\n' +
+            '      "encoding": {\n' +
+            '        "y": {\n' +
+            '          "field": "b",\n' +
+            '          "type": "nominal",\n' +
+            '          "sort": null,\n' +
+            '          "axis": {\n' +
+            '            "ticks": false,\n' +
+            '            "domain": false,\n' +
+            '            "title": null\n' +
+            '          }\n' +
+            '        },\n' +
+            '        "size": {\n' +
+            '          "field": "b",\n' +
+            '          "type": "quantitative",\n' +
+            '          "scale": {\n' +
+            '            "type": "quantize"\n' +
+            '          }\n' +
+            '        },\n' +
+            '        "color": {\n' +
+            '          "field": "b",\n' +
+            '          "type": "quantitative",\n' +
+            '          "scale": {\n' +
+            '            "type": "quantize",\n' +
+            '            "zero": true\n' +
+            '          },\n' +
+            '          "legend": {\n' +
+            '            "title": "Quantize"\n' +
+            '          }\n' +
+            '        }\n' +
+            '      }\n' +
+            '    },\n' +
+            '    {\n' +
+            '      "mark": "circle",\n' +
+            '      "encoding": {\n' +
+            '        "y": {\n' +
+            '          "field": "b",\n' +
+            '          "type": "nominal",\n' +
+            '          "sort": null,\n' +
+            '          "axis": {\n' +
+            '            "ticks": false,\n' +
+            '            "domain": false,\n' +
+            '            "title": null\n' +
+            '          }\n' +
+            '        },\n' +
+            '        "size": {\n' +
+            '          "field": "b",\n' +
+            '          "type": "quantitative",\n' +
+            '          "scale": {\n' +
+            '            "type": "quantile",\n' +
+            '            "range": [80, 160, 240, 320, 400]\n' +
+            '          }\n' +
+            '        },\n' +
+            '        "color": {\n' +
+            '          "field": "b",\n' +
+            '          "type": "quantitative",\n' +
+            '          "scale": {\n' +
+            '            "type": "quantile",\n' +
+            '            "scheme": "magma"\n' +
+            '          },\n' +
+            '          "legend": {\n' +
+            '            "format": "d",\n' +
+            '            "title": "Quantile"\n' +
+            '          }\n' +
+            '        }\n' +
+            '      }\n' +
+            '    },\n' +
+            '    {\n' +
+            '      "mark": "circle",\n' +
+            '      "encoding": {\n' +
+            '        "y": {\n' +
+            '          "field": "b",\n' +
+            '          "type": "nominal",\n' +
+            '          "sort": null,\n' +
+            '          "axis": {\n' +
+            '            "ticks": false,\n' +
+            '            "domain": false,\n' +
+            '            "title": null\n' +
+            '          }\n' +
+            '        },\n' +
+            '        "size": {\n' +
+            '          "field": "b",\n' +
+            '          "type": "quantitative",\n' +
+            '          "scale": {\n' +
+            '            "type": "threshold",\n' +
+            '            "domain": [30, 70],\n' +
+            '            "range": [80, 200, 320]\n' +
+            '          }\n' +
+            '        },\n' +
+            '        "color": {\n' +
+            '          "field": "b",\n' +
+            '          "type": "quantitative",\n' +
+            '          "scale": {\n' +
+            '            "type": "threshold",\n' +
+            '            "domain": [30, 70],\n' +
+            '            "scheme": "viridis"\n' +
+            '          },\n' +
+            '          "legend": {\n' +
+            '            "title": "Threshold"\n' +
+            '          }\n' +
+            '        }\n' +
+            '      }\n' +
+            '    }\n' +
+            '  ],\n' +
+            '  "resolve": {\n' +
+            '    "scale": {\n' +
+            '      "color": "independent",\n' +
+            '      "size": "independent"\n' +
+            '    }\n' +
+            '  }\n' +
+            '}\n'
         }
         convert()
       })
