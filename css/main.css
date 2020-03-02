@@ -8354,6 +8354,11 @@ svg.kroki-output.kroki-output-nomnoml {
   max-width: 40rem;
 }
 
+svg.kroki-output.kroki-output-vega {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 pre.diagram-source {
   max-height: 25rem;
 }
