@@ -8354,14 +8354,14 @@ svg.kroki-output.kroki-output-nomnoml {
   max-width: 40rem;
 }
 
-svg.kroki-output.kroki-output-vega {
-  height: auto;
-  max-width: 100%;
-}
-
 svg.kroki-output.kroki-output-diverging-stacked-bar-char {
   height: auto;
   width: 40em;
+}
+
+svg.kroki-output.kroki-output-plantuml-mind-map, svg.kroki-output.kroki-output-plantuml-wbs, svg.kroki-output.kroki-output-packetdiag, svg.kroki-output.kroki-output-vega {
+  height: auto;
+  max-width: 100%;
 }
 
 pre.diagram-source {
