@@ -591,6 +591,14 @@ document.addEventListener('DOMContentLoaded', function () {
             '    }\n' +
             '  }\n' +
             '}\n'
+        } else if (diagramType === 'wavedrom') {
+          diagramSourceElement.value = '{ signal: [\n' +
+            '  { name: "clk",         wave: "p.....|..." },\n' +
+            '  { name: "Data",        wave: "x.345x|=.x", data: ["head", "body", "tail", "data"] },\n' +
+            '  { name: "Request",     wave: "0.1..0|1.0" },\n' +
+            '  {},\n' +
+            '  { name: "Acknowledge", wave: "1.....|01." }\n' +
+            ']}'
         }
         convert()
       })
