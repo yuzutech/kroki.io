@@ -596,7 +596,7 @@ Prism.languages.mermaid = {
     greedy: true
   },
   'punctuation': /[{}[\])(;,]/,
-  'operator': /[:*+\-><]|participant|Note|right of|loop|end|sequenceDiagram/g,
+  'operator': /[:*+]|-?->|<--?|participant|Note|right of|loop|end|sequenceDiagram|gantt|title|dateFormat|section/g,
 };
 Prism.languages.nomnoml = {
   'punctuation': /[{}[\]|,]/,
