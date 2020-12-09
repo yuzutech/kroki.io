@@ -10,8 +10,8 @@
   "devDependencies": {
     "autoprefixer": "9.4.5",
     "clean-css-cli": "4.2.1",
-    "node-sass": "^4.14.0",
-    "pako": "^1.0.8",
+    "node-sass": "^4.14.1",
+    "pako": "^1.0.11",
     "postcss-cli": "6.1.1",
     "rimraf": "2.6.3"
   },
