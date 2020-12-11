@@ -8,7 +8,9 @@
     "url": "https://yuzutech.fr"
   },
   "devDependencies": {
+    "@primer/css": "^15.2.0",
     "autoprefixer": "10.1.0",
+    "bulma": "0.9.1",
     "clean-css-cli": "4.3.0",
     "clipboard": "2.0.6",
     "node-sass": "5.0.0",
@@ -27,9 +29,5 @@
     "deploy": "npm run build",
     "start": "npm run build-sass -- --watch"
   },
-  "dependencies": {
-    "@primer/css": "^15.2.0",
-    "bulma": "0.9.1",
-    "bulma-pricingtable": "0.2.0"
-  }
+  "private": "true"
 }
