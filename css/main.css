@@ -8037,11 +8037,17 @@ pre[class*="language-"] {
   color: #e90;
 }
 
+.token.font-style-thin {
+  font-weight: lighter;
+}
+
+.token.font-style-bold,
 .token.important,
 .token.bold {
   font-weight: bold;
 }
 
+.token.font-style-italic,
 .token.italic {
   font-style: italic;
 }

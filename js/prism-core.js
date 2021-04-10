@@ -685,3 +685,20 @@ Prism.languages.clojure = {
   number: /\b[\da-f]+\b/i,
   punctuation: /[{}\[\](),]/
 };
+Prism.languages.pikchr = {
+  'string': {
+    pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,
+    greedy: true
+  },
+  'assignment': /([a-z\$]+) (?=\*?=)/,
+  'comment': /#.*/,
+  'punctuation': /[{}[\])(;,\\/]|\.start|\.end|\.nw|\.ne|\.n|\.sw|\.se|\.s|\.e|\.w|\.radius|\.x|\.y/,
+  'variable': /linewid/,
+  'operator': /[:*+\-\=]|heading|right|left|down|from|then|to|at|rad|height|width|with|wid|ht|behind|fill|move|up|last|color|between|and|way|until|even|previous|same|scale|dist|chop|fit|west|of|below|above|south|2nd/g,
+  'keyword': /circle|arrow|box|ellipse|line|dot|oval/,
+  'symbol': /black|white|gray|0x[0-9a-z]{6}/,
+  'number': /\b[0-9\.]+(%|cm|in)?/,
+  'font-style-thin': /thin/,
+  'font-style-bold': /bold/,
+  'font-style-italic': /italic/
+};
