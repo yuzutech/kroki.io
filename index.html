@@ -504,9 +504,7 @@ main_ts ==> (main.view)
                         Let's take an example with a <em>GraphViz</em> "Hello World":
                     </p>
                     <code class="snippet-name">hello.dot</code>
-                    <pre><code class="language-graphviz">digraph G {
-  Hello->World
-}</code></pre>
+                    <pre><code class="language-graphviz">digraph G {Hello->World}</code></pre>
                     <p>
                         Here, we are using a Python one-liner to encode our diagram using deflate + base64:
                     </p>
@@ -520,7 +518,7 @@ main_ts ==> (main.view)
                     </article>
 
                     <p>
-                        The above command will return a value that you can copy in the URL:
+                        The above command will return a value that you can copy and paste at the end of the URL:
                     </p>
                     <pre><code class="language-http">GET /graphviz/svg/eNpLyUwvSizIUHBXqPZIzcnJ17ULzy_KSanlAgB1EAjQ</code></pre>
                     <p>
@@ -550,6 +548,17 @@ main_ts ==> (main.view)
                             </g>
                         </g>
                     </svg>
+                    <br/>
+
+                    <p>Please note that the encoding process is lossless. As a matter of fact, you can also use a Python one-liner to decode an encoded diagram:</p>
+
+                    <pre><code class="language-sh">echo "eNpLyUwvSizIUHBXqPZIzcnJ17ULzy_KSanlAgB1EAjQ" | python -c "import sys; import base64; import zlib; print(zlib.decompress(base64.urlsafe_b64decode(sys.stdin.read())))"</code></pre>
+                    <p>
+                        The above command will return:
+                    </p>
+                    <pre><code class="language-text">digraph G {Hello->World}</code></pre>
+
+                    <h3 id="post-requests" class="title is-4">POST requests<a class="anchor-link" href="#post-requests">#</a></h3>
 
                     <p id="post-request">You can also call Kroki with <code>POST</code>:</p>
                     <pre><code class="language-http">POST /</code></pre>
