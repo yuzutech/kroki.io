@@ -1745,6 +1745,63 @@ document.addEventListener('DOMContentLoaded', function () {
             '(draw-box (text "length" [:math] [:sub 2]) {:span 4})\n' +
             '(draw-gap "Unknown bytes" {:min-label-columns 6})\n' +
             '(draw-bottom)\n'
+        } else if (diagramType === 'pikchr') {
+          diagramSourceElement.value = '$r = 0.2in\n' +
+            'linerad = 0.75*$r\n' +
+            'linewid = 0.25\n' +
+            '\n' +
+            '# Start and end blocks\n' +
+            '#\n' +
+            'box "element" bold fit\n' +
+            'line down 50% from last box.sw\n' +
+            'dot rad 250% color black\n' +
+            'X0: last.e + (0.3,0)\n' +
+            'arrow from last dot to X0\n' +
+            'move right 3.9in\n' +
+            'box wid 5% ht 25% fill black\n' +
+            'X9: last.w - (0.3,0)\n' +
+            'arrow from X9 to last box.w\n' +
+            '\n' +
+            '\n' +
+            '# The main rule that goes straight through from start to finish\n' +
+            '#\n' +
+            'box "object-definition" italic fit at 11/16 way between X0 and X9\n' +
+            'arrow to X9\n' +
+            'arrow from X0 to last box.w\n' +
+            '\n' +
+            '# The LABEL: rule\n' +
+            '#\n' +
+            'arrow right $r from X0 then down 1.25*$r then right $r\n' +
+            'oval " LABEL " fit\n' +
+            'arrow 50%\n' +
+            'oval "\\":\\"" fit\n' +
+            'arrow 200%\n' +
+            'box "position" italic fit\n' +
+            'arrow\n' +
+            'line right until even with X9 - ($r,0) \\\n' +
+            '  then up until even with X9 then to X9\n' +
+            'arrow from last oval.e right $r*0.5 then up $r*0.8 right $r*0.8\n' +
+            'line up $r*0.45 right $r*0.45 then right\n' +
+            '\n' +
+            '# The VARIABLE = rule\n' +
+            '#\n' +
+            'arrow right $r from X0 then down 2.5*$r then right $r\n' +
+            'oval " VARIABLE " fit\n' +
+            'arrow 70%\n' +
+            'box "assignment-operator" italic fit\n' +
+            'arrow 70%\n' +
+            'box "expr" italic fit\n' +
+            'line right until even with X9 - ($r,0) \\\n' +
+            '  then up until even with X9 then to X9\n' +
+            '\n' +
+            '# The PRINT rule\n' +
+            '#\n' +
+            'arrow right $r from X0 then down 3.75*$r then right $r\n' +
+            'oval "\\"print\\"" fit\n' +
+            'arrow\n' +
+            'box "print-args" italic fit\n' +
+            'line right until even with X9 - ($r,0) \\\n' +
+            '  then up until even with X9 then to X9'
         }
         convert()
       })

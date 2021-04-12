@@ -36,7 +36,7 @@
         <div class="content">
             <p>
                 Kroki provides a unified API with support for BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag, PacketDiag, RackDiag),
-                BPMN, Bytefield, C4 (with PlantUML), Ditaa, Erd, Excalidraw, GraphViz, Mermaid, Nomnoml, PlantUML, SvgBob, UMLet, Vega, Vega-Lite, WaveDrom...
+                BPMN, Bytefield, C4 (with PlantUML), Ditaa, Erd, Excalidraw, GraphViz, Mermaid, Nomnoml, Pikchr, PlantUML, SvgBob, UMLet, Vega, Vega-Lite, WaveDrom...
                 and more to come!
             </p>
         </div>
@@ -67,12 +67,14 @@
                 <li><a href="#bpmn">BPMN <small class="tag is-small is-highlight">BPMN</small></a></li>
                 <li><a href="#bytefield">Bytefield <small class="tag is-small is-highlight">Bytefield</small></a></li>
                 <li><a href="#gantt">Gantt diagram <small class="tag is-small is-highlight">Mermaid</small></a></li>
+                <li><a href="#syntax">Syntax diagram <small class="tag is-small is-highlight">Pikchr</small></a></li>
             </ul>
             <p class="menu-label">
                 Graph
             </p>
             <ul class="menu-list">
                 <li><a href="#oo-graph">Object Oriented Graph <small class="tag is-small is-highlight">GraphViz</small></a></li>
+                <li><a href="#commit-graph">Commit Graph <small class="tag is-small is-highlight">Pikchr</small></a></li>
             </ul>
             <p class="menu-label">
                 C4
@@ -96,6 +98,7 @@
                 <li><a href="#conjugate">Conjugate prior relationships <small class="tag is-small is-highlight">Ditaa</small></a></li>
                 <li><a href="#connected-servers">Connected servers <small class="tag is-small is-highlight">SvgBob</small></a></li>
                 <li><a href="#ascii-art">Ascii Art <small class="tag is-small is-highlight">SvgBob</small></a></li>
+                <li><a href="#impossible-trident">Impossible trident <small class="tag is-small is-highlight">Pikchr</small></a></li>
             </ul>
         </aside>
 
@@ -1952,6 +1955,158 @@
                         <polygon fill="#000000" stroke="#000000" points="963.0596,-310.4264 959.5595,-300.4264 956.0596,-310.4264 963.0596,-310.4264"/>
                     </g>
                 </g>
+            </svg>
+        </div>
+
+        <h3 id="commit-graph" class="title is-3">Commit Graph<a class="anchor-link" href="#commit-graph">#</a></h3>
+        <h4 class="subtitle is-4">Pikchr</h4>
+        <div class="content">
+            <pre class="diagram-source"><code class="language-pikchr">scale = 0.8
+fill = white
+linewid *= 0.5
+circle "C0" fit
+circlerad = previous.radius
+arrow
+circle "C1"
+arrow
+circle "C2"
+arrow
+circle "C4"
+arrow
+circle "C6"
+circle "C3" at dist(C2,C4) heading 30 from C2
+arrow
+circle "C5"
+arrow from C2 to C3 chop
+C3P: circle "C3'" at dist(C4,C6) heading 30 from C6
+arrow right from C3P.e
+C5P: circle "C5'"
+arrow from C6 to C3P chop
+
+box height C3.y-C2.y \
+    width (C5P.e.x-C0.w.x)+linewid \
+    with .w at 0.5*linewid west of C0.w \
+    behind C0 \
+    fill 0xc6e2ff thin color gray
+box same width previous.e.x - C2.w.x \
+    with .se at previous.ne \
+    fill 0x9accfc
+"trunk" below at 2nd last box.s
+"feature branch" above at last box.n
+
+circle "C0" at 3.7cm south of C0
+arrow
+circle "C1"
+arrow
+circle "C2"
+arrow
+circle "C4"
+arrow
+circle "C6"
+circle "C3" at dist(C2,C4) heading 30 from C2
+arrow
+circle "C5"
+arrow
+circle "C7"
+arrow from C2 to C3 chop
+arrow from C6 to C7 chop
+
+box height C3.y-C2.y \
+    width (C7.e.x-C0.w.x)+1.5*C1.radius \
+    with .w at 0.5*linewid west of C0.w \
+    behind C0 \
+    fill 0xc6e2ff thin color gray
+box same width previous.e.x - C2.w.x \
+    with .se at previous.ne \
+    fill 0x9accfc
+"trunk" below at 2nd last box.s
+"feature branch" above at last box.n</code></pre>
+            <div class="highlight">
+                <pre><code class="language-http">GET https://kroki.io/pikchr/svg/eNrlU8tygjAU3ecr7rBRW80gCLSd6So_4Ad0E2KQTJE4SRD8-14QRLTT6bIzZZX7Ouck92AFLyS8g09fSKaKAo91rpwkhSplrXbw1NYiIpQR2Ogx34NMuT42fIcDRyNPSleWYqgqS7gxuh4n1t59JnjIbB4ysTeeQw-4g52ybs6CJdssIJdIVe4h9CEz-gAsuJ-PesShDk4DC0Hk-khYuH2DEX12A79Zsvgb-LgHM2qfuz4XbqkkLLqFimZT1vjCur3QklQ3CN1BsJCeVyygZ_gggB8-tcthjnBU0mbFfFrTZvE8bGFowh5at2pxJ09DsZbWgc6gHeo7U5mrcoeZPu5W6zcilkGWgcMiCF1oA3vDz50uyw-yV3HdJyqBFb5dq2UiwcpWw7WvlFOaVy5EJojnTFV-eiim0J3oACUVHMUiIbXEyyR3lZGQGl6KHLeQ6lOHfG0qycR5WAppIg5gdYU6ujv_LbuNmeQHAz56JPm9RZKJQ9ZoBLbuf73_65MvEC93wQ==</code></pre>
+                <button class="button is-small bd-copy"
+                        data-clipboard-text="https://kroki.io/pikchr/svg/eNrlU8tygjAU3ecr7rBRW80gCLSd6So_4Ad0E2KQTJE4SRD8-14QRLTT6bIzZZX7Ouck92AFLyS8g09fSKaKAo91rpwkhSplrXbw1NYiIpQR2Ogx34NMuT42fIcDRyNPSleWYqgqS7gxuh4n1t59JnjIbB4ysTeeQw-4g52ybs6CJdssIJdIVe4h9CEz-gAsuJ-PesShDk4DC0Hk-khYuH2DEX12A79Zsvgb-LgHM2qfuz4XbqkkLLqFimZT1vjCur3QklQ3CN1BsJCeVyygZ_gggB8-tcthjnBU0mbFfFrTZvE8bGFowh5at2pxJ09DsZbWgc6gHeo7U5mrcoeZPu5W6zcilkGWgcMiCF1oA3vDz50uyw-yV3HdJyqBFb5dq2UiwcpWw7WvlFOaVy5EJojnTFV-eiim0J3oACUVHMUiIbXEyyR3lZGQGl6KHLeQ6lOHfG0qycR5WAppIg5gdYU6ujv_LbuNmeQHAz56JPm9RZKJQ9ZoBLbuf73_65MvEC93wQ=="
+                        title="Copy to clipboard">
+                    <svg fill="currentColor" viewBox="0 0 896 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <svg class="kroki-output kroki-output-pikchr-syntax pikchr" width="100%" height="100%" viewBox="0 0 537.378 396.448" style="width: 100%; height: 100%; max-height: 316px; max-width: 429px;">
+                <path d="M2,164L535,164L535,93L2,93Z" style="fill:rgb(198,226,255);stroke-width:1.4472;stroke:rgb(128,128,128);"></path>
+                <path d="M184,93L535,93L535,22L184,22Z" style="fill:rgb(154,204,252);stroke-width:1.4472;stroke:rgb(128,128,128);"></path>
+                <path d="M2,374L451,374L451,303L2,303Z" style="fill:rgb(198,226,255);stroke-width:1.4472;stroke:rgb(128,128,128);"></path>
+                <path d="M184,303L451,303L451,232L184,232Z" style="fill:rgb(154,204,252);stroke-width:1.4472;stroke:rgb(128,128,128);"></path>
+                <circle cx="43" cy="128" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="43" y="128" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C0</text>
+                <polygon points="102,128 90,133 90,124" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M66,128L96,128" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="125" cy="128" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="125" y="128" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C1</text>
+                <polygon points="184,128 172,133 172,124" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M148,128L178,128" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="207" cy="128" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="207" y="128" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C2</text>
+                <polygon points="266,128 254,133 254,124" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M230,128L260,128" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="289" cy="128" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="289" y="128" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C4</text>
+                <polygon points="348,128 336,133 336,124" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M312,128L342,128" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="371" cy="128" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="371" y="128" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C6</text>
+                <circle cx="248" cy="57" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="248" y="57" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C3</text>
+                <polygon points="307,57 295,62 295,53" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M271,57L301,57" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="330" cy="57" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="330" y="57" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C5</text>
+                <polygon points="236,77 234,89 227,85" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M218,108L233,82" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="412" cy="57" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="412" y="57" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C3'</text>
+                <polygon points="471,57 459,62 459,53" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M435,57L465,57" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="494" cy="57" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="494" y="57" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C5'</text>
+                <polygon points="400,77 398,89 391,85" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M382,108L397,82" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="268" y="174" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">trunk</text>
+                <text x="359" y="12" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">feature&nbsp;branch</text>
+                <circle cx="43" cy="338" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="43" y="338" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C0</text>
+                <polygon points="102,338 90,342 90,334" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M66,338L96,338" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="125" cy="338" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="125" y="338" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C1</text>
+                <polygon points="184,338 172,342 172,334" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M148,338L178,338" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="207" cy="338" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="207" y="338" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C2</text>
+                <polygon points="266,338 254,342 254,334" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M230,338L260,338" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="289" cy="338" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="289" y="338" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C4</text>
+                <polygon points="348,338 336,342 336,334" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M312,338L342,338" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="371" cy="338" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="371" y="338" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C6</text>
+                <circle cx="248" cy="267" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="248" y="267" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C3</text>
+                <polygon points="307,267 295,271 295,263" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M271,267L301,267" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="330" cy="267" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="330" y="267" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C5</text>
+                <polygon points="389,267 377,271 377,263" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M353,267L383,267" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="412" cy="267" r="23.0045" style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <text x="412" y="267" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">C7</text>
+                <polygon points="236,287 234,299 227,295" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M218,318L233,292" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <polygon points="400,287 398,299 391,295" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M382,318L397,292" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="226" y="384" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">trunk</text>
+                <text x="317" y="222" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">feature&nbsp;branch</text>
             </svg>
         </div>
 
@@ -5062,6 +5217,135 @@ skinparam monochrome true
                     <line x1="20159" x2="20159" y1="25" y2="171" class="today"/>
                 </g>
                 <text x="292" y="25" class="titleText">A Gantt Diagram</text>
+            </svg>
+        </div>
+
+        <h3 id="syntax" class="title is-3">Syntax diagram<a class="anchor-link" href="#syntax">#</a></h3>
+        <h4 class="subtitle is-4">Pikchr</h4>
+        <div class="content">
+            <pre class="diagram-source"><code class="language-pikchr">$r = 0.2in
+linerad = 0.75*$r
+linewid = 0.25
+
+# Start and end blocks
+#
+box "element" bold fit
+line down 50% from last box.sw
+dot rad 250% color black
+X0: last.e + (0.3,0)
+arrow from last dot to X0
+move right 3.9in
+box wid 5% ht 25% fill black
+X9: last.w - (0.3,0)
+arrow from X9 to last box.w
+
+
+# The main rule that goes straight through from start to finish
+#
+box "object-definition" italic fit at 11/16 way between X0 and X9
+arrow to X9
+arrow from X0 to last box.w
+
+# The LABEL: rule
+#
+arrow right $r from X0 then down 1.25*$r then right $r
+oval " LABEL " fit
+arrow 50%
+oval "\":\"" fit
+arrow 200%
+box "position" italic fit
+arrow
+line right until even with X9 - ($r,0) \
+  then up until even with X9 then to X9
+arrow from last oval.e right $r*0.5 then up $r*0.8 right $r*0.8
+line up $r*0.45 right $r*0.45 then right
+
+# The VARIABLE = rule
+#
+arrow right $r from X0 then down 2.5*$r then right $r
+oval " VARIABLE " fit
+arrow 70%
+box "assignment-operator" italic fit
+arrow 70%
+box "expr" italic fit
+line right until even with X9 - ($r,0) \
+  then up until even with X9 then to X9
+
+# The PRINT rule
+#
+arrow right $r from X0 then down 3.75*$r then right $r
+oval "\"print\"" fit
+arrow
+box "print-args" italic fit
+line right until even with X9 - ($r,0) \
+  then up until even with X9 then to X9</code></pre>
+            <div class="highlight">
+                <pre><code class="language-http">GET https://kroki.io/pikchr/svg/eNq1VLFu2zAQ3fkVB8UB2rRWZTlqIgMdHCBDAKMo0iDw4IW2aIkNTQokbbl_3yMpOXLtABnaQSB4d3z33jtSAw3fIIlTLongkmla-P1NdjXQPtLwEEkzQi7gp6XaApUFMPyWQq1eDLkgS7WHiAm2YdJGsFSigDW3_jwUqpGQJZew1moDghqLBfvYNKRQFlzD1GVXSiiNiHT1QubJxBfGDD7BhyQef04-Eqq1anog7rRVME_IRu0YaF5WFsZxjkocHcc7uwSMpbisuRAdeN6CNzA8Bz7PHeyBZ0Oc7qeKwYZyCXorGNiKWigVM2Cspr6xrbTallWAMN4lRFlzyU3VGaSWv9jKDgvmwpYrGQG3VPCVMwsQcjT6MvoKDf0NS2YbxiSq82bP85ahE5wfsU3-ZhvIzqZ397OJp4vtw4Fg0UC_nqywhZ_PCOeLEw-Rro6oHRUQBSxc3UgDEg6sTS6iySLqp9IEc15urcyJylAULkZos5WWC2A77NtwWzn7cSwDjVOBBYHAaFufq_OpE0e8F45czA5KrpI4OyD57W0_dxsIdbnrrJ-8znqudPY-Tx8fpneze3wa77U4jd92-ADXd_KmM5Iaw0vp3tZQ1fhErdKnnr6Ws319nP_nbrcm_Hh8-P70bv3j8FM5a8AiqjWX9ugmtZfIxYdUl-a_SvoDVDiU0w==</code></pre>
+                <button class="button is-small bd-copy"
+                        data-clipboard-text="https://kroki.io/pikchr/svg/eNq1VLFu2zAQ3fkVB8UB2rRWZTlqIgMdHCBDAKMo0iDw4IW2aIkNTQokbbl_3yMpOXLtABnaQSB4d3z33jtSAw3fIIlTLongkmla-P1NdjXQPtLwEEkzQi7gp6XaApUFMPyWQq1eDLkgS7WHiAm2YdJGsFSigDW3_jwUqpGQJZew1moDghqLBfvYNKRQFlzD1GVXSiiNiHT1QubJxBfGDD7BhyQef04-Eqq1anog7rRVME_IRu0YaF5WFsZxjkocHcc7uwSMpbisuRAdeN6CNzA8Bz7PHeyBZ0Oc7qeKwYZyCXorGNiKWigVM2Cspr6xrbTallWAMN4lRFlzyU3VGaSWv9jKDgvmwpYrGQG3VPCVMwsQcjT6MvoKDf0NS2YbxiSq82bP85ahE5wfsU3-ZhvIzqZ397OJp4vtw4Fg0UC_nqywhZ_PCOeLEw-Rro6oHRUQBSxc3UgDEg6sTS6iySLqp9IEc15urcyJylAULkZos5WWC2A77NtwWzn7cSwDjVOBBYHAaFufq_OpE0e8F45czA5KrpI4OyD57W0_dxsIdbnrrJ-8znqudPY-Tx8fpneze3wa77U4jd92-ADXd_KmM5Iaw0vp3tZQ1fhErdKnnr6Ws319nP_nbrcm_Hh8-P70bv3j8FM5a8AiqjWX9ugmtZfIxYdUl-a_SvoDVDiU0w=="
+                        title="Copy to clipboard">
+                    <svg fill="currentColor" viewBox="0 0 896 1024">
+                        <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <svg class="kroki-output kroki-output-pikchr-syntax pikchr" viewBox="0 0 619.92 193.68" height="100%" width="100%" style="width: 100%; height: 100%;">
+                <path d="M7,32L93,32L93,2L7,2Z" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="50" y="17" text-anchor="middle" font-weight="bold" fill="rgb(0,0,0)" dominant-baseline="central">element</text>
+                <path d="M7,32L7,68" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <circle cx="7" cy="68" r="5.4" style="fill:rgb(0,0,0);stroke-width:2.16;stroke:rgb(0,0,0);"></circle>
+                <polygon points="50,68 39,72 39,64" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M7,68L45,68" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M612,77L617,77L617,59L612,59Z" style="fill:rgb(0,0,0);stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <polygon points="612,68 600,72 600,64" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M569,68L606,68" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M332,83L481,83L481,53L332,53Z" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="407" y="68" text-anchor="middle" font-style="italic" fill="rgb(0,0,0)" dominant-baseline="central">object-definition</text>
+                <polygon points="569,68 557,72 557,64" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M481,68L563,68" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <polygon points="332,68 321,72 321,64" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M50,68L326,68" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <polygon points="108,104 96,108 96,100" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M50,68 L 65,68 Q 79,68 79,86 Q 79,104 91,104 L 102,104" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M123,119L172,119A15 15 0 0 0 188 104A15 15 0 0 0 172 89L123,89A15 15 0 0 0 108 104A15 15 0 0 0 123 119Z" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="148" y="104" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">&nbsp;LABEL&nbsp;</text>
+                <polygon points="206,104 194,108 194,100" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M188,104L200,104" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M221,119L222,119A15 15 0 0 0 237 104A15 15 0 0 0 222 89L221,89A15 15 0 0 0 206 104A15 15 0 0 0 221 119Z" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="221" y="104" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">":"</text>
+                <polygon points="309,104 298,108 298,100" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M237,104L303,104" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M309,119L388,119L388,89L309,89Z" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="348" y="104" text-anchor="middle" font-style="italic" fill="rgb(0,0,0)" dominant-baseline="central">position</text>
+                <polygon points="424,104 412,108 412,100" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M388,104L418,104" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M424,104 L 518,104 Q 540,104 540,86 Q 540,68 554,68 L 569,68" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <polygon points="275,81 269,92 263,86" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M237,104 L 244,104 Q 252,104 261,94 L 271,85" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M275,81 L 281,74 Q 288,68 306,68 L 324,68" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <polygon points="108,140 96,144 96,136" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M50,68 L 65,68 Q 79,68 79,90 L 79,118 Q 79,140 91,140 L 102,140" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M123,155L204,155A15 15 0 0 0 219 140A15 15 0 0 0 204 125L123,125A15 15 0 0 0 108 140A15 15 0 0 0 123 155Z" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="164" y="140" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">&nbsp;VARIABLE&nbsp;</text>
+                <polygon points="244,140 233,144 233,136" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M219,140L239,140" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M244,155L431,155L431,125L244,125Z" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="337" y="140" text-anchor="middle" font-style="italic" fill="rgb(0,0,0)" dominant-baseline="central">assignment-operator</text>
+                <polygon points="456,140 444,144 444,136" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M431,140L450,140" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M456,155L505,155L505,125L456,125Z" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="480" y="140" text-anchor="middle" font-style="italic" fill="rgb(0,0,0)" dominant-baseline="central">expr</text>
+                <path d="M505,140 L 522,140 Q 540,140 540,118 L 540,90 Q 540,68 554,68 L 569,68" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <polygon points="108,176 96,180 96,172" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M50,68 L 65,68 Q 79,68 79,90 L 79,154 Q 79,176 91,176 L 102,176" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M123,191L160,191A15 15 0 0 0 175 176A15 15 0 0 0 160 161L123,161A15 15 0 0 0 108 176A15 15 0 0 0 123 191Z" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="141" y="176" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">"print"</text>
+                <polygon points="211,176 199,180 199,172" style="fill:rgb(0,0,0)"></polygon>
+                <path d="M175,176L205,176" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M211,191L306,191L306,161L211,161Z" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <text x="259" y="176" text-anchor="middle" font-style="italic" fill="rgb(0,0,0)" dominant-baseline="central">print-args</text>
+                <path d="M306,176 L 518,176 Q 540,176 540,154 L 540,90 Q 540,68 554,68 L 569,68" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
             </svg>
         </div>
 
@@ -8703,6 +8987,61 @@ skinparam monochrome true
                 <g>
                     <circle class="fg_stroke no_fill" cx="36" cy="40" r="6"/>
                 </g>
+            </svg>
+        </div>
+
+        <h3 id="impossible-trident" class="title is-3">Impossible trident <a class="anchor-link" href="#impossible-trident">#</a></h3>
+        <h4 class="subtitle is-4">Pikchr</h4>
+        <div class="content">
+            <pre class="diagram-source"><code class="language-pikchr"># Impossible trident pikchr script
+# https://en.wikipedia.org/wiki/Impossible_trident
+# pikchr script by Kees Nuyt, license Creative Commons BY-NC-SA
+# https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+scale = 1.0
+eh = 0.5cm
+ew = 0.2cm
+ed = 2 * eh
+er = 0.4cm
+lws = 4.0cm
+lwm = lws + er
+lwl = lwm + er
+
+ellipse height eh width ew
+L1: line width lwl from last ellipse.n
+line width lwm from last ellipse.s
+LV: line height eh down
+
+move right er down ed from last ellipse.n
+ellipse height eh width ew
+L3: line width lws right from last ellipse.n to LV.end then down eh right ew
+line width lwm right from last ellipse.s then to LV.start
+
+move right er down ed from last ellipse.n
+ellipse height eh width ew
+line width lwl right from last ellipse.n then to L1.end
+line width lwl right from last ellipse.s then up eh</code></pre>
+            <div class="highlight">
+                <pre><code class="language-http">GET https://kroki.io/pikchr/svg/eNqtUD1PwzAQ3f0rTuoGxGlLWSoxQCdE1QWpEhNKnKO2GtuRzyXqv-eSuCqtSsXA9u7p7n3cCF5s44lMWSPEYCp0ERqzVToAqWCaKEagY2xonufoZGu2psHKFNKHTd5N-VHgIwnwyYkElHt4RSRY7fbxDmqj0BHCImARzRcDb613BM_v2WqRvT3BD0-VltSw09smAcrLfeZURkU-k-NcCFIFt3iEiRwL1AzG8kFZgW0Ppx2sGE7hBlALDD09Y7puiTGL9Ngy7phbwMBj3Y92GAXWtWk4vEaz0ZF1oDVV1ICtWE7m3M1hYrrLz-At1AXx4nAnnThZsRdWSCzXSenoUvnWCWE9vysMXOg54EqXXK7lvD_LSUnygg5ED8u1RFdB1OiSpT5kaM_b_CZEw_mgRrEI8Z_KnD38SpGD_6Rr89e7lHvXsOk31fIV1Q==</code></pre>
+                <button class="button is-small bd-copy" data-clipboard-text="https://kroki.io/pikchr/svg/eNqtUD1PwzAQ3f0rTuoGxGlLWSoxQCdE1QWpEhNKnKO2GtuRzyXqv-eSuCqtSsXA9u7p7n3cCF5s44lMWSPEYCp0ERqzVToAqWCaKEagY2xonufoZGu2psHKFNKHTd5N-VHgIwnwyYkElHt4RSRY7fbxDmqj0BHCImARzRcDb613BM_v2WqRvT3BD0-VltSw09smAcrLfeZURkU-k-NcCFIFt3iEiRwL1AzG8kFZgW0Ppx2sGE7hBlALDD09Y7puiTGL9Ngy7phbwMBj3Y92GAXWtWk4vEaz0ZF1oDVV1ICtWE7m3M1hYrrLz-At1AXx4nAnnThZsRdWSCzXSenoUvnWCWE9vysMXOg54EqXXK7lvD_LSUnygg5ED8u1RFdB1OiSpT5kaM_b_CZEw_mgRrEI8Z_KnD38SpGD_6Rr89e7lHvXsOk31fIV1Q=="
+                        title="Copy to clipboard">
+                    <svg fill="currentColor" viewBox="0 0 896 1024">
+                        <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <svg class="kroki-output kroki-output-pikchr-syntax pikchr" viewBox="0 0 327.47 146.052" height="100%" width="100%" style="width: 100%; height: 100%;">
+                <ellipse cx="7" cy="16" rx="5.66929" ry="14.1732" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></ellipse>
+                <path d="M7,2L279,2" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M7,30L257,30" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <path d="M257,30L257,58" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
+                <ellipse cx="30" cy="73" rx="5.66929" ry="14.1732" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></ellipse>
+                <path d="M30,58L257,58L257,58L268,87" style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);"></path>
+                <path d="M30,87L279,87L257,30" style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);"></path>
+                <ellipse cx="53" cy="129" rx="5.66929" ry="14.1732" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></ellipse>
+                <path d="M53,115L325,115L279,2" style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);"></path>
+                <path d="M53,143L325,143L325,115" style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);"></path>
             </svg>
         </div>
 
