@@ -526,7 +526,7 @@ main_ts ==> (main.view)
                     <p>
                         Here, we are using a Python one-liner to encode our diagram using deflate + base64:
                     </p>
-                    <pre><code class="language-sh">cat hello.dot | python -c "import sys; import base64; import zlib; print(base64.urlsafe_b64encode(zlib.compress(sys.stdin.read(), 9)))"</code></pre>
+                    <pre><code class="language-sh">cat hello.dot | python -c "import sys; import base64; import zlib; print(base64.urlsafe_b64encode(zlib.compress(sys.stdin.read().encode('utf-8'), 9)).decode('ascii'))"</code></pre>
 
                     <article class="message is-info">
                         <div class="message-body">
@@ -570,7 +570,7 @@ main_ts ==> (main.view)
 
                     <p>Please note that the encoding process is lossless. As a matter of fact, you can also use a Python one-liner to decode an encoded diagram:</p>
 
-                    <pre><code class="language-sh">echo "eNpLyUwvSizIUHBXqPZIzcnJ17ULzy_KSanlAgB1EAjQ" | python -c "import sys; import base64; import zlib; print(zlib.decompress(base64.urlsafe_b64decode(sys.stdin.read())))"</code></pre>
+                    <pre><code class="language-sh">echo "eNpLyUwvSizIUHBXqPZIzcnJ17ULzy_KSanlAgB1EAjQ" | python -c "import sys; import base64; import zlib; print(zlib.decompress(base64.urlsafe_b64decode(sys.stdin.read())).decode('utf8'))"</code></pre>
                     <p>
                         The above command will return:
                     </p>
