@@ -82,6 +82,7 @@
             <ul class="menu-list">
                 <li><a href="#c4-context">Context diagram <small class="tag is-small is-highlight">PlantUML</small></a></li>
                 <li><a href="#c4-container">Container diagram <small class="tag is-small is-highlight">PlantUML</small></a></li>
+                <li><a href="#structurizr-container">Container diagram <small class="tag is-small is-highlight">Structurizr</small></a></li>
                 <li><a href="#c4-component">Component diagram <small class="tag is-small is-highlight">PlantUML</small></a></li>
             </ul>
             <p class="menu-label">
@@ -9370,6 +9371,70 @@ Rel_Neighbor(backend_api, banking_system, "Uses", "sync/async, XML/HTTPS")
             </svg>
         </div>
 
+        <h3 id="structurizr-container" class="title is-3">Container diagram<a class="anchor-link" href="#structurizr-container">#</a></h3>
+        <h4 class="subtitle is-4">Structurizr</h4>
+        <div class="content">
+            <pre class="diagram-source"><code class="language-structurizr">
+workspace {
+    model { 
+        user = person "User" 
+        softwareSystem = softwareSystem "Software System" { 
+            webapp = container "Web Application" { 
+                user -> this "Uses!!!" 
+            } 
+            database = container "Database" { 
+                webapp -> this "Reads from and writes to" 
+            } 
+        } 
+    } 
+    views { 
+        systemContext softwareSystem { 
+            include * 
+            autolayout lr 
+        } 
+        container softwareSystem { 
+            include * 
+            autolayout lr 
+        } 
+        theme default 
+    } 
+}
+</code></pre>
+            <div class="highlight">
+                <pre><code class="language-http">GET https://kroki.io/structurizr/svg/eNq1UEFOxDAMvPMKN0ckngASghewQpzdxtVGpHEUOxtWq_07aam62y4cmUsyEzszNhROnxKxIzjdQcXAljycYCIjslCCR4iUhAOY90rN5VW414KJdkdRGmrdRjC7mcOPYK6_HlGoxRhrY8dB0YVqZj6ohecYvetQHYebniXWwxPo3smUSpqmMeu685paVGxRaG32Oqu_uszpFp83QivQJx4Ag4WSnJKA8t_G83U-Do6KXBvJtJWXGoe-dLu8TSAXOp8twf1axqzs8chZwacb4xGXaf_JQPc0EFjqMXtdBj5_A1fGoBA=</code></pre>
+                <button class="button is-small bd-copy"
+                        data-clipboard-text="https://kroki.io/structurizr/svg/eNq1UEFOxDAMvPMKN0ckngASghewQpzdxtVGpHEUOxtWq_07aam62y4cmUsyEzszNhROnxKxIzjdQcXAljycYCIjslCCR4iUhAOY90rN5VW414KJdkdRGmrdRjC7mcOPYK6_HlGoxRhrY8dB0YVqZj6ohecYvetQHYebniXWwxPo3smUSpqmMeu685paVGxRaG32Oqu_uszpFp83QivQJx4Ag4WSnJKA8t_G83U-Do6KXBvJtJWXGoe-dLu8TSAXOp8twf1axqzs8chZwacb4xGXaf_JQPc0EFjqMXtdBj5_A1fGoBA="
+                        title="Copy to clipboard">
+                    <svg fill="currentColor" viewBox="0 0 896 1024">
+                        <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="100%" preserveAspectRatio="none" style="width: 100%; height: 100%; max-height: 162px; max-width: 589px;" version="1.1" viewBox="0 0 589 162" width="100%" zoomAndPan="magnify">
+            <defs />
+                <g>
+                    <text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="239" x="168.5" y="17.9999">Software System - Containers</text>
+                    <polygon fill="#FFFFFF" points="142,27.5999,275,27.5999,282,67.1997,572,67.1997,572,155.5999,142,155.5999,142,27.5999" style="stroke:#444444;stroke-width:1.5;"></polygon>
+                    <line style="stroke:#444444;stroke-width:1.5;" x1="142" x2="282" y1="67.1997" y2="67.1997"></line><text fill="#444444" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="117" x="151" y="43.5998">Software System</text>
+                    <text fill="#444444" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="127" x="146" y="60.3997">[Software System]</text>
+                    <rect fill="#DDDDDD" height="51.2" style="stroke:#9A9A9A;stroke-width:1.5;" width="144" x="158" y="80.0999"></rect><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="124" x="168" y="106.0999">Web Application</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="46" x="207" y="119.2999">[Container]</text>
+                    <rect fill="#DDDDDD" height="51.2" style="stroke:#9A9A9A;stroke-width:1.5;" width="92" x="464" y="80.0999"></rect><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="72" x="474" y="106.0999">Database</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="46" x="487" y="119.2999">[Container]</text>
+                    <rect fill="#DDDDDD" height="51.2" style="stroke:#9A9A9A;stroke-width:1.5;" width="56" x="7" y="80.0999"></rect><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="36" x="17" y="106.0999">User</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="36" x="17" y="119.2999">[Person]</text>
+                    <path d="M63.24,105.5999 C86.52,105.5999 121.16,105.5999 152.76,105.5999 " fill="none" id="User-to-SoftwareSystem.WebApplication" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;"></path>
+                    <polygon fill="#707070" points="157.81,105.5999,148.81,101.5999,152.81,105.5999,148.81,109.5999,157.81,105.5999" style="stroke:#707070;stroke-width:2.0;"></polygon>
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="31" x="94" y="103.5999">Uses!!!</text>
+                    <path d="M302.23,105.5999 C351.08,105.5999 414.72,105.5999 458.42,105.5999 " fill="none" id="SoftwareSystem.WebApplication-to-SoftwareSystem.Database" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;"></path>
+                    <polygon fill="#707070" points="463.65,105.5999,454.65,101.5999,458.65,105.5999,454.65,109.5999,463.65,105.5999" style="stroke:#707070;stroke-width:2.0;"></polygon>
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="97" x="333" y="91.5999">Reads from and writes</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="8" x="379" y="103.5998">to</text>
+                </g>
+            </svg>
+        </div>
+        
         <h3 id="c4-component" class="title is-3">Component diagram<a class="anchor-link" href="#c4-component">#</a></h3>
         <h4 class="subtitle is-4">C4 PlantUML</h4>
         <div class="content">
