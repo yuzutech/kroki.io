@@ -8,6 +8,13 @@
     "schedule:monthly",
     ":maintainLockFilesMonthly"
   ],
+  "packageRules": [
+    {
+      // pako 2.x requires some work... disable for now
+      "matchPackagePatterns": ["pako"],
+      "enabled": false
+    }
+  ],
   "lockFileMaintenance": {
     "extends": [
       "group:all"
