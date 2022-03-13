@@ -1295,6 +1295,31 @@ document.addEventListener('DOMContentLoaded', function () {
             '  {},\n' +
             '  { name: "Acknowledge", wave: "1.....|01." }\n' +
             ']}'
+        } else if (diagramType === 'structurizr') {
+          diagramSourceElement.value = ' workspace {\n' +
+            '    model { \n' +
+            '        user = person "User" \n' +
+            '        softwareSystem = softwareSystem "Software System" { \n' +
+            '            webapp = container "Web Application" { \n' +
+            '                user -> this "Uses!!!" \n' +
+            '            } \n' +
+            '            database = container "Database" { \n' +
+            '                webapp -> this "Reads from and writes to" \n' +
+            '            } \n' +
+            '        } \n' +
+            '    } \n' +
+            '    views { \n' +
+            '        systemContext softwareSystem { \n' +
+            '            include * \n' +
+            '            autolayout lr \n' +
+            '        } \n' +
+            '        container softwareSystem { \n' +
+            '            include * \n' +
+            '            autolayout lr \n' +
+            '        } \n' +
+            '        theme default \n' +
+            '    } \n' +
+            '}'  
         } else if (diagramType === 'bpmn') {
           diagramSourceElement.value = '<?xml version="1.0" encoding="UTF-8"?>\n' +
             '<semantic:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL" id="_1275940932088" targetNamespace="http://www.trisotech.com/definitions/_1275940932088" exporter="Camunda Modeler" exporterVersion="1.16.0">\n' +

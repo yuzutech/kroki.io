@@ -36,7 +36,7 @@
         <div class="content">
             <p>
                 Kroki provides a unified API with support for BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag, PacketDiag, RackDiag),
-                BPMN, Bytefield, C4 (with PlantUML), Ditaa, Erd, Excalidraw, GraphViz, Mermaid, Nomnoml, Pikchr, PlantUML, SvgBob, UMLet, Vega, Vega-Lite, WaveDrom...
+                BPMN, Bytefield, C4 (with PlantUML), Ditaa, Erd, Excalidraw, GraphViz, Mermaid, Nomnoml, Pikchr, PlantUML, Structurizr, SvgBob, UMLet, Vega, Vega-Lite, WaveDrom...
                 and more to come!
             </p>
         </div>
@@ -82,6 +82,7 @@
             <ul class="menu-list">
                 <li><a href="#c4-context">Context diagram <small class="tag is-small is-highlight">PlantUML</small></a></li>
                 <li><a href="#c4-container">Container diagram <small class="tag is-small is-highlight">PlantUML</small></a></li>
+                <li><a href="#structurizr-container">Container diagram <small class="tag is-small is-highlight">Structurizr</small></a></li>
                 <li><a href="#c4-component">Component diagram <small class="tag is-small is-highlight">PlantUML</small></a></li>
             </ul>
             <p class="menu-label">
@@ -9370,6 +9371,473 @@ Rel_Neighbor(backend_api, banking_system, "Uses", "sync/async, XML/HTTPS")
             </svg>
         </div>
 
+        <h3 id="structurizr-container" class="title is-3">Container diagram<a class="anchor-link" href="#structurizr-container">#</a></h3>
+        <h4 class="subtitle is-4">Structurizr</h4>
+        <div class="content">
+            <pre class="diagram-source"><code class="language-structurizr">
+workspace "Big Bank plc" "This is an example workspace to illustrate the key features of Structurizr, via the DSL, based around a fictional online banking system." {
+
+    model {
+        customer = person "Personal Banking Customer" "A customer of the bank, with personal bank accounts." "Customer"
+
+        enterprise "Big Bank plc" {
+            supportStaff = person "Customer Service Staff" "Customer service staff within the bank." "Bank Staff"
+            backoffice = person "Back Office Staff" "Administration and support staff within the bank." "Bank Staff"
+
+            mainframe = softwaresystem "Mainframe Banking System" "Stores all of the core banking information about customers, accounts, transactions, etc." "Existing System"
+            email = softwaresystem "E-mail System" "The internal Microsoft Exchange e-mail system." "Existing System"
+            atm = softwaresystem "ATM" "Allows customers to withdraw cash." "Existing System"
+
+            internetBankingSystem = softwaresystem "Internet Banking System" "Allows customers to view information about their bank accounts, and make payments." {
+                singlePageApplication = container "Single-Page Application" "Provides all of the Internet banking functionality to customers via their web browser." "JavaScript and Angular" "Web Browser"
+                mobileApp = container "Mobile App" "Provides a limited subset of the Internet banking functionality to customers via their mobile device." "Xamarin" "Mobile App"
+                webApplication = container "Web Application" "Delivers the static content and the Internet banking single page application." "Java and Spring MVC"
+                apiApplication = container "API Application" "Provides Internet banking functionality via a JSON/HTTPS API." "Java and Spring MVC" {
+                    signinController = component "Sign In Controller" "Allows users to sign in to the Internet Banking System." "Spring MVC Rest Controller"
+                    accountsSummaryController = component "Accounts Summary Controller" "Provides customers with a summary of their bank accounts." "Spring MVC Rest Controller"
+                    resetPasswordController = component "Reset Password Controller" "Allows users to reset their passwords with a single use URL." "Spring MVC Rest Controller"
+                    securityComponent = component "Security Component" "Provides functionality related to signing in, changing passwords, etc." "Spring Bean"
+                    mainframeBankingSystemFacade = component "Mainframe Banking System Facade" "A facade onto the mainframe banking system." "Spring Bean"
+                    emailComponent = component "E-mail Component" "Sends e-mails to users." "Spring Bean"
+                }
+                database = container "Database" "Stores user registration information, hashed authentication credentials, access logs, etc." "Oracle Database Schema" "Database"
+            }
+        }
+
+        # relationships between people and software systems
+        customer -> internetBankingSystem "Views account balances, and makes payments using"
+        internetBankingSystem -> mainframe "Gets account information from, and makes payments using"
+        internetBankingSystem -> email "Sends e-mail using"
+        email -> customer "Sends e-mails to"
+        customer -> supportStaff "Asks questions to" "Telephone"
+        supportStaff -> mainframe "Uses"
+        customer -> atm "Withdraws cash using"
+        atm -> mainframe "Uses"
+        backoffice -> mainframe "Uses"
+
+        # relationships to/from containers
+        customer -> webApplication "Visits bigbank.com/ib using" "HTTPS"
+        customer -> singlePageApplication "Views account balances, and makes payments using"
+        customer -> mobileApp "Views account balances, and makes payments using"
+        webApplication -> singlePageApplication "Delivers to the customer's web browser"
+
+        # relationships to/from components
+        singlePageApplication -> signinController "Makes API calls to" "JSON/HTTPS"
+        singlePageApplication -> accountsSummaryController "Makes API calls to" "JSON/HTTPS"
+        singlePageApplication -> resetPasswordController "Makes API calls to" "JSON/HTTPS"
+        mobileApp -> signinController "Makes API calls to" "JSON/HTTPS"
+        mobileApp -> accountsSummaryController "Makes API calls to" "JSON/HTTPS"
+        mobileApp -> resetPasswordController "Makes API calls to" "JSON/HTTPS"
+        signinController -> securityComponent "Uses"
+        accountsSummaryController -> mainframeBankingSystemFacade "Uses"
+        resetPasswordController -> securityComponent "Uses"
+        resetPasswordController -> emailComponent "Uses"
+        securityComponent -> database "Reads from and writes to" "JDBC"
+        mainframeBankingSystemFacade -> mainframe "Makes API calls to" "XML/HTTPS"
+        emailComponent -> email "Sends e-mail using"
+
+        deploymentEnvironment "Development" {
+            deploymentNode "Developer Laptop" "" "Microsoft Windows 10 or Apple macOS" {
+                deploymentNode "Web Browser" "" "Chrome, Firefox, Safari, or Edge" {
+                    developerSinglePageApplicationInstance = containerInstance singlePageApplication
+                }
+                deploymentNode "Docker Container - Web Server" "" "Docker" {
+                    deploymentNode "Apache Tomcat" "" "Apache Tomcat 8.x" {
+                        developerWebApplicationInstance = containerInstance webApplication
+                        developerApiApplicationInstance = containerInstance apiApplication
+                    }
+                }
+                deploymentNode "Docker Container - Database Server" "" "Docker" {
+                    deploymentNode "Database Server" "" "Oracle 12c" {
+                        developerDatabaseInstance = containerInstance database
+                    }
+                }
+            }
+            deploymentNode "Big Bank plc" "" "Big Bank plc data center" "" {
+                deploymentNode "bigbank-dev001" "" "" "" {
+                    softwareSystemInstance mainframe
+                }
+            }
+
+        }
+
+        deploymentEnvironment "Live" {
+            deploymentNode "Customer's mobile device" "" "Apple iOS or Android" {
+                liveMobileAppInstance = containerInstance mobileApp
+            }
+            deploymentNode "Customer's computer" "" "Microsoft Windows or Apple macOS" {
+                deploymentNode "Web Browser" "" "Chrome, Firefox, Safari, or Edge" {
+                    liveSinglePageApplicationInstance = containerInstance singlePageApplication
+                }
+            }
+
+            deploymentNode "Big Bank plc" "" "Big Bank plc data center" {
+                deploymentNode "bigbank-web***" "" "Ubuntu 16.04 LTS" "" 4 {
+                    deploymentNode "Apache Tomcat" "" "Apache Tomcat 8.x" {
+                        liveWebApplicationInstance = containerInstance webApplication
+                    }
+                }
+                deploymentNode "bigbank-api***" "" "Ubuntu 16.04 LTS" "" 8 {
+                    deploymentNode "Apache Tomcat" "" "Apache Tomcat 8.x" {
+                        liveApiApplicationInstance = containerInstance apiApplication
+                    }
+                }
+
+                deploymentNode "bigbank-db01" "" "Ubuntu 16.04 LTS" {
+                    primaryDatabaseServer = deploymentNode "Oracle - Primary" "" "Oracle 12c" {
+                        livePrimaryDatabaseInstance = containerInstance database
+                    }
+                }
+                deploymentNode "bigbank-db02" "" "Ubuntu 16.04 LTS" "Failover" {
+                    secondaryDatabaseServer = deploymentNode "Oracle - Secondary" "" "Oracle 12c" "Failover" {
+                        liveSecondaryDatabaseInstance = containerInstance database "Failover"
+                    }
+                }
+                deploymentNode "bigbank-prod001" "" "" "" {
+                    softwareSystemInstance mainframe
+                }
+            }
+
+            primaryDatabaseServer -> secondaryDatabaseServer "Replicates data to"
+        }
+    }
+
+    views {
+        systemlandscape "SystemLandscape" {
+            include *
+            autoLayout
+        }
+
+        systemcontext internetBankingSystem "SystemContext" {
+            include *
+            animation {
+                internetBankingSystem
+                customer
+                mainframe
+                email
+            }
+            autoLayout
+        }
+
+        container internetBankingSystem "Containers" {
+            include *
+            animation {
+                customer mainframe email
+                webApplication
+                singlePageApplication
+                mobileApp
+                apiApplication
+                database
+            }
+            autoLayout
+        }
+
+        component apiApplication "Components" {
+            include *
+            animation {
+                singlePageApplication mobileApp database email mainframe
+                signinController securityComponent
+                accountsSummaryController mainframeBankingSystemFacade
+                resetPasswordController emailComponent
+            }
+            autoLayout
+        }
+
+        dynamic apiApplication "SignIn" "Summarises how the sign in feature works in the single-page application." {
+            singlePageApplication -> signinController "Submits credentials to"
+            signinController -> securityComponent "Validates credentials using"
+            securityComponent -> database "select * from users where username = ?"
+            database -> securityComponent "Returns user data to"
+            securityComponent -> signinController "Returns true if the hashed password matches"
+            signinController -> singlePageApplication "Sends back an authentication token to"
+            autoLayout
+        }
+
+        deployment internetBankingSystem "Development" "DevelopmentDeployment" {
+            include *
+            animation {
+                developerSinglePageApplicationInstance
+                developerWebApplicationInstance developerApiApplicationInstance
+                developerDatabaseInstance
+            }
+            autoLayout
+        }
+
+        deployment internetBankingSystem "Live" "LiveDeployment" {
+            include *
+            animation {
+                liveSinglePageApplicationInstance
+                liveMobileAppInstance
+                liveWebApplicationInstance liveApiApplicationInstance
+                livePrimaryDatabaseInstance
+                liveSecondaryDatabaseInstance
+            }
+            autoLayout
+        }
+
+        styles {
+            element "Person" {
+                color #ffffff
+                fontSize 22
+                shape Person
+            }
+            element "Customer" {
+                background #08427b
+            }
+            element "Bank Staff" {
+                background #999999
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Existing System" {
+                background #999999
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
+            element "Web Browser" {
+                shape WebBrowser
+            }
+            element "Mobile App" {
+                shape MobileDeviceLandscape
+            }
+            element "Database" {
+                shape Cylinder
+            }
+            element "Component" {
+                background #85bbf0
+                color #000000
+            }
+            element "Failover" {
+                opacity 25
+            }
+        }
+    }
+}
+</code></pre>
+            <div class="highlight">
+                <pre><code class="language-http">GET https://kroki.io/structurizr/svg/eNrFWm1v2zgS_u5fQagf7i5wmpdNe7kF9g5O0t51kWyCKm33Ky3RNhFJ1Im0nWyR_34zJPVCSbTlONszghiWyHl5ZjgzHPLoYEQOyP2CSwJ_lEQinfKMxWTFCslFRsSMqAUjM5EkYs2zOVmL4kHmNGLyZ5iKsw9JcMHn5IJmDyRPIvgdPknFUnJNs1hGNGcB-etCqVz-fHQkVbGM1LLgfxRvgdmRXNCCHZ2enx6fHP2tn9qnTLEiY0o_QxEM-a1Ef3p_coZED45GldAu8YAEleoZYY80zRNWa0iUIDxJlkCeKqZxeGBPZMYo8GISsQlrzmOy4lQPugqvx2RKJcBIC7HM4IvMeKQAT5oQkSWAMLw3ykitzNuAfB-NCHxSEbMEfhD7iYC9SFlBfiE52ARMEtzpbyBVAnJpx4A-k3qCNR0yGpM1VwtLACbiM0KjCIRTEngHFYVRxZgh7HnBZQe0Wjj8yGWei0KFis5mDSFLiiRkxYoDmHpAgxWR9oXUM1FAnlUSo1Cao5nmcJzS6EHMZji35ncBD8mteVqymsQpz7g2H_oyuGMp7TCmDteU8mxW0BSZSjFTa_AxYzwS3FTv2j4ahEqgr9AkKQ0SwYPK_DBPFKmVbyqWqrKfHFcWGhNQIZNUuxD8YipCUT88gm4NZo64DORNekT9cKhfVPLdg0RcrzDwixseFQJnkA-P0YJmc0aYGV-56WauVKU9PCf3N2gNDCGy1g-XFxogLuiaRFQueqk75LkNBRZlG2e6DL0ho1eIFWfrHkOArXjhLpWx9qGUPjCS06eUmdXjrge9JoBnwu7onE3yPOGRIfsLmD5T4Crg_EGohxziGNIYBCLeFWLFY9dnKoVKv5ktMxtQuHpCJWqNbBgC2ddsSqYF6MsKxPZXuqJhVPBcaTUm2XyZUAwa32DchRkXdHRJxZQnqIcr_41-jKI7IpOEp1wxXGhTCfLuJb9hTWKGcQI1-J2mtOAIUoN9R2JQ2ws7qurCfcUSvtKesNCxSPFITwDjaph6xTcGBicA69GaXImynhhC8IShN18vuyLSnHtFnNx98nnEFhgROUp-DW9_O_rP_f1dSICUT6QerzWeO894dgnSFJDyddqBjJqLDOEAp51nIASp39dLaintckISBKOqcLFz1yLKVYtDPjOpmmR7hSuXYbhMwQ-efFJO7DBix7niVmDWHqeTIwWXNcONz7bX_ksEhojE1B2VEmqK2CfuZxxEylGbsdUErXS5nVHLb5wSBpMvn69fIq9kEdQyCpAtpXPNb1-T6n0TT9cXC5ZQjAPWIUyuGxOdVfBHJX2VzqywF4xm_dJVGdgJ_x9pRGPmCurLx8QM1nXSzMwDRIyf1vm9U5ptF01nWw9qNuM2MQsZVMY2tWq7agNv5fTceRJTRbHSdCPIlX1alx9IH0wyr4uhRr4bkwVkX6xWlwBEpsqoFBUsxp80MbUIk5IkYl5b7LagEThcyY6E0QKACBoCjPrFf67T-hvjKVjYLHguyZSpNWMZ1HUCi3Fds9nsbg0iu7Xx4T89pUHwFXK7LNcwWDahGehR53FZJXLACObVEvcTBE61owT_Zqom3qwgZoVI92JiyjfHUdpzzRAYW8HQ8augFyqnYg8m8kGS_y4hPKANcBIUhSxh-QK8tSbgTHJR-CKZ7OeE5WDwzdZ4Uhd5bS1wyCZyjWK_b5jXj5Q4QiPUy6LfbVq1AviL5GCmKZ_rDQHuJvnUykwCnVU9oPaWfHv4X5N4XYPtQbClql_muiIykbGU5C-yWVEOwt6GvBr7fpZallbhAUEctcFqKIJK2HpmXdwE22n664VXIO7L7cNJ11bdT3-Hzmvo7BDcX8-Oaqhup9JorXu_Hs0w0FcJtAj55B8ixIa5rYzfmtilDFOqZA0lH4U4rdcIrts1DGUlgFcXjf3CRkXdeNhrjt9vrtvWaAm-OddUs2KWJ0LHlQ_ZihciS7XWV2zFEpGnuqxxdxT1jN8EWsUOBfSuaa4EbhtxH1d1HL7xLMZa9-SYiEJvgLAmi27Dvq1Km3hzB6vpXi4AXDYmH3nBZuJxTEI6g63jGGl_iOfMt_-JSynDvnX_KYMNYhY55Vb1rDdSDKnh2kCJ6AFQuqzquUOC6mEfrdTODPHr4BKc5BQKM3IvUpDJEHAekfO3jz5aDibfnAyyEQw32WwnPXE2xBtJu3vnXtLPrwN7Xdi-GPteErZuPjmNBsFe0tiIShlcXoTH88aV22qZB60OPXImkW4X67fbV6utrg5Bw-PjE0PSM1UHU1v_m-BXaVzFvq3K9e07PAHtGiqfbZHssq6HnA5VubQwcvHbUIexLC4Ej_s0wxrrpky0G01bpeMdbNaQEauwZWmcnoD7f4y2iMGPCbTPo1dz8eH-DUHw4ODA0PsyhWpmSU7evz0-I9f3oX569oMiOOL8usH7JRG2hAUC-GZYzn8gLH9-4hkeDqdlMOyi0q9EXnAsjssEYXIMyN7mYBPOIbkzE3ZJQwjSncvnz0tEW-A59TrNRyhaxcqfl6EgF1m8E1ZhOaWL1lZ2VXBrsx0EXYP-q6OYFyL-sUnX76hmC9ZrF9gimZUGexodfZvNLMPKsljphkithGkSJuXdA9jX6AeNywjfW2eKUbIEhA7cg8ylEtf0SSxVX_FgeOhTokflaz2a70szaCDXjNsGYtcovVw6o8pezcjbPB_19q43lBaboajbzh4YqoJa7o9B1ROr971d6bu9rmHns_6Tzy3Hd96u_B6gltvz1kFhUG3cXwHN_tZW3fypwpFpEPg9qNPg6bQ_RsOP8ja1PEZDD9jcJseL7RA_ZTTlUccKeA76CU9mjfhcQpRaiLU5QrbHn_aakLlOROwtEwP5Yc-5cetSzfA2abicptiybpzWOMFyhw7cV5rwWIfcJrFWG3lAe0uyhEWKHJgOlzm8XC9Yoc8mi8zcofmXS7Ka3S_aZwZgZvYgq5MQvDJ14SoJqWIJuzRzO8Eef5VHkuCCCopIOQDD_ga66aThyQXeK2udqinxwLKO9Fv8sErmvijrNOKav66qqfsHjGHNsdGu_aMtTaDR4MbIy9f5VnxNX0B_vSaiWzfAw9oGox02fP5Nz2iH0n-0U7X7YsNI9ZQw2QIOootp1piLkH0VbCQSUZA3M_3pvJ3BIg75H4ycnnZz2QKLRkN5g9iVDPXdy64UGAHm5gbom-Pzs9O_T4dQbNxA3ELzH_ozhGZYHqGXF-E2Ez45eX8-jXdA1cO2fZtvd31exLYqObcxPPvpPI7f7c_QaYh99_gUDLJjhpBs3q_zUTRjrnTzsdrfDCFeXxDxkb58SngWDxO1cbNlM9zn76bT2bEP7mP9GcJw0-5b5DTC-0en77x3T8z_5_8B4cj34g==?view-key=Containers</code></pre>
+                <button class="button is-small bd-copy"
+                        data-clipboard-text="https://kroki.io/structurizr/svg/eNrFWm1v2zgS_u5fQagf7i5wmpdNe7kF9g5O0t51kWyCKm33Ky3RNhFJ1Im0nWyR_34zJPVCSbTlONszghiWyHl5ZjgzHPLoYEQOyP2CSwJ_lEQinfKMxWTFCslFRsSMqAUjM5EkYs2zOVmL4kHmNGLyZ5iKsw9JcMHn5IJmDyRPIvgdPknFUnJNs1hGNGcB-etCqVz-fHQkVbGM1LLgfxRvgdmRXNCCHZ2enx6fHP2tn9qnTLEiY0o_QxEM-a1Ef3p_coZED45GldAu8YAEleoZYY80zRNWa0iUIDxJlkCeKqZxeGBPZMYo8GISsQlrzmOy4lQPugqvx2RKJcBIC7HM4IvMeKQAT5oQkSWAMLw3ykitzNuAfB-NCHxSEbMEfhD7iYC9SFlBfiE52ARMEtzpbyBVAnJpx4A-k3qCNR0yGpM1VwtLACbiM0KjCIRTEngHFYVRxZgh7HnBZQe0Wjj8yGWei0KFis5mDSFLiiRkxYoDmHpAgxWR9oXUM1FAnlUSo1Cao5nmcJzS6EHMZji35ncBD8mteVqymsQpz7g2H_oyuGMp7TCmDteU8mxW0BSZSjFTa_AxYzwS3FTv2j4ahEqgr9AkKQ0SwYPK_DBPFKmVbyqWqrKfHFcWGhNQIZNUuxD8YipCUT88gm4NZo64DORNekT9cKhfVPLdg0RcrzDwixseFQJnkA-P0YJmc0aYGV-56WauVKU9PCf3N2gNDCGy1g-XFxogLuiaRFQueqk75LkNBRZlG2e6DL0ho1eIFWfrHkOArXjhLpWx9qGUPjCS06eUmdXjrge9JoBnwu7onE3yPOGRIfsLmD5T4Crg_EGohxziGNIYBCLeFWLFY9dnKoVKv5ktMxtQuHpCJWqNbBgC2ddsSqYF6MsKxPZXuqJhVPBcaTUm2XyZUAwa32DchRkXdHRJxZQnqIcr_41-jKI7IpOEp1wxXGhTCfLuJb9hTWKGcQI1-J2mtOAIUoN9R2JQ2ws7qurCfcUSvtKesNCxSPFITwDjaph6xTcGBicA69GaXImynhhC8IShN18vuyLSnHtFnNx98nnEFhgROUp-DW9_O_rP_f1dSICUT6QerzWeO894dgnSFJDyddqBjJqLDOEAp51nIASp39dLaintckISBKOqcLFz1yLKVYtDPjOpmmR7hSuXYbhMwQ-efFJO7DBix7niVmDWHqeTIwWXNcONz7bX_ksEhojE1B2VEmqK2CfuZxxEylGbsdUErXS5nVHLb5wSBpMvn69fIq9kEdQyCpAtpXPNb1-T6n0TT9cXC5ZQjAPWIUyuGxOdVfBHJX2VzqywF4xm_dJVGdgJ_x9pRGPmCurLx8QM1nXSzMwDRIyf1vm9U5ptF01nWw9qNuM2MQsZVMY2tWq7agNv5fTceRJTRbHSdCPIlX1alx9IH0wyr4uhRr4bkwVkX6xWlwBEpsqoFBUsxp80MbUIk5IkYl5b7LagEThcyY6E0QKACBoCjPrFf67T-hvjKVjYLHguyZSpNWMZ1HUCi3Fds9nsbg0iu7Xx4T89pUHwFXK7LNcwWDahGehR53FZJXLACObVEvcTBE61owT_Zqom3qwgZoVI92JiyjfHUdpzzRAYW8HQ8augFyqnYg8m8kGS_y4hPKANcBIUhSxh-QK8tSbgTHJR-CKZ7OeE5WDwzdZ4Uhd5bS1wyCZyjWK_b5jXj5Q4QiPUy6LfbVq1AviL5GCmKZ_rDQHuJvnUykwCnVU9oPaWfHv4X5N4XYPtQbClql_muiIykbGU5C-yWVEOwt6GvBr7fpZallbhAUEctcFqKIJK2HpmXdwE22n664VXIO7L7cNJ11bdT3-Hzmvo7BDcX8-Oaqhup9JorXu_Hs0w0FcJtAj55B8ixIa5rYzfmtilDFOqZA0lH4U4rdcIrts1DGUlgFcXjf3CRkXdeNhrjt9vrtvWaAm-OddUs2KWJ0LHlQ_ZihciS7XWV2zFEpGnuqxxdxT1jN8EWsUOBfSuaa4EbhtxH1d1HL7xLMZa9-SYiEJvgLAmi27Dvq1Km3hzB6vpXi4AXDYmH3nBZuJxTEI6g63jGGl_iOfMt_-JSynDvnX_KYMNYhY55Vb1rDdSDKnh2kCJ6AFQuqzquUOC6mEfrdTODPHr4BKc5BQKM3IvUpDJEHAekfO3jz5aDibfnAyyEQw32WwnPXE2xBtJu3vnXtLPrwN7Xdi-GPteErZuPjmNBsFe0tiIShlcXoTH88aV22qZB60OPXImkW4X67fbV6utrg5Bw-PjE0PSM1UHU1v_m-BXaVzFvq3K9e07PAHtGiqfbZHssq6HnA5VubQwcvHbUIexLC4Ej_s0wxrrpky0G01bpeMdbNaQEauwZWmcnoD7f4y2iMGPCbTPo1dz8eH-DUHw4ODA0PsyhWpmSU7evz0-I9f3oX569oMiOOL8usH7JRG2hAUC-GZYzn8gLH9-4hkeDqdlMOyi0q9EXnAsjssEYXIMyN7mYBPOIbkzE3ZJQwjSncvnz0tEW-A59TrNRyhaxcqfl6EgF1m8E1ZhOaWL1lZ2VXBrsx0EXYP-q6OYFyL-sUnX76hmC9ZrF9gimZUGexodfZvNLMPKsljphkithGkSJuXdA9jX6AeNywjfW2eKUbIEhA7cg8ylEtf0SSxVX_FgeOhTokflaz2a70szaCDXjNsGYtcovVw6o8pezcjbPB_19q43lBaboajbzh4YqoJa7o9B1ROr971d6bu9rmHns_6Tzy3Hd96u_B6gltvz1kFhUG3cXwHN_tZW3fypwpFpEPg9qNPg6bQ_RsOP8ja1PEZDD9jcJseL7RA_ZTTlUccKeA76CU9mjfhcQpRaiLU5QrbHn_aakLlOROwtEwP5Yc-5cetSzfA2abicptiybpzWOMFyhw7cV5rwWIfcJrFWG3lAe0uyhEWKHJgOlzm8XC9Yoc8mi8zcofmXS7Ka3S_aZwZgZvYgq5MQvDJ14SoJqWIJuzRzO8Eef5VHkuCCCopIOQDD_ga66aThyQXeK2udqinxwLKO9Fv8sErmvijrNOKav66qqfsHjGHNsdGu_aMtTaDR4MbIy9f5VnxNX0B_vSaiWzfAw9oGox02fP5Nz2iH0n-0U7X7YsNI9ZQw2QIOootp1piLkH0VbCQSUZA3M_3pvJ3BIg75H4ycnnZz2QKLRkN5g9iVDPXdy64UGAHm5gbom-Pzs9O_T4dQbNxA3ELzH_ozhGZYHqGXF-E2Ez45eX8-jXdA1cO2fZtvd31exLYqObcxPPvpPI7f7c_QaYh99_gUDLJjhpBs3q_zUTRjrnTzsdrfDCFeXxDxkb58SngWDxO1cbNlM9zn76bT2bEP7mP9GcJw0-5b5DTC-0en77x3T8z_5_8B4cj34g==?view-key=Containers"
+                        title="Copy to clipboard">
+                    <svg fill="currentColor" viewBox="0 0 896 1024">
+                        <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1088px" preserveAspectRatio="none" style="width:934px;height:1088px;background:#FFFFFF;" version="1.1" viewBox="0 0 934 1088" width="934px" zoomAndPan="magnify">
+                <defs />
+                <g>
+                    <text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="299" x="311" y="17.9999">Internet Banking System - Containers</text>
+                    <polygon fill="#FFFFFF" points="222.5,189.5999,398.5,189.5999,405.5,229.1997,709.5,229.1997,709.5,1081.5999,222.5,1081.5999,222.5,189.5999" style="stroke:#444444;stroke-width:1.5;" />
+                    <line style="stroke:#444444;stroke-width:1.5;" x1="222.5" x2="405.5" y1="229.1997" y2="229.1997" />
+                    <text fill="#444444" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="170" x="226.5" y="205.5998">Internet Banking System</text>
+                    <text fill="#444444" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="127" x="248" y="222.3997">[Software System]</text>
+                    <rect fill="#438DD5" height="118.3997" style="stroke:#2E6295;stroke-width:1.5;" width="219" x="448" y="241.5999" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="124" x="495.5" y="267.5999">Web Application</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="146" x="484.5" y="280.7999">[Container: Java and Spring MVC]</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="559.5" y="296.7998" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="186" x="462.5" y="313.5998">Delivers the static content and</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="458" y="330.3997">the Internet banking single page</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="522" y="347.1996">application.</text>
+                    <rect fill="#438DD5" height="118.3997" style="stroke:#2E6295;stroke-width:1.5;" width="219" x="474" y="708.5999" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="117" x="525" y="734.5999">API Application</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="146" x="510.5" y="747.7999">[Container: Java and Spring MVC]</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="585.5" y="763.7998" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158" x="502.5" y="780.5998">Provides Internet banking</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="484" y="797.3997">functionality via a JSON/HTTPS</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="570.5" y="814.1996">API.</text>
+                    <path d="M490.5,931.5999 C490.5,921.5999 583.5,921.5999 583.5,921.5999 C583.5,921.5999 676.5,921.5999 676.5,931.5999 L676.5,1055.7995 C676.5,1065.7995 583.5,1065.7995 583.5,1065.7995 C583.5,1065.7995 490.5,1065.7995 490.5,1055.7995 L490.5,931.5999 " fill="#438DD5" style="stroke:#2E6295;stroke-width:1.5;" />
+                    <path d="M490.5,931.5999 C490.5,941.5999 583.5,941.5999 583.5,941.5999 C583.5,941.5999 676.5,941.5999 676.5,931.5999 " fill="none" style="stroke:#2E6295;stroke-width:1.5;" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="72" x="547.5" y="961.5999">Database</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="161" x="503" y="974.7999">[Container: Oracle Database Schema]</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="585.5" y="990.7998" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="510" y="1007.5998">Stores user registration</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="520.5" y="1024.3997">information, hashed</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="500.5" y="1041.1996">authentication credentials,</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="532.5" y="1057.9995">access logs, etc.</text>
+                    <rect fill="#438DD5" height="135.1997" style="stroke:#2E6295;stroke-width:1.5;" width="202" x="491.5" y="490.5999" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="182" x="501.5" y="516.5999">Single-Page Application</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="152" x="516.5" y="529.7999">[Container: JavaScript and Angular]</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="594.5" y="545.7998" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="510.5" y="562.5998">Provides all of the Internet</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="519" y="579.3997">banking functionality to</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="518" y="596.1996">customers via their web</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="566" y="612.9995">browser.</text>
+                    <rect fill="#438DD5" height="135.1997" style="stroke:#2E6295;stroke-width:1.5;" width="218" x="238.5" y="490.5999" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="86" x="304.5" y="516.5999">Mobile App</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="86" x="304.5" y="529.7999">[Container: Xamarin]</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="349.5" y="545.7998" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="191" x="250" y="562.5998">Provides a limited subset of the</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="194" x="248.5" y="579.3997">Internet banking functionality to</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="266" y="596.1996">customers via their mobile</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="326" y="612.9995">device.</text>
+                    <ellipse cx="106.5" cy="240.1595" fill="#08427B" rx="32.5596" ry="32.5596" style="stroke:#052E56;stroke-width:1.5;" />
+                    <rect fill="#08427B" height="120.7998" rx="32.5596" ry="32.5596" style="stroke:#052E56;stroke-width:1.5;" width="199" x="7" y="272.7191" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="135" x="37" y="298.7191">Personal Banking</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="75" x="69" y="317.9191">Customer</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="36" x="88.5" y="331.1191">[Person]</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="108.5" y="347.1191" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="17" y="363.919">A customer of the bank, with</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152" x="30.5" y="380.7189">personal bank accounts.</text>
+                    <rect fill="#999999" height="137.5998" style="stroke:#6B6B6B;stroke-width:1.5;" width="203" x="725" y="924.5999" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="147" x="751" y="950.5999">Mainframe Banking</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="57" x="798" y="969.7999">System</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="80" x="786.5" y="982.9999">[Software System]</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="828.5" y="998.9999" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="179" x="735" y="1015.7998">Stores all of the core banking</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="735.5" y="1032.5997">information about customers,</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="170" x="741.5" y="1049.3997">accounts, transactions, etc.</text>
+                    <rect fill="#999999" height="101.5998" style="stroke:#6B6B6B;stroke-width:1.5;" width="220" x="316.5" y="28.5999" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="108" x="372.5" y="54.5999">E-mail System</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="80" x="386.5" y="67.7999">[Software System]</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="428.5" y="83.7998" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="200" x="326.5" y="100.5998">The internal Microsoft Exchange</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="382.5" y="117.3997">e-mail system.</text>
+                    <path d="M316.48,126.7399 C284.88,142.1599 251.23,160.7899 222.5,181.5999 C213.14,188.3799 203.85,195.9499 194.85,203.8899 " fill="none" id="EmailSystem-to-PersonalBankingCustomer" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;" />
+                    <polygon fill="#707070" points="191,207.3099,200.3777,204.3002,194.7299,203.9801,195.0501,198.3323,191,207.3099" style="stroke:#707070;stroke-width:2.0;" />
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="72" x="253.5" y="171.5999">Sends e-mails to</text>
+                    <path d="M206.03,300.5999 C275.95,300.5999 369.66,300.5999 442.73,300.5999 " fill="none" id="PersonalBankingCustomer-to-InternetBankingSystem.WebApplication" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;" />
+                    <polygon fill="#707070" points="447.95,300.5999,438.95,296.5999,442.95,300.5999,438.95,304.5999,447.95,300.5999" style="stroke:#707070;stroke-width:2.0;" />
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="92" x="279.5" y="273.5999">Visits bigbank.com/ib</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="23" x="315.5" y="285.5998">using</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="8" lengthAdjust="spacing" textLength="30" x="312" y="295.5997">[HTTPS]</text>
+                    <path d="M206.3,384.8899 C211.65,388.0299 217.07,390.9599 222.5,393.5999 C274.28,418.7499 294.65,403.2499 348.5,423.5999 C407.83,446.0199 418.87,460.1399 474.5,490.5999 C478.51,492.7999 482.6,495.0499 486.72,497.3199 " fill="none" id="PersonalBankingCustomer-to-InternetBankingSystem.SinglePageApplication" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;" />
+                    <polygon fill="#707070" points="491.21,499.8099,485.2547,491.9655,486.8298,497.3986,481.3967,498.9738,491.21,499.8099" style="stroke:#707070;stroke-width:2.0;" />
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="61" x="438.5" y="434.5999">Views account</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="91" x="423.5" y="446.5998">balances, and makes</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="68" x="436.5" y="458.5998">payments using</text>
+                    <path d="M186.91,393.8099 C206.75,415.9599 228.15,439.3499 248.5,460.5999 C256.71,469.1699 265.43,478.0299 274.18,486.7499 " fill="none" id="PersonalBankingCustomer-to-InternetBankingSystem.MobileApp" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;" />
+                    <polygon fill="#707070" points="277.92,490.4699,274.3659,481.2846,274.3773,486.9415,268.7205,486.9529,277.92,490.4699" style="stroke:#707070;stroke-width:2.0;" />
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="61" x="264.5" y="434.5999">Views account</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="91" x="249.5" y="446.5998">balances, and makes</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="68" x="262.5" y="458.5998">payments using</text>
+                    <path d="M565.49,359.8999 C570.58,397.1099 577.23,445.6199 582.65,485.2099 " fill="none" id="InternetBankingSystem.WebApplication-to-InternetBankingSystem.SinglePageApplication" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;" />
+                    <polygon fill="#707070" points="583.37,490.4899,586.1258,481.0344,582.6989,485.5351,578.1982,482.1082,583.37,490.4899" style="stroke:#707070;stroke-width:2.0;" />
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="61" x="582.5" y="434.5999">Delivers to the</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="67" x="579.5" y="446.5998">customer's web</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="34" x="597.5" y="458.5998">browser</text>
+                    <path d="M589.62,625.6099 C588.54,650.5099 587.31,678.7099 586.25,703.3099 " fill="none" id="InternetBankingSystem.SinglePageApplication-to-InternetBankingSystem.APIApplication" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;" />
+                    <polygon fill="#707070" points="586.02,708.4999,590.428,699.6925,586.249,703.5051,582.4364,699.3261,586.02,708.4999" style="stroke:#707070;stroke-width:2.0;" />
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="81" x="588.5" y="666.5999">Makes API calls to</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="8" lengthAdjust="spacing" textLength="53" x="602.5" y="676.5998">[JSON/HTTPS]</text>
+                    <path d="M423.15,625.6099 C452.18,651.1399 485.15,680.1299 513.62,705.1599 " fill="none" id="InternetBankingSystem.MobileApp-to-InternetBankingSystem.APIApplication" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;" />
+                    <polygon fill="#707070" points="517.43,708.4999,513.3076,699.5552,513.6733,705.2003,508.0283,705.5659,517.43,708.4999" style="stroke:#707070;stroke-width:2.0;" />
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="81" x="480.5" y="666.5999">Makes API calls to</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="8" lengthAdjust="spacing" textLength="53" x="494.5" y="676.5998">[JSON/HTTPS]</text>
+                    <path d="M583.5,826.8699 C583.5,854.1999 583.5,887.1099 583.5,916.3899 " fill="none" id="InternetBankingSystem.APIApplication-to-InternetBankingSystem.Database" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;" />
+                    <polygon fill="#707070" points="583.5,921.4299,587.5,912.4299,583.5,916.4299,579.5,912.4299,583.5,921.4299" style="stroke:#707070;stroke-width:2.0;" />
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="97" x="584.5" y="867.5999">Reads from and writes</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="8" x="630.5" y="879.5998">to</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="8" lengthAdjust="spacing" textLength="25" x="622" y="889.5997">[JDBC]</text>
+                    <path d="M658.78,826.8099 C670.6,836.5199 682.53,846.6699 693.5,856.5999 C715.72,876.7099 738.9,899.6599 759.57,920.8999 " fill="none" id="InternetBankingSystem.APIApplication-to-MainframeBankingSystem" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;" />
+                    <polygon fill="#707070" points="763.13,924.5599,759.7438,915.3114,759.6522,920.9675,753.9961,920.8759,763.13,924.5599" style="stroke:#707070;stroke-width:2.0;" />
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="81" x="728.5" y="873.5999">Makes API calls to</text>
+                    <text fill="#707070" font-family="sans-serif" font-size="8" lengthAdjust="spacing" textLength="48" x="745" y="883.5998">[XML/HTTPS]</text>
+                    <path d="M658.38,708.3999 C681.11,685.5699 702.46,657.2299 711.5,625.5999 C765.84,435.5199 802.95,339.8899 684.5,181.5999 C650.65,136.3599 593.55,111.3699 541.65,97.5799 " fill="none" id="InternetBankingSystem.APIApplication-to-EmailSystem" style="stroke:#707070;stroke-width:2.0;stroke-dasharray:7.0,7.0;" />
+                    <polygon fill="#707070" points="536.65,96.2799,544.3562,102.4129,541.4896,97.5362,546.3663,94.6695,536.65,96.2799" style="stroke:#707070;stroke-width:2.0;" />
+                    <text fill="#707070" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="82" x="760.5" y="446.5999">Sends e-mail using</text>
+                    <!--MD5=[023afb36c2bae5bd69a6861820251717]
+                                        @startuml
+                                        title Internet Banking System - Containers
+                                        
+                                        top to bottom direction
+                                        
+                                        skinparam {
+                                          shadowing false
+                                          arrowFontSize 10
+                                          defaultTextAlignment center
+                                          wrapWidth 200
+                                          maxMessageSize 100
+                                        }
+                                        
+                                        hide stereotype
+                                        
+                                        skinparam rectangle<<InternetBankingSystem.APIApplication>> {
+                                          BackgroundColor #438dd5
+                                          FontColor #ffffff
+                                          BorderColor #2e6295
+                                        }
+                                        skinparam database<<InternetBankingSystem.Database>> {
+                                          BackgroundColor #438dd5
+                                          FontColor #ffffff
+                                          BorderColor #2e6295
+                                        }
+                                        skinparam rectangle<<EmailSystem>> {
+                                          BackgroundColor #999999
+                                          FontColor #ffffff
+                                          BorderColor #6b6b6b
+                                        }
+                                        skinparam rectangle<<MainframeBankingSystem>> {
+                                          BackgroundColor #999999
+                                          FontColor #ffffff
+                                          BorderColor #6b6b6b
+                                        }
+                                        skinparam rectangle<<InternetBankingSystem.MobileApp>> {
+                                          BackgroundColor #438dd5
+                                          FontColor #ffffff
+                                          BorderColor #2e6295
+                                        }
+                                        skinparam person<<PersonalBankingCustomer>> {
+                                          BackgroundColor #08427b
+                                          FontColor #ffffff
+                                          BorderColor #052e56
+                                        }
+                                        skinparam rectangle<<InternetBankingSystem.SinglePageApplication>> {
+                                          BackgroundColor #438dd5
+                                          FontColor #ffffff
+                                          BorderColor #2e6295
+                                        }
+                                        skinparam rectangle<<InternetBankingSystem.WebApplication>> {
+                                          BackgroundColor #438dd5
+                                          FontColor #ffffff
+                                          BorderColor #2e6295
+                                        }
+                                        
+                                        person "==Personal Banking Customer\n<size:10>[Person]</size>\n\nA customer of the bank, with personal bank accounts." <<PersonalBankingCustomer>> as PersonalBankingCustomer
+                                        rectangle "==Mainframe Banking System\n<size:10>[Software System]</size>\n\nStores all of the core banking information about customers, accounts, transactions, etc." <<MainframeBankingSystem>> as MainframeBankingSystem
+                                        rectangle "==E-mail System\n<size:10>[Software System]</size>\n\nThe internal Microsoft Exchange e-mail system." <<EmailSystem>> as EmailSystem
+                                        
+                                        package "Internet Banking System\n[Software System]" <<InternetBankingSystem>> {
+                                          skinparam PackageBorderColor<<InternetBankingSystem>> #444444
+                                          skinparam PackageFontColor<<InternetBankingSystem>> #444444
+                                        
+                                          rectangle "==Web Application\n<size:10>[Container: Java and Spring MVC]</size>\n\nDelivers the static content and the Internet banking single page application." <<InternetBankingSystem.WebApplication>> as InternetBankingSystem.WebApplication
+                                          rectangle "==API Application\n<size:10>[Container: Java and Spring MVC]</size>\n\nProvides Internet banking functionality via a JSON/HTTPS API." <<InternetBankingSystem.APIApplication>> as InternetBankingSystem.APIApplication
+                                          database "==Database\n<size:10>[Container: Oracle Database Schema]</size>\n\nStores user registration information, hashed authentication credentials, access logs, etc." <<InternetBankingSystem.Database>> as InternetBankingSystem.Database
+                                          rectangle "==Single-Page Application\n<size:10>[Container: JavaScript and Angular]</size>\n\nProvides all of the Internet banking functionality to customers via their web browser." <<InternetBankingSystem.SinglePageApplication>> as InternetBankingSystem.SinglePageApplication
+                                          rectangle "==Mobile App\n<size:10>[Container: Xamarin]</size>\n\nProvides a limited subset of the Internet banking functionality to customers via their mobile device." <<InternetBankingSystem.MobileApp>> as InternetBankingSystem.MobileApp
+                                        }
+                                        
+                                        EmailSystem .[#707070,thickness=2].> PersonalBankingCustomer : "<color:#707070>Sends e-mails to"
+                                        PersonalBankingCustomer .[#707070,thickness=2].> InternetBankingSystem.WebApplication : "<color:#707070>Visits bigbank.com/ib using\n<color:#707070><size:8>[HTTPS]</size>"
+                                        PersonalBankingCustomer .[#707070,thickness=2].> InternetBankingSystem.SinglePageApplication : "<color:#707070>Views account balances, and makes payments using"
+                                        PersonalBankingCustomer .[#707070,thickness=2].> InternetBankingSystem.MobileApp : "<color:#707070>Views account balances, and makes payments using"
+                                        InternetBankingSystem.WebApplication .[#707070,thickness=2].> InternetBankingSystem.SinglePageApplication : "<color:#707070>Delivers to the customer's web browser"
+                                        InternetBankingSystem.SinglePageApplication .[#707070,thickness=2].> InternetBankingSystem.APIApplication : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+                                        InternetBankingSystem.MobileApp .[#707070,thickness=2].> InternetBankingSystem.APIApplication : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+                                        InternetBankingSystem.APIApplication .[#707070,thickness=2].> InternetBankingSystem.Database : "<color:#707070>Reads from and writes to\n<color:#707070><size:8>[JDBC]</size>"
+                                        InternetBankingSystem.APIApplication .[#707070,thickness=2].> MainframeBankingSystem : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[XML/HTTPS]</size>"
+                                        InternetBankingSystem.APIApplication .[#707070,thickness=2].> EmailSystem : "<color:#707070>Sends e-mail using"
+                                        @enduml
+                                        
+                                        PlantUML version 1.2021.16(Wed Dec 08 17:25:22 GMT 2021)
+                                        (GPL source distribution)
+                                        Java Runtime: OpenJDK Runtime Environment
+                                        JVM: OpenJDK 64-Bit Server VM
+                                        Default Encoding: UTF-8
+                                        Language: en
+                                        Country: US
+                                        -->
+                </g>
+            </svg>
+        </div>
+        
         <h3 id="c4-component" class="title is-3">Component diagram<a class="anchor-link" href="#c4-component">#</a></h3>
         <h4 class="subtitle is-4">C4 PlantUML</h4>
         <div class="content">
