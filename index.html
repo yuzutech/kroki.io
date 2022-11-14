@@ -108,14 +108,9 @@
                         <div class="column">
                             <div class="field">
                                 <div class="control">
-                            <textarea id="diagram-source" class="textarea code" placeholder="User -> Kroki: Hello" rows="25">skinparam monochrome true
-skinparam ranksep 20
-skinparam dpi 150
-skinparam arrowThickness 0.7
+                            <textarea id="diagram-source" class="textarea code" placeholder="User -> Kroki: Hello" rows="25">skinparam ranksep 20
+skinparam dpi 125
 skinparam packageTitleAlignment left
-skinparam usecaseBorderThickness 0.4
-skinparam defaultFontSize 12
-skinparam rectangleBorderThickness 1
 
 rectangle "Main" {
   (main.view)
@@ -138,89 +133,7 @@ main_ts ==> (main.view)
                         </div>
                         <div class="column">
                             <div id="diagram-result" class="diagram-plantuml">
-                                <svg xmlns="http://www.w3.org/2000/svg" contentscripttype="application/ecmascript" contentstyletype="text/css" height="100%"
-                                     preserveAspectRatio="none" style="width:100%;height:100%;max-width:340px;max-height:492px;" version="1.1" viewBox="0 0 340 492" width="100%"
-                                     zoomAndPan="magnify">
-                                    <defs>
-                                        <filter height="300%" id="f1dwx3iaec31et" width="300%" x="-1" y="-1">
-                                            <feGaussianBlur result="blurOut" stdDeviation="3.125"></feGaussianBlur>
-                                            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"></feColorMatrix>
-                                            <feOffset dx="6.25" dy="6.25" in="blurOut2" result="blurOut3"></feOffset>
-                                            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"></feBlend>
-                                        </filter>
-                                    </defs>
-                                    <g><!--cluster Main-->
-                                        <rect fill="#FFFFFF" filter="url(#f1dwx3iaec31et)" height="196.875" style="stroke: #000000; stroke-width: 1.5625;" width="153.125"
-                                              x="21.875"
-                                              y="78.125"></rect>
-                                        <text fill="#000000" font-family="sans-serif" font-size="18.75" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="42.1875"
-                                              x="26.5625"
-                                              y="100.0001">Main
-                                        </text><!--cluster Base-->
-                                        <rect fill="#FFFFFF" filter="url(#f1dwx3iaec31et)" height="167.1875" style="stroke: #000000; stroke-width: 1.5625;" width="293.75"
-                                              x="29.6875"
-                                              y="307.8125"></rect>
-                                        <text fill="#000000" font-family="sans-serif" font-size="18.75" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="45.3125"
-                                              x="34.375"
-                                              y="329.6876">Base
-                                        </text>
-                                        <ellipse cx="98.401" cy="137.785" fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" rx="63.2448" ry="20.5975"
-                                                 style="stroke: #383838; stroke-width: 0.625;"></ellipse>
-                                        <text fill="#000000" font-family="sans-serif" font-size="18.75" lengthAdjust="spacingAndGlyphs" textLength="82.8125" x="56.9948"
-                                              y="143.5663">
-                                            main.view
-                                        </text>
-                                        <ellipse cx="93.792" cy="242.4725" fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" rx="55.5108" ry="20.5975"
-                                                 style="stroke: #383838; stroke-width: 0.625;"></ellipse>
-                                        <text fill="#000000" font-family="sans-serif" font-size="18.75" lengthAdjust="spacingAndGlyphs" textLength="71.875" x="57.8545"
-                                              y="248.2538">
-                                            singleton
-                                        </text>
-                                        <ellipse cx="219.0594" cy="440.8431" fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" rx="91.7156" ry="22.0931"
-                                                 style="stroke: #383838; stroke-width: 0.625;"></ellipse>
-                                        <text fill="#000000" font-family="sans-serif" font-size="18.75" lengthAdjust="spacingAndGlyphs" textLength="132.8125" x="152.6531"
-                                              y="446.6245">
-                                            base.component
-                                        </text>
-                                        <ellipse cx="243.9031" cy="367.4725" fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" rx="66.5593" ry="20.5975"
-                                                 style="stroke: #383838; stroke-width: 0.625;"></ellipse>
-                                        <text fill="#000000" font-family="sans-serif" font-size="18.75" lengthAdjust="spacingAndGlyphs" textLength="87.5" x="200.1531" y="373.2538">
-                                            component
-                                        </text>
-                                        <ellipse cx="83.0116" cy="367.4725" fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" rx="40.0428" ry="20.5975"
-                                                 style="stroke: #383838; stroke-width: 0.625;"></ellipse>
-                                        <text fill="#000000" font-family="sans-serif" font-size="18.75" lengthAdjust="spacingAndGlyphs" textLength="50" x="58.0116" y="373.2538">
-                                            model
-                                        </text><!--entity main_ts-->
-                                        <rect fill="#F8F8F8" filter="url(#f1dwx3iaec31et)" height="53.7502" style="stroke: #000000; stroke-width: 1.5625;" width="96.875" x="50"
-                                              y="12.5"></rect>
-                                        <text fill="#000000" font-family="sans-serif" font-size="18.75" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="65.625"
-                                              x="65.625"
-                                              y="46.8751">main.ts
-                                        </text><!--link component to base.component-->
-                                        <path d="M236.7861,387.6439 C234.3155,394.9013 231.4834,403.2208 228.8067,411.0833 " fill="none" id="component-base.component"
-                                              style="stroke: #383838; stroke-width: 1.09375; stroke-dasharray: 7.0,7.0;"></path>
-                                        <polygon fill="#383838" points="226.2011,418.7373,236.6497,407.4394,228.7189,411.3417,224.8166,403.4109,226.2011,418.7373"
-                                                 style="stroke: #383838; stroke-width: 1.5625;"></polygon><!--link main_ts to main.view-->
-                                        <path d="M98.4375,65.9609 C98.4375,79.1605 98.4375,95.077 98.4375,108.5425 " fill="none" id="main_ts-main.view"
-                                              style="stroke: #383838; stroke-width: 3.125;"></path>
-                                        <polygon fill="#383838" points="98.4375,116.5637,104.6875,102.5012,98.4375,108.7512,92.1875,102.5012,98.4375,116.5637"
-                                                 style="stroke: #383838; stroke-width: 1.5625;"></polygon><!--link main.view to component-->
-                                        <path d="M119.642,156.7719 C136.5806,172.9598 160.1238,197.3244 176.5625,221.875 C201.8642,259.662 222.2691,308.5056 233.7009,338.8372 "
-                                              fill="none"
-                                              id="main.view-component" style="stroke: #383838; stroke-width: 1.09375;"></path>
-                                        <polygon fill="#383838" points="236.6841,346.8767,237.6516,331.5183,233.9662,339.5522,225.9323,335.8669,236.6841,346.8767"
-                                                 style="stroke: #383838; stroke-width: 1.5625;"></polygon><!--link main.view to singleton-->
-                                        <path d="M97.5114,158.1828 C96.8052,173.9552 95.8239,195.8706 95.0406,213.3623 " fill="none" id="main.view-singleton"
-                                              style="stroke: #383838; stroke-width: 1.09375; stroke-dasharray: 7.0,7.0;"></path>
-                                        <polygon fill="#383838" points="94.6742,221.5477,101.5475,207.7791,95.024,213.743,89.0601,207.2194,94.6742,221.5477"
-                                                 style="stroke: #383838; stroke-width: 1.5625;"></polygon><!--link singleton to model-->
-                                        <path d="M91.9439,262.8288 C90.1391,283.4561 87.3491,315.3414 85.3278,338.4402 " fill="none" id="singleton-model"
-                                              style="stroke: #383838; stroke-width: 1.09375;"></path>
-                                        <polygon fill="#383838" points="84.6213,346.5156,92.0733,333.0515,85.3023,338.7329,79.6209,331.9618,84.6213,346.5156"
-                                                 style="stroke: #383838; stroke-width: 1.5625;"></polygon>
-                                    </g>
-                                </svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="100%" preserveAspectRatio="none" style="width: 100%; height: 100%; max-height: 506.51px; max-width: 391.927px;" version="1.1" viewBox="0 0 391 506" width="100%" zoomAndPan="magnify"><defs></defs><g><g id="cluster_Main"><rect fill="none" height="197.9167" rx="3.2552" ry="3.2552" style="stroke:#181818;stroke-width:1.3020833333333333;" width="197.9167" x="9.1146" y="76.8229"></rect><text fill="#000000" font-family="sans-serif" font-size="18.2292" font-weight="bold" lengthAdjust="spacing" textLength="46.875" x="13.0208" y="96.3478">Main</text></g><g id="cluster_Base"><rect fill="none" height="180.9896" rx="3.2552" ry="3.2552" style="stroke:#181818;stroke-width:1.3020833333333333;" width="368.4896" x="15.625" y="317.7083"></rect><text fill="#000000" font-family="sans-serif" font-size="18.2292" font-weight="bold" lengthAdjust="spacing" textLength="49.4792" x="19.5313" y="337.2332">Base</text></g><g id="elem_main.view"><ellipse cx="108.1593" cy="141.6305" fill="#F1F1F1" rx="78.2114" ry="19.2346" style="stroke:#181818;stroke-width:0.6510416666666666;"></ellipse><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="87.2396" x="60.6333" y="146.5101">main.view</text></g><g id="elem_singleton"><ellipse cx="106.5449" cy="234.0581" fill="#F1F1F1" rx="75.2949" ry="19.2143" style="stroke:#181818;stroke-width:0.6510416666666666;"></ellipse><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="83.3333" x="60.972" y="238.9377">singleton</text></g><g id="elem_base.component"><ellipse cx="258.8332" cy="453.5895" fill="#F1F1F1" rx="103.8852" ry="23.902" style="stroke:#181818;stroke-width:0.6510416666666666;"></ellipse><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="153.6458" x="179.7338" y="458.0225">base.component</text></g><g id="elem_component"><ellipse cx="277.2395" cy="383.4427" fill="#F1F1F1" rx="85.1823" ry="20.1615" style="stroke:#181818;stroke-width:0.6510416666666666;"></ellipse><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="104.1667" x="221.25" y="388.3223">component</text></g><g id="elem_model"><ellipse cx="91.3452" cy="383.5955" fill="#F1F1F1" rx="54.8868" ry="19.0121" style="stroke:#181818;stroke-width:0.6510416666666666;"></ellipse><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="55.9896" x="59.4441" y="388.4751">model</text></g><g id="elem_main_ts"><rect fill="#F1F1F1" height="47.2616" rx="3.2552" ry="3.2552" style="stroke:#181818;stroke-width:0.6510416666666666;" width="100.2604" x="57.9427" y="9.1146"></rect><text fill="#000000" font-family="sans-serif" font-size="18.2292" font-weight="bold" lengthAdjust="spacing" textLength="74.2188" x="70.9635" y="39.0561">main.ts</text></g><g id="link_component_base.component"><path d="M272.2656,403.6198 C270.651,409.6094 268.8281,416.3802 267.0703,422.9297 " fill="none" id="component-to-base.component" style="stroke:#181818;stroke-width:1.3020833333333333;stroke-dasharray:7.0,7.0;"></path><polygon fill="#181818" points="265.3385,429.375,273.4144,419.4132,267.0311,423.0884,263.3559,416.7052,265.3385,429.375" style="stroke:#181818;stroke-width:1.3020833333333333;"></polygon></g><g id="link_main_ts_main.view"><path d="M108.0729,56.4974 C108.0729,73.7891 108.0729,97.6172 108.0729,115.4948 " fill="none" id="main_ts-to-main.view" style="stroke:#181818;stroke-width:2.6041666666666665;"></path><polygon fill="#181818" points="108.0729,122.2656,113.2813,110.5469,108.0729,115.7552,102.8646,110.5469,108.0729,122.2656" style="stroke:#181818;stroke-width:2.6041666666666665;"></polygon></g><g id="link_main.view_component"><path d="M139.2318,160.0911 C160.3255,172.8125 187.5521,191.9661 205.7292,214.8438 C240.3646,258.4505 261.25,321.3281 270.9115,356.263 " fill="none" id="main.view-to-component" style="stroke:#181818;stroke-width:1.3020833333333333;"></path><polygon fill="#181818" points="272.6953,362.8646,274.678,350.1947,271.0028,356.578,264.6195,352.9028,272.6953,362.8646" style="stroke:#181818;stroke-width:1.3020833333333333;"></polygon></g><g id="link_main.view_singleton"><path d="M107.7995,161.849 C107.6172,175.0911 107.3568,193.0599 107.1354,207.6302 " fill="none" id="main.view-to-singleton" style="stroke:#181818;stroke-width:1.3020833333333333;stroke-dasharray:7.0,7.0;"></path><polygon fill="#181818" points="107.0443,214.4792,112.4195,202.836,107.1373,207.9694,102.0039,202.6872,107.0443,214.4792" style="stroke:#181818;stroke-width:1.3020833333333333;"></polygon></g><g id="link_singleton_model"><path d="M104.7917,254.2318 C101.9922,280.4557 96.875,328.4245 93.763,357.5911 " fill="none" id="singleton-to-model" style="stroke:#181818;stroke-width:1.3020833333333333;"></path><polygon fill="#181818" points="93.0599,364.2188,99.478,353.1163,93.7482,357.7448,89.1197,352.015,93.0599,364.2188" style="stroke:#181818;stroke-width:1.3020833333333333;"></polygon></g></g></svg>
                             </div>
                             <article id="diagram-error" class="message is-danger is-invisible">
                                 <div id="diagram-error-message" class="message-body">
@@ -229,9 +142,9 @@ main_ts ==> (main.view)
                         </div>
                     </div>
                     <div class="highlight" id="diagram-url">
-                        <pre><code class="language-http static"><span class="token verb-get">GET</span> <span class="token host">https://kroki.io</span>/<span class="token path">plantuml/svg/eNplj0FvwjAMhe_5FVZP40CgaNMuUGkcdttp3Kc0NSVq4lRxGNKm_fe1HULuuD37-bOfuXPUm2QChEjRnlIMCDmdUfHNSYY6xh42a9Fsegflk-yYlOLlcHK2I2SGtX4WZm9sZ1o8uOzxxbuWAlIGj8cshs6M1jDuY2owyU2P8jAezdnn10j53X0hlBsZFW021Pq7HaVSNw-KN-OogG8F8BAGqT8dXhZjxW4cyJEW6kcC-yHWFagHqW0MfaThhYmaVyE26P_x27qaDmXeruqqAMMw1h-ZlRI4aF3dX7hOwm5XzfIKDctlNcshPT1tFa8JPYAj-Zf5F065sqM=</span></code></pre>
+                        <pre><code class="language-http static"><span class="token verb-get">GET</span> <span class="token host">https://kroki.io</span>/<span class="token path">plantuml/svg/eNpljzEPgjAQhff-iguTDFQlcYMmuru5mwNO0tCWhjY6GP-7LRJTdHvv7r67d26QxuKEGiY0gyML5Y65b7GzEvblIalYbAfs6SK9oqOSvdFkPCi6ecYmaj2aXhFkZ5QmgycD2Ogg-V3SI4_OyTjgR5OzVwqc0NECNEHydtR2NGH3TK2dHjtSP3zViPmQd9W2ERmgg-iv3jGW4MC5-L-wTEJdi1XeRENRiFWOtMfnrclriQ5gJD-Z3x9beAM=</span></code></pre>
                         <button class="button is-small bd-copy"
-                                data-clipboard-text="https://kroki.io/plantuml/svg/eNplj0FvwjAMhe_5FVZP40CgaNMuUGkcdttp3Kc0NSVq4lRxGNKm_fe1HULuuD37-bOfuXPUm2QChEjRnlIMCDmdUfHNSYY6xh42a9Fsegflk-yYlOLlcHK2I2SGtX4WZm9sZ1o8uOzxxbuWAlIGj8cshs6M1jDuY2owyU2P8jAezdnn10j53X0hlBsZFW021Pq7HaVSNw-KN-OogG8F8BAGqT8dXhZjxW4cyJEW6kcC-yHWFagHqW0MfaThhYmaVyE26P_x27qaDmXeruqqAMMw1h-ZlRI4aF3dX7hOwm5XzfIKDctlNcshPT1tFa8JPYAj-Zf5F065sqM="
+                                data-clipboard-text="https://kroki.io/plantuml/svg/eNpljzEPgjAQhff-iguTDFQlcYMmuru5mwNO0tCWhjY6GP-7LRJTdHvv7r67d26QxuKEGiY0gyML5Y65b7GzEvblIalYbAfs6SK9oqOSvdFkPCi6ecYmaj2aXhFkZ5QmgycD2Ogg-V3SI4_OyTjgR5OzVwqc0NECNEHydtR2NGH3TK2dHjtSP3zViPmQd9W2ERmgg-iv3jGW4MC5-L-wTEJdi1XeRENRiFWOtMfnrclriQ5gJD-Z3x9beAM="
                                 title="Copy to clipboard">
                             <svg fill="currentColor" viewBox="0 0 896 1024" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>

@@ -149,14 +149,9 @@ document.addEventListener('DOMContentLoaded', function () {
         diagramSourceElement.placeholder = ''
         let diagramType = selectDiagramElement.value
         if (diagramType === 'plantuml') {
-          diagramSourceElement.value = 'skinparam monochrome true\n' +
-            'skinparam ranksep 20\n' +
-            'skinparam dpi 150\n' +
-            'skinparam arrowThickness 0.7\n' +
+          diagramSourceElement.value = 'skinparam ranksep 20\n' +
+            'skinparam dpi 125\n' +
             'skinparam packageTitleAlignment left\n' +
-            'skinparam usecaseBorderThickness 0.4\n' +
-            'skinparam defaultFontSize 12\n' +
-            'skinparam rectangleBorderThickness 1\n' +
             '\n' +
             'rectangle "Main" {\n' +
             '  (main.view)\n' +
