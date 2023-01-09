@@ -70,8 +70,7 @@ fieldset[disabled] .button {
 }
 
 .select.is-loading::after, .control.is-loading::after, .button.is-loading::after {
-  -webkit-animation: spinAround 500ms infinite linear;
-          animation: spinAround 500ms infinite linear;
+  animation: spinAround 500ms infinite linear;
   border: 2px solid #dbdbdb;
   border-radius: 9999px;
   border-right-color: transparent;
@@ -327,15 +326,6 @@ table th {
   color: #363636;
 }
 
-@-webkit-keyframes spinAround {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -351,7 +341,6 @@ table th {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
 }
@@ -7811,15 +7800,6 @@ label.panel-block:hover {
   opacity: 0;
 }
 
-@-webkit-keyframes tooltip-appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes tooltip-appear {
   from {
     opacity: 0;
@@ -7836,16 +7816,11 @@ label.panel-block:hover {
 .tooltipped:focus::after {
   display: inline-block;
   text-decoration: none;
-  -webkit-animation-name: tooltip-appear;
-          animation-name: tooltip-appear;
-  -webkit-animation-duration: 0.1s;
-          animation-duration: 0.1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-name: tooltip-appear;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-delay: 0.4s;
 }
 
 .tooltipped-no-delay:hover::before, .tooltipped-no-delay:hover::after,
@@ -7853,8 +7828,7 @@ label.panel-block:hover {
 .tooltipped-no-delay:active::after,
 .tooltipped-no-delay:focus::before,
 .tooltipped-no-delay:focus::after {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .tooltipped-multiline:hover::after,
@@ -7983,7 +7957,6 @@ label.panel-block:hover {
 }
 
 .tooltipped-multiline::after {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   max-width: 250px;
@@ -8016,9 +7989,7 @@ label.panel-block:hover {
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation: load7 1.8s infinite ease-in-out;
   animation: load7 1.8s infinite ease-in-out;
 }
 
@@ -8029,7 +8000,6 @@ label.panel-block:hover {
   position: relative;
   text-indent: -9999em;
   transform: translateZ(0);
-  -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
 
@@ -8042,23 +8012,11 @@ label.panel-block:hover {
 
 .loader:before {
   left: -4.5em;
-  -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
 
 .loader:after {
   left: 4.5em;
-}
-
-@-webkit-keyframes load7 {
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 2.5em 0 -1.3em;
-  }
-  40% {
-    box-shadow: 0 2.5em 0 0;
-  }
 }
 
 @keyframes load7 {
@@ -8315,9 +8273,20 @@ pre[class*="language-"] {
 ul.sponsors {
   list-style: none;
   margin: 1em 0 0;
+  display: grid;
+  justify-items: center;
+}
+
+ul.sponsors li a {
+  display: grid;
+  justify-items: center;
 }
 
 ul.sponsors li img.inline-exoscale {
+  max-width: 250px;
+}
+
+ul.sponsors li img.inline-terrastruct {
   max-width: 250px;
 }
 
