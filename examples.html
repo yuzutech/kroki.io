@@ -36,7 +36,7 @@
         <div class="content">
             <p>
                 Kroki provides a unified API with support for BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag, PacketDiag, RackDiag),
-                BPMN, Bytefield, C4 (with PlantUML), Ditaa, Erd, Excalidraw, GraphViz, Mermaid, Nomnoml, Pikchr, PlantUML, Structurizr, SvgBob, UMLet, Vega, Vega-Lite, WaveDrom...
+                BPMN, Bytefield, C4 (with PlantUML), D2, DBML, Ditaa, Erd, Excalidraw, GraphViz, Mermaid, Nomnoml, Pikchr, PlantUML, Structurizr, SvgBob, UMLet, Vega, Vega-Lite, WaveDrom...
                 and more to come!
             </p>
         </div>
@@ -9748,9 +9748,9 @@ workspace "Big Bank plc" "This is an example workspace to illustrate the key fea
                     <!--MD5=[023afb36c2bae5bd69a6861820251717]
                                         @startuml
                                         title Internet Banking System - Containers
-                                        
+
                                         top to bottom direction
-                                        
+
                                         skinparam {
                                           shadowing false
                                           arrowFontSize 10
@@ -9758,9 +9758,9 @@ workspace "Big Bank plc" "This is an example workspace to illustrate the key fea
                                           wrapWidth 200
                                           maxMessageSize 100
                                         }
-                                        
+
                                         hide stereotype
-                                        
+
                                         skinparam rectangle<<InternetBankingSystem.APIApplication>> {
                                           BackgroundColor #438dd5
                                           FontColor #ffffff
@@ -9801,22 +9801,22 @@ workspace "Big Bank plc" "This is an example workspace to illustrate the key fea
                                           FontColor #ffffff
                                           BorderColor #2e6295
                                         }
-                                        
+
                                         person "==Personal Banking Customer\n<size:10>[Person]</size>\n\nA customer of the bank, with personal bank accounts." <<PersonalBankingCustomer>> as PersonalBankingCustomer
                                         rectangle "==Mainframe Banking System\n<size:10>[Software System]</size>\n\nStores all of the core banking information about customers, accounts, transactions, etc." <<MainframeBankingSystem>> as MainframeBankingSystem
                                         rectangle "==E-mail System\n<size:10>[Software System]</size>\n\nThe internal Microsoft Exchange e-mail system." <<EmailSystem>> as EmailSystem
-                                        
+
                                         package "Internet Banking System\n[Software System]" <<InternetBankingSystem>> {
                                           skinparam PackageBorderColor<<InternetBankingSystem>> #444444
                                           skinparam PackageFontColor<<InternetBankingSystem>> #444444
-                                        
+
                                           rectangle "==Web Application\n<size:10>[Container: Java and Spring MVC]</size>\n\nDelivers the static content and the Internet banking single page application." <<InternetBankingSystem.WebApplication>> as InternetBankingSystem.WebApplication
                                           rectangle "==API Application\n<size:10>[Container: Java and Spring MVC]</size>\n\nProvides Internet banking functionality via a JSON/HTTPS API." <<InternetBankingSystem.APIApplication>> as InternetBankingSystem.APIApplication
                                           database "==Database\n<size:10>[Container: Oracle Database Schema]</size>\n\nStores user registration information, hashed authentication credentials, access logs, etc." <<InternetBankingSystem.Database>> as InternetBankingSystem.Database
                                           rectangle "==Single-Page Application\n<size:10>[Container: JavaScript and Angular]</size>\n\nProvides all of the Internet banking functionality to customers via their web browser." <<InternetBankingSystem.SinglePageApplication>> as InternetBankingSystem.SinglePageApplication
                                           rectangle "==Mobile App\n<size:10>[Container: Xamarin]</size>\n\nProvides a limited subset of the Internet banking functionality to customers via their mobile device." <<InternetBankingSystem.MobileApp>> as InternetBankingSystem.MobileApp
                                         }
-                                        
+
                                         EmailSystem .[#707070,thickness=2].> PersonalBankingCustomer : "<color:#707070>Sends e-mails to"
                                         PersonalBankingCustomer .[#707070,thickness=2].> InternetBankingSystem.WebApplication : "<color:#707070>Visits bigbank.com/ib using\n<color:#707070><size:8>[HTTPS]</size>"
                                         PersonalBankingCustomer .[#707070,thickness=2].> InternetBankingSystem.SinglePageApplication : "<color:#707070>Views account balances, and makes payments using"
@@ -9828,7 +9828,7 @@ workspace "Big Bank plc" "This is an example workspace to illustrate the key fea
                                         InternetBankingSystem.APIApplication .[#707070,thickness=2].> MainframeBankingSystem : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[XML/HTTPS]</size>"
                                         InternetBankingSystem.APIApplication .[#707070,thickness=2].> EmailSystem : "<color:#707070>Sends e-mail using"
                                         @enduml
-                                        
+
                                         PlantUML version 1.2021.16(Wed Dec 08 17:25:22 GMT 2021)
                                         (GPL source distribution)
                                         Java Runtime: OpenJDK Runtime Environment
@@ -9840,7 +9840,7 @@ workspace "Big Bank plc" "This is an example workspace to illustrate the key fea
                 </g>
             </svg>
         </div>
-        
+
         <h3 id="c4-component" class="title is-3">Component diagram<a class="anchor-link" href="#c4-component">#</a></h3>
         <h4 class="subtitle is-4">C4 PlantUML</h4>
         <div class="content">

@@ -1314,7 +1314,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '        } \n' +
             '        theme default \n' +
             '    } \n' +
-            '}'  
+            '}'
         } else if (diagramType === 'bpmn') {
           diagramSourceElement.value = '<?xml version="1.0" encoding="UTF-8"?>\n' +
             '<semantic:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL" id="_1275940932088" targetNamespace="http://www.trisotech.com/definitions/_1275940932088" exporter="Camunda Modeler" exporterVersion="1.16.0">\n' +
@@ -1822,6 +1822,53 @@ document.addEventListener('DOMContentLoaded', function () {
             'box "print-args" italic fit\n' +
             'line right until even with X9 - ($r,0) \\\n' +
             '  then up until even with X9 then to X9'
+        } else if (diagramType === 'd2') {
+          diagramSourceElement.value = 'D2 Parser: {\n' +
+            '  shape: class\n' +
+            '\n' +
+            '  # Default visibility is + so no need to specify.\n' +
+            '  +reader: io.RuneReader\n' +
+            '  readerPos: d2ast.Position\n' +
+            '\n' +
+            '  # Private field.\n' +
+            '  -lookahead: "[]rune"\n' +
+            '\n' +
+            '  # Protected field.\n' +
+            '  # We have to escape the # to prevent the line from being parsed as a comment.\n' +
+            '  \\#lookaheadPos: d2ast.Position\n' +
+            '\n' +
+            '  +peek(): (r rune, eof bool)\n' +
+            '  rewind()\n' +
+            '  commit()\n' +
+            '\n' +
+            '  \\#peekn(n int): (s string, eof bool)\n' +
+            '}\n' +
+            '\n' +
+            '"github.com/terrastruct/d2parser.git" -> D2 Parser'
+        } else if (diagramType === 'dbml') {
+          diagramSourceElement.value = 'Table users {\n' +
+            '  id integer\n' +
+            '  username varchar\n' +
+            '  role varchar\n' +
+            '  created_at timestamp\n' +
+            '}\n' +
+            '\n' +
+            'Table posts {\n' +
+            '  id integer [primary key]\n' +
+            '  title varchar\n' +
+            '  body text [note: \'Content of the post\']\n' +
+            '  user_id integer\n' +
+            '  status post_status\n' +
+            '  created_at timestamp\n' +
+            '}\n' +
+            '\n' +
+            'Enum post_status {\n' +
+            '  draft\n' +
+            '  published\n' +
+            '  private [note: \'visible via URL only\']\n' +
+            '}\n' +
+            '\n' +
+            'Ref: posts.user_id > users.id // many-to-one'
         }
         convert()
       })
