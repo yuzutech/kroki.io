@@ -1869,6 +1869,33 @@ document.addEventListener('DOMContentLoaded', function () {
             '}\n' +
             '\n' +
             'Ref: posts.user_id > users.id // many-to-one'
+        } else if (diagramType === 'wireviz') {
+          diagramSourceElement.value = 'connectors:\n' +
+            '  X1:\n' +
+            '    type: D-Sub\n' +
+            '    subtype: female\n' +
+            '    pinlabels: [DCD, RX, TX, DTR, GND, DSR, RTS, CTS, RI]\n' +
+            '  X2:\n' +
+            '    type: Molex KK 254\n' +
+            '    subtype: female\n' +
+            '    pinlabels: [GND, RX, TX]\n' +
+            '\n' +
+            'cables:\n' +
+            '  W1:\n' +
+            '    gauge: 0.25 mm2\n' +
+            '    length: 0.2\n' +
+            '    color_code: DIN\n' +
+            '    wirecount: 3\n' +
+            '    shield: true\n' +
+            '\n' +
+            'connections:\n' +
+            '  -\n' +
+            '    - X1: [5,2,3]\n' +
+            '    - W1: [1,2,3]\n' +
+            '    - X2: [1,3,2]\n' +
+            '  -\n' +
+            '    - X1: 5\n' +
+            '    - W1: s'
         }
         convert()
       })
