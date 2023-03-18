@@ -8458,6 +8458,15 @@ pre[class*="static-"] {
   margin-right: 0.25rem;
 }
 
+table.table.table-support thead th:not(:first-child) {
+  width: 80px;
+  text-align: center;
+}
+
+table.table.table-support tbody td:not(:first-child) {
+  text-align: center;
+}
+
 .table pre.services {
   color: #000;
   background: 0 0;
@@ -8570,15 +8579,6 @@ svg:not(:root) {
 
 .container > .duo aside.menu {
   display: none;
-}
-
-@media screen and (min-width: 1216px) {
-  .container > .duo aside.menu {
-    display: block;
-    position: relative;
-    padding: 3rem 0 3rem 1.5rem;
-    flex: 0 0 calc(14rem + 1.5rem);
-  }
 }
 
 .container > .duo aside.menu .anchors.is-pinned {

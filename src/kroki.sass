@@ -165,6 +165,14 @@ pre[class*="static-"]
     height: 1rem
     margin-right: 0.25rem
 
+table.table.table-support
+  thead
+    th:not(:first-child)
+      width: 80px
+      text-align: center
+  tbody
+    td:not(:first-child)
+      text-align: center
 .table
   pre.services
     color: #000
@@ -260,11 +268,6 @@ svg:not(:root)
     padding: 0 3rem 3rem
   aside.menu
     display: none
-    +widescreen
-      display: block
-      position: relative
-      padding: 3rem 0 3rem 1.5rem
-      flex: 0 0 calc(14rem + 1.5rem)
     .anchors.is-pinned
       display: block
       max-width: 14rem
