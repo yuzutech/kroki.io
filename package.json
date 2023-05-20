@@ -29,5 +29,8 @@
     "deploy": "npm run build",
     "start": "npm run build-sass -- --watch"
   },
-  "private": "true"
+  "private": "true",
+  "volta": {
+    "node": "18.16.0"
+  }
 }
