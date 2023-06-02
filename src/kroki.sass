@@ -16,16 +16,26 @@
 ul.sponsors
   list-style: none
   margin: 1em 0 0
+  padding-bottom: 1.25em
   display: grid
   justify-items: center
+
+  li + li
+    margin-top: 0.75em
   li
+    max-width: 350px
     a
       display: grid
       justify-items: center
+      text-align: center
     img.inline-exoscale
       max-width: 250px
     img.inline-terrastruct
       max-width: 250px
+    img.inline-zulip
+      max-height: 54px
+      padding-bottom: 0.25em
+      padding-top: 0.5em
 
 .tag.is-highlight
   background-color: #ff3860
@@ -262,19 +272,27 @@ svg:not(:root)
   .lead
     background-color: #fff
     overflow: hidden
-    flex-grow: 1
-    flex-shrink: 1
+    flex: 1
     margin-left: -3rem
     padding: 0 3rem 3rem
   aside.menu
-    display: none
     .anchors.is-pinned
       display: block
-      max-width: 14rem
       padding: 1.5rem
-      position: fixed
+      position: sticky
       top: 2rem
       background-color: #fafafa
+
++from($desktop)
+  .container > .duo
+    aside.menu
+      .anchors.is-pinned
+        max-width: 14rem
+
++until($desktop)
+  .container > .duo
+    flex-direction: column-reverse
+
 
 .anchor-link
   color: #a9a9a9
@@ -299,3 +317,8 @@ svg
   flex-direction: column
   img
     padding-bottom: 0.75em
+
+.link.has-icon
+  display: inline-flex
+  align-items: center
+  gap: 0.5em

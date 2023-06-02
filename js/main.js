@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function fallbackMessage (action) {
-    var actionMsg = ''
-    var actionKey = (action === 'cut' ? 'X' : 'C')
+    let actionMsg
+    const actionKey = (action === 'cut' ? 'X' : 'C')
     if (/iPhone|iPad/i.test(navigator.userAgent)) {
       actionMsg = 'No support :('
     } else if (/Mac/i.test(navigator.userAgent)) {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function addHighlightControls () {
-    var $highlightButtons = getAll('.highlight .bd-copy, .highlight .bd-expand')
+    const $highlightButtons = getAll('.highlight .bd-copy, .highlight .bd-expand')
 
     $highlightButtons.forEach(function ($el) {
       $el.addEventListener('mouseenter', function () {
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
         clearTooltip(this)
       })
 
-      var clipboardSnippets = new ClipboardJS($el)
+      const clipboardSnippets = new ClipboardJS($el)
       clipboardSnippets.on('success', function (e) {
         e.clearSelection()
         showTooltip(e.trigger, 'Copied!')
@@ -1896,13 +1896,108 @@ document.addEventListener('DOMContentLoaded', function () {
             '  -\n' +
             '    - X1: 5\n' +
             '    - W1: s'
+        } else if (diagramType === 'tikz') {
+           diagramSourceElement.value = '\\documentclass{article}\n' +
+             '\\usepackage{tikz}\n' +
+             '\\usepackage{tikz-3dplot}\n' +
+             '\\usetikzlibrary{math}\n' +
+             '\\usepackage[active,tightpage]{preview}\n' +
+             '\\PreviewEnvironment{tikzpicture}\n' +
+             '\\setlength\\PreviewBorder{0.125pt}\n' +
+             '%\n' +
+             '% File name: directional-angles.tex\n' +
+             '% Description: \n' +
+             '% The directional angles of a vector are geometrically represented.\n' +
+             '% \n' +
+             '% Date of creation: July, 25th, 2021.\n' +
+             '% Date of last modification: October, 9th, 2022.\n' +
+             '% Author: Efra�n Soto Apolinar.\n' +
+             '% https://www.aprendematematicas.org.mx/author/efrain-soto-apolinar/instructing-courses/\n' +
+             '% Source: page 11 of the \n' +
+             '% Glosario Ilustrado de Matematicas Escolares.\n' +
+             '% https://tinyurl.com/5udm2ufy\n' +
+             '%\n' +
+             '% Terms of use:\n' +
+             '% According to TikZ.net\n' +
+             '% https://creativecommons.org/licenses/by-nc-sa/4.0/\n' +
+             '% Your commitment to the terms of use is greatly appreciated.\n' +
+             '%\n' +
+             '\\begin{document}\n' +
+             '  \\tdplotsetmaincoords{80}{120}\n' +
+             '  %\n' +
+             '  \\begin{tikzpicture}[tdplot_main_coords,scale=0.75] \n' +
+             '    % Indicate the components of the vector in rectangular coordinates\n' +
+             '    \\pgfmathsetmacro{\\ux}{4}\n' +
+             '    \\pgfmathsetmacro{\\uy}{4}\n' +
+             '    \\pgfmathsetmacro{\\uz}{3}\n' +
+             '    % Length of each axis\n' +
+             '    \\pgfmathsetmacro{\\ejex}{\\ux+0.5}\n' +
+             '    \\pgfmathsetmacro{\\ejey}{\\uy+0.5}\n' +
+             '    \\pgfmathsetmacro{\\ejez}{\\uz+0.5}\n' +
+             '    \\pgfmathsetmacro{\\umag}{sqrt(\\ux*\\ux+\\uy*\\uy+\\uz*\\uz)} % Magnitude of vector $\\vec{u}$\n' +
+             '    % Compute the angle $\\theta$\n' +
+             '    \\pgfmathsetmacro{\\angthetax}{pi*atan(\\uy/\\ux)/180}\n' +
+             '    \\pgfmathsetmacro{\\angthetay}{pi*atan(\\ux/\\uz)/180}\n' +
+             '    \\pgfmathsetmacro{\\angthetaz}{pi*atan(\\uz/\\uy)/180}\n' +
+             '    % Compute the angle $\\phi$\n' +
+             '    \\pgfmathsetmacro{\\angphix}{pi*acos(\\ux/\\umag)/180}\n' +
+             '    \\pgfmathsetmacro{\\angphiy}{pi*acos(\\uy/\\umag)/180}\n' +
+             '    \\pgfmathsetmacro{\\angphiz}{pi*acos(\\uz/\\umag)/180}\n' +
+             '    % Compute rho sin(phi) to simplify computations\n' +
+             '    \\pgfmathsetmacro{\\costz}{cos(\\angthetax r)}\n' +
+             '    \\pgfmathsetmacro{\\sintz}{sin(\\angthetax r)}\n' +
+             '    \\pgfmathsetmacro{\\costy}{cos(\\angthetay r)}\n' +
+             '    \\pgfmathsetmacro{\\sinty}{sin(\\angthetay r)}\n' +
+             '    \\pgfmathsetmacro{\\costx}{cos(\\angthetaz r)}\n' +
+             '    \\pgfmathsetmacro{\\sintx}{sin(\\angthetaz r)}\n' +
+             '    % Coordinate axis\n' +
+             '    \\draw[thick,->] (0,0,0) -- (\\ejex,0,0) node[below left] {$x$};\n' +
+             '    \\draw[thick,->] (0,0,0) -- (0,\\ejey,0) node[right] {$y$};\n' +
+             '    \\draw[thick,->] (0,0,0) -- (0,0,\\ejez) node[above] {$z$};\n' +
+             '    % Projections of the components in the axis\n' +
+             '    \\draw[gray,very thin,opacity=0.5] (0,0,0) -- (\\ux,0,0) -- (\\ux,\\uy,0) -- (0,\\uy,0) -- (0,0,0);\t% face on the plane z = 0\n' +
+             '    \\draw[gray,very thin,opacity=0.5] (0,0,\\uz) -- (\\ux,0,\\uz) -- (\\ux,\\uy,\\uz) -- (0,\\uy,\\uz) -- (0,0,\\uz);\t% face on the plane z = \\uz\n' +
+             '    \\draw[gray,very thin,opacity=0.5] (0,0,0) -- (0,0,\\uz) -- (\\ux,0,\\uz) -- (\\ux,0,0) -- (0,0,0);\t% face on the plane y = 0\n' +
+             '    \\draw[gray,very thin,opacity=0.5] (0,\\uy,0) -- (0,\\uy,\\uz) -- (\\ux,\\uy,\\uz) -- (\\ux,\\uy,0) -- (0,\\uy,0);\t% face on the plane y = \\uy\n' +
+             '    \\draw[gray,very thin,opacity=0.5] (0,0,0) -- (0,\\uy,0) -- (0,\\uy,\\uz) -- (0,0,\\uz) -- (0,0,0); % face on the plane x = 0\n' +
+             '    \\draw[gray,very thin,opacity=0.5] (\\ux,0,0) -- (\\ux,\\uy,0) -- (\\ux,\\uy,\\uz) -- (\\ux,0,\\uz) -- (\\ux,0,0); % face on the plane x = \\ux\n' +
+             '    % Arc indicating the angle $\\alpha$\n' +
+             '    % (angle formed by the vector $\\vec{v}$ and the $x$ axis)\n' +
+             '    \\draw[red,thick] plot[domain=0:\\angphix,smooth,variable=\\t] ({cos(\\t r)},{sin(\\t r)*\\costx},{sin(\\t r)*\\sintx});\n' +
+             '    % Arc indicating the angle $\\beta$\n' +
+             '    % (angle formed by the vector $\\vec{v}$ and the $y$ axis)\n' +
+             '    \\draw[red,thick] plot[domain=0:\\angphiy,smooth,variable=\\t] ({sin(\\t r)*\\sinty},{cos(\\t r)},{sin(\\t r)*\\costy});\n' +
+             '    % Arc indicating the angle $\\gamma$\n' +
+             '    % (angle formed by the vector $\\vec{v}$ and the $z$ axis)\n' +
+             '    \\draw[red,thick] plot[domain=0:\\angphiz,smooth,variable=\\t] ({sin(\\t r)*\\costz},{sin(\\t r)*\\sintz},{cos(\\t r)});\n' +
+             '    % Vector $\\vec{u}$\n' +
+             '    \\draw[blue,thick,->] (0,0,0) -- (\\ux,\\uy,\\uz) node [below right] {$\\vec{u}$};\n' +
+             '    % Nodes indicating the direction angles\n' +
+             '    \\pgfmathsetmacro{\\xa}{1.85*cos(0.5*\\angphix r)}\n' +
+             '    \\pgfmathsetmacro{\\ya}{1.85*sin(0.5*\\angphix r)*\\costx}\n' +
+             '    \\pgfmathsetmacro{\\za}{1.85*sin(0.5*\\angphiz r)*\\sintx}\n' +
+             '    \\node[red] at (\\xa,\\ya,\\za) {\\footnotesize$\\alpha$};\n' +
+             '    %\n' +
+             '    \\pgfmathsetmacro{\\xb}{1.5*sin(0.5*\\angphiy r)*\\sinty}\n' +
+             '    \\pgfmathsetmacro{\\yb}{1.5*cos(0.5*\\angphiy r)}\n' +
+             '    \\pgfmathsetmacro{\\zb}{1.5*sin(0.5*\\angphiy r)*\\costy}\n' +
+             '    \\node[red] at (\\xb,\\yb,\\zb) {\\footnotesize$\\beta$};\n' +
+             '    %\n' +
+             '    \\pgfmathsetmacro{\\xc}{1.5*sin(0.5*\\angphiz r)*\\costz}\n' +
+             '    \\pgfmathsetmacro{\\yc}{1.5*sin(0.5*\\angphiz r)*\\sintz}\n' +
+             '    \\pgfmathsetmacro{\\zc}{1.5*cos(0.5*\\angphiz r)}\n' +
+             '    \\node[red] at (\\xc,\\yc,\\zc) {\\footnotesize$\\gamma$};\n' +
+             '    %\n' +
+             '  \\end{tikzpicture}\n' +
+             '  %\n' +
+             '\\end{document}'
         }
         convert()
       })
     }
   }
 
-  var backToTopElement = document.getElementById('back-top');
+  const backToTopElement = document.getElementById('back-top');
   if (backToTopElement) {
     backToTopElement.onclick = function scrollToTop () {
       window.scrollTo(0, 0);

@@ -8273,13 +8273,23 @@ pre[class*="language-"] {
 ul.sponsors {
   list-style: none;
   margin: 1em 0 0;
+  padding-bottom: 1.25em;
   display: grid;
   justify-items: center;
+}
+
+ul.sponsors li + li {
+  margin-top: 0.75em;
+}
+
+ul.sponsors li {
+  max-width: 350px;
 }
 
 ul.sponsors li a {
   display: grid;
   justify-items: center;
+  text-align: center;
 }
 
 ul.sponsors li img.inline-exoscale {
@@ -8288,6 +8298,12 @@ ul.sponsors li img.inline-exoscale {
 
 ul.sponsors li img.inline-terrastruct {
   max-width: 250px;
+}
+
+ul.sponsors li img.inline-zulip {
+  max-height: 54px;
+  padding-bottom: 0.25em;
+  padding-top: 0.5em;
 }
 
 .tag.is-highlight {
@@ -8571,23 +8587,29 @@ svg:not(:root) {
 .container > .duo .lead {
   background-color: #fff;
   overflow: hidden;
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex: 1;
   margin-left: -3rem;
   padding: 0 3rem 3rem;
 }
 
-.container > .duo aside.menu {
-  display: none;
-}
-
 .container > .duo aside.menu .anchors.is-pinned {
   display: block;
-  max-width: 14rem;
   padding: 1.5rem;
-  position: fixed;
+  position: sticky;
   top: 2rem;
   background-color: #fafafa;
+}
+
+@media screen and (min-width: 1024px) {
+  .container > .duo aside.menu .anchors.is-pinned {
+    max-width: 14rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container > .duo {
+    flex-direction: column-reverse;
+  }
 }
 
 .anchor-link {
@@ -8617,5 +8639,16 @@ svg .title {
 
 .download-cheat-sheet img {
   padding-bottom: 0.75em;
+}
+
+.link.has-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+[data-color-mode=light][data-light-theme*=light] {
+  --color-neutral-emphasis-plus: #24292f;
+  --color-neutral-emphasis: #6e7781;
 }
 /*# sourceMappingURL=main.css.map */

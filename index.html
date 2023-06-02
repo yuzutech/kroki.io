@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-color-mode="light" data-light-theme="light" data-dark-theme="dark_dimmed">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +24,7 @@
     <meta name="msapplication-wide310x150logo" content="./assets/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="./assets/mstile-310x310.png" />
     <title>Kroki!</title>
-    <link rel="stylesheet" href="./css/main.min.css?v=0.7.0">
+    <link rel="stylesheet" href="./css/main.min.css?v=1.0.0">
 </head>
 <body>
 <section class="section">
@@ -38,7 +38,7 @@
                 <div class="content">
                     <p>
                         Kroki provides a unified API with support for BlockDiag (BlockDiag, SeqDiag, ActDiag, NwDiag, PacketDiag, RackDiag),
-                        BPMN, Bytefield, C4 (with PlantUML), D2, DBML, Ditaa, Erd, Excalidraw, GraphViz, Mermaid, Nomnoml, Pikchr, PlantUML, Structurizr, SvgBob, UMLet, Vega, Vega-Lite, WaveDrom, WireViz...
+                        BPMN, Bytefield, C4 (with PlantUML), D2, DBML, Ditaa, Erd, Excalidraw, GraphViz, Mermaid, Nomnoml, Pikchr, PlantUML, Structurizr, SvgBob, TikZ, UMLet, Vega, Vega-Lite, WaveDrom, WireViz...
                         and more to come!
                     </p>
                 </div>
@@ -98,6 +98,7 @@
                                 <option selected value="plantuml">PlantUML</option>
                                 <option value="structurizr">Structurizr</option>
                                 <option value="svgbob">Svgbob</option>
+                                <option value="tikz">TikZ</option>
                                 <option value="vega">Vega</option>
                                 <option value="vegalite">Vega-Lite</option>
                                 <option value="wavedrom">WaveDrom</option>
@@ -136,7 +137,7 @@ main_ts ==> (main.view)
                         </div>
                         <div class="column">
                             <div id="diagram-result" class="diagram-plantuml">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="506.5104px" preserveAspectRatio="none" style="width:391px;height:506px;background:#FFFFFF;" version="1.1" viewBox="0 0 391 506" width="391.9271px" zoomAndPan="magnify"><defs/><g><!--cluster Main--><g id="cluster_Main"><rect fill="none" height="197.9167" rx="3.2552" ry="3.2552" style="stroke:#181818;stroke-width:1.3020833333333333;" width="197.9167" x="9.1146" y="76.8229"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" font-weight="bold" lengthAdjust="spacing" textLength="46.875" x="13.0208" y="96.3478">Main</text></g><!--cluster Base--><g id="cluster_Base"><rect fill="none" height="180.9896" rx="3.2552" ry="3.2552" style="stroke:#181818;stroke-width:1.3020833333333333;" width="368.4896" x="15.625" y="317.7083"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" font-weight="bold" lengthAdjust="spacing" textLength="49.4792" x="19.5313" y="337.2332">Base</text></g><g id="elem_main.view"><ellipse cx="108.1593" cy="141.6305" fill="#F1F1F1" rx="78.2114" ry="19.2346" style="stroke:#181818;stroke-width:0.6510416666666666;"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="87.2396" x="60.6333" y="146.5101">main.view</text></g><g id="elem_singleton"><ellipse cx="106.5449" cy="234.0581" fill="#F1F1F1" rx="75.2949" ry="19.2143" style="stroke:#181818;stroke-width:0.6510416666666666;"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="83.3333" x="60.972" y="238.9377">singleton</text></g><g id="elem_base.component"><ellipse cx="258.8332" cy="453.5895" fill="#F1F1F1" rx="103.8852" ry="23.902" style="stroke:#181818;stroke-width:0.6510416666666666;"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="153.6458" x="179.7338" y="458.0225">base.component</text></g><g id="elem_component"><ellipse cx="277.2395" cy="383.4427" fill="#F1F1F1" rx="85.1823" ry="20.1615" style="stroke:#181818;stroke-width:0.6510416666666666;"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="104.1667" x="221.25" y="388.3223">component</text></g><g id="elem_model"><ellipse cx="91.3452" cy="383.5955" fill="#F1F1F1" rx="54.8868" ry="19.0121" style="stroke:#181818;stroke-width:0.6510416666666666;"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="55.9896" x="59.4441" y="388.4751">model</text></g><!--entity main_ts--><g id="elem_main_ts"><rect fill="#F1F1F1" height="47.2616" rx="3.2552" ry="3.2552" style="stroke:#181818;stroke-width:0.6510416666666666;" width="100.2604" x="57.9427" y="9.1146"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" font-weight="bold" lengthAdjust="spacing" textLength="74.2188" x="70.9635" y="39.0561">main.ts</text></g><!--link component to base.component--><g id="link_component_base.component"><path d="M272.1745,403.9844 C270.7161,409.362 269.1146,415.3516 267.526,421.224 " fill="none" id="component-to-base.component" style="stroke:#181818;stroke-width:1.3020833333333333;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="265.9115,427.2135,273.9873,417.2518,267.604,420.927,263.9288,414.5437,265.9115,427.2135" style="stroke:#181818;stroke-width:1.3020833333333333;"/></g><!--link main_ts to main.view--><g id="link_main_ts_main.view"><path d="M108.0729,56.4974 C108.0729,73.2292 108.0729,96.0677 108.0729,113.724 " fill="none" id="main_ts-to-main.view" style="stroke:#181818;stroke-width:2.6041666666666665;"/><polygon fill="#181818" points="108.0729,119.9609,113.2813,108.2422,108.0729,113.4505,102.8646,108.2422,108.0729,119.9609" style="stroke:#181818;stroke-width:2.6041666666666665;"/></g><!--link main.view to component--><g id="link_main.view_component"><path d="M139.6875,160.3646 C160.7161,173.0859 187.6823,192.1224 205.7292,214.8438 C239.9349,257.9036 260.7292,319.7526 270.5469,354.9349 " fill="none" id="main.view-to-component" style="stroke:#181818;stroke-width:1.3020833333333333;"/><polygon fill="#181818" points="272.1745,360.9635,274.1222,348.2883,270.4646,354.6817,264.0712,351.0241,272.1745,360.9635" style="stroke:#181818;stroke-width:1.3020833333333333;"/></g><!--link main.view to singleton--><g id="link_main.view_singleton"><path d="M107.7995,161.849 C107.6172,174.6094 107.3698,191.7578 107.1615,206.0286 " fill="none" id="main.view-to-singleton" style="stroke:#181818;stroke-width:1.3020833333333333;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="107.0703,212.513,112.4455,200.8699,107.1633,206.0033,102.0299,200.7211,107.0703,212.513" style="stroke:#181818;stroke-width:1.3020833333333333;"/></g><!--link singleton to model--><g id="link_singleton_model"><path d="M104.7917,254.2318 C102.0443,280.013 97.0443,326.8099 93.9323,356.0938 " fill="none" id="singleton-to-model" style="stroke:#181818;stroke-width:1.3020833333333333;"/><polygon fill="#181818" points="93.2682,362.2526,99.6863,351.1502,93.9565,355.7787,89.3281,350.0489,93.2682,362.2526" style="stroke:#181818;stroke-width:1.3020833333333333;"/></g></g></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="506.5104px" preserveAspectRatio="none" style="width:391px;height:506px;background:#FFFFFF;" version="1.1" viewBox="0 0 391 506" width="391.9271px" zoomAndPan="magnify"><defs/><g><!--cluster Main--><g id="cluster_Main"><rect fill="none" height="197.9167" rx="3.2552" ry="3.2552" style="stroke:#181818;stroke-width:1.3020833333333333;" width="197.9167" x="9.1146" y="76.8229"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" font-weight="bold" lengthAdjust="spacing" textLength="46.875" x="13.0208" y="96.3478">Main</text></g><!--cluster Base--><g id="cluster_Base"><rect fill="none" height="180.9896" rx="3.2552" ry="3.2552" style="stroke:#181818;stroke-width:1.3020833333333333;" width="368.4896" x="15.625" y="317.7083"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" font-weight="bold" lengthAdjust="spacing" textLength="49.4792" x="19.5313" y="337.2332">Base</text></g><g id="elem_main.view"><ellipse cx="108.1593" cy="141.6305" fill="#F1F1F1" rx="78.2114" ry="19.2346" style="stroke:#181818;stroke-width:0.6510416666666666;"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="87.2396" x="60.6333" y="146.5101">main.view</text></g><g id="elem_singleton"><ellipse cx="106.5449" cy="234.0581" fill="#F1F1F1" rx="75.2949" ry="19.2143" style="stroke:#181818;stroke-width:0.6510416666666666;"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="83.3333" x="60.972" y="238.9377">singleton</text></g><g id="elem_base.component"><ellipse cx="258.8332" cy="453.5895" fill="#F1F1F1" rx="103.8852" ry="23.902" style="stroke:#181818;stroke-width:0.6510416666666666;"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="153.6458" x="179.7338" y="458.0225">base.component</text></g><g id="elem_component"><ellipse cx="277.2395" cy="383.4427" fill="#F1F1F1" rx="85.1823" ry="20.1615" style="stroke:#181818;stroke-width:0.6510416666666666;"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="104.1667" x="221.25" y="388.3223">component</text></g><g id="elem_model"><ellipse cx="91.3452" cy="383.5955" fill="#F1F1F1" rx="54.8868" ry="19.0121" style="stroke:#181818;stroke-width:0.6510416666666666;"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" lengthAdjust="spacing" textLength="55.9896" x="59.4441" y="388.4751">model</text></g><!--entity main_ts--><g id="elem_main_ts"><rect fill="#F1F1F1" height="47.2616" rx="3.2552" ry="3.2552" style="stroke:#181818;stroke-width:0.6510416666666666;" width="100.2604" x="57.9427" y="9.1146"/><text fill="#000000" font-family="sans-serif" font-size="18.2292" font-weight="bold" lengthAdjust="spacing" textLength="74.2188" x="70.9635" y="39.0561">main.ts</text></g><!--link component to base.component--><g id="link_component_base.component"><path d="M272.1745,403.9844 C270.7161,409.362 269.1146,415.3516 267.526,421.224 " fill="none" id="component-to-base.component" style="stroke:#181818;stroke-width:1.3020833333333333;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="265.9115,427.2135,273.9873,417.2518,267.604,420.927,263.9288,414.5437,265.9115,427.2135" style="stroke:#181818;stroke-width:1.3020833333333333;"/></g><!--link main_ts to main.view--><g id="link_main_ts_main.view"><path d="M108.0729,56.4974 C108.0729,73.2292 108.0729,96.0677 108.0729,113.724 " fill="none" id="main_ts-to-main.view" style="stroke:#181818;stroke-width:2.6041666666666665;"/><polygon fill="#181818" points="108.0729,119.9609,113.2813,108.2422,108.0729,113.4505,102.8646,108.2422,108.0729,119.9609" style="stroke:#181818;stroke-width:2.6041666666666665;"/></g><!--link main.view to component--><g id="link_main.view_component"><path d="M139.6875,160.3646 C160.7161,173.0859 187.6823,192.1224 205.7292,214.8438 C239.9349,257.9036 260.7292,319.7526 270.5469,354.9349 " fill="none" id="main.view-to-component" style="stroke:#181818;stroke-width:1.3020833333333333;"/><polygon fill="#181818" points="272.1745,360.9635,274.1222,348.2883,270.4646,354.6817,264.0712,351.0241,272.1745,360.9635" style="stroke:#181818;stroke-width:1.3020833333333333;"/></g><!--link main.view to singleton--><g id="link_main.view_singleton"><path d="M107.7995,161.849 C107.6172,174.6094 107.3698,191.7578 107.1615,206.0286 " fill="none" id="main.view-to-singleton" style="stroke:#181818;stroke-width:1.3020833333333333;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="107.0703,212.513,112.4455,200.8699,107.1633,206.0033,102.0299,200.7211,107.0703,212.513" style="stroke:#181818;stroke-width:1.3020833333333333;"/></g><!--link singleton to model--><g id="link_singleton_model"><path d="M104.7917,254.2318 C102.0443,280.013 97.0443,326.8099 93.9323,356.0938 " fill="none" id="singleton-to-model" style="stroke:#181818;stroke-width:1.3020833333333333;"/><polygon fill="#181818" points="93.2682,362.2526,99.6863,351.1502,93.9565,355.7787,89.3281,350.0489,93.2682,362.2526" style="stroke:#181818;stroke-width:1.3020833333333333;"/></g></g></svg>
                             </div>
                             <article id="diagram-error" class="message is-danger is-invisible">
                                 <div id="diagram-error-message" class="message-body">
@@ -371,6 +372,15 @@ main_ts ==> (main.view)
                                 <td></td>
                             </tr>
                             <tr>
+                                <td><a href="https://github.com/pgf-tikz/pgf">TikZ</a></td>
+                                <td>✔️️</td>
+                                <td>✔️</td>
+                                <td>✔️️</td>
+                                <td>️✔️</td>
+                                <td>️</td>
+                                <td></td>
+                            </tr>
+                            <tr>
                                 <td><a href="https://github.com/umlet/umlet">UMlet</a></td>
                                 <td>✔️</td>
                                 <td>✔️</td>
@@ -408,7 +418,7 @@ main_ts ==> (main.view)
                             </tr>
                             <tr>
                                 <td><a href="https://github.com/formatc1702/WireViz">WireViz</a></td>
-                                <td></td>
+                                <td>✔️</td>
                                 <td>✔️</td>
                                 <td></td>
                                 <td></td>
@@ -625,6 +635,12 @@ digraph G {
                                 <span>The diagramming tool for developers.</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="https://zulip.com/?utm_source=kroki" target="_blank" rel="noopener noreferrer">
+                                <img class="inline-zulip" src="assets/zulip-org-logo.svg" alt="Zulip"/>
+                                <span>An open-source modern team chat app designed to keep both live and asynchronous conversations organized.</span>
+                            </a>
+                        </li>
                     </ul>
                     <p>
                         Sponsors play a critical role, without them, we won't be able to provide Kroki as a free service.<br/>
@@ -662,7 +678,8 @@ digraph G {
                         <li><a href="#about">About</a></li>
                         <li><a href="#" id="back-top">Back to top ↑</a></li>
                         <li><hr class="menu-divider"/></li>
-                        <li><a href="https://docs.kroki.io/kroki/" target="_blank" rel="noopener noreferrer">📖 Documentation</a></li>
+                        <li><a class="link has-icon" href="https://docs.kroki.io/kroki/" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"></path></svg> Documentation</a></li>
+                        <li><a class="link has-icon" href="https://kroki.zulipchat.com/" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.061l-2.574 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.458 1.458 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h1a.25.25 0 0 0 .25-.25Z"></path></svg> Discussion</a></li>
                     </ul>
                 </div>
             </aside>
@@ -681,7 +698,7 @@ digraph G {
 </footer>
 <script src="js/clipboard.js?v=2.0.6"></script>
 <script src="js/prism-core.js?v=1.22.1"></script>
-<script src="js/main.js?v=0.7.0"></script>
+<script src="js/main.js?v=1.0.0"></script>
 <script src="js/pako_deflate.min.js?v=1.0.11"></script>
 </body>
 </html>
