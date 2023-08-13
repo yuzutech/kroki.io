@@ -970,8 +970,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '                                |____| |  |\n' +
             '                                /::::/ |__|'
         } else if (diagramType === 'c4plantuml') {
-          diagramSourceElement.value = '@startuml\n' +
-            '!include C4_Context.puml\n' +
+          diagramSourceElement.value = '!include <C4/C4_Context>\n' +
             '\n' +
             'title System Context diagram for Internet Banking System\n' +
             '\n' +
@@ -984,8 +983,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'Rel(customer, banking_system, "Uses")\n' +
             'Rel_Back(customer, mail_system, "Sends e-mails to")\n' +
             'Rel_Neighbor(banking_system, mail_system, "Sends e-mails", "SMTP")\n' +
-            'Rel(banking_system, mainframe, "Uses")\n' +
-            '@enduml'
+            'Rel(banking_system, mainframe, "Uses")'
         } else if (diagramType === 'ditaa') {
           diagramSourceElement.value = '      +--------+\n' +
             '      |        |\n' +
