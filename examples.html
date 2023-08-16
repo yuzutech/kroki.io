@@ -24,7 +24,7 @@
     <meta name="msapplication-wide310x150logo" content="./assets/mstile-310x150.png"/>
     <meta name="msapplication-square310x310logo" content="./assets/mstile-310x310.png"/>
     <title>Kroki!</title>
-    <link rel="stylesheet" href="./css/main.min.css?v=0.6.0">
+    <link rel="stylesheet" href="./css/main.min.css?v=1.1.0">
 </head>
 <body>
 <section class="section">
@@ -59,7 +59,6 @@
                 <li><a href="#actdiag">Activity diagram <small class="tag is-small is-highlight">ActDiag</small></a></li>
                 <li><a href="#nwdiag">Network diagram <small class="tag is-small is-highlight">NwDiag</small></a></li>
                 <li><a href="#packetdiag">Packet diagram <small class="tag is-small is-highlight">PacketDiag</small></a></li>
-                <li><a href="#rackdiag">Rack diagram <small class="tag is-small is-highlight">RackDiag</small></a></li>
                 <li><a href="#erd">Entity Relationship Diagram <small class="tag is-small is-highlight">Erd</small></a></li>
                 <li><a href="#uml-diag">UML diagram <small class="tag is-small is-highlight">Nomnoml</small></a></li>
                 <li><a href="#use-case">Use case diagram <small class="tag is-small is-highlight">PlantUML</small></a></li>
@@ -103,6 +102,14 @@
                 <li><a href="#connected-servers">Connected servers <small class="tag is-small is-highlight">SvgBob</small></a></li>
                 <li><a href="#ascii-art">Ascii Art <small class="tag is-small is-highlight">SvgBob</small></a></li>
                 <li><a href="#impossible-trident">Impossible trident <small class="tag is-small is-highlight">Pikchr</small></a></li>
+            </ul>
+            <p class="menu-label">
+                Hardware architecture
+            </p>
+            <ul class="menu-list">
+                <li><a href="#wiring">Wiring system <small class="tag is-small is-highlight">WireViz</small></a></li>
+                <li><a href="#rackdiag">Rack diagram <small class="tag is-small is-highlight">RackDiag</small></a></li>
+                <li><a href="#hardware-struct">Hardware structure/behavior <small class="tag is-small is-highlight">Symbolator</small></a></li>
             </ul>
         </aside>
 
@@ -9377,8 +9384,7 @@ Rel_Neighbor(backend_api, banking_system, "Uses", "sync/async, XML/HTTPS")
         <h3 id="structurizr-container" class="title is-3">Container diagram<a class="anchor-link" href="#structurizr-container">#</a></h3>
         <h4 class="subtitle is-4">Structurizr</h4>
         <div class="content">
-            <pre class="diagram-source"><code class="language-structurizr">
-workspace "Big Bank plc" "This is an example workspace to illustrate the key features of Structurizr, via the DSL, based around a fictional online banking system." {
+            <pre class="diagram-source"><code class="language-structurizr">workspace "Big Bank plc" "This is an example workspace to illustrate the key features of Structurizr, via the DSL, based around a fictional online banking system." {
 
     model {
         customer = person "Personal Banking Customer" "A customer of the bank, with personal bank accounts." "Customer"
@@ -10411,7 +10417,7 @@ validity
             <div class="highlight">
                 <pre><code class="language-http">GET https://kroki.io/umlet/svg/eNrdWUFv2jAYvedXRBym7lBiJ05ChEkvU7Ve1047VFNlEgNZQ4IcU8q_n51ip5SujRHNoAcwmCTye9_3vvfZWPjicZ7bD5RVWVmMerAPejYtkjLNiumo9_Pm8nzQu4jxcp5TfpdmZMrIPMY0p3Na8Bjz9YLGSTnv1xf0N_P9Malo_wfNCRdPxU59FU7KkonHEk6rGD_GoRdh5zHG6xgG2FnHeBW7noudVYxnsRsg7Mxi7GzdtCAFze8I5ywbL-VMzkdfcj48t1YzWpxViywVQGhRlWzUYyUXd_W-Ws44L5N7--lX7Ow8BJM0zeRCydY0DODQRWgoRw8NQ_UeipW9fgd2NC_vEZQsKy4mLwWy_Fqu8x8kDSKwIckNgGIJKJJAG47aI-aMFNWCMLHAa7HQRF4xmpC8ogdA3ColfIUWhgotDBRc6IVGOUEmnDL7DIJK5IC9ZxIgMIQADINADZL0Q4X_rch7SHGBXM0FUFygVqFfkYwfSfg3iL9nYmDrt4C7ngaOPn_KP0OryyD0FFzfrAoyWnHCDELuAlnUIJRDV4BDBdiLFOBoT7wLspSBaos2rNG6BwLbtoTrCo7A509nFCi78nU2Q6QKuKGpbxVwns1puTTIbV8ktrBvMYigR6jDDNeSFsJSJOgUr53NgARj3CK_oQ9qUatRToWgM-sKgSIg0vgHGj9ohZ8kCV1wa1wSedHUXpCqss7PLbEEtnZsJpYjQmEn4mcrLR313dTfXxUMZ8uu9OJrl4fPzM4340rnyq1kiRZToZpxWd7T9LdJu_uUJ-I1qD8NQFc1Q3d9rtaLKzcHTxxEe3NQlNycBxdGtVgiPXQlm6BxRl_rRluF34oGRv-IJN6WzSnZx0DLwdMUIHdPOYh2aJlzu5zYFSUsmRl0ClCKQLy7oPO2qNn5-GbdvsJtoHmvVrp7WGu4mTFKf5F169L3TPYn2Ri10DbUYINXwuu21DZJ7ZeGeBxW14IBBHYZ0E1BuxqfzKjYwuv63rQD9a5nI3LZDYzzrLi3czJfHBU9724VYNhsBj-_JBrbR_secEhJWI3hX307Rfiety980esWPJusGwpOyOvrg70XR5vIrCCYO56wuvBwhmcGE4IdmOHHwfT_F8ymedUwBx8HM-gYJto9oQ4HeyWtdftA8sxka-JFMnm97nYkTY2C_r41qjZtq4aa8fVx1eerQjymrSXDIz--c7b_o7P-At8zCQE=</code></pre>
                 <button class="button is-small bd-copy"
-                        data-clipboard-text="https://demo.kroki.io/umlet/svg/eNrdWUFv2jAYvedXRBym7lBiJ05ChEkvU7Ve1047VFNlEgNZQ4IcU8q_n51ip5SujRHNoAcwmCTye9_3vvfZWPjicZ7bD5RVWVmMerAPejYtkjLNiumo9_Pm8nzQu4jxcp5TfpdmZMrIPMY0p3Na8Bjz9YLGSTnv1xf0N_P9Malo_wfNCRdPxU59FU7KkonHEk6rGD_GoRdh5zHG6xgG2FnHeBW7noudVYxnsRsg7Mxi7GzdtCAFze8I5ywbL-VMzkdfcj48t1YzWpxViywVQGhRlWzUYyUXd_W-Ws44L5N7--lX7Ow8BJM0zeRCydY0DODQRWgoRw8NQ_UeipW9fgd2NC_vEZQsKy4mLwWy_Fqu8x8kDSKwIckNgGIJKJJAG47aI-aMFNWCMLHAa7HQRF4xmpC8ogdA3ColfIUWhgotDBRc6IVGOUEmnDL7DIJK5IC9ZxIgMIQADINADZL0Q4X_rch7SHGBXM0FUFygVqFfkYwfSfg3iL9nYmDrt4C7ngaOPn_KP0OryyD0FFzfrAoyWnHCDELuAlnUIJRDV4BDBdiLFOBoT7wLspSBaos2rNG6BwLbtoTrCo7A509nFCi78nU2Q6QKuKGpbxVwns1puTTIbV8ktrBvMYigR6jDDNeSFsJSJOgUr53NgARj3CK_oQ9qUatRToWgM-sKgSIg0vgHGj9ohZ8kCV1wa1wSedHUXpCqss7PLbEEtnZsJpYjQmEn4mcrLR313dTfXxUMZ8uu9OJrl4fPzM4340rnyq1kiRZToZpxWd7T9LdJu_uUJ-I1qD8NQFc1Q3d9rtaLKzcHTxxEe3NQlNycBxdGtVgiPXQlm6BxRl_rRluF34oGRv-IJN6WzSnZx0DLwdMUIHdPOYh2aJlzu5zYFSUsmRl0ClCKQLy7oPO2qNn5-GbdvsJtoHmvVrp7WGu4mTFKf5F169L3TPYn2Ri10DbUYINXwuu21DZJ7ZeGeBxW14IBBHYZ0E1BuxqfzKjYwuv63rQD9a5nI3LZDYzzrLi3czJfHBU9724VYNhsBj-_JBrbR_secEhJWI3hX307Rfiety980esWPJusGwpOyOvrg70XR5vIrCCYO56wuvBwhmcGE4IdmOHHwfT_F8ymedUwBx8HM-gYJto9oQ4HeyWtdftA8sxka-JFMnm97nYkTY2C_r41qjZtq4aa8fVx1eerQjymrSXDIz--c7b_o7P-At8zCQE="
+                        data-clipboard-text="https://kroki.io/umlet/svg/eNrdWUFv2jAYvedXRBym7lBiJ05ChEkvU7Ve1047VFNlEgNZQ4IcU8q_n51ip5SujRHNoAcwmCTye9_3vvfZWPjicZ7bD5RVWVmMerAPejYtkjLNiumo9_Pm8nzQu4jxcp5TfpdmZMrIPMY0p3Na8Bjz9YLGSTnv1xf0N_P9Malo_wfNCRdPxU59FU7KkonHEk6rGD_GoRdh5zHG6xgG2FnHeBW7noudVYxnsRsg7Mxi7GzdtCAFze8I5ywbL-VMzkdfcj48t1YzWpxViywVQGhRlWzUYyUXd_W-Ws44L5N7--lX7Ow8BJM0zeRCydY0DODQRWgoRw8NQ_UeipW9fgd2NC_vEZQsKy4mLwWy_Fqu8x8kDSKwIckNgGIJKJJAG47aI-aMFNWCMLHAa7HQRF4xmpC8ogdA3ColfIUWhgotDBRc6IVGOUEmnDL7DIJK5IC9ZxIgMIQADINADZL0Q4X_rch7SHGBXM0FUFygVqFfkYwfSfg3iL9nYmDrt4C7ngaOPn_KP0OryyD0FFzfrAoyWnHCDELuAlnUIJRDV4BDBdiLFOBoT7wLspSBaos2rNG6BwLbtoTrCo7A509nFCi78nU2Q6QKuKGpbxVwns1puTTIbV8ktrBvMYigR6jDDNeSFsJSJOgUr53NgARj3CK_oQ9qUatRToWgM-sKgSIg0vgHGj9ohZ8kCV1wa1wSedHUXpCqss7PLbEEtnZsJpYjQmEn4mcrLR313dTfXxUMZ8uu9OJrl4fPzM4340rnyq1kiRZToZpxWd7T9LdJu_uUJ-I1qD8NQFc1Q3d9rtaLKzcHTxxEe3NQlNycBxdGtVgiPXQlm6BxRl_rRluF34oGRv-IJN6WzSnZx0DLwdMUIHdPOYh2aJlzu5zYFSUsmRl0ClCKQLy7oPO2qNn5-GbdvsJtoHmvVrp7WGu4mTFKf5F169L3TPYn2Ri10DbUYINXwuu21DZJ7ZeGeBxW14IBBHYZ0E1BuxqfzKjYwuv63rQD9a5nI3LZDYzzrLi3czJfHBU9724VYNhsBj-_JBrbR_secEhJWI3hX307Rfiety980esWPJusGwpOyOvrg70XR5vIrCCYO56wuvBwhmcGE4IdmOHHwfT_F8ymedUwBx8HM-gYJto9oQ4HeyWtdftA8sxka-JFMnm97nYkTY2C_r41qjZtq4aa8fVx1eerQjymrSXDIz--c7b_o7P-At8zCQE="
                         title="Copy to clipboard">
                     <svg fill="currentColor" viewBox="0 0 896 1024">
                         <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>
@@ -10769,6 +10775,315 @@ validity
                     </g>
                 </g>
             </svg>
+        </div>
+
+        <h3 id="wiring" class="title is-3">Wiring system <a class="anchor-link" href="#wiring">#</a></h3>
+        <h4 class="subtitle is-4">WireViz</h4>
+        <div class="content">
+            <pre class="diagram-source"><code class="language-yaml">connectors:
+  X1:
+    type: D-Sub
+    subtype: female
+    pinlabels: [DCD, RX, TX, DTR, GND, DSR, RTS, CTS, RI]
+  X2:
+    type: Molex KK 254
+    subtype: female
+    pinlabels: [GND, RX, TX]
+
+cables:
+  W1:
+    gauge: "0.25 mm2"
+    length: 0.2
+    color_code: DIN
+    wirecount: 3
+    shield: true
+
+connections:
+  -
+    - X1: [5,2,3]
+    - W1: [1,2,3]
+    - X2: [1,3,2]
+  -
+    - X1: 5
+    - W1: s</code></pre>
+            <div class="highlight">
+                <pre><code class="language-http">GET https://kroki.io/wireviz/svg/eNqNkMGKwjAQhu99inmAdNF0e8nVgIish7agIGVp41gLaSJtgu7bbzL1UDx5yJD5yJ__n1HWGFTOjpNIAE7rWAHc3x0FyLT0LfWTb2d0xaHRSOzeG920qCcBZ7mRDIoTgyocWRUMtodAZBluRVUy2MRS7OrowZceP1bjE_Z74Pn3R1b08WxVJ4lqWo0U_fiK3jW-C-rVF89hGDgxjaZzN4LUK6vt-KvsJQ65OxB79CMq640TkM1Bbj3qiwA3egxG8556a8gtpSdpXBicc8ZZVr_IMZL1koSBI8kYr9-U-UIz_QMAMGVl</code></pre>
+                <button class="button is-small bd-copy"
+                        data-clipboard-text="https://kroki.io/wireviz/svg/eNqNkMGKwjAQhu99inmAdNF0e8nVgIish7agIGVp41gLaSJtgu7bbzL1UDx5yJD5yJ__n1HWGFTOjpNIAE7rWAHc3x0FyLT0LfWTb2d0xaHRSOzeG920qCcBZ7mRDIoTgyocWRUMtodAZBluRVUy2MRS7OrowZceP1bjE_Z74Pn3R1b08WxVJ4lqWo0U_fiK3jW-C-rVF89hGDgxjaZzN4LUK6vt-KvsJQ65OxB79CMq640TkM1Bbj3qiwA3egxG8556a8gtpSdpXBicc8ZZVr_IMZL1koSBI8kYr9-U-UIz_QMAMGVl"
+                        title="Copy to clipboard">
+                    <svg fill="currentColor" viewBox="0 0 896 1024">
+                        <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <svg class="kroki-output" width="100%" height="100%" viewBox="0.00 0.00 813.50 292.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 100%; height: 100%; max-height: 293pt; max-width: 814pt;">
+                <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 288.5)">
+                    <polygon fill="#ffffff" stroke="none" points="-4,4 -4,-288.5 809.5,-288.5 809.5,4 -4,4"></polygon>
+                    <!-- X1 -->
+                    <g id="node1" class="node">
+                        <title>X1</title>
+                        <polygon fill="#ffffff" stroke="black" points="133.5,-254.5 0,-254.5 0,0 133.5,0 133.5,-254.5"></polygon>
+                        <polygon fill="none" stroke="black" points="0,-230.75 0,-254.5 133.5,-254.5 133.5,-230.75 0,-230.75"></polygon>
+                        <text text-anchor="start" x="58.5" y="-237.2" font-family="arial" font-size="14.00">X1</text>
+                        <polygon fill="none" stroke="black" points="0,-207 0,-230.75 46.25,-230.75 46.25,-207 0,-207"></polygon>
+                        <text text-anchor="start" x="4" y="-213.45" font-family="arial" font-size="14.00">D-Sub</text>
+                        <polygon fill="none" stroke="black" points="46.25,-207 46.25,-230.75 95.5,-230.75 95.5,-207 46.25,-207"></polygon>
+                        <text text-anchor="start" x="50.25" y="-213.45" font-family="arial" font-size="14.00">female</text>
+                        <polygon fill="none" stroke="black" points="95.5,-207 95.5,-230.75 133.5,-230.75 133.5,-207 95.5,-207"></polygon>
+                        <text text-anchor="start" x="99.5" y="-213.45" font-family="arial" font-size="14.00">9-pin</text>
+                        <polygon fill="none" stroke="black" points="0,-184 0,-207 78.25,-207 78.25,-184 0,-184"></polygon>
+                        <text text-anchor="start" x="24.5" y="-189.7" font-family="arial" font-size="14.00">DCD</text>
+                        <polygon fill="none" stroke="black" points="78.25,-184 78.25,-207 133.5,-207 133.5,-184 78.25,-184"></polygon>
+                        <text text-anchor="start" x="102.12" y="-189.7" font-family="arial" font-size="14.00">1</text>
+                        <polygon fill="none" stroke="black" points="0,-161 0,-184 78.25,-184 78.25,-161 0,-161"></polygon>
+                        <text text-anchor="start" x="29.75" y="-166.7" font-family="arial" font-size="14.00">RX</text>
+                        <polygon fill="none" stroke="black" points="78.25,-161 78.25,-184 133.5,-184 133.5,-161 78.25,-161"></polygon>
+                        <text text-anchor="start" x="102.12" y="-166.7" font-family="arial" font-size="14.00">2</text>
+                        <polygon fill="none" stroke="black" points="0,-138 0,-161 78.25,-161 78.25,-138 0,-138"></polygon>
+                        <text text-anchor="start" x="30.5" y="-143.7" font-family="arial" font-size="14.00">TX</text>
+                        <polygon fill="none" stroke="black" points="78.25,-138 78.25,-161 133.5,-161 133.5,-138 78.25,-138"></polygon>
+                        <text text-anchor="start" x="102.12" y="-143.7" font-family="arial" font-size="14.00">3</text>
+                        <polygon fill="none" stroke="black" points="0,-115 0,-138 78.25,-138 78.25,-115 0,-115"></polygon>
+                        <text text-anchor="start" x="25.25" y="-120.7" font-family="arial" font-size="14.00">DTR</text>
+                        <polygon fill="none" stroke="black" points="78.25,-115 78.25,-138 133.5,-138 133.5,-115 78.25,-115"></polygon>
+                        <text text-anchor="start" x="102.12" y="-120.7" font-family="arial" font-size="14.00">4</text>
+                        <polygon fill="none" stroke="black" points="0,-92 0,-115 78.25,-115 78.25,-92 0,-92"></polygon>
+                        <text text-anchor="start" x="23.75" y="-97.7" font-family="arial" font-size="14.00">GND</text>
+                        <polygon fill="none" stroke="black" points="78.25,-92 78.25,-115 133.5,-115 133.5,-92 78.25,-92"></polygon>
+                        <text text-anchor="start" x="102.12" y="-97.7" font-family="arial" font-size="14.00">5</text>
+                        <polygon fill="none" stroke="black" points="0,-69 0,-92 78.25,-92 78.25,-69 0,-69"></polygon>
+                        <text text-anchor="start" x="24.88" y="-74.7" font-family="arial" font-size="14.00">DSR</text>
+                        <polygon fill="none" stroke="black" points="78.25,-69 78.25,-92 133.5,-92 133.5,-69 78.25,-69"></polygon>
+                        <text text-anchor="start" x="102.12" y="-74.7" font-family="arial" font-size="14.00">6</text>
+                        <polygon fill="none" stroke="black" points="0,-46 0,-69 78.25,-69 78.25,-46 0,-46"></polygon>
+                        <text text-anchor="start" x="25.62" y="-51.7" font-family="arial" font-size="14.00">RTS</text>
+                        <polygon fill="none" stroke="black" points="78.25,-46 78.25,-69 133.5,-69 133.5,-46 78.25,-46"></polygon>
+                        <text text-anchor="start" x="102.12" y="-51.7" font-family="arial" font-size="14.00">7</text>
+                        <polygon fill="none" stroke="black" points="0,-23 0,-46 78.25,-46 78.25,-23 0,-23"></polygon>
+                        <text text-anchor="start" x="25.62" y="-28.7" font-family="arial" font-size="14.00">CTS</text>
+                        <polygon fill="none" stroke="black" points="78.25,-23 78.25,-46 133.5,-46 133.5,-23 78.25,-23"></polygon>
+                        <text text-anchor="start" x="102.12" y="-28.7" font-family="arial" font-size="14.00">8</text>
+                        <polygon fill="none" stroke="black" points="0,0 0,-23 78.25,-23 78.25,0 0,0"></polygon>
+                        <text text-anchor="start" x="32.38" y="-5.7" font-family="arial" font-size="14.00">RI</text>
+                        <polygon fill="none" stroke="black" points="78.25,0 78.25,-23 133.5,-23 133.5,0 78.25,0"></polygon>
+                        <text text-anchor="start" x="102.12" y="-5.7" font-family="arial" font-size="14.00">9</text>
+                    </g>
+                    <!-- W1 -->
+                    <g id="node3" class="node">
+                        <title>W1</title>
+                        <polygon fill="#ffffff" stroke="black" points="481.5,-284.5 277.5,-284.5 277.5,-84 481.5,-84 481.5,-284.5"></polygon>
+                        <polygon fill="none" stroke="black" points="277.5,-260.75 277.5,-284.5 481.5,-284.5 481.5,-260.75 277.5,-260.75"></polygon>
+                        <text text-anchor="start" x="369" y="-267.2" font-family="arial" font-size="14.00">W1</text>
+                        <polygon fill="none" stroke="black" points="277.5,-237 277.5,-260.75 310.69,-260.75 310.69,-237 277.5,-237"></polygon>
+                        <text text-anchor="start" x="286.97" y="-243.45" font-family="arial" font-size="14.00">3x</text>
+                        <polygon fill="none" stroke="black" points="310.69,-237 310.69,-260.75 388.12,-260.75 388.12,-237 310.69,-237"></polygon>
+                        <text text-anchor="start" x="320.16" y="-243.45" font-family="arial" font-size="14.00">0.25 mm²</text>
+                        <polygon fill="none" stroke="black" points="388.12,-237 388.12,-260.75 428.06,-260.75 428.06,-237 388.12,-237"></polygon>
+                        <text text-anchor="start" x="397.59" y="-243.45" font-family="arial" font-size="14.00">+ S</text>
+                        <polygon fill="none" stroke="black" points="428.06,-237 428.06,-260.75 481.5,-260.75 481.5,-237 428.06,-237"></polygon>
+                        <text text-anchor="start" x="437.53" y="-243.45" font-family="arial" font-size="14.00">0.2 m</text>
+                        <text text-anchor="start" x="308.62" y="-221.7" font-family="arial" font-size="14.00">&nbsp;</text>
+                        <text text-anchor="start" x="279.38" y="-202.7" font-family="arial" font-size="14.00">X1:5:GND</text>
+                        <text text-anchor="start" x="345.38" y="-202.7" font-family="arial" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;1:WH &nbsp;&nbsp;&nbsp;</text>
+                        <text text-anchor="start" x="417.38" y="-202.7" font-family="arial" font-size="14.00">X2:1:GND</text>
+                        <polygon fill="#000000" stroke="none" points="277.5,-197 277.5,-199 481.5,-199 481.5,-197 277.5,-197"></polygon>
+                        <polygon fill="#ffffff" stroke="none" points="277.5,-195 277.5,-197 481.5,-197 481.5,-195 277.5,-195"></polygon>
+                        <polygon fill="#000000" stroke="none" points="277.5,-193 277.5,-195 481.5,-195 481.5,-193 277.5,-193"></polygon>
+                        <text text-anchor="start" x="285.38" y="-177.7" font-family="arial" font-size="14.00">X1:2:RX</text>
+                        <text text-anchor="start" x="347.62" y="-177.7" font-family="arial" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;2:BN &nbsp;&nbsp;&nbsp;</text>
+                        <text text-anchor="start" x="424.12" y="-177.7" font-family="arial" font-size="14.00">X2:3:TX</text>
+                        <polygon fill="#000000" stroke="none" points="277.5,-172 277.5,-174 481.5,-174 481.5,-172 277.5,-172"></polygon>
+                        <polygon fill="#895956" stroke="none" points="277.5,-170 277.5,-172 481.5,-172 481.5,-170 277.5,-170"></polygon>
+                        <polygon fill="#000000" stroke="none" points="277.5,-168 277.5,-170 481.5,-170 481.5,-168 277.5,-168"></polygon>
+                        <text text-anchor="start" x="286.12" y="-152.7" font-family="arial" font-size="14.00">X1:3:TX</text>
+                        <text text-anchor="start" x="346.5" y="-152.7" font-family="arial" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;3:GN &nbsp;&nbsp;&nbsp;</text>
+                        <text text-anchor="start" x="423.38" y="-152.7" font-family="arial" font-size="14.00">X2:2:RX</text>
+                        <polygon fill="#000000" stroke="none" points="277.5,-147 277.5,-149 481.5,-149 481.5,-147 277.5,-147"></polygon>
+                        <polygon fill="#00ff00" stroke="none" points="277.5,-145 277.5,-147 481.5,-147 481.5,-145 277.5,-145"></polygon>
+                        <polygon fill="#000000" stroke="none" points="277.5,-143 277.5,-145 481.5,-145 481.5,-143 277.5,-143"></polygon>
+                        <text text-anchor="start" x="308.62" y="-127.7" font-family="arial" font-size="14.00">&nbsp;</text>
+                        <text text-anchor="start" x="279.38" y="-108.7" font-family="arial" font-size="14.00">X1:5:GND</text>
+                        <text text-anchor="start" x="360.75" y="-108.7" font-family="arial" font-size="14.00">Shield</text>
+                        <polygon fill="#000000" stroke="none" points="277.5,-103 277.5,-105 481.5,-105 481.5,-103 277.5,-103"></polygon>
+                        <text text-anchor="start" x="308.62" y="-87.7" font-family="arial" font-size="14.00">&nbsp;</text>
+                    </g>
+                    <!-- X1&#45;&#45;W1 -->
+                    <g id="edge1" class="edge">
+                        <title>X1:e--W1:w</title>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M133.5,-101.25C211.68,-103.43 203.31,-196.43 277.5,-194.25"></path>
+                        <path fill="none" stroke="#ffffff" stroke-width="2" d="M133.5,-103.25C209.69,-103.25 201.31,-196.25 277.5,-196.25"></path>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M133.5,-105.25C207.69,-103.07 199.32,-196.07 277.5,-198.25"></path>
+                    </g>
+                    <!-- X1&#45;&#45;W1 -->
+                    <g id="edge3" class="edge">
+                        <title>X1:e--W1:w</title>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M133.5,-170.25C197.38,-170.25 213.37,-169.25 277.5,-169.25"></path>
+                        <path fill="none" stroke="#895956" stroke-width="2" d="M133.5,-172.25C197.5,-172.25 213.5,-171.25 277.5,-171.25"></path>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M133.5,-174.25C197.63,-174.25 213.62,-173.25 277.5,-173.25"></path>
+                    </g>
+                    <!-- X1&#45;&#45;W1 -->
+                    <g id="edge5" class="edge">
+                        <title>X1:e--W1:w</title>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M133.5,-147.25C197.14,-147.28 213.12,-144.28 277.5,-144.25"></path>
+                        <path fill="none" stroke="#00ff00" stroke-width="2" d="M133.5,-149.25C197.51,-149.25 213.49,-146.25 277.5,-146.25"></path>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M133.5,-151.25C197.88,-151.22 213.86,-148.22 277.5,-148.25"></path>
+                    </g>
+                    <!-- X1&#45;&#45;W1 -->
+                    <g id="edge7" class="edge">
+                        <title>X1:e--W1:w</title>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M133.5,-103.25C197.5,-103.25 213.5,-104.25 277.5,-104.25"></path>
+                    </g>
+                    <!-- X2 -->
+                    <g id="node2" class="node">
+                        <title>X2</title>
+                        <polygon fill="#ffffff" stroke="black" points="805.5,-255.5 625.5,-255.5 625.5,-139 805.5,-139 805.5,-255.5"></polygon>
+                        <polygon fill="none" stroke="black" points="625.5,-231.75 625.5,-255.5 805.5,-255.5 805.5,-231.75 625.5,-231.75"></polygon>
+                        <text text-anchor="start" x="707.25" y="-238.2" font-family="arial" font-size="14.00">X2</text>
+                        <polygon fill="none" stroke="black" points="625.5,-208 625.5,-231.75 718.25,-231.75 718.25,-208 625.5,-208"></polygon>
+                        <text text-anchor="start" x="629.5" y="-214.45" font-family="arial" font-size="14.00">Molex KK 254</text>
+                        <polygon fill="none" stroke="black" points="718.25,-208 718.25,-231.75 767.5,-231.75 767.5,-208 718.25,-208"></polygon>
+                        <text text-anchor="start" x="722.25" y="-214.45" font-family="arial" font-size="14.00">female</text>
+                        <polygon fill="none" stroke="black" points="767.5,-208 767.5,-231.75 805.5,-231.75 805.5,-208 767.5,-208"></polygon>
+                        <text text-anchor="start" x="771.5" y="-214.45" font-family="arial" font-size="14.00">3-pin</text>
+                        <polygon fill="none" stroke="black" points="625.5,-185 625.5,-208 704,-208 704,-185 625.5,-185"></polygon>
+                        <text text-anchor="start" x="661" y="-190.7" font-family="arial" font-size="14.00">1</text>
+                        <polygon fill="none" stroke="black" points="704,-185 704,-208 805.5,-208 805.5,-185 704,-185"></polygon>
+                        <text text-anchor="start" x="739.38" y="-190.7" font-family="arial" font-size="14.00">GND</text>
+                        <polygon fill="none" stroke="black" points="625.5,-162 625.5,-185 704,-185 704,-162 625.5,-162"></polygon>
+                        <text text-anchor="start" x="661" y="-167.7" font-family="arial" font-size="14.00">2</text>
+                        <polygon fill="none" stroke="black" points="704,-162 704,-185 805.5,-185 805.5,-162 704,-162"></polygon>
+                        <text text-anchor="start" x="745.38" y="-167.7" font-family="arial" font-size="14.00">RX</text>
+                        <polygon fill="none" stroke="black" points="625.5,-139 625.5,-162 704,-162 704,-139 625.5,-139"></polygon>
+                        <text text-anchor="start" x="661" y="-144.7" font-family="arial" font-size="14.00">3</text>
+                        <polygon fill="none" stroke="black" points="704,-139 704,-162 805.5,-162 805.5,-139 704,-139"></polygon>
+                        <text text-anchor="start" x="746.12" y="-144.7" font-family="arial" font-size="14.00">TX</text>
+                    </g>
+                    <!-- W1&#45;&#45;X2 -->
+                    <g id="edge2" class="edge">
+                        <title>W1:e--X2:w</title>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M481.5,-194.25C545.5,-194.25 561.5,-194.25 625.5,-194.25"></path>
+                        <path fill="none" stroke="#ffffff" stroke-width="2" d="M481.5,-196.25C545.5,-196.25 561.5,-196.25 625.5,-196.25"></path>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M481.5,-198.25C545.5,-198.25 561.5,-198.25 625.5,-198.25"></path>
+                    </g>
+                    <!-- W1&#45;&#45;X2 -->
+                    <g id="edge4" class="edge">
+                        <title>W1:e--X2:w</title>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M481.5,-169.25C544.54,-170.11 559.18,-149.11 625.5,-148.25"></path>
+                        <path fill="none" stroke="#895956" stroke-width="2" d="M481.5,-171.25C546.18,-171.25 560.82,-150.25 625.5,-150.25"></path>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M481.5,-173.25C547.82,-172.39 562.46,-151.39 625.5,-152.25"></path>
+                    </g>
+                    <!-- W1&#45;&#45;X2 -->
+                    <g id="edge6" class="edge">
+                        <title>W1:e--X2:w</title>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M481.5,-144.25C548.4,-145.34 562.17,-172.34 625.5,-171.25"></path>
+                        <path fill="none" stroke="#00ff00" stroke-width="2" d="M481.5,-146.25C546.62,-146.25 560.38,-173.25 625.5,-173.25"></path>
+                        <path fill="none" stroke="#000000" stroke-width="2" d="M481.5,-148.25C544.83,-147.16 558.6,-174.16 625.5,-175.25"></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <h3 id="hardware-struct" class="title is-3">Hardware structure/behavior <a class="anchor-link" href="#hardware-struct">#</a></h3>
+        <h4 class="subtitle is-4">Symbolator</h4>
+        <div class="content">
+            <pre class="diagram-source"><code class="language-vhdl">module demo_device #(
+    //# {{}}
+    parameter SIZE = 8,
+    parameter RESET_ACTIVE_LEVEL = 1
+) (
+    //# {{clocks|Clocking}}
+    input wire clock,
+    //# {{control|Control signals}}
+    input wire reset,
+    input wire enable,
+    //# {{data|Data ports}}
+    input wire [SIZE-1:0] data_in,
+    output wire [SIZE-1:0] data_out
+);
+  // ...
+endmodule</code></pre>
+            <div class="highlight">
+                <pre><code class="language-http">GET https://kroki.io/symbolator/svg/eNp1UMEOgjAMve8rmnCRBFFuRuPB4A4knIR40BgyWWMWx0bG0IP47wJ6IKg9tOnre69pC81ricCx0BnHm8gRnAmBNmYzBx6P57NvSmZYgRYNJNGBwhoW3gjf0YSm2SZMoz3NYrqnccsKiAtDt1zq_Fo1YVeEunzMhSprC3dhEHqCN1RoZY2WTfiuUImLYrL6Vhqs0HpjFBU7SxwacmZZs20TlNrYH0bH7sJpsJyfoONmQr3lurZ_Oe2MuCvS7QDf9wkqXvSPfQFdM2uY</code></pre>
+                <button class="button is-small bd-copy"
+                        data-clipboard-text="https://kroki.io/symbolator/svg/eNp1UMEOgjAMve8rmnCRBFFuRuPB4A4knIR40BgyWWMWx0bG0IP47wJ6IKg9tOnre69pC81ricCx0BnHm8gRnAmBNmYzBx6P57NvSmZYgRYNJNGBwhoW3gjf0YSm2SZMoz3NYrqnccsKiAtDt1zq_Fo1YVeEunzMhSprC3dhEHqCN1RoZY2WTfiuUImLYrL6Vhqs0HpjFBU7SxwacmZZs20TlNrYH0bH7sJpsJyfoONmQr3lurZ_Oe2MuCvS7QDf9wkqXvSPfQFdM2uY"
+                        title="Copy to clipboard">
+                    <svg fill="currentColor" viewBox="0 0 896 1024">
+                        <path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <svg class="kroki-output" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="476" height="224" viewBox="-138 -20 476.0 224.0" version="1.1">
+<style type="text/css">
+.fnt1 {fill:#000000;
+    font-family:Helvetica; font-size:12pt; font-weight:normal; font-style:normal;}
+.fnt2 {fill:#000000;
+    font-family:Verdana; font-size:9pt; font-weight:bold; font-style:normal;}
+.label {fill:#000;
+    text-anchor:middle;
+    font-size:16pt; font-weight:bold; font-family:Sans;}
+.link {fill: #0D47A1;}
+.link:hover {fill: #0D47A1; text-decoration:underline;}
+.link:visited {fill: #4A148C;}
+</style>
+                <defs>
+<marker id="clock" markerWidth="8.0" markerHeight="15.0" viewBox="0 0 8.0 15.0" refX="0.5" refY="7.5" orient="auto" markerUnits="userSpaceOnUse">
+<g transform="translate(0.5,7.5)"><path d="M 0 -7 L 0 7 L 7 0 z" stroke="#000000" fill="#FFFFFF" stroke-width="1"/>
+</g>
+</marker>
+</defs>
+                <rect x="-138" y="-20" width="100%" height="100%" fill="white"/><g transform="translate(0,0)">
+<rect x="0" y="-15.0" width="200" height="50.0" stroke="#646464" fill="#C8C8C8" stroke-width="1"/>
+                <g transform="translate(0,0)">
+<line x1="-20" y1="0" x2="0" y2="0" stroke="#000000" fill="none" stroke-width="1"/>
+                    <text class="fnt1" x="10" y="0" text-anchor="normal" dy="3.5">SIZE</text>
+</g>
+                <g transform="translate(0,20)">
+<line x1="-20" y1="0" x2="0" y2="0" stroke="#000000" fill="none" stroke-width="1"/>
+                    <text class="fnt1" x="10" y="0" text-anchor="normal" dy="3.5">RESET_ACTIVE_LEVEL</text>
+</g>
+</g>
+                <rect x="1.0" y="-14.0" width="198.0" height="48.0" stroke="#646464" fill="none" stroke-width="3"/>
+                <g transform="translate(0,58.0)">
+<rect x="0" y="-15.0" width="200" height="45.0" stroke="#000000" fill="#C5DBFB" stroke-width="1"/>
+                    <text class="fnt2" x="100.0" y="0" text-anchor="middle" dy="4.5">Clocking</text>
+                    <g transform="translate(0,15)">
+<line x1="-20" y1="0" x2="0" y2="0" stroke="#000000" fill="none" stroke-width="1" marker-end="url(#clock)"/>
+                        <text class="fnt1" x="10" y="0" text-anchor="normal" dy="3.5">clock</text>
+                        <text class="fnt1" x="-30" y="0" text-anchor="end" dy="3.5" style="fill:#969696">wire</text>
+</g>
+</g>
+                <g transform="translate(0,103.0)">
+<rect x="0" y="-15.0" width="200" height="65.0" stroke="#000000" fill="#E7FDBA" stroke-width="1"/>
+                    <text class="fnt2" x="100.0" y="0" text-anchor="middle" dy="4.5">Control signals</text>
+                    <g transform="translate(0,15)">
+<line x1="-20" y1="0" x2="0" y2="0" stroke="#000000" fill="none" stroke-width="1"/>
+                        <text class="fnt1" x="10" y="0" text-anchor="normal" dy="3.5">reset</text>
+                        <text class="fnt1" x="-30" y="0" text-anchor="end" dy="3.5" style="fill:#969696">wire</text>
+</g>
+                    <g transform="translate(0,35)">
+<line x1="-20" y1="0" x2="0" y2="0" stroke="#000000" fill="none" stroke-width="1"/>
+                        <text class="fnt1" x="10" y="0" text-anchor="normal" dy="3.5">enable</text>
+                        <text class="fnt1" x="-30" y="0" text-anchor="end" dy="3.5" style="fill:#969696">wire</text>
+</g>
+</g>
+                <g transform="translate(0,168.0)">
+<rect x="0" y="-15.0" width="200" height="45.0" stroke="#000000" fill="#FFAFFD" stroke-width="1"/>
+                    <text class="fnt2" x="100.0" y="0" text-anchor="middle" dy="4.5">Data ports</text>
+                    <g transform="translate(0,15)">
+<line x1="-20" y1="0" x2="0" y2="0" stroke="#000000" fill="none" stroke-width="3"/>
+                        <text class="fnt1" x="10" y="0" text-anchor="normal" dy="3.5">data_in</text>
+                        <text class="fnt1" x="-30" y="0" text-anchor="end" dy="3.5" style="fill:#969696">wire <tspan fill="#039BE5">[SIZE-1:0]</tspan></text>
+</g>
+                    <g transform="translate(200,15)">
+<line x1="20" y1="0" x2="0" y2="0" stroke="#000000" fill="none" stroke-width="3"/>
+                        <text class="fnt1" x="-10" y="0" text-anchor="end" dy="3.5">data_out</text>
+                        <text class="fnt1" x="30" y="0" text-anchor="normal" dy="3.5" style="fill:#969696">wire <tspan fill="#039BE5">[SIZE-1:0]</tspan></text>
+</g>
+</g>
+                <rect x="1.0" y="44.0" width="198.0" height="153.0" stroke="#000000" fill="none" stroke-width="3"/>
+</svg>
         </div>
     </div>
 </section>

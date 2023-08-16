@@ -101,6 +101,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (this.readyState === XMLHttpRequest.DONE) {
           if (this.status === 200) {
             diagramResultElement.innerHTML = this.responseText
+            if (diagramType === 'symbolator') {
+              const svg = diagramResultElement.getElementsByTagName('svg')[0]
+              const styleElement = svg.getElementsByTagName('style')[0]
+              styleElement.textContent = styleElement.textContent.replace(/\.label {.+?}/s)
+            }
             if (diagramType !== 'ditaa') {
               const svg = diagramResultElement.getElementsByTagName('svg')[0]
               const height = svg.getAttribute('height')
@@ -1989,6 +1994,23 @@ document.addEventListener('DOMContentLoaded', function () {
              '  \\end{tikzpicture}\n' +
              '  %\n' +
              '\\end{document}'
+        } else if (diagramType === 'symbolator') {
+          diagramSourceElement.value = 'module demo_device #(\n' +
+            '    //# {{}}\n' +
+            '    parameter SIZE = 8,\n' +
+            '    parameter RESET_ACTIVE_LEVEL = 1\n' +
+            ') (\n' +
+            '    //# {{clocks|Clocking}}\n' +
+            '    input wire clock,\n' +
+            '    //# {{control|Control signals}}\n' +
+            '    input wire reset,\n' +
+            '    input wire enable,\n' +
+            '    //# {{data|Data ports}}\n' +
+            '    input wire [SIZE-1:0] data_in,\n' +
+            '    output wire [SIZE-1:0] data_out\n' +
+            ');\n' +
+            '  // ...\n' +
+            'endmodule'
         }
         convert()
       })
