@@ -940,7 +940,9 @@ document.addEventListener('DOMContentLoaded', function () {
             '  32-63: Sequence Number;\n' +
             '  64-95: Acknowledgment Number;\n' +
             '  96-99: Data Offset;\n' +
-            '  100-105: Reserved;\n' +
+            '  100-103: Reserved;\n' +
+            '  104: CWR [rotate = 270];\n' +
+            '  105: ECE [rotate = 270];\n' +
             '  106: URG [rotate = 270];\n' +
             '  107: ACK [rotate = 270];\n' +
             '  108: PSH [rotate = 270];\n' +
