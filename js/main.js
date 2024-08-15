@@ -90,7 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var diagramType = selectDiagramElement.value
     var source = diagramSourceElement.value
     if (diagramType && source && source.trim() !== '') {
-      var urlPath = diagramType + '/svg/' + btoa(pako.deflate(textEncode(source), { level: 9, to: 'string' }))
+      var urlDiagramType = diagramType === 'c4plantuml' ? 'plantuml' : diagramType
+      var urlPath = urlDiagramType + '/svg/' + btoa(pako.deflate(textEncode(source), { level: 9, to: 'string' }))
         .replace(/\+/g, '-')
         .replace(/\//g, '_')
       var url = 'https://kroki.io/' + urlPath
