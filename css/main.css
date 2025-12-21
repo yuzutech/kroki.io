@@ -8563,20 +8563,20 @@ svg:not(:root) {
   justify-content: center;
 }
 
-#diagram-result.diagram-blockdiag svg,
-#diagram-result.diagram-seqdiag svg,
-#diagram-result.diagram-actdiag svg,
-#diagram-result.diagram-nwdiag svg,
-#diagram-result.diagram-mermaid svg {
+#diagram-result.diagram-blockdiag > svg,
+#diagram-result.diagram-seqdiag > svg,
+#diagram-result.diagram-actdiag > svg,
+#diagram-result.diagram-nwdiag > svg,
+#diagram-result.diagram-mermaid > svg {
   width: 100%;
   height: 100%;
 }
 
-#diagram-result.diagram-blockdiag svg .label,
-#diagram-result.diagram-seqdiag svg .label,
-#diagram-result.diagram-actdiag svg .label,
-#diagram-result.diagram-nwdiag svg .label,
-#diagram-result.diagram-mermaid svg .label {
+#diagram-result.diagram-blockdiag > svg .label,
+#diagram-result.diagram-seqdiag > svg .label,
+#diagram-result.diagram-actdiag > svg .label,
+#diagram-result.diagram-nwdiag > svg .label,
+#diagram-result.diagram-mermaid > svg .label {
   color: inherit;
   display: inherit;
   font-size: inherit;
