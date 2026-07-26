@@ -7,6 +7,9 @@
 .menu
   padding-bottom: 3rem
 
+.anchors-list a:hover
+  color: $link
+
 .tag.is-small
   height: 1rem
   padding-left: .25em
@@ -44,6 +47,25 @@ ul.sponsors
 .tag.is-highlight
   background-color: #ff3860
   color: white
+
+.tags.diagram-types
+  margin: 1em 0 1.5em
+
+  a.tag
+    background-color: $white
+    border: 1px solid hsl(0, 0%, 86%)
+    color: $text
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease
+
+    &:hover
+      background-color: $link
+      border-color: $link
+      color: $white
+
+  .tag.is-more
+    background-color: transparent
+    border: 1px dashed hsl(0, 0%, 86%)
+    color: hsl(0, 0%, 48%)
 
 code.snippet-name
   background-color: transparent
@@ -145,7 +167,7 @@ pre[class*="static-"]
 
   &.bd-is-hovering
     border-radius: 2px
-    box-shadow: 0 0 0 2px hsl(204, 86%, 53%)
+    box-shadow: 0 0 0 2px $link
 
   pre:not(:last-child)
     margin-bottom: 0
@@ -156,7 +178,7 @@ pre[class*="static-"]
 // copy
 
 .highlight .bd-copy:hover, .highlight .bd-expand:hover
-  background-color: hsl(204, 86%, 53%)
+  background-color: $link
   color: white
 
 .highlight .bd-copy:active, .highlight .bd-copy:focus, .highlight .bd-expand:active, .highlight .bd-expand:focus
@@ -240,15 +262,156 @@ svg:not(:root)
   text-align: center
   width: 1.25em
 
-// Try
+// Try — the editor component (toolbar + source/preview panes + status bar)
 
-.try-columns
+.editor
+  margin: 1em 0 1.5em
+  border: 1px solid hsl(0, 0%, 86%)
+  border-radius: $border-radius-3
+  background-color: $white
+  overflow: hidden
+
+.editor-toolbar
+  display: flex
+  align-items: center
+  justify-content: space-between
   flex-wrap: wrap
+  gap: 0.6em
+  padding: 0.6em 0.85em
+  background-color: hsl(0, 0%, 98%)
+  border-bottom: 1px solid hsl(0, 0%, 90%)
 
-#diagram-source
+.editor-toolbar-actions
+  display: flex
+  align-items: center
+  gap: 1em
+  font-size: 0.9rem
+
+  .checkbox
+    display: inline-flex
+    align-items: center
+    gap: 0.4em
+    cursor: pointer
+
+.editor-body
+  display: flex
+  height: 32rem
+
+  +until($desktop)
+    flex-direction: column
+    height: auto
+
+.editor-pane
+  flex: 1 1 50%
+  min-width: 0
+  overflow: auto
+
+.editor-pane-source
+  border-right: 1px solid hsl(0, 0%, 90%)
+
+  +until($desktop)
+    border-right: none
+    border-bottom: 1px solid hsl(0, 0%, 90%)
+    height: 20rem
+    flex: none
+
+.editor-pane-preview
+  position: relative
+  overflow: hidden
+  padding: 0
+  background-color: $white
+
+  +until($desktop)
+    height: 20rem
+    flex: none
+
+  #diagram-error
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: 2
+    max-width: calc(100% - 2em)
+    transform: translate(-50%, -50%)
+
+// A pannable, zoomable canvas for the diagram preview (drag to pan, wheel
+// to zoom) so a tall/wide diagram never changes the editor's height.
+.editor-canvas
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  cursor: grab
+  background-color: hsl(0, 0%, 99%)
+  background-image: radial-gradient(circle, hsl(0, 0%, 82%) 1px, transparent 1px)
+  background-size: 20px 20px
+  user-select: none
+
+  &.is-panning
+    cursor: grabbing
+
+.editor-canvas-viewport
+  position: absolute
+  top: 0
+  left: 0
+  transform-origin: 0 0
+
+.editor-canvas-controls
+  position: absolute
+  right: 0.6em
+  bottom: 0.6em
+  z-index: 2
+  display: flex
+  gap: 0.25em
+
+  button
+    width: 1.75rem
+    height: 1.75rem
+    padding: 0
+    line-height: 1
+    border: 1px solid hsl(0, 0%, 82%)
+    border-radius: $border-radius-1
+    background-color: rgba(255, 255, 255, 0.9)
+    color: $text
+    cursor: pointer
+    transition: color 0.15s ease, border-color 0.15s ease
+
+    &:hover
+      border-color: $link
+      color: $link
+      background-color: $white
+
+.editor-textarea
+  display: block
+  width: 100%
+  height: 100%
+  min-height: 28rem
+  padding: 1em
+  border: none
+  outline: none
+  resize: none
+  background: transparent
+  color: $text
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
-  overflow-x: scroll
+  font-size: 0.95rem
+  line-height: 1.5
   white-space: pre
+
+  +until($desktop)
+    min-height: 20rem
+
+.editor-statusbar
+  background-color: hsl(0, 0%, 98%)
+  border-top: 1px solid hsl(0, 0%, 90%)
+
+  .highlight
+    margin-bottom: 0
+
+  pre
+    margin: 0
+    padding: 0.6em 1em
+    overflow-x: auto
+    background: transparent
 
 #diagram-result
   display: flex
@@ -259,17 +422,11 @@ svg:not(:root)
 #diagram-result.diagram-actdiag,
 #diagram-result.diagram-nwdiag,
 #diagram-result.diagram-mermaid
-  > svg
-    width: 100%
-    height: 100%
-    .label
-      color: inherit
-      display: inherit
-      font-size: inherit
-      font-weight: inherit
-
-#diagram-url > pre
-  overflow-x: scroll
+  > svg .label
+    color: inherit
+    display: inherit
+    font-size: inherit
+    font-weight: inherit
 
 .container > .duo
   display: flex
@@ -302,6 +459,9 @@ svg:not(:root)
   color: #a9a9a9
   position: absolute
   right: calc(100% + 0.1rem)
+
+  &:hover
+    color: $link
 
 hr.menu-divider
   margin: 0.5rem

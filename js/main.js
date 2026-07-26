@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return result;
   }
 
-  var convert = debounce(function () {
+  function renderDiagram () {
     diagramErrorElement.classList.add('is-invisible')
     var diagramType = selectDiagramElement.value
     var source = diagramSourceElement.value
@@ -101,27 +101,60 @@ document.addEventListener('DOMContentLoaded', function () {
         if (this.readyState === XMLHttpRequest.DONE) {
           if (this.status === 200) {
             diagramResultElement.innerHTML = this.responseText
-            if (diagramType === 'symbolator') {
-              const svg = diagramResultElement.getElementsByTagName('svg')[0]
-              const styleElement = svg.getElementsByTagName('style')[0]
-              styleElement.textContent = styleElement.textContent.replace(/\.label {.+?}/s)
-            }
-            if (diagramType !== 'ditaa') {
-              const svg = diagramResultElement.getElementsByTagName('svg')[0]
-              const height = svg.getAttribute('height')
-              const width = svg.getAttribute('width')
-              svg.setAttribute('height', '100%')
-              svg.setAttribute('width', '100%')
-              let style = 'width:100%;height:100%;'
-              if (height) {
-                style += 'max-height:' + height + ';'
+            const svg = diagramResultElement.getElementsByTagName('svg')[0]
+            if (svg) {
+              if (diagramType === 'symbolator') {
+                const styleElement = svg.getElementsByTagName('style')[0]
+                styleElement.textContent = styleElement.textContent.replace(/\.label {.+?}/s)
               }
-              if (width) {
-                style += 'max-width:' + width + ';'
+              // Render the SVG at its natural size (from the viewBox, falling
+              // back to its width/height attributes) rather than stretching
+              // it to fill the pane: the canvas below handles fitting/
+              // zooming, so the diagram needs a real size to zoom from.
+              let naturalWidth = null
+              let naturalHeight = null
+              const viewBox = svg.getAttribute('viewBox')
+              if (viewBox) {
+                const dimensions = viewBox.trim().split(/\s+/).map(Number)
+                if (dimensions.length === 4 && dimensions[2] > 0 && dimensions[3] > 0) {
+                  naturalWidth = dimensions[2]
+                  naturalHeight = dimensions[3]
+                  svg.style.width = naturalWidth + 'px'
+                  svg.style.height = naturalHeight + 'px'
+                }
               }
-              svg.style = style
+              if (naturalWidth === null) {
+                naturalWidth = parseFloat(svg.getAttribute('width'))
+                naturalHeight = parseFloat(svg.getAttribute('height'))
+              }
+              // Some renderers (e.g. PlantUML) bake an opaque white
+              // background into the SVG's own style; drop it so the
+              // diagram sits on the canvas's dot grid instead of a card.
+              svg.style.background = 'transparent'
+              // Others (Graphviz-based engines, WaveDrom, Svgbob, Ditaa,
+              // Symbolator, D2...) paint their own white background as a
+              // shape rather than a style, so the above alone won't remove
+              // it. That shape is always the first thing painted, so check
+              // only the first non-definition rect/polygon: if it's white
+              // and covers essentially the whole canvas, it's a background.
+              if (naturalWidth > 0 && naturalHeight > 0) {
+                const shapes = svg.querySelectorAll('rect, polygon')
+                for (let i = 0; i < shapes.length; i++) {
+                  const shape = shapes[i]
+                  if (shape.closest('defs, symbol, clipPath, marker, pattern, mask')) continue
+                  const fill = getComputedStyle(shape).fill
+                  if (fill === 'rgb(255, 255, 255)' || fill === '#ffffff' || fill === '#fff' || fill === 'white') {
+                    const box = shape.getBBox()
+                    if (box.width >= naturalWidth * 0.9 && box.height >= naturalHeight * 0.9) {
+                      shape.style.fill = 'none'
+                    }
+                  }
+                  break
+                }
+              }
             }
             diagramResultElement.className = 'diagram-' + diagramType
+            fitDiagramCanvas()
           } else {
             diagramResultElement.innerHTML = ''
             diagramResultElement.className = ''
@@ -135,20 +168,171 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       diagramResultElement.innerHTML = ''
     }
-  }, 250)
+  }
+
+  // Auto-refresh waits for a pause in typing before rendering, so an
+  // in-progress edit (e.g. an unclosed bracket) doesn't flash an error.
+  var debouncedRenderDiagram = debounce(renderDiagram, 1200)
 
   var diagramResultElement = document.getElementById('diagram-result')
   var diagramErrorElement = document.getElementById('diagram-error')
   var diagramErrorMessageElement = document.getElementById('diagram-error-message')
   var diagramSourceElement = document.getElementById('diagram-source')
   var selectDiagramElement = document.getElementById('select-diagram')
+  var autoRefreshElement = document.getElementById('auto-refresh')
+  var refreshDiagramElement = document.getElementById('refresh-diagram')
   var diagramUrlElement = document.getElementById('diagram-url')
+
+  var diagramCanvasElement = document.getElementById('diagram-canvas')
+  var diagramCanvasViewportElement = document.getElementById('diagram-canvas-viewport')
+  var canvasScale = 1
+  var canvasTranslateX = 0
+  var canvasTranslateY = 0
+
+  function applyCanvasTransform () {
+    if (diagramCanvasViewportElement) {
+      diagramCanvasViewportElement.style.transform =
+        'translate(' + canvasTranslateX + 'px, ' + canvasTranslateY + 'px) scale(' + canvasScale + ')'
+    }
+  }
+
+  function clampCanvasScale (value) {
+    return Math.min(6, Math.max(0.1, value))
+  }
+
+  // Centers and scales the diagram to fit the pane. Called after every
+  // render so a new diagram always starts fully visible, and available as
+  // a manual "reset view" action once the user has panned/zoomed.
+  function fitDiagramCanvas () {
+    if (!diagramCanvasElement || !diagramCanvasViewportElement) return
+    canvasScale = 1
+    canvasTranslateX = 0
+    canvasTranslateY = 0
+    applyCanvasTransform()
+    var svg = diagramCanvasViewportElement.querySelector('svg')
+    if (!svg) return
+    var paneRect = diagramCanvasElement.getBoundingClientRect()
+    var svgRect = svg.getBoundingClientRect()
+    if (svgRect.width === 0 || svgRect.height === 0 || paneRect.width === 0 || paneRect.height === 0) return
+    var fit = Math.min((paneRect.width - 32) / svgRect.width, (paneRect.height - 32) / svgRect.height)
+    canvasScale = clampCanvasScale(fit > 0 ? fit : 1)
+    canvasTranslateX = (paneRect.width - svgRect.width * canvasScale) / 2
+    canvasTranslateY = (paneRect.height - svgRect.height * canvasScale) / 2
+    applyCanvasTransform()
+  }
+
+  // Zooms by `factor` while keeping the point at (anchorX, anchorY) —
+  // pane-relative coordinates — visually still, instead of always scaling
+  // from the viewport's top-left corner (which makes the diagram drift
+  // toward a corner, and eventually off-screen, after repeated zooms).
+  function zoomCanvasBy (factor, anchorX, anchorY) {
+    var previousScale = canvasScale
+    canvasScale = clampCanvasScale(canvasScale * factor)
+    canvasTranslateX = anchorX - (anchorX - canvasTranslateX) * (canvasScale / previousScale)
+    canvasTranslateY = anchorY - (anchorY - canvasTranslateY) * (canvasScale / previousScale)
+    applyCanvasTransform()
+  }
+
+  if (diagramCanvasElement && diagramCanvasViewportElement) {
+    diagramCanvasElement.addEventListener('wheel', function (e) {
+      e.preventDefault()
+      var paneRect = diagramCanvasElement.getBoundingClientRect()
+      zoomCanvasBy(e.deltaY < 0 ? 1.1 : 0.9, e.clientX - paneRect.left, e.clientY - paneRect.top)
+    }, { passive: false })
+
+    var isPanningCanvas = false
+    var panStartX = 0
+    var panStartY = 0
+    var panStartTranslateX = 0
+    var panStartTranslateY = 0
+
+    diagramCanvasElement.addEventListener('mousedown', function (e) {
+      if (e.target.closest('.editor-canvas-controls')) return
+      isPanningCanvas = true
+      panStartX = e.clientX
+      panStartY = e.clientY
+      panStartTranslateX = canvasTranslateX
+      panStartTranslateY = canvasTranslateY
+      diagramCanvasElement.classList.add('is-panning')
+      e.preventDefault()
+    })
+
+    window.addEventListener('mousemove', function (e) {
+      if (!isPanningCanvas) return
+      canvasTranslateX = panStartTranslateX + (e.clientX - panStartX)
+      canvasTranslateY = panStartTranslateY + (e.clientY - panStartY)
+      applyCanvasTransform()
+    })
+
+    window.addEventListener('mouseup', function () {
+      if (!isPanningCanvas) return
+      isPanningCanvas = false
+      diagramCanvasElement.classList.remove('is-panning')
+    })
+
+    diagramCanvasElement.addEventListener('dblclick', function (e) {
+      if (e.target.closest('.editor-canvas-controls')) return
+      fitDiagramCanvas()
+    })
+
+    var canvasZoomInElement = document.getElementById('canvas-zoom-in')
+    var canvasZoomOutElement = document.getElementById('canvas-zoom-out')
+    var canvasZoomResetElement = document.getElementById('canvas-zoom-reset')
+    if (canvasZoomInElement) {
+      canvasZoomInElement.addEventListener('click', function () {
+        var paneRect = diagramCanvasElement.getBoundingClientRect()
+        zoomCanvasBy(1.2, paneRect.width / 2, paneRect.height / 2)
+      })
+    }
+    if (canvasZoomOutElement) {
+      canvasZoomOutElement.addEventListener('click', function () {
+        var paneRect = diagramCanvasElement.getBoundingClientRect()
+        zoomCanvasBy(1 / 1.2, paneRect.width / 2, paneRect.height / 2)
+      })
+    }
+    if (canvasZoomResetElement) {
+      canvasZoomResetElement.addEventListener('click', fitDiagramCanvas)
+    }
+
+    fitDiagramCanvas()
+  }
+
   if (diagramUrlElement) {
     var diagramUrlPathElement = diagramUrlElement.querySelector("pre > code > span.path")
     var diagramUrlButtonElement = diagramUrlElement.querySelector("button")
     if (diagramSourceElement && diagramResultElement && diagramErrorElement && diagramErrorMessageElement && selectDiagramElement) {
-      diagramSourceElement.addEventListener('keyup', convert)
-      diagramSourceElement.addEventListener('change', convert)
+      if (autoRefreshElement) {
+        try {
+          var savedAutoRefresh = window.localStorage.getItem('kroki-auto-refresh')
+          if (savedAutoRefresh !== null) {
+            autoRefreshElement.checked = savedAutoRefresh === 'true'
+          }
+        } catch (e) { /* localStorage unavailable, keep default */ }
+        autoRefreshElement.addEventListener('change', function () {
+          try {
+            window.localStorage.setItem('kroki-auto-refresh', autoRefreshElement.checked)
+          } catch (e) { /* localStorage unavailable */ }
+        })
+      }
+      if (refreshDiagramElement) {
+        refreshDiagramElement.addEventListener('click', renderDiagram)
+      }
+      diagramSourceElement.addEventListener('keyup', function () {
+        if (!autoRefreshElement || autoRefreshElement.checked) {
+          debouncedRenderDiagram()
+        }
+      })
+      diagramSourceElement.addEventListener('keydown', function (e) {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+          e.preventDefault()
+          renderDiagram()
+        }
+      })
+      diagramSourceElement.addEventListener('change', function () {
+        if (!autoRefreshElement || autoRefreshElement.checked) {
+          debouncedRenderDiagram()
+        }
+      })
       selectDiagramElement.addEventListener('change', (_) => {
         diagramSourceElement.value = ''
         diagramSourceElement.placeholder = ''
@@ -156,7 +340,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (diagramType === 'plantuml') {
           diagramSourceElement.value = 'skinparam ranksep 20\n' +
             'skinparam dpi 125\n' +
-            'skinparam packageTitleAlignment left\n' +
+            '<style>\n' +
+            '  rectangle {\n' +
+            '    HorizontalAlignment: left;\n' +
+            '  }\n' +
+            '</style>\n' +
             '\n' +
             'rectangle "Main" {\n' +
             '  (main.view)\n' +
@@ -2018,7 +2206,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '  // ...\n' +
             'endmodule'
         }
-        convert()
+        renderDiagram()
       })
     }
   }

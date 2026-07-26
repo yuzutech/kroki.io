@@ -23,6 +23,14 @@ $spacer-1: round($spacer / 2) !default
 $spacer-2: $spacer !default
 $spacer-3: $spacer * 2 !default
 
+// Kroki accent color: electric blue reused from the Kroki Vision brand,
+// shared across links, focus states and interactive hover feedback so it
+// reads as a deliberate brand color rather than an unstyled default link.
+// Kept distinct from the red/pink already used for HTTP POST and
+// code-token semantics (see kroki.sass) so the two hues don't compete.
+$link: #0000ee !default
+$primary: $link !default
+
 @import "../node_modules/bulma/sass/utilities/_all"
 @import "../node_modules/bulma/sass/base/_all"
 @import "../node_modules/bulma/sass/grid/tiles"
