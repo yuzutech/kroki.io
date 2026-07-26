@@ -262,6 +262,82 @@ svg:not(:root)
   text-align: center
   width: 1.25em
 
+// Examples gallery — a scannable preview instead of a plain text link
+
+.examples-gallery
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr))
+  gap: 1em
+  margin: 1.25em 0
+
+.examples-gallery-item
+  display: block
+  border: 1px solid hsl(0, 0%, 88%)
+  border-radius: $border-radius-3
+  overflow: hidden
+  background-color: $white
+  transition: border-color 0.15s ease, box-shadow 0.15s ease
+
+  &:hover
+    border-color: $link
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08)
+
+.examples-gallery-thumb
+  display: flex
+  height: 8.5rem
+  padding: 0.75em
+  background-color: hsl(0, 0%, 98.5%)
+  background-image: radial-gradient(circle, hsl(0, 0%, 88%) 1px, transparent 1px)
+  background-size: 16px 16px
+
+  svg
+    width: 100%
+    height: 100%
+
+.examples-gallery-caption
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 0.5em
+  padding: 0.6em 0.85em
+  border-top: 1px solid hsl(0, 0%, 92%)
+  font-size: 0.9rem
+  color: $text
+
+.examples-gallery-cta
+  margin-top: 0.25em
+
+// Diagram type support — compact cards instead of a wide checkmark matrix
+
+.diagram-support-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr))
+  gap: 0.75em
+  margin: 1.25em 0
+
+.diagram-support-card
+  border: 1px solid hsl(0, 0%, 90%)
+  border-radius: $border-radius-2
+  padding: 0.75em 0.9em
+
+  a
+    font-weight: 600
+
+.diagram-support-formats
+  display: flex
+  flex-wrap: wrap
+  gap: 0.3em
+  margin-top: 0.5em
+
+.diagram-support-format
+  font-size: 0.7rem
+  text-transform: uppercase
+  letter-spacing: 0.02em
+  padding: 0.15em 0.55em
+  border-radius: 999px
+  background-color: hsl(0, 0%, 95%)
+  color: hsl(0, 0%, 35%)
+
 // Try — the editor component (toolbar + source/preview panes + status bar)
 
 .editor
