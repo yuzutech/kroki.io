@@ -45,8 +45,8 @@ ul.sponsors
       padding-top: 0.5em
 
 .tag.is-highlight
-  background-color: #ff3860
-  color: white
+  background-color: mix($white, $soft-blue, 90%)
+  color: $soft-blue
 
 .tags.diagram-types
   margin: 1em 0 1.5em
@@ -148,14 +148,14 @@ pre[class*="static-"]
   color: white
   border-radius: 0.25rem
   padding: 0.1rem 0.25rem
-  background-color: hsl(204, 86%, 53%)
+  background-color: $http-get
   font-weight: 600
 
 .token.verb-post
   color: white
   border-radius: 0.25rem
   padding: 0.1rem 0.25rem
-  background-color: hsl(348, 100%, 61%)
+  background-color: $http-post
   font-weight: 600
 
 .token.host
@@ -172,8 +172,43 @@ pre[class*="static-"]
   pre:not(:last-child)
     margin-bottom: 0
 
+// Prism's default theme ships its own rainbow (green/brown/pink/orange)
+// that has nothing to do with the site's palette. Re-pointing every
+// token category at the brand colors already defined above keeps code
+// blocks in the same family as everything around them.
 .token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted
-  color: hsl(348, 100%, 61%)
+  color: $palette-violet
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted
+  color: $palette-pink
+
+.token.atrule, .token.attr-value, .token.keyword
+  color: $palette-yellow
+
+.token.function, .token.class-name
+  color: $palette-red
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string
+  color: $palette-brown
+
+.token.regex, .token.color, .token.important, .token.variable
+  color: $palette-error-600
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata
+  color: hsl(0, 0%, 48%)
+
+.token.punctuation
+  color: hsl(0, 0%, 65%)
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection, code[class*="language-"]::selection, code[class*="language-"] ::selection
+  background: mix($white, $soft-blue, 80%)
+
+pre[class*="language-"], :not(pre) > code[class*="language-"]
+  background: hsl(0, 0%, 98%)
 
 // copy
 
@@ -307,6 +342,21 @@ svg:not(:root)
 
 .examples-gallery-cta
   margin-top: 0.25em
+
+// Bulma's .button.is-link rule is two classes (background-color: $link);
+// matching that specificity here (rather than the single-class selector
+// above) so this CTA reliably wins instead of silently losing to it.
+.button.is-link.examples-gallery-cta
+  background-color: $accent
+  border-color: $accent
+
+  &:hover, &.is-hovered
+    background-color: darken($accent, 2.5%)
+    border-color: darken($accent, 2.5%)
+
+  &:active, &.is-active
+    background-color: darken($accent, 5%)
+    border-color: darken($accent, 5%)
 
 // Diagram type support — compact cards instead of a wide checkmark matrix
 
