@@ -976,6 +976,10 @@ document.addEventListener('DOMContentLoaded', function () {
             '                           \'--->|    | |==|\n' +
             '                                |____| |  |\n' +
             '                                /::::/ |__|'
+        } else if (diagramType === 'goat') {
+          diagramSourceElement.value = '   +-------+     +-------+\n' +
+            '   |  You  |---->| Kroki |\n' +
+            '   +-------+     +-------+\n'
         } else if (diagramType === 'c4plantuml') {
           diagramSourceElement.value = '!include <C4/C4_Context>\n' +
             '\n' +
