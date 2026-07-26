@@ -8318,8 +8318,8 @@ ul.sponsors li img.inline-utoolity {
 }
 
 .tag.is-highlight {
-  background-color: #f3f6ff;
-  color: #85a8ff;
+  background-color: #f3f8ff;
+  color: #0609cd;
 }
 
 .tags.diagram-types {
@@ -8477,53 +8477,7 @@ pre[class*="static-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #7f2eef;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #bc27b6;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: #f2c114;
-}
-
-.token.function,
-.token.class-name {
-  color: #da7870;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: #7f4400;
-}
-
-.token.regex,
-.token.color,
-.token.important,
-.token.variable {
-  color: #c7240b;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #7a7a7a;
-}
-
-.token.punctuation {
-  color: #a6a6a6;
+  color: #dd280c;
 }
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection, code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
@@ -8712,10 +8666,17 @@ svg:not(:root) {
   border: 1px solid #e6e6e6;
   border-radius: 6px;
   padding: 0.75em 0.9em;
+  display: flex;
+  flex-direction: column;
 }
 
 .diagram-support-card a {
   font-weight: 600;
+  color: #2a2d31;
+}
+
+.diagram-support-card a:hover {
+  color: #0000ee;
 }
 
 .diagram-support-formats {
@@ -8731,8 +8692,8 @@ svg:not(:root) {
   letter-spacing: 0.02em;
   padding: 0.15em 0.55em;
   border-radius: 999px;
-  background-color: #f0f0ff;
-  color: #0000ee;
+  background-color: #f4f4f4;
+  color: #2a2d31;
 }
 
 .catalog-filters {

@@ -45,8 +45,8 @@ ul.sponsors
       padding-top: 0.5em
 
 .tag.is-highlight
-  background-color: mix($white, $soft-blue, 90%)
-  color: $soft-blue
+  background-color: $palette-primary-50
+  color: $palette-primary-600
 
 .tags.diagram-types
   margin: 1em 0 1.5em
@@ -148,7 +148,7 @@ pre[class*="static-"]
   color: white
   border-radius: 0.25rem
   padding: 0.1rem 0.25rem
-  background-color: $http-get
+  background-color: $palette-primary-400
   font-weight: 600
 
 .token.verb-post
@@ -172,37 +172,8 @@ pre[class*="static-"]
   pre:not(:last-child)
     margin-bottom: 0
 
-// Prism's default theme ships its own rainbow (green/brown/pink/orange)
-// that has nothing to do with the site's palette. Re-pointing every
-// token category at the brand colors already defined above keeps code
-// blocks in the same family as everything around them.
 .token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted
-  color: $palette-violet
-
-.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted
-  color: $palette-pink
-
-.token.atrule, .token.attr-value, .token.keyword
-  color: $palette-yellow
-
-.token.function, .token.class-name
-  color: $palette-red
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string
-  color: $palette-brown
-
-.token.regex, .token.color, .token.important, .token.variable
-  color: $palette-error-600
-
-.token.comment, .token.prolog, .token.doctype, .token.cdata
-  color: hsl(0, 0%, 48%)
-
-.token.punctuation
-  color: hsl(0, 0%, 65%)
+  color: $palette-error-500
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection, code[class*="language-"]::selection, code[class*="language-"] ::selection
   background: mix($white, $soft-blue, 80%)
@@ -370,9 +341,15 @@ svg:not(:root)
   border: 1px solid hsl(0, 0%, 90%)
   border-radius: $border-radius-2
   padding: 0.75em 0.9em
+  display: flex
+  flex-direction: column
 
   a
     font-weight: 600
+    color: $palette-basic-dark
+
+  a:hover
+    color: $primary
 
 .diagram-support-formats
   display: flex
@@ -389,8 +366,8 @@ svg:not(:root)
   letter-spacing: 0.02em
   padding: 0.15em 0.55em
   border-radius: 999px
-  background-color: hsl(240, 100%, 97%)
-  color: $link
+  background-color: $palette-grey-5
+  color: $palette-basic-dark
 
 // Examples catalog (examples.html) — filterable per-type cards with an
 // expandable detail panel showing the working example(s)

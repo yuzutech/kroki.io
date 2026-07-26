@@ -235,6 +235,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (diagramCanvasElement && diagramCanvasViewportElement) {
     diagramCanvasElement.addEventListener('wheel', function (e) {
+      // Browsers report both an explicit Ctrl/Cmd+scroll and a trackpad
+      // pinch gesture as a wheel event with ctrlKey set — that's the only
+      // signal that means "zoom". A plain two-finger scroll has ctrlKey
+      // false and should just scroll the page, not zoom the canvas.
+      if (!e.ctrlKey) return
       e.preventDefault()
       var paneRect = diagramCanvasElement.getBoundingClientRect()
       zoomCanvasBy(e.deltaY < 0 ? 1.1 : 0.9, e.clientX - paneRect.left, e.clientY - paneRect.top)
