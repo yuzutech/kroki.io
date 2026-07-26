@@ -76,7 +76,7 @@ code.snippet-name
 .section
   min-height: calc(100vh - 174px)
 
-svg.kroki-output
+.kroki-output
   max-width: 50rem
   margin: auto
   display: block
@@ -290,9 +290,10 @@ svg:not(:root)
   background-image: radial-gradient(circle, hsl(0, 0%, 88%) 1px, transparent 1px)
   background-size: 16px 16px
 
-  svg
+  svg, img
     width: 100%
     height: 100%
+    object-fit: contain
 
 .examples-gallery-caption
   display: flex
@@ -329,14 +330,189 @@ svg:not(:root)
   gap: 0.3em
   margin-top: 0.5em
 
+// Output-format pills use the accent color so they read as a distinct kind
+// of tag from the neutral grey usage-category tags (.tag.is-small) they
+// often sit next to.
 .diagram-support-format
   font-size: 0.7rem
   text-transform: uppercase
   letter-spacing: 0.02em
   padding: 0.15em 0.55em
   border-radius: 999px
-  background-color: hsl(0, 0%, 95%)
-  color: hsl(0, 0%, 35%)
+  background-color: hsl(240, 100%, 97%)
+  color: $link
+
+// Examples catalog (examples.html) — filterable per-type cards with an
+// expandable detail panel showing the working example(s)
+
+.catalog-filters
+  display: flex
+  flex-wrap: wrap
+  gap: 0.5em
+  margin: 1em 0 1.5em
+
+.catalog-filter
+  border: 1px solid hsl(0, 0%, 85%)
+  border-radius: 999px
+  background-color: $white
+  color: $text
+  font-size: 0.85rem
+  padding: 0.35em 0.9em
+  cursor: pointer
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease
+
+  &:hover
+    border-color: $link
+    color: $link
+
+  &.is-active
+    background-color: $link
+    border-color: $link
+    color: $white
+
+.catalog-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr))
+  gap: 0.75em
+  margin: 1.25em 0
+  align-items: start
+
+.catalog-card
+  border: 1px solid hsl(0, 0%, 90%)
+  border-radius: $border-radius-2
+  padding: 0.75em 0.9em
+  transition: border-color 0.15s ease, box-shadow 0.15s ease
+
+  &[hidden]
+    display: none
+
+  // Distinct style for whichever card's detail is currently open below
+  // the grid, so it's clear which card the detail panel belongs to.
+  &.is-active
+    border-color: $link
+    box-shadow: 0 0 0 1px $link
+
+.catalog-card-toggle
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 0.5em
+  width: 100%
+  border: none
+  background: none
+  padding: 0
+  font: inherit
+  font-weight: 600
+  color: $text
+  cursor: pointer
+  text-align: left
+
+  &:hover
+    color: $link
+
+.catalog-card-chevron
+  font-size: 0.7em
+  color: hsl(0, 0%, 60%)
+  transition: transform 0.15s ease
+
+.catalog-card.is-active .catalog-card-chevron
+  color: $link
+  transform: rotate(180deg)
+
+.catalog-card-tags
+  display: flex
+  flex-wrap: wrap
+  gap: 0.3em
+  margin-top: 0.5em
+
+.catalog-card-link
+  display: inline-block
+  font-size: 0.8rem
+  color: hsl(0, 0%, 45%)
+
+  &:hover
+    color: $link
+
+// A single shared area below the whole grid, instead of interleaving each
+// card's detail between cards — expanding a card never cuts the list.
+.catalog-details
+  margin-top: 1em
+
+.catalog-detail
+  border: 1px solid hsl(0, 0%, 88%)
+  border-radius: $border-radius-3
+  background-color: hsl(0, 0%, 99%)
+  padding: 1.25em
+  scroll-margin-top: 1rem
+
+  &[hidden]
+    display: none
+
+.catalog-detail-header
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  gap: 0.75em
+  margin-bottom: 1em
+  padding-bottom: 1em
+  border-bottom: 1px solid hsl(0, 0%, 90%)
+
+  .diagram-support-formats
+    margin-top: 0
+
+.catalog-detail-switcher
+  display: flex
+  flex-wrap: wrap
+  gap: 0.4em
+  margin-bottom: 1em
+
+.catalog-example-toggle
+  border: 1px solid hsl(0, 0%, 85%)
+  border-radius: $border-radius-1
+  background-color: $white
+  color: $text
+  font-size: 0.8rem
+  padding: 0.3em 0.7em
+  cursor: pointer
+
+  &:hover
+    border-color: $link
+    color: $link
+
+  &.is-active
+    background-color: $link
+    border-color: $link
+    color: $white
+
+.catalog-example
+  &[hidden]
+    display: none
+
+// Fixed box for every example image (rather than max-width/height:auto) so
+// a very wide-but-short diagram and a narrow-but-tall one read at the same
+// visual scale instead of one looking huge and the other tiny.
+.catalog-example-image
+  display: block
+  width: 100%
+  height: 18rem
+  object-fit: contain
+  margin: 0 auto 1.25em
+  background-color: hsl(0, 0%, 98.5%)
+  background-image: radial-gradient(circle, hsl(0, 0%, 88%) 1px, transparent 1px)
+  background-size: 16px 16px
+  border-radius: $border-radius-1
+
+.catalog-example-code
+  code.snippet-name
+    display: block
+    margin-bottom: 0.25em
+
+  // Some sources (BPMN, UMLet, Structurizr...) are thousands of lines;
+  // cap the block and let it scroll instead of dominating the page.
+  .catalog-example-source
+    max-height: 18rem
+    overflow-y: auto
 
 // Try — the editor component (toolbar + source/preview panes + status bar)
 
@@ -548,15 +724,6 @@ svg
     font-size: inherit
     font-weight: inherit
     line-height: inherit
-
-.download-cheat-sheet
-  padding: 1em
-  display: flex
-  border: 1px solid #e0e0e0
-  font-weight: 600
-  flex-direction: column
-  img
-    padding-bottom: 0.75em
 
 .link.has-icon
   display: inline-flex

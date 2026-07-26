@@ -1,0 +1,41 @@
+<svg class="kroki-output kroki-output-erd" viewBox="0.00 0.00 300.00 144.00" xmlns="http://www.w3.org/2000/svg">
+                <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 140)">
+                    <title>Entity Relationship</title>
+                    
+                    <!-- Person -->
+                    <g id="node1" class="node">
+                        <title>Person</title>
+                        <polygon fill="none" stroke="#000000" points="8,-104 8,-132 118,-132 118,-104 8,-104"/>
+                        <text text-anchor="start" x="35.5" y="-115.2" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="16.00" fill="#000000">Person</text>
+                        <polygon fill="none" stroke="#000000" points="8,-79 8,-104 118,-104 118,-79 8,-79"/>
+                        <text text-anchor="start" x="13" y="-88.8" font-family="Helvetica,sans-Serif" text-decoration="underline" font-size="14.00" fill="#000000">name</text>
+                        <polygon fill="none" stroke="#000000" points="8,-54 8,-79 118,-79 118,-54 8,-54"/>
+                        <text text-anchor="start" x="13" y="-62.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">height</text>
+                        <polygon fill="none" stroke="#000000" points="8,-29 8,-54 118,-54 118,-29 8,-29"/>
+                        <text text-anchor="start" x="13" y="-37.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">weight</text>
+                        <polygon fill="none" stroke="#000000" points="8,-4 8,-29 118,-29 118,-4 8,-4"/>
+                        <text text-anchor="start" x="13" y="-13.8" font-family="Helvetica,sans-Serif" font-style="italic" font-size="14.00" fill="#000000">birth_location_id</text>
+                    </g>
+                    <!-- Location -->
+                    <g id="node2" class="node">
+                        <title>Location</title>
+                        <polygon fill="none" stroke="#000000" points="207.5,-104 207.5,-132 284.5,-132 284.5,-104 207.5,-104"/>
+                        <text text-anchor="start" x="212.5" y="-115.2" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="16.00" fill="#000000">Location</text>
+                        <polygon fill="none" stroke="#000000" points="207.5,-79 207.5,-104 284.5,-104 284.5,-79 207.5,-79"/>
+                        <text text-anchor="start" x="212.5" y="-88.8" font-family="Helvetica,sans-Serif" text-decoration="underline" font-size="14.00" fill="#000000">id</text>
+                        <polygon fill="none" stroke="#000000" points="207.5,-54 207.5,-79 284.5,-79 284.5,-54 207.5,-54"/>
+                        <text text-anchor="start" x="212.5" y="-62.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">city</text>
+                        <polygon fill="none" stroke="#000000" points="207.5,-29 207.5,-54 284.5,-54 284.5,-29 207.5,-29"/>
+                        <text text-anchor="start" x="212.5" y="-37.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">state</text>
+                        <polygon fill="none" stroke="#000000" points="207.5,-4 207.5,-29 284.5,-29 284.5,-4 207.5,-4"/>
+                        <text text-anchor="start" x="212.5" y="-12.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">country</text>
+                    </g>
+                    <!-- Person&#45;&#45;Location -->
+                    <g id="edge1" class="edge">
+                        <title>Person&#45;&#45;Location</title>
+                        <path fill="none" stroke="#7f7f7f" stroke-dasharray="5,2" d="M126.0617,-68C149.9644,-68 176.7286,-68 198.8534,-68"/>
+                        <text text-anchor="start" x="191.8534" y="-56.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
+                        <text text-anchor="start" x="126.0617" y="-56.8" font-family="Times,serif" font-size="14.00" fill="#000000">0..N</text>
+                    </g>
+                </g>
+            </svg>

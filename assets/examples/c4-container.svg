@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="kroki-output kroki-output-container-diagram" contentScriptType="application/ecmascript" contentStyleType="text/css"
+                 viewBox="0 0 1159 910" zoomAndPan="magnify">
+                <defs />
+                <g>
+                    <text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="372" x="384.25" y="18.9492">Container diagram for Internet
+                        Banking System
+                    </text>
+                    <rect fill="#FFFFFF" height="460" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="791" x="7" y="257.293" />
+                    <text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="117" x="344" y="276.1367">Internet Banking
+                    </text>
+                    <text fill="#444444" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="46" x="379.5" y="293.5195">[System]</text>
+                    <rect fill="#438DD5" height="114.4727" style="stroke:#3C7FC0;stroke-width:1.5;" width="216" x="23" y="332.293" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="115" x="73.5" y="359.1367">Web Application
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="98" x="82" y="376.5195">[Java, Spring MVC]
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="133" y="394.8203" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="188" x="37" y="413.7148">Delivers the static content and</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="54" y="432.6094">the Internet banking SPA</text>
+                    <rect fill="#438DD5" height="133.3672" style="stroke:#3C7FC0;stroke-width:1.5;" width="210" x="317" y="322.793" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="116" x="364" y="349.6367">Single-Page App
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="106" x="369" y="367.0195">[JavaScript,
+                        Angular]
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="424" y="385.3203" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="349" y="404.2148">Provides all the Internet</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="348.5" y="423.1094">banking functionality to</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190" x="327" y="442.0039">cutomers via their web browser</text>
+                    <rect fill="#438DD5" height="152.2617" style="stroke:#3C7FC0;stroke-width:1.5;" width="219" x="562.5" y="313.293" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="80" x="632" y="340.1367">Mobile App</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="636.5" y="357.5195">[C#, Xamarin]
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="674" y="375.8203" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="194" x="577" y="394.7148">Provides a limited subset of the
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="572.5" y="413.6094">Internet banking functionality to
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="589.5" y="432.5039">customers via their mobile</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="652" y="451.3984">device</text>
+                    <path
+                        d="M208,569.293 C208,559.293 308,559.293 308,559.293 C308,559.293 408,559.293 408,569.293 L408,691.6602 C408,701.6602 308,701.6602 308,701.6602 C308,701.6602 208,701.6602 208,691.6602 L208,569.293 "
+                        fill="#438DD5" style="stroke:#3C7FC0;stroke-width:1.5;" />
+                    <path d="M208,569.293 C208,579.293 308,579.293 308,579.293 C308,579.293 408,579.293 408,569.293 " fill="none" style="stroke:#3C7FC0;stroke-width:1.5;" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="69" x="273.5" y="600.1367">Database</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="81" x="267.5" y="617.5195">[SQL Database]
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="310" y="635.8203" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="238.5" y="654.7148">Stores user registraion</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148" x="232" y="673.6094">information, hased auth</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="180" x="218" y="692.5039">credentials, access logs, etc.</text>
+                    <rect fill="#438DD5" height="114.4727" style="stroke:#3C7FC0;stroke-width:1.5;" width="185" x="574.5" y="573.293" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="106" x="614" y="600.1367">API Application
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="126" x="604" y="617.5195">[Java, Docker
+                        Container]
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="669" y="635.8203" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="588.5" y="654.7148">Provides Internet banking</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119" x="607.5" y="673.6094">functionality via API</text>
+                    <rect fill="#08427B" height="146.2773" style="stroke:#073B6F;stroke-width:1.5;" width="204" x="403" y="31.293" />
+                    <image height="48" width="48" x="481"
+                           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACD0lEQVR4Xu2YoU4EMRCGT+4j8Ai8AhaH4QHgAUjQuFMECUgMIUgwJAgMhgQsAYUiJCiQIBBY+EITsjfTdme6V24v4c8vyGbb+ZjOtN0bNcvjQXmkH83WvYBWto6PLm6v7p7uH1/w2fXD+PBycX1Pv2l3IdDm/vn7x+dXQiAubRzoURa7gRZWd0iGRIiJbOnhnfYBQZNJjNbuyY2eJG8fkDE3bbG4ep6MHUAsgYxmE3nVs6VsBWJSGccsOlFPmLIViMzLOB7pCVO2AtHJMohH7Fh6zqitQK7m0rJvAVYgGcEpe//PLdDz65sM4pF9N7ICcXDKIB5Nv6j7tD0NoSdM2QrU9Gg0ewE1LqBhHR3BBdvj2vapnidjHxD/q6vd7Pvhr31AwcY8eXMTXAKECZZJFXuEq27aLgQK5uLMohCenGGuGewOxSjBvYBqeG6B+Nqiblggdjnc+ZXDy+FNFpFzw76O3UBAROuXh6FoiAcf5g9eTvUgzy0nWg6I8cXHRUpg5bOVBCo+KDpFajOf23GgPme7RSQ+lacIENUgJ6gg1k6HjgOlqnLqip4tEuhv0hNEMXUD0clyXE3p6pZA0S2nnvTlXwLJEZWlb7cTQH1+USgTN4VhAenm/wea1OCAOmqo6fE1WCb9WSKBah+rbUWPWAmE2Rvk0ApiB45eOyNAzU8xcTvj8KvkKEoOaIYeHNA3ZuygAvFMUO0AAAAASUVORK5CYII="
+                           y="41.293" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="68" x="471" y="106.1367">Customer</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="507" y="125.625" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176" x="417" y="144.5195">A customer of the bank, with</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="430" y="163.4141">personal bank accounts</text>
+                    <rect fill="#999999" height="98.2773" style="stroke:#8A8A8A;stroke-width:1.5;" width="161" x="816.5" y="340.293" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="101" x="846.5" y="367.1367">E-Mail System
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="899" y="386.625" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="830.5" y="405.5195">The internal Microsoft</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="843.5" y="424.4141">Exchange system</text>
+                    <rect fill="#999999" height="117.1719" style="stroke:#8A8A8A;stroke-width:1.5;" width="215" x="932.5" y="571.793" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="195" x="942.5" y="598.6367">Mainframe Banking
+                        System
+                    </text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="1042" y="618.125" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="182" x="949" y="637.0195">Stores all of the core banking</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="947.5" y="655.9141">information about customers,</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="172" x="954" y="674.8086">accounts, transactions, etc.</text>
+                    <path d="M402.76,174.833 C369.59,197.993 332.88,224.273 300,249.293 C267.68,273.883 232.88,302.173 203.32,326.783 " fill="none" id="customer-to-web_app"
+                          style="stroke:#666666;stroke-width:1.0;" />
+                    <polygon fill="#666666" points="197.09,331.973,205.1537,329.1488,201.3084,324.543,197.09,331.973" style="stroke:#666666;stroke-width:1.0;" />
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="26" x="364" y="220.9258">Uses</text>
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="356" y="237.1211">[HTTPS]</text>
+                    <path d="M483.84,177.443 C471.5,219.523 455.96,272.493 443.55,314.803 " fill="none" id="customer-to-spa" style="stroke:#666666;stroke-width:1.0;" />
+                    <polygon fill="#666666" points="441.27,322.573,446.3944,315.7363,440.6355,314.0526,441.27,322.573" style="stroke:#666666;stroke-width:1.0;" />
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="26" x="482" y="220.9258">Uses</text>
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="474" y="237.1211">[HTTPS]</text>
+                    <path d="M547.57,177.443 C570.69,216.603 599.35,265.183 623.35,305.843 " fill="none" id="customer-to-mobile_app" style="stroke:#666666;stroke-width:1.0;" />
+                    <polygon fill="#666666" points="627.46,312.823,625.9782,304.4084,620.8108,307.4576,627.46,312.823" style="stroke:#666666;stroke-width:1.0;" />
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="26" x="584" y="228.9258">Uses</text>
+                    <path d="M239.36,389.293 C262.05,389.293 286.04,389.293 308.9,389.293 " fill="none" id="web_app-to-spa" style="stroke:#666666;stroke-width:1.0;" />
+                    <polygon fill="#666666" points="316.94,389.293,308.94,386.293,308.94,392.293,316.94,389.293" style="stroke:#666666;stroke-width:1.0;" />
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="41" x="257.5" y="381.9258">Delivers</text>
+                    <path d="M476.84,455.843 C497.73,479.703 522.24,506.413 546,529.293 C559.48,542.273 574.44,555.493 589.11,567.883 " fill="none" id="spa-to-backend_api"
+                          style="stroke:#666666;stroke-width:1.0;" />
+                    <polygon fill="#666666" points="595.38,573.133,591.1803,565.6924,587.3234,570.2885,595.38,573.133" style="stroke:#666666;stroke-width:1.0;" />
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="26" x="590.5" y="508.9258">Uses</text>
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="113" x="547" y="525.1211">[async,
+                        JSON/HTTPS]
+                    </text>
+                    <path d="M670.42,465.583 C669.76,497.493 668.99,534.283 668.35,564.903 " fill="none" id="mobile_app-to-backend_api" style="stroke:#666666;stroke-width:1.0;" />
+                    <polygon fill="#666666" points="668.18,572.953,671.3507,565.0191,665.3521,564.8905,668.18,572.953" style="stroke:#666666;stroke-width:1.0;" />
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="26" x="713.5" y="508.9258">Uses</text>
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="113" x="670" y="525.1211">[async,
+                        JSON/HTTPS]
+                    </text>
+                    <path d="M416.02,630.293 C466.47,630.293 525.93,630.293 574.3,630.293 " fill="none" id="database-backto-backend_api" style="stroke:#666666;stroke-width:1.0;" />
+                    <polygon fill="#666666" points="408,630.293,416,633.293,416,627.293,408,630.293" style="stroke:#666666;stroke-width:1.0;" />
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="130" x="426.25" y="606.9258">Reads from and
+                        writes to
+                    </text>
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="66" x="458.25" y="623.1211">[sync, JDBC]
+                    </text>
+                    <path d="M614.7,143.973 C673.27,168.193 744.15,203.533 798,249.293 C827.91,274.713 853.38,311.053 871,340.203 " fill="none" id="customer-backto-email_system"
+                          style="stroke:#666666;stroke-width:1.0;" />
+                    <polygon fill="#666666" points="607.26,140.933,613.518,146.75,615.7998,141.2008,607.26,140.933" style="stroke:#666666;stroke-width:1.0;" />
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="87" x="785" y="228.9258">Sends e-mails to
+                    </text>
+                    <path d="M860.49,444.993 C841.51,471.683 817.08,503.513 792,529.293 C777.18,544.533 760.05,559.593 743.32,573.223 " fill="none"
+                          id="email_system-backto-backend_api" style="stroke:#666666;stroke-width:1.0;" />
+                    <polygon fill="#666666" points="865.2,438.333,858.1327,443.1344,863.0325,446.5975,865.2,438.333" style="stroke:#666666;stroke-width:1.0;" />
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="104" x="821" y="508.9258">Sends e-mails
+                        using
+                    </text>
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="69" x="838.5" y="525.1211">[sync, SMTP]
+                    </text>
+                    <path d="M759.68,630.293 C809.45,630.293 871.27,630.293 924.18,630.293 " fill="none" id="backend_api-to-banking_system"
+                          style="stroke:#666666;stroke-width:1.0;" />
+                    <polygon fill="#666666" points="932.25,630.293,924.25,627.293,924.25,633.293,932.25,630.293" style="stroke:#666666;stroke-width:1.0;" />
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="26" x="833" y="606.9258">Uses</text>
+                    <text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="136" x="778" y="623.1211">[sync/async,
+                        XML/HTTPS]
+                    </text>
+                    <rect fill="#FFFFFF" height="146.2617" rx="5" ry="5" style="stroke:#FFFFFF;stroke-width:1.0;" width="131" x="1000.5" y="730.293" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="46" x="1006.5" y="752.0313">Legend</text>
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="1056.5" y="752.0313" />
+                    <rect fill="#08427B" height="18.8945" style="stroke:none;stroke-width:1.0;" width="119" x="1006.5" y="756.1875" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="1010.5" y="770.9258">person</text>
+                    <rect fill="#1168BD" height="18.8945" style="stroke:none;stroke-width:1.0;" width="119" x="1006.5" y="775.082" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="1010.5" y="789.8203">system</text>
+                    <rect fill="#438DD5" height="18.8945" style="stroke:none;stroke-width:1.0;" width="119" x="1006.5" y="793.9766" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="1010.5" y="808.7148">container</text>
+                    <rect fill="#686868" height="18.8945" style="stroke:none;stroke-width:1.0;" width="119" x="1006.5" y="812.8711" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="1010.5" y="827.6094">external person</text>
+                    <rect fill="#999999" height="18.8945" style="stroke:none;stroke-width:1.0;" width="119" x="1006.5" y="831.7656" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="1010.5" y="846.5039">external system</text>
+                    <rect fill="#B3B3B3" height="18.8945" style="stroke:none;stroke-width:1.0;" width="119" x="1006.5" y="850.6602" />
+                    <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="1010.5" y="865.3984">external container</text>
+                    <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="1006.5" x2="1125.5" y1="737.293" y2="737.293" />
+                    <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="1006.5" x2="1125.5" y1="756.1875" y2="756.1875" />
+                    <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="1006.5" x2="1125.5" y1="775.082" y2="775.082" />
+                    <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="1006.5" x2="1125.5" y1="793.9766" y2="793.9766" />
+                    <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="1006.5" x2="1125.5" y1="812.8711" y2="812.8711" />
+                    <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="1006.5" x2="1125.5" y1="831.7656" y2="831.7656" />
+                    <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="1006.5" x2="1125.5" y1="850.6602" y2="850.6602" />
+                    <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="1006.5" x2="1125.5" y1="869.5547" y2="869.5547" />
+                    <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="1006.5" x2="1006.5" y1="737.293" y2="869.5547" />
+                    <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="1125.5" x2="1125.5" y1="737.293" y2="869.5547" />
+                </g>
+            </svg>

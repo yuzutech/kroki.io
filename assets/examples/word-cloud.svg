@@ -1,0 +1,676 @@
+<svg class="kroki-output kroki-output-vega marks" xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+                <g transform="translate(0,0)">
+                    <g class="mark-group role-frame root">
+                        <g transform="translate(0,0)">
+                            <path class="background" d="M0,0h800v400h-800Z" style="fill: none;"/>
+                            <g>
+                                <g class="mark-text role-mark">
+                                    <text text-anchor="middle" transform="translate(162,117) rotate(-45)"
+                                          style="font-family: Helvetica Neue ,Arial, sans-serif; font-size: 37px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        DECLARATIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        VISUALIZATION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        GRAMMARS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        ACCELERATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        DEVELOPMENT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(689,304) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        FACILITATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        RETARGETING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(34,265) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        ACROSS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(85,358) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        PLATFORMS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(145,314) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        ALLOW
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        LANGUAGE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(297,150)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 34px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        LEVEL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(587,89)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        OPTIMIZATIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(652,323) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        HOWEVER
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(576,115)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        EXISTING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(582,333)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        LANGUAGES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(473,51) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        PRIMARILY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(395,383)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        CONCERNED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(264,311) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 29px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        VISUAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(458,213) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        ENCODING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(397,272) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        RELY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        IMPERATIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(533,280) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 25px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        EVENT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(49,71) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        HANDLERS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(629,157)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 41px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        INTERACTIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        BEHAVIORS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        RESPONSE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        INTRODUCE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(235,269) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 25px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        MODEL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(413,168) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 44px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        INTERACTION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(159,212) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 25px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        DESIGN
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(275,118)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 53px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        DATA
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(674,250) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 25px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        VISUALIZATIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(371,366)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        ADOPTING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(689,181)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        METHODS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(415,218) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 41px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        REACTIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(299,388)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        PROGRAMMING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(391,93) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        LOW
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(97,255) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        EVENTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(659,383)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        COMPOSABLE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">STREAMS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(197,370)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        FORM
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">HIGHER
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(574,60)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        SEMANTIC
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(607,240) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        SIGNALS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(501,214) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        FEED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(469,331) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        PREDICATES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(330,193) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        SCALE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(465,358) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        INVERSIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(696,195)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        GENERALIZE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(533,240) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 29px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        SELECTIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(277,174) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        ITEM
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(698,68) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        GEOMETRY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(443,363) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        PIXELS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(65,125)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        QUERIES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(531,36)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        DOMAIN
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(711,239) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        PRODUCTION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(369,109) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        RULES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(511,190) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        USE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(49,330) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        MANIPULATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(752,353) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        APPEARANCE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(471,221) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        REUSE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(628,229) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        SHARING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(382,40)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        CONSTRUCTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        ENCAPSULATED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(501,115)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        NAMED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(242,289) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        INTERACTORS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(744,235) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        STANDALONE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(586,369) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        PURELY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(103,313) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        SPECIFICATIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(336,348)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 25px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        TECHNIQUES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(149,153) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        ASSESS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(751,46) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        FEASIBILITY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(50,355) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        EXPRESSIVITY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(52,173) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        INSTANTIATING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(652,365)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        EXTENSIONS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(221,196) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 56px; font-style: normal; font-weight: 600; fill: #652c90; fill-opacity: 1;">
+                                        VEGA
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(359,317)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 29px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        GRAMMAR
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(106,194) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        DIVERSE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(117,64) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        RANGE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(599,290)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        EXAMPLES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(319,17)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        DEMONSTRATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        COVERAGE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        ESTABLISHED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        TAXONOMY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(505,340) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        PRESENT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(260,369)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        SYSTEM
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(707,121)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        ARCHITECTURE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        PROVIDES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(551,313)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        FIRST
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(39,86) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        ROBUST
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(478,12)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        COMPREHENSIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(198,389)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        TREATMENT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        STARTING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(686,28) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        SINGLE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(334,69)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 25px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        SPECIFICATION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(664,66) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        DATAFLOW
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(88,81) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 25px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        GRAPH
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(152,281) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 25px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        INPUT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(539,171)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        SCENE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        ELEMENTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(615,308)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        TREATED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(526,387)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        CLASS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(579,17)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        STREAMING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">SOURCES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(157,40)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        SUPPORT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(113,386)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        EXPRESSIVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(361,134)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        MAY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(766,190) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        INVOLVE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(449,276) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        TIME
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">VARYING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(768,72) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        SCALAR
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        RELATIONAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        HIERARCHICAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        DYNAMICALLY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">WRITE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">RUNTIME
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(50,22)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        EXTENDING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">PRUNING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        BRANCHES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(762,215) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        DRIVEN
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(747,108)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        FASHION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">DISCUSS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">COMPILE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(650,20) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        RUN
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(695,335) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        APPLIED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">WITHIN
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">SHARE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">RESULTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        BENCHMARK
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">STUDIES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        INDICATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        SUPERIOR
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        PERFORMANCE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        ORIGINAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(113,215) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        NON
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(196,233) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 37px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        LITE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(423,85)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        HIGH
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">ENABLES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(41,155) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        RAPID
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        COMBINES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        TRADITIONAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        GRAPHICS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        PROVIDING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        COMPOSITION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">ALGEBRA
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">LAYERED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(583,35)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        MULTI
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(122,356) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        VIEW
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        DISPLAYS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(712,29) rotate(45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        NOVEL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(151,182) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        USERS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">SPECIFY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        SEMANTICS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        COMPOSING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(152,22)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        SELECTION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        ABSTRACTION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">DEFINES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        PROCESSING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">POINTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        INTEREST
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        PREDICATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        FUNCTION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        INCLUSION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">TESTING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        PARAMETERIZE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        ENCODINGS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">SERVING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        DEFINING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">EXTENTS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">DRIVING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        CONDITIONAL
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(217,244) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 19px; font-style: normal; font-weight: 300; fill: #652c90; fill-opacity: 1;">
+                                        LOGIC
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        COMPILER
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        AUTOMATICALLY
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        SYNTHESIZES
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        REQUISITE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(768,293)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #d5a928; fill-opacity: 1;">
+                                        FLOW
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        HANDLING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        OVERRIDE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        CUSTOMIZATION
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        CONTRAST
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        DECOMPOSE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">CONCISE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        ENUMERABLE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(191,341) rotate(-45)"
+                                          style="font-family: Helvetica Neue, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; fill: #939597; fill-opacity: 1;">
+                                        UNITS
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        EVALUATE
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">
+                                        DEMONSTRATING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">
+                                        SUCCINCT
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">
+                                        CUSTOMIZED
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">COMMON
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #939597; fill-opacity: 1;">PANNING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #d5a928; fill-opacity: 1;">ZOOMING
+                                    </text>
+                                    <text text-anchor="middle" transform="translate(0,0)" style="font-family: sans-serif; font-size: 0; fill: #652c90; fill-opacity: 1;">LINKED
+                                    </text>
+                                </g>
+                            </g>
+                            <path class="foreground" d="" style="display: none; fill: none;"/>
+                        </g>
+                    </g>
+                </g>
+            </svg>

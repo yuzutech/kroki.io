@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="192" height="58"
+    viewBox="0 0 192 58">
+  <style type="text/css" source-text-origin="source-independent defaults: shared by ASCII and UTF-8">
+    svg {
+        color-scheme: light dark; /* this becomes necessary if not inherited from parent elements */
+        font-family: monospace;
+        font-size: 15px;
+    }
+    text {
+        stroke: none;
+        text-anchor: middle;
+    }
+    .path {
+        fill: none;
+    }
+    circle.filled {
+        fill: inherit;
+    }
+    circle.hollow {
+         fill: none;
+    }
+    svg {
+        color: #000;  /* set value of 'currentColor' */
+    }
+    @media (prefers-color-scheme: dark) {
+        svg {
+            color: #FFF;  /* set value of 'currentColor' */
+        }
+    }
+    svg {
+        fill: currentColor;
+        stroke: currentColor;
+    }
+  </style>
+
+<g transform='translate(8,12)'>
+  <g id='lines'>
+    <polyline class="path" points="0,0 64,0"/>
+    <polyline class="path" points="112,0 176,0"/>
+    <polyline class="path" points="72,16 104,16"/>
+    <polyline class="path" points="0,32 64,32"/>
+    <polyline class="path" points="112,32 176,32"/>
+    <polyline class="path" points="0,0 0,32"/>
+    <polyline class="path" points="64,0 64,32"/>
+    <polyline class="path" points="112,0 112,32"/>
+    <polyline class="path" points="176,0 176,32"/>
+  </g>
+  <g id='triangles'>
+    <polygon points="112,16 100,10.4 100,21.6" transform="rotate(0, 104, 16)" class="arrowhead"></polygon>
+  </g>
+  <g id='roundedCorners'>
+  </g>
+  <g id='circles'>
+  </g>
+  <g id='bridges'>
+  </g>
+  <g id='text'>
+    <text x="16" y="20">A</text>
+    <text x="24" y="20">l</text>
+    <text x="32" y="20">i</text>
+    <text x="40" y="20">c</text>
+    <text x="48" y="20">e</text>
+    <text x="136" y="20">B</text>
+    <text x="144" y="20">o</text>
+    <text x="152" y="20">b</text>
+</g>
+</g>
+</svg>

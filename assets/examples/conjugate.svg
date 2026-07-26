@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="kroki-output" viewBox="0 0 750 406">
+                <defs>
+                    <style type="text/css">@font-face {
+                        font-family: sans-serif;
+                    }</style>
+                    <filter id="shadowBlur" x="0" y="0" width="200%" height="200%">
+                        <feOffset in="SourceGraphic" dx="3.0003002" dy="3.0003002" result="offOut"></feOffset>
+                        <feGaussianBlur in="offOut" stdDeviation="3"></feGaussianBlur>
+                    </filter>
+                </defs>
+                <g stroke-width="1" stroke-linecap="square" stroke-linejoin="round">
+                    
+                    <path stroke="#969696" fill="#969696" filter="url(#shadowBlur)" d="M685.0 161.0 L685.0 217.0 L545.0 217.0 L545.0 161.0 z"></path>
+                    <path stroke="#969696" fill="#969696" filter="url(#shadowBlur)" d="M165.0 161.0 L165.0 217.0 L25.0 217.0 L25.0 161.0 z"></path>
+                    <path stroke="#969696" fill="#969696" filter="url(#shadowBlur)" d="M285.0 49.0 L285.0 105.0 L425.0 105.0 L425.0 49.0 z"></path>
+                    <path stroke="#969696" fill="#969696" filter="url(#shadowBlur)" d="M425.0 161.0 L425.0 217.0 L285.0 217.0 L285.0 161.0 z"></path>
+                    <path stroke="#969696" fill="#969696" filter="url(#shadowBlur)" d="M425.0 273.0 L425.0 329.0 L285.0 329.0 L285.0 273.0 z"></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="white"
+                          d="M685.0 161.0 L685.0 217.0 L545.0 217.0 L545.0 161.0 z"></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="white"
+                          d="M165.0 161.0 L165.0 217.0 L25.0 217.0 L25.0 161.0 z"></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="white"
+                          d="M285.0 49.0 L285.0 105.0 L425.0 105.0 L425.0 49.0 z"></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="white"
+                          d="M425.0 161.0 L425.0 217.0 L285.0 217.0 L285.0 161.0 z"></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="white"
+                          d="M425.0 273.0 L425.0 329.0 L285.0 329.0 L285.0 273.0 z"></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M85.0 231.0 L85.0 287.0 L275.0 287.0 "></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                          d="M435.0 203.0 L465.0 203.0 L465.0 259.0 L365.0 259.0 L365.0 231.0 "></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                          d="M435.0 315.0 L475.0 315.0 L475.0 371.0 L395.0 371.0 L395.0 343.0 "></path>
+                    <path stroke="none" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M350.0 140.0 L355.0 154.0 L360.0 140.0 z"></path>
+                    <path stroke="none" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M270.0 182.0 L280.0 189.0 L270.0 196.0 z"></path>
+                    <path stroke="none" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M440.0 182.0 L430.0 189.0 L440.0 196.0 z"></path>
+                    <path stroke="none" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M345.0 224.0 L340.0 238.0 L350.0 238.0 z"></path>
+                    <path stroke="none" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M365.0 224.0 L360.0 238.0 L370.0 238.0 z"></path>
+                    <path stroke="none" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M270.0 280.0 L280.0 287.0 L270.0 294.0 z"></path>
+                    <path stroke="none" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M395.0 336.0 L390.0 350.0 L400.0 350.0 z"></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M275.0 189.0 L175.0 189.0 "></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M435.0 189.0 L535.0 189.0 "></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M345.0 259.0 L345.0 231.0 "></path>
+                    <path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M355.0 119.0 L355.0 147.0 "></path>
+                    <text x="310" y="83" font-family="sans-serif" font-size="16" stroke="none" fill="#000000">Exponential</text>
+                    <text x="54" y="195" font-family="sans-serif" font-size="16" stroke="none" fill="#000000">Lognormal</text>
+                    <text x="103" y="265" font-family="sans-serif" font-size="16" stroke="none" fill="#000000">tau</text>
+                    <text x="490" y="348" font-family="sans-serif" font-size="13" stroke="none" fill="#000000">mu</text>
+                    <text x="282" y="139" font-family="sans-serif" font-size="16" stroke="none" fill="#000000">lambda</text>
+                    <text x="331" y="194" font-family="sans-serif" font-size="13" stroke="none" fill="#000000">Gamma</text>
+                    <text x="564" y="195" font-family="sans-serif" font-size="16" stroke="none" fill="#000000">Poisson</text>
+                    <text x="343" y="307" font-family="sans-serif" font-size="16" stroke="none" fill="#000000">Normal</text>
+                    <text x="283" y="251" font-family="sans-serif" font-size="16" stroke="none" fill="#000000">tau</text>
+                    <text x="203" y="181" font-family="sans-serif" font-size="16" stroke="none" fill="#000000">tau</text>
+                    <text x="462" y="181" font-family="sans-serif" font-size="16" stroke="none" fill="#000000">lambda</text>
+                    <text x="484" y="237" font-family="sans-serif" font-size="16" stroke="none" fill="#000000">beta</text>
+                </g>
+            </svg>

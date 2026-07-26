@@ -1,0 +1,286 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="kroki-output kroki-output-mermaid-gantt" id="mermaid-1588452835063" width="584" height="196" viewBox="0 0 584 196">
+                <style>
+                #mermaid-1588452835063 .label text {
+                    fill: #333
+                }
+
+                #mermaid-1588452835063 .node rect, #mermaid-1588452835063 .node circle, #mermaid-1588452835063 .node ellipse, #mermaid-1588452835063 .node polygon, #mermaid-1588452835063 .node path {
+                    fill: #ECECFF;
+                    stroke: #9370db;
+                    stroke-width: 1px
+                }
+
+                #mermaid-1588452835063 .cluster rect {
+                    fill: #ffffde;
+                    stroke: #aa3;
+                    stroke-width: 1px
+                }
+
+                #mermaid-1588452835063 .cluster text {
+                    fill: #333
+                }
+
+                #mermaid-1588452835063 .actor {
+                    stroke: #ccf;
+                    fill: #ECECFF
+                }
+
+                #mermaid-1588452835063 text.actor {
+                    fill: #000;
+                    stroke: none
+                }
+
+                #mermaid-1588452835063 .actor-line {
+                    stroke: grey
+                }
+
+                #mermaid-1588452835063 .messageLine0 {
+                    stroke-width: 1.5;
+                    stroke: #333
+                }
+
+                #mermaid-1588452835063 .messageLine1 {
+                    stroke-width: 1.5;
+                    stroke: #333
+                }
+
+                #mermaid-1588452835063 #arrowhead {
+                    fill: #333
+                }
+
+                #mermaid-1588452835063 #crosshead path {
+                    fill: #333 !important;
+                    stroke: #333 !important
+                }
+
+                #mermaid-1588452835063 .messageText {
+                    fill: #333;
+                    stroke: none
+                }
+
+                #mermaid-1588452835063 .labelBox {
+                    stroke: #ccf;
+                    fill: #ECECFF
+                }
+
+                #mermaid-1588452835063 .labelText {
+                    fill: #000;
+                    stroke: none
+                }
+
+                #mermaid-1588452835063 .loopText {
+                    fill: #000;
+                    stroke: none
+                }
+
+                #mermaid-1588452835063 .loopLine {
+                    stroke-width: 2;
+                    stroke: #ccf
+                }
+
+                #mermaid-1588452835063 .note {
+                    stroke: #aa3;
+                    fill: #fff5ad
+                }
+
+                #mermaid-1588452835063 .noteText {
+                    fill: black;
+                    stroke: none;
+                    font-family: 'trebuchet ms', verdana, arial, sans-serif;
+                    font-size: 14px
+                }
+
+                #mermaid-1588452835063 .section0 {
+                    opacity: 0.2;
+                    fill: rgba(102, 102, 255, 0.49)
+                }
+
+                #mermaid-1588452835063 .section1 {
+                    fill: #fff;
+                    opacity: 0.2
+                }
+
+                #mermaid-1588452835063 .sectionTitle0 {
+                    fill: #333
+                }
+
+                #mermaid-1588452835063 .sectionTitle1 {
+                    fill: #333
+                }
+
+                #mermaid-1588452835063 .sectionTitle {
+                    text-anchor: start;
+                    font-size: 11px;
+                    font-family: 'trebuchet ms', verdana, arial, sans-serif;
+                }
+
+                #mermaid-1588452835063 .grid .tick {
+                    stroke: #d3d3d3;
+                    opacity: 0.8;
+                    shape-rendering: crispEdges
+                }
+
+                #mermaid-1588452835063 .grid .tick text {
+                    font-family: 'trebuchet ms', verdana, arial, sans-serif;
+                }
+
+                #mermaid-1588452835063 .grid path {
+                    stroke-width: 0
+                }
+
+                #mermaid-1588452835063 .today {
+                    fill: none;
+                    stroke: red;
+                    stroke-width: 2px
+                }
+
+                #mermaid-1588452835063 .task {
+                    stroke-width: 2
+                }
+
+                #mermaid-1588452835063 .taskText {
+                    text-anchor: middle;
+                    font-family: 'trebuchet ms', verdana, arial, sans-serif;
+                }
+
+                #mermaid-1588452835063 .taskText:not([font-size]) {
+                    font-size: 11px
+                }
+
+                #mermaid-1588452835063 .taskText0, #mermaid-1588452835063 .taskText1 {
+                    fill: #fff
+                }
+
+                #mermaid-1588452835063 .task0, #mermaid-1588452835063 .task1 {
+                    fill: #8a90dd;
+                    stroke: #534fbc
+                }
+
+                #mermaid-1588452835063 .titleText {
+                    text-anchor: middle;
+                    font-size: 18px;
+                    fill: #000;
+                    font-family: 'trebuchet ms', verdana, arial, sans-serif;
+                }
+
+                #mermaid-1588452835063 g.classGroup text {
+                    fill: #9370db;
+                    stroke: none;
+                    font-family: 'trebuchet ms', verdana, arial, sans-serif;
+                    font-size: 10px
+                }
+
+                #mermaid-1588452835063 g.classGroup rect {
+                    fill: #ECECFF;
+                    stroke: #9370db
+                }
+
+                #mermaid-1588452835063 g.classGroup line {
+                    stroke: #9370db;
+                    stroke-width: 1
+                }
+
+                #mermaid-1588452835063 g.stateGroup text {
+                    fill: #9370db;
+                    stroke: none;
+                    font-size: 10px;
+                    font-family: 'trebuchet ms', verdana, arial, sans-serif;
+                }
+
+                #mermaid-1588452835063 g.stateGroup text {
+                    fill: #9370db;
+                    stroke: none;
+                    font-size: 10px
+                }
+
+                #mermaid-1588452835063 g.stateGroup rect {
+                    fill: #ECECFF;
+                    stroke: #9370db
+                }
+
+                #mermaid-1588452835063 g.stateGroup line {
+                    stroke: #9370db;
+                    stroke-width: 1
+                }
+
+                #mermaid-1588452835063 .state-note text {
+                    fill: black;
+                    stroke: none;
+                    font-size: 10px
+                }
+
+                #mermaid-1588452835063 .stateLabel text {
+                    fill: #000;
+                    font-size: 10px;
+                    font-weight: bold;
+                    font-family: 'trebuchet ms', verdana, arial, sans-serif;
+                }
+
+                :root {
+                    --mermaid-font-family: "trebuchet ms", verdana, arial;
+                }</style>
+                <style>#mermaid-1588452835063 {
+                    color: rgb(0, 0, 0);
+                    font: 16px "trebuchet ms", verdana, arial;
+                }</style>
+                <g/>
+                <g class="grid" transform="translate(75, 146)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
+                    <path class="domain" stroke="currentColor" d="M0.5,-111V0.5H434.5V-111"/>
+                    <g class="tick" opacity="1" transform="translate(35.5,0)">
+                        <line stroke="currentColor" y2="-111"/>
+                        <text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2014-01-05</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(95.5,0)">
+                        <line stroke="currentColor" y2="-111"/>
+                        <text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2014-01-12</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(156.5,0)">
+                        <line stroke="currentColor" y2="-111"/>
+                        <text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2014-01-19</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(217.5,0)">
+                        <line stroke="currentColor" y2="-111"/>
+                        <text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2014-01-26</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(278.5,0)">
+                        <line stroke="currentColor" y2="-111"/>
+                        <text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2014-02-02</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(339.5,0)">
+                        <line stroke="currentColor" y2="-111"/>
+                        <text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2014-02-09</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(399.5,0)">
+                        <line stroke="currentColor" y2="-111"/>
+                        <text fill="#000" y="3" dy="1em" stroke="none" font-size="10" style="text-anchor: middle;">2014-02-16</text>
+                    </g>
+                </g>
+                <g>
+                    <rect x="0" y="48" width="546.5" height="24" class="section section0"/>
+                    <rect x="0" y="72" width="546.5" height="24" class="section section0"/>
+                    <rect x="0" y="96" width="546.5" height="24" class="section section1"/>
+                    <rect x="0" y="120" width="546.5" height="24" class="section section1"/>
+                </g>
+                <g>
+                    <rect id="a1" rx="3" ry="3" x="75" y="50" width="260" height="20" class="task task0 "/>
+                    <rect id="task1" rx="3" ry="3" x="335" y="74" width="174" height="20" class="task task0 "/>
+                    <rect id="task2" rx="3" ry="3" x="170" y="98" width="105" height="20" class="task task1 "/>
+                    <rect id="task3" rx="3" ry="3" x="275" y="122" width="208" height="20" class="task task1 "/>
+                    <text id="a1-text" font-size="11" x="205" y="63.5" class=" taskText taskText0  width-31">A task</text>
+                    <text id="task1-text" font-size="11" x="422" y="87.5" class=" taskText taskText0  width-66">Another task</text>
+                    <text id="task2-text" font-size="11" x="222.5" y="111.5" class=" taskText taskText1  width-55">Task in sec</text>
+                    <text id="task3-text" font-size="11" x="379" y="135.5" class=" taskText taskText1  width-65">another task</text>
+                </g>
+                <g>
+                    <text dy="0em" x="10" y="74" class="sectionTitle sectionTitle0">
+                        <tspan alignment-baseline="central" x="10">Section</tspan>
+                    </text>
+                    <text dy="0em" x="10" y="122" class="sectionTitle sectionTitle1">
+                        <tspan alignment-baseline="central" x="10">Another</tspan>
+                    </text>
+                </g>
+                <g class="today">
+                    <line x1="20159" x2="20159" y1="25" y2="171" class="today"/>
+                </g>
+                <text x="292" y="25" class="titleText">A Gantt Diagram</text>
+            </svg>

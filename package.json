@@ -29,6 +29,7 @@
     "build-cleancss": "cleancss -o css/main.min.css css/main.css",
     "build-sass": "node-sass --output-style expanded --source-map true src/main.sass css/main.css",
     "build-clean": "rimraf css",
+    "generate-examples": "node scripts/generate-examples.js",
     "deploy": "npm run build",
     "start": "npm run build-sass -- --watch"
   },
