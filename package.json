@@ -30,6 +30,7 @@
     "build-sass": "node-sass --output-style expanded --source-map true src/main.sass css/main.css",
     "build-clean": "rimraf css",
     "generate-examples": "node scripts/generate-examples.js",
+    "generate-cheatsheet": "npm install --prefix scripts/cheatsheet && node scripts/cheatsheet/generate.js",
     "deploy": "npm run build",
     "start": "npm run build-sass -- --watch"
   },

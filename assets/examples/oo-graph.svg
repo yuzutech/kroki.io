@@ -1,594 +1,554 @@
-<svg class="kroki-output" viewBox="0.00 0.00 432.00 387.93" xmlns="http://www.w3.org/2000/svg">
-                <g id="graph0" class="graph" transform="scale(.3227 .3227) rotate(0) translate(4 1198.0048)">
-                    <title>unix</title>
-                    
-                    <text text-anchor="middle" x="665.2761" y="-55.2" font-family="Helvetica,sans-Serif" font-style="oblique" font-size="36.00" fill="#000000">Object Oriented
-                        Graphs
-                    </text>
-                    <text text-anchor="middle" x="665.2761" y="-15.2" font-family="Helvetica,sans-Serif" font-style="oblique" font-size="36.00" fill="#000000">Stephen North,
-                        3/19/93
-                    </text>
-                    <!-- 5th Edition -->
-                    <g id="node1" class="node">
-                        <title>5th Edition</title>
-                        <polygon fill="#ee8262" stroke="#ee8262"
-                                 points="804.988,-1171.8075 814.6711,-1187.2996 784.1009,-1194.1298 714.4646,-1186.8225 658.4421,-1172.2897 662.3433,-1160.8243 711.2259,-1155.5112 757.5653,-1154.552 784.2342,-1159.1872 804.988,-1171.8075"/>
-                        <text text-anchor="middle" x="743.5595" y="-1167.6804" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">5th Edition</text>
-                    </g>
-                    <!-- 6th Edition -->
-                    <g id="node2" class="node">
-                        <title>6th Edition</title>
-                        <polygon fill="#00bfff" stroke="#00bfff"
-                                 points="723.8063,-1104.6955 637.735,-1112.6364 525.1637,-1093.9608 550.3255,-1074.9458 655.7668,-1080.6439 723.8063,-1104.6955"/>
-                        <text text-anchor="middle" x="618.5595" y="-1089.6765" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">6th Edition</text>
-                    </g>
-                    <!-- 5th Edition&#45;&gt;6th Edition -->
-                    <g id="edge1" class="edge">
-                        <title>5th Edition&#45;&gt;6th Edition</title>
-                        <path fill="none" stroke="#000000" d="M717.6594,-1155.218C699.9684,-1144.1782 676.2369,-1129.369 656.4324,-1117.0104"/>
-                        <polygon fill="#000000" stroke="#000000" points="658.2672,-1114.0298 647.9306,-1111.705 654.5613,-1119.9684 658.2672,-1114.0298"/>
-                    </g>
-                    <!-- PWB 1.0 -->
-                    <g id="node3" class="node">
-                        <title>PWB 1.0</title>
-                        <polygon fill="#eeb422" stroke="#eeb422"
-                                 points="976.6551,-1111.6645 937.7738,-1111.5008 904.5534,-1100.5856 896.4541,-1085.3129 918.3629,-1074.8982 957.4461,-1075.4424 990.6664,-1086.3576 998.564,-1101.2498 976.6551,-1111.6645"/>
-                        <text text-anchor="middle" x="947.5595" y="-1089.6765" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">PWB 1.0</text>
-                    </g>
-                    <!-- 5th Edition&#45;&gt;PWB 1.0 -->
-                    <g id="edge2" class="edge">
-                        <title>5th Edition&#45;&gt;PWB 1.0</title>
-                        <path fill="none" stroke="#000000" d="M778.6283,-1157.9711C814.4973,-1144.2558 870.137,-1122.9807 907.6656,-1108.6308"/>
-                        <polygon fill="#000000" stroke="#000000" points="909.1751,-1111.8008 917.2655,-1104.9601 906.675,-1105.2625 909.1751,-1111.8008"/>
-                    </g>
-                    <!-- LSX -->
-                    <g id="node4" class="node">
-                        <title>LSX</title>
-                        <polygon fill="#eec591" stroke="#eec591"
-                                 points="877.0038,-1007.6417 863.2566,-1017.2724 837.6282,-1022.4816 817.6547,-1022.1668 804.1875,-1014.43 795.0333,-1000.8461 800.0199,-989.1061 827.2343,-987.2122 862.017,-995.5869 877.0038,-1007.6417"/>
-                        <text text-anchor="middle" x="831.5595" y="-1002.6048" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">LSX</text>
-                    </g>
-                    <!-- 6th Edition&#45;&gt;LSX -->
-                    <g id="edge3" class="edge">
-                        <title>6th Edition&#45;&gt;LSX</title>
-                        <path fill="none" stroke="#000000"
-                              d="M658.9424,-1081.7131C691.6007,-1071.7144 738.4223,-1056.0855 777.5595,-1037.9969 786.1626,-1034.0207 795.1692,-1029.0768 803.3067,-1024.2857"/>
-                        <polygon fill="#000000" stroke="#000000" points="805.3064,-1027.1668 812.0569,-1019.0009 801.6875,-1021.1748 805.3064,-1027.1668"/>
-                    </g>
-                    <!-- 1 BSD -->
-                    <g id="node5" class="node">
-                        <title>1 BSD</title>
-                        <polygon fill="#ffd700" stroke="#ffd700"
-                                 points="214.6255,-1011.2458 202.782,-1025.5946 161.2242,-1024.0647 127.449,-1009.1612 133.0931,-993.46 164.9425,-986.829 196.8001,-993.7785 214.6255,-1011.2458"/>
-                        <text text-anchor="middle" x="171.5595" y="-1002.6048" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">1 BSD</text>
-                    </g>
-                    <!-- 6th Edition&#45;&gt;1 BSD -->
-                    <g id="edge4" class="edge">
-                        <title>6th Edition&#45;&gt;1 BSD</title>
-                        <path fill="none" stroke="#000000"
-                              d="M540.2195,-1082.5473C472.8787,-1072.6962 373.347,-1056.842 287.5595,-1037.9969 264.9544,-1033.0312 240.1741,-1026.4231 219.3417,-1020.5263"/>
-                        <polygon fill="#000000" stroke="#000000" points="220.0358,-1017.0845 209.4588,-1017.6989 218.1104,-1023.8145 220.0358,-1017.0845"/>
-                    </g>
-                    <!-- Mini Unix -->
-                    <g id="node6" class="node">
-                        <title>Mini Unix</title>
-                        <polygon fill="#adff2f" stroke="#adff2f" points="581.4808,-1024.3048 472.3624,-1022.9087 500.2897,-988.3388 604.105,-989.6671 581.4808,-1024.3048"/>
-                        <text text-anchor="middle" x="539.5595" y="-1002.6048" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">Mini Unix</text>
-                    </g>
-                    <!-- 6th Edition&#45;&gt;Mini Unix -->
-                    <g id="edge5" class="edge">
-                        <title>6th Edition&#45;&gt;Mini Unix</title>
-                        <path fill="none" stroke="#000000" d="M604.4359,-1077.8098C592.7955,-1064.9801 576.0563,-1046.5307 562.4969,-1031.5859"/>
-                        <polygon fill="#000000" stroke="#000000" points="565.0515,-1029.1927 555.7399,-1024.1385 559.8673,-1033.8963 565.0515,-1029.1927"/>
-                    </g>
-                    <!-- Wollongong -->
-                    <g id="node7" class="node">
-                        <title>Wollongong</title>
-                        <polygon fill="#8fbc8f" stroke="#8fbc8f"
-                                 points="711.0961,-1025.7044 629.6372,-1014.0529 640.6626,-991.6939 733.3416,-991.6543 768.0599,-1008.4188 711.0961,-1025.7044"/>
-                        <text text-anchor="middle" x="696.5595" y="-1002.6048" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">Wollongong</text>
-                    </g>
-                    <!-- 6th Edition&#45;&gt;Wollongong -->
-                    <g id="edge6" class="edge">
-                        <title>6th Edition&#45;&gt;Wollongong</title>
-                        <path fill="none" stroke="#000000" d="M631.4396,-1078.9984C643.4517,-1065.5892 661.5822,-1045.3501 675.6647,-1029.6297"/>
-                        <polygon fill="#000000" stroke="#000000" points="678.5407,-1031.6647 682.6062,-1021.8809 673.3268,-1026.994 678.5407,-1031.6647"/>
-                    </g>
-                    <!-- Interdata -->
-                    <g id="node8" class="node">
-                        <title>Interdata</title>
-                        <polygon fill="#1e90ff" stroke="#1e90ff" points="381.7936,-1031.4941 296.3921,-996.3267 391.8005,-990.3706 432.2517,-1007.028 381.7936,-1031.4941"/>
-                        <text text-anchor="middle" x="375.5595" y="-1002.6048" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">Interdata</text>
-                    </g>
-                    <!-- 6th Edition&#45;&gt;Interdata -->
-                    <g id="edge7" class="edge">
-                        <title>6th Edition&#45;&gt;Interdata</title>
-                        <path fill="none" stroke="#000000"
-                              d="M569.6814,-1075.9485C539.1645,-1065.0586 499.0643,-1050.7329 463.5595,-1037.9969 448.9053,-1032.7403 432.8846,-1026.9759 418.5764,-1021.8213"/>
-                        <polygon fill="#000000" stroke="#000000" points="419.5765,-1018.4615 408.9821,-1018.364 417.2034,-1025.0469 419.5765,-1018.4615"/>
-                    </g>
-                    <!-- PWB 1.2 -->
-                    <g id="node28" class="node">
-                        <title>PWB 1.2</title>
-                        <polygon fill="#00ffff" stroke="#00ffff"
-                                 points="967.7856,-1035.8024 923.0668,-1031.9214 894.5703,-1001.2777 905.9758,-974.4196 950.9157,-979.0446 992.3399,-1000.8714 998.2622,-1020.7969 967.7856,-1035.8024"/>
-                        <text text-anchor="middle" x="947.5595" y="-1002.6048" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">PWB 1.2</text>
-                    </g>
-                    <!-- PWB 1.0&#45;&gt;PWB 1.2 -->
-                    <g id="edge31" class="edge">
-                        <title>PWB 1.0&#45;&gt;PWB 1.2</title>
-                        <path fill="none" stroke="#000000" d="M947.5595,-1074.9108C947.5595,-1066.075 947.5595,-1055.1491 947.5595,-1044.6343"/>
-                        <polygon fill="#000000" stroke="#000000" points="951.0596,-1044.3491 947.5595,-1034.3492 944.0596,-1044.3492 951.0596,-1044.3491"/>
-                    </g>
-                    <!-- USG 1.0 -->
-                    <g id="node29" class="node">
-                        <title>USG 1.0</title>
-                        <polygon fill="#0000ff" stroke="#0000ff" points="1138.3324,-1031.5041 1018.8979,-1000.4393 1112.0705,-990.2829 1160.9371,-1002.9931 1138.3324,-1031.5041"/>
-                        <text text-anchor="middle" x="1107.5595" y="-1002.6048" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">USG 1.0</text>
-                    </g>
-                    <!-- PWB 1.0&#45;&gt;USG 1.0 -->
-                    <g id="edge32" class="edge">
-                        <title>PWB 1.0&#45;&gt;USG 1.0</title>
-                        <path fill="none" stroke="#000000" d="M971.86,-1080.1522C1000.0642,-1064.8035 1046.6048,-1039.4763 1077.1745,-1022.8403"/>
-                        <polygon fill="#000000" stroke="#000000" points="1079.0003,-1025.8314 1086.1109,-1017.9771 1075.6543,-1019.6829 1079.0003,-1025.8314"/>
-                    </g>
-                    <!-- 2 BSD -->
-                    <g id="node19" class="node">
-                        <title>2 BSD</title>
-                        <polygon fill="#ffebcd" stroke="#ffebcd"
-                                 points="127.7765,-574.9971 92.8209,-574.3196 74.2645,-561.4085 86.051,-545.8622 119.2754,-539.2633 148.9618,-546.7601 152.7662,-562.7517 127.7765,-574.9971"/>
-                        <text text-anchor="middle" x="114.5595" y="-554.2089" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">2 BSD</text>
-                    </g>
-                    <!-- 1 BSD&#45;&gt;2 BSD -->
-                    <g id="edge19" class="edge">
-                        <title>1 BSD&#45;&gt;2 BSD</title>
-                        <path fill="none" stroke="#000000"
-                              d="M165.2888,-986.7325C154.9745,-952.7497 135.5595,-880.4645 135.5595,-817.8393 135.5595,-817.8393 135.5595,-817.8393 135.5595,-726.0436 135.5595,-675.8752 126.2397,-617.9313 120.0175,-584.8364"/>
-                        <polygon fill="#000000" stroke="#000000" points="123.452,-584.1623 118.1218,-575.0059 116.5786,-585.4877 123.452,-584.1623"/>
-                    </g>
-                    <!-- Unix/TS 3.0 -->
-                    <g id="node9" class="node">
-                        <title>Unix/TS 3.0</title>
-                        <polygon fill="#eed2ee" stroke="#eed2ee"
-                                 points="975.3789,-741.4954 946.6639,-752.5595 868.2958,-744.654 786.1816,-722.4098 773.7974,-705.7312 838.3977,-704.3882 916.7658,-712.2937 962.9947,-724.8167 975.3789,-741.4954"/>
-                        <text text-anchor="middle" x="883.5595" y="-722.3436" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">Unix/TS 3.0</text>
-                    </g>
-                    <!-- Interdata&#45;&gt;Unix/TS 3.0 -->
-                    <g id="edge8" class="edge">
-                        <title>Interdata&#45;&gt;Unix/TS 3.0</title>
-                        <path fill="none" stroke="#000000" d="M399.0425,-993.3493C480.0441,-948.6611 748.1887,-800.727 846.775,-746.3374"/>
-                        <polygon fill="#000000" stroke="#000000" points="848.7092,-749.2677 855.7743,-741.3725 845.3277,-743.1386 848.7092,-749.2677"/>
-                    </g>
-                    <!-- PWB 2.0 -->
-                    <g id="node10" class="node">
-                        <title>PWB 2.0</title>
-                        <polygon fill="#a2cd5a" stroke="#a2cd5a"
-                                 points="872.6129,-927.4314 805.6867,-931.0624 714.0868,-910.0455 726.5061,-893.9083 811.9787,-894.5326 866.4857,-907.0388 872.6129,-927.4314"/>
-                        <text text-anchor="middle" x="799.5595" y="-906.9698" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">PWB 2.0</text>
-                    </g>
-                    <!-- Interdata&#45;&gt;PWB 2.0 -->
-                    <g id="edge9" class="edge">
-                        <title>Interdata&#45;&gt;PWB 2.0</title>
-                        <path fill="none" stroke="#000000"
-                              d="M402.8731,-994.9078C420.0346,-988.14 442.7818,-979.8786 463.5595,-974.6128 566.8359,-948.4386 596.4238,-961.1267 700.5595,-938.6128 718.5075,-934.7325 738.0085,-929.4615 754.9196,-924.5429"/>
-                        <polygon fill="#000000" stroke="#000000" points="755.9464,-927.8892 764.5461,-921.7008 753.9643,-921.1757 755.9464,-927.8892"/>
-                    </g>
-                    <!-- 7th Edition -->
-                    <g id="node11" class="node">
-                        <title>7th Edition</title>
-                        <polygon fill="#d2691e" stroke="#d2691e"
-                                 points="423.118,-918.4851 403.2473,-929.8781 372.8008,-933.9343 340.9129,-927.3731 320.7166,-913.3621 323.0106,-899.3925 347.8717,-891.4615 383.3086,-890.8675 413.2904,-896.1062 427.3181,-905.8379 423.118,-918.4851"/>
-                        <text text-anchor="middle" x="375.5595" y="-906.9698" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">7th Edition</text>
-                    </g>
-                    <!-- Interdata&#45;&gt;7th Edition -->
-                    <g id="edge10" class="edge">
-                        <title>Interdata&#45;&gt;7th Edition</title>
-                        <path fill="none" stroke="#000000" d="M375.5595,-991.3619C375.5595,-978.6922 375.5595,-960.0546 375.5595,-943.8824"/>
-                        <polygon fill="#000000" stroke="#000000" points="379.0596,-943.6985 375.5595,-933.6985 372.0596,-943.6985 379.0596,-943.6985"/>
-                    </g>
-                    <!-- TS 4.0 -->
-                    <g id="node38" class="node">
-                        <title>TS 4.0</title>
-                        <polygon fill="#dc143c" stroke="#dc143c"
-                                 points="1027.7598,-579.1384 1006.5761,-583.9177 967.4337,-578.7625 930.9518,-568.7775 908.9002,-556.579 902.6956,-542.9506 912.5429,-531.9002 940.3489,-530.7842 981.1609,-543.1645 1017.225,-563.1146 1027.7598,-579.1384"/>
-                        <text text-anchor="middle" x="959.5595" y="-554.2089" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">TS 4.0</text>
-                    </g>
-                    <!-- Unix/TS 3.0&#45;&gt;TS 4.0 -->
-                    <g id="edge44" class="edge">
-                        <title>Unix/TS 3.0&#45;&gt;TS 4.0</title>
-                        <path fill="none" stroke="#000000" d="M890.9851,-709.616C904.2317,-680.3104 932.0299,-618.8125 947.8643,-583.782"/>
-                        <polygon fill="#000000" stroke="#000000" points="951.0615,-585.2062 951.9912,-574.6523 944.6829,-582.3229 951.0615,-585.2062"/>
-                    </g>
-                    <!-- PWB 2.0&#45;&gt;Unix/TS 3.0 -->
-                    <g id="edge42" class="edge">
-                        <title>PWB 2.0&#45;&gt;Unix/TS 3.0</title>
-                        <path fill="none" stroke="#000000"
-                              d="M790.9777,-894.143C779.5163,-869.5798 762.7157,-822.7131 781.5595,-788.9518 793.3864,-767.7621 815.6098,-752.8224 836.301,-742.836"/>
-                        <polygon fill="#000000" stroke="#000000" points="837.9964,-745.9103 845.6571,-738.5916 835.1044,-739.5356 837.9964,-745.9103"/>
-                    </g>
-                    <!-- 8th Edition -->
-                    <g id="node12" class="node">
-                        <title>8th Edition</title>
-                        <polygon fill="#00c5cd" stroke="#00c5cd" points="671.7933,-480.8158 621.5655,-466.1963 656.165,-436.7281 800.7141,-478.8009 671.7933,-480.8158"/>
-                        <text text-anchor="middle" x="687.5595" y="-461.9353" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">8th Edition</text>
-                    </g>
-                    <!-- 7th Edition&#45;&gt;8th Edition -->
-                    <g id="edge11" class="edge">
-                        <title>7th Edition&#45;&gt;8th Edition</title>
-                        <path fill="none" stroke="#000000"
-                              d="M420.2616,-900.7569C491.2233,-884.8322 622.4197,-854.5436 629.5595,-846.7269 666.1784,-806.6358 648.5595,-780.3412 648.5595,-726.0436 648.5595,-726.0436 648.5595,-726.0436 648.5595,-642.0533 648.5595,-586.9051 666.9538,-524.2974 678.4772,-490.4867"/>
-                        <polygon fill="#000000" stroke="#000000" points="681.812,-491.5532 681.8049,-480.9584 675.2034,-489.2452 681.812,-491.5532"/>
-                    </g>
-                    <!-- 32V -->
-                    <g id="node13" class="node">
-                        <title>32V</title>
-                        <polygon fill="#4f94cd" stroke="#4f94cd"
-                                 points="616.2989,-822.9104 619.149,-839.4715 570.217,-836.4385 522.2959,-819.3999 527.4175,-804.4908 558.6821,-798.1627 586.8558,-804.0014 616.2989,-822.9104"/>
-                        <text text-anchor="middle" x="571.5595" y="-814.1393" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">32V</text>
-                    </g>
-                    <!-- 7th Edition&#45;&gt;32V -->
-                    <g id="edge12" class="edge">
-                        <title>7th Edition&#45;&gt;32V</title>
-                        <path fill="none" stroke="#000000"
-                              d="M409.4289,-895.2985C437.4418,-882.5079 478.2173,-863.712 513.5595,-846.7269 522.2712,-842.5401 531.6687,-837.9096 540.3103,-833.6049"/>
-                        <polygon fill="#000000" stroke="#000000" points="541.9439,-836.7012 549.3224,-829.098 538.8129,-830.4404 541.9439,-836.7012"/>
-                    </g>
-                    <!-- V7M -->
-                    <g id="node14" class="node">
-                        <title>V7M</title>
-                        <polygon fill="#000080" stroke="#000080"
-                                 points="103.1785,-732.4037 96.9207,-742.5588 73.3365,-746.4056 50.2984,-745.7022 33.2204,-739.4844 17.6689,-726.138 6.1982,-709.5283 12.054,-699.2268 41.8638,-702.3958 80.8553,-716.5919 103.1785,-732.4037"/>
-                        <text text-anchor="middle" x="51.5595" y="-722.3436" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">V7M</text>
-                    </g>
-                    <!-- 7th Edition&#45;&gt;V7M -->
-                    <g id="edge13" class="edge">
-                        <title>7th Edition&#45;&gt;V7M</title>
-                        <path fill="none" stroke="#000000"
-                              d="M322.3382,-901.8543C278.6165,-892.8854 216.3306,-876.0319 168.5595,-846.7269 129.1101,-822.5267 93.6358,-781.994 72.3516,-754.6527"/>
-                        <polygon fill="#000000" stroke="#000000" points="75.0672,-752.4421 66.213,-746.6237 69.5063,-756.6937 75.0672,-752.4421"/>
-                    </g>
-                    <!-- Ultrix&#45;11 -->
-                    <g id="node15" class="node">
-                        <title>Ultrix&#45;11</title>
-                        <polygon fill="#698b69" stroke="#698b69"
-                                 points="177.8408,-364.9654 179.4683,-375.8953 157.0668,-385.1536 129.3202,-389.9085 102.9585,-388.0747 75.5329,-379.4818 53.6507,-367.1429 55.7975,-356.4755 91.2806,-352.2588 142.6785,-355.8343 177.8408,-364.9654"/>
-                        <text text-anchor="middle" x="116.5595" y="-367.8191" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">Ultrix&#45;11</text>
-                    </g>
-                    <!-- 7th Edition&#45;&gt;Ultrix&#45;11 -->
-                    <g id="edge14" class="edge">
-                        <title>7th Edition&#45;&gt;Ultrix&#45;11</title>
-                        <path fill="none" stroke="#000000"
-                              d="M321.6728,-905.2301C282.3449,-898.301 230.966,-882.5465 201.5595,-846.7269 167.1063,-804.76 182.5595,-780.3412 182.5595,-726.0436 182.5595,-726.0436 182.5595,-726.0436 182.5595,-557.9089 182.5595,-498.3509 152.2455,-433.9107 132.7062,-398.5609"/>
-                        <polygon fill="#000000" stroke="#000000" points="135.7242,-396.7874 127.7555,-389.8053 129.6309,-400.2329 135.7242,-396.7874"/>
-                    </g>
-                    <!-- Xenix -->
-                    <g id="node16" class="node">
-                        <title>Xenix</title>
-                        <polygon fill="#ff7f50" stroke="#ff7f50"
-                                 points="304.0338,-836.3826 272.5466,-838.1361 235.6676,-829.83 215.0001,-816.33 217.0473,-801.8841 240.6101,-794.9544 277.4891,-803.2605 306.0811,-821.9367 304.0338,-836.3826"/>
-                        <text text-anchor="middle" x="258.5595" y="-814.1393" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">Xenix</text>
-                    </g>
-                    <!-- 7th Edition&#45;&gt;Xenix -->
-                    <g id="edge15" class="edge">
-                        <title>7th Edition&#45;&gt;Xenix</title>
-                        <path fill="none" stroke="#000000" d="M351.0324,-891.2095C333.7548,-877.501 310.4268,-858.9921 291.5242,-843.9943"/>
-                        <polygon fill="#000000" stroke="#000000" points="293.4664,-841.0674 283.4572,-837.5937 289.1155,-846.5511 293.4664,-841.0674"/>
-                    </g>
-                    <!-- UniPlus+ -->
-                    <g id="node17" class="node">
-                        <title>UniPlus+</title>
-                        <polygon fill="#a2cd5a" stroke="#a2cd5a"
-                                 points="482.8508,-832.0602 451.3612,-842.6592 371.8339,-828.8074 324.4799,-806.6964 365.2828,-798.7371 434.1465,-802.5983 471.9613,-813.3164 482.8508,-832.0602"/>
-                        <text text-anchor="middle" x="414.5595" y="-814.1393" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">UniPlus+</text>
-                    </g>
-                    <!-- 7th Edition&#45;&gt;UniPlus+ -->
-                    <g id="edge16" class="edge">
-                        <title>7th Edition&#45;&gt;UniPlus+</title>
-                        <path fill="none" stroke="#000000" d="M384.0219,-890.527C389.6646,-877.0958 397.1459,-859.2884 403.2912,-844.6609"/>
-                        <polygon fill="#000000" stroke="#000000" points="406.6467,-845.7102 407.2932,-835.1351 400.1931,-842.9988 406.6467,-845.7102"/>
-                    </g>
-                    <!-- 9th Edition -->
-                    <g id="node18" class="node">
-                        <title>9th Edition</title>
-                        <polygon fill="#cd5b45" stroke="#cd5b45"
-                                 points="776.2775,-385.33 738.1953,-395.1009 689.8371,-385.802 670.6377,-365.7478 698.0746,-351.3516 747.1232,-351.558 779.7711,-365.7432 776.2775,-385.33"/>
-                        <text text-anchor="middle" x="728.5595" y="-367.8191" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">9th Edition</text>
-                    </g>
-                    <!-- 8th Edition&#45;&gt;9th Edition -->
-                    <g id="edge18" class="edge">
-                        <title>8th Edition&#45;&gt;9th Edition</title>
-                        <path fill="none" stroke="#000000" d="M695.2713,-447.9327C700.9798,-434.8286 708.8912,-416.668 715.5689,-401.3391"/>
-                        <polygon fill="#000000" stroke="#000000" points="718.9584,-402.322 719.7435,-391.7563 712.5409,-399.5263 718.9584,-402.322"/>
-                    </g>
-                    <!-- 3 BSD -->
-                    <g id="node22" class="node">
-                        <title>3 BSD</title>
-                        <polygon fill="#fffacd" stroke="#fffacd"
-                                 points="560.1201,-721.9221 559.5622,-733.3639 541.4328,-742.0096 509.4311,-744.0436 477.0127,-738.8848 460.5475,-729.1384 467.5567,-718.7232 492.1375,-711.1041 521.675,-708.678 546.1191,-712.5678 560.1201,-721.9221"/>
-                        <text text-anchor="middle" x="513.5595" y="-722.3436" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">3 BSD</text>
-                    </g>
-                    <!-- 32V&#45;&gt;3 BSD -->
-                    <g id="edge23" class="edge">
-                        <title>32V&#45;&gt;3 BSD</title>
-                        <path fill="none" stroke="#000000" d="M558.9743,-797.921C550.4213,-784.3842 539.0277,-766.3518 529.7924,-751.7352"/>
-                        <polygon fill="#000000" stroke="#000000" points="532.6662,-749.7309 524.3658,-743.1465 526.7484,-753.47 532.6662,-749.7309"/>
-                    </g>
-                    <!-- V7M&#45;&gt;Ultrix&#45;11 -->
-                    <g id="edge17" class="edge">
-                        <title>V7M&#45;&gt;Ultrix&#45;11</title>
-                        <path fill="none" stroke="#000000"
-                              d="M51.4344,-705.6034C51.5676,-669.8391 53.4206,-593.7293 65.5595,-530.8466 74.7988,-482.9847 93.8443,-429.3975 105.8667,-398.1643"/>
-                        <polygon fill="#000000" stroke="#000000" points="109.1286,-399.433 109.502,-388.8447 102.6072,-396.8891 109.1286,-399.433"/>
-                    </g>
-                    <!-- 2.8 BSD -->
-                    <g id="node20" class="node">
-                        <title>2.8 BSD</title>
-                        <polygon fill="#b0e2ff" stroke="#b0e2ff" points="275.4981,-482.8355 220.9359,-467.3207 269.0376,-445.4258 344.7663,-466.9592 275.4981,-482.8355"/>
-                        <text text-anchor="middle" x="277.5595" y="-461.9353" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">2.8 BSD</text>
-                    </g>
-                    <!-- 2 BSD&#45;&gt;2.8 BSD -->
-                    <g id="edge20" class="edge">
-                        <title>2 BSD&#45;&gt;2.8 BSD</title>
-                        <path fill="none" stroke="#000000" d="M138.9622,-544.0946C168.0619,-527.6214 216.6779,-500.1001 247.9136,-482.4177"/>
-                        <polygon fill="#000000" stroke="#000000" points="249.642,-485.4612 256.6201,-477.4889 246.1935,-479.3695 249.642,-485.4612"/>
-                    </g>
-                    <!-- 2.8 BSD&#45;&gt;Ultrix&#45;11 -->
-                    <g id="edge21" class="edge">
-                        <title>2.8 BSD&#45;&gt;Ultrix&#45;11</title>
-                        <path fill="none" stroke="#000000" d="M254.1487,-451.95C227.5573,-436.4054 183.843,-410.8512 152.8298,-392.7217"/>
-                        <polygon fill="#000000" stroke="#000000" points="154.4451,-389.6118 144.0456,-387.5867 150.9124,-395.655 154.4451,-389.6118"/>
-                    </g>
-                    <!-- 2.9 BSD -->
-                    <g id="node21" class="node">
-                        <title>2.9 BSD</title>
-                        <polygon fill="#76eec6" stroke="#76eec6" points="249.466,-386.1106 214.9124,-358.4361 287.9,-342.709 357.9595,-398.8205 249.466,-386.1106"/>
-                        <text text-anchor="middle" x="277.5595" y="-367.8191" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">2.9 BSD</text>
-                    </g>
-                    <!-- 2.8 BSD&#45;&gt;2.9 BSD -->
-                    <g id="edge22" class="edge">
-                        <title>2.8 BSD&#45;&gt;2.9 BSD</title>
-                        <path fill="none" stroke="#000000" d="M277.5595,-447.4887C277.5595,-433.9477 277.5595,-415.1922 277.5595,-399.7052"/>
-                        <polygon fill="#000000" stroke="#000000" points="281.0596,-399.6099 277.5595,-389.6099 274.0596,-399.6099 281.0596,-399.6099"/>
-                    </g>
-                    <!-- 4 BSD -->
-                    <g id="node23" class="node">
-                        <title>4 BSD</title>
-                        <polygon fill="#ff7f00" stroke="#ff7f00"
-                                 points="542.5969,-654.6193 487.7016,-658.4567 458.8673,-639.6252 477.7354,-620.8888 565.8961,-636.6764 542.5969,-654.6193"/>
-                        <text text-anchor="middle" x="506.5595" y="-638.3533" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">4 BSD</text>
-                    </g>
-                    <!-- 3 BSD&#45;&gt;4 BSD -->
-                    <g id="edge24" class="edge">
-                        <title>3 BSD&#45;&gt;4 BSD</title>
-                        <path fill="none" stroke="#000000" d="M512.1765,-709.4498C511.1767,-697.4539 509.8078,-681.0286 508.6717,-667.3967"/>
-                        <polygon fill="#000000" stroke="#000000" points="512.1405,-666.8757 507.8219,-657.201 505.1647,-667.4571 512.1405,-666.8757"/>
-                    </g>
-                    <!-- 4.1 BSD -->
-                    <g id="node24" class="node">
-                        <title>4.1 BSD</title>
-                        <polygon fill="#ffffe0" stroke="#ffffe0" points="518.4397,-578.3284 444.2798,-561.4578 469.6804,-534.9873 565.838,-556.8622 518.4397,-578.3284"/>
-                        <text text-anchor="middle" x="499.5595" y="-554.2089" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">4.1 BSD</text>
-                    </g>
-                    <!-- 4 BSD&#45;&gt;4.1 BSD -->
-                    <g id="edge25" class="edge">
-                        <title>4 BSD&#45;&gt;4.1 BSD</title>
-                        <path fill="none" stroke="#000000" d="M505.1765,-625.4291C504.2082,-613.7891 502.8935,-597.9863 501.7795,-584.5953"/>
-                        <polygon fill="#000000" stroke="#000000" points="505.2567,-584.174 500.9396,-574.4986 498.2808,-584.7544 505.2567,-584.174"/>
-                    </g>
-                    <!-- 4.1 BSD&#45;&gt;8th Edition -->
-                    <g id="edge28" class="edge">
-                        <title>4.1 BSD&#45;&gt;8th Edition</title>
-                        <path fill="none" stroke="#000000" d="M522.2367,-546.7786C554.7378,-530.8264 614.8355,-501.3295 652.923,-482.6355"/>
-                        <polygon fill="#000000" stroke="#000000" points="654.667,-485.6784 662.1019,-478.1303 651.5827,-479.3945 654.667,-485.6784"/>
-                    </g>
-                    <!-- 4.1 BSD&#45;&gt;2.8 BSD -->
-                    <g id="edge27" class="edge">
-                        <title>4.1 BSD&#45;&gt;2.8 BSD</title>
-                        <path fill="none" stroke="#000000" d="M462.4017,-542.4644C420.8065,-525.1755 353.8929,-497.363 313.0074,-480.3691"/>
-                        <polygon fill="#000000" stroke="#000000" points="314.2799,-477.1078 303.7024,-476.5015 311.5932,-483.5717 314.2799,-477.1078"/>
-                    </g>
-                    <!-- 4.2 BSD -->
-                    <g id="node25" class="node">
-                        <title>4.2 BSD</title>
-                        <polygon fill="#68228b" stroke="#68228b"
-                                 points="556.9058,-488.7786 531.1389,-493.2233 482.9966,-487.1304 439.2859,-476.7916 413.4874,-464.6418 405.0496,-450.4211 413.9801,-438.0472 445.2859,-436.211 495.4275,-449.5784 542.0371,-471.5293 556.9058,-488.7786"/>
-                        <text text-anchor="middle" x="472.5595" y="-461.9353" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">4.2 BSD</text>
-                    </g>
-                    <!-- 4.1 BSD&#45;&gt;4.2 BSD -->
-                    <g id="edge26" class="edge">
-                        <title>4.1 BSD&#45;&gt;4.2 BSD</title>
-                        <path fill="none" stroke="#000000" d="M494.481,-540.553C490.8071,-527.9974 485.7479,-510.7072 481.4153,-495.9005"/>
-                        <polygon fill="#000000" stroke="#000000" points="484.7255,-494.7499 478.5579,-486.1353 478.0072,-496.7158 484.7255,-494.7499"/>
-                    </g>
-                    <!-- 4.3 BSD -->
-                    <g id="node26" class="node">
-                        <title>4.3 BSD</title>
-                        <polygon fill="#eee9bf" stroke="#eee9bf"
-                                 points="646.3908,-384.2064 624.6846,-396.3629 596.4371,-399.0298 572.5681,-391.3773 562.145,-376.2562 568.9883,-359.2091 590.4344,-346.6752 618.4217,-343.6309 642.39,-351.4276 653.1347,-367.0152 646.3908,-384.2064"/>
-                        <text text-anchor="middle" x="607.5595" y="-367.8191" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">4.3 BSD</text>
-                    </g>
-                    <!-- 4.2 BSD&#45;&gt;4.3 BSD -->
-                    <g id="edge29" class="edge">
-                        <title>4.2 BSD&#45;&gt;4.3 BSD</title>
-                        <path fill="none" stroke="#000000" d="M495.7668,-449.4561C515.6409,-435.6008 544.6868,-415.3512 568.1906,-398.9654"/>
-                        <polygon fill="#000000" stroke="#000000" points="570.3702,-401.7124 576.5719,-393.1223 566.3669,-395.9701 570.3702,-401.7124"/>
-                    </g>
-                    <!-- Ultrix&#45;32 -->
-                    <g id="node27" class="node">
-                        <title>Ultrix&#45;32</title>
-                        <polygon fill="#cd9b1d" stroke="#cd9b1d" points="487.8236,-388.2919 412.5993,-379.8677 394.2584,-350.5985 543.5566,-367.3181 487.8236,-388.2919"/>
-                        <text text-anchor="middle" x="459.5595" y="-367.8191" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">Ultrix&#45;32</text>
-                    </g>
-                    <!-- 4.2 BSD&#45;&gt;Ultrix&#45;32 -->
-                    <g id="edge30" class="edge">
-                        <title>4.2 BSD&#45;&gt;Ultrix&#45;32</title>
-                        <path fill="none" stroke="#000000" d="M469.346,-442.3706C467.3807,-428.1427 464.8716,-409.977 462.886,-395.6018"/>
-                        <polygon fill="#000000" stroke="#000000" points="466.3227,-394.9029 461.4873,-385.4759 459.3886,-395.8608 466.3227,-394.9029"/>
-                    </g>
-                    <!-- PWB 1.2&#45;&gt;PWB 2.0 -->
-                    <g id="edge33" class="edge">
-                        <title>PWB 1.2&#45;&gt;PWB 2.0</title>
-                        <path fill="none" stroke="#000000" d="M903.9551,-978.1284C883.0095,-964.5938 858.1317,-948.5182 837.9163,-935.4553"/>
-                        <polygon fill="#000000" stroke="#000000" points="839.5745,-932.3597 829.2759,-929.872 835.7754,-938.2391 839.5745,-932.3597"/>
-                    </g>
-                    <!-- CB Unix 1 -->
-                    <g id="node30" class="node">
-                        <title>CB Unix 1</title>
-                        <polygon fill="#b22222" stroke="#b22222"
-                                 points="1209.7197,-918.667 1196.6943,-931.0221 1160.9132,-934.4943 1123.0778,-928.6621 1094.826,-914.4111 1083.3114,-896.5662 1097.8809,-884.6803 1139.1581,-886.5762 1186.4538,-900.9489 1209.7197,-918.667"/>
-                        <text text-anchor="middle" x="1143.5595" y="-906.9698" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">CB Unix 1</text>
-                    </g>
-                    <!-- USG 1.0&#45;&gt;CB Unix 1 -->
-                    <g id="edge34" class="edge">
-                        <title>USG 1.0&#45;&gt;CB Unix 1</title>
-                        <path fill="none" stroke="#000000" d="M1113.5041,-990.5127C1118.5979,-976.9809 1126.0755,-957.1165 1132.2976,-940.5872"/>
-                        <polygon fill="#000000" stroke="#000000" points="1135.7296,-941.4048 1135.977,-930.8128 1129.1784,-938.9386 1135.7296,-941.4048"/>
-                    </g>
-                    <!-- USG 2.0 -->
-                    <g id="node31" class="node">
-                        <title>USG 2.0</title>
-                        <polygon fill="#458b00" stroke="#458b00" points="963.5529,-937.6503 908.9597,-882.7838 1014.4285,-896.6162 1043.2968,-925.629 963.5529,-937.6503"/>
-                        <text text-anchor="middle" x="982.5595" y="-906.9698" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">USG 2.0</text>
-                    </g>
-                    <!-- USG 1.0&#45;&gt;USG 2.0 -->
-                    <g id="edge35" class="edge">
-                        <title>USG 1.0&#45;&gt;USG 2.0</title>
-                        <path fill="none" stroke="#000000" d="M1089.65,-992.6027C1070.8092,-978.188 1040.688,-955.1428 1017.1828,-937.1594"/>
-                        <polygon fill="#000000" stroke="#000000" points="1019.2429,-934.3287 1009.1739,-931.032 1014.9894,-939.8882 1019.2429,-934.3287"/>
-                    </g>
-                    <!-- CB Unix 2 -->
-                    <g id="node32" class="node">
-                        <title>CB Unix 2</title>
-                        <polygon fill="#adff2f" stroke="#adff2f"
-                                 points="1303.6686,-816.287 1311.7606,-830.5102 1297.2397,-839.8935 1252.2143,-837.9766 1199.0155,-826.5904 1174.5739,-813.6392 1193.3584,-805.1684 1234.7556,-801.5375 1269.5152,-801.2571 1289.4929,-805.533 1303.6686,-816.287"/>
-                        <text text-anchor="middle" x="1252.5595" y="-814.1393" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">CB Unix 2</text>
-                    </g>
-                    <!-- CB Unix 1&#45;&gt;CB Unix 2 -->
-                    <g id="edge36" class="edge">
-                        <title>CB Unix 1&#45;&gt;CB Unix 2</title>
-                        <path fill="none" stroke="#000000" d="M1163.2986,-893.8589C1180.6911,-879.0465 1206.1898,-857.3304 1225.4852,-840.8973"/>
-                        <polygon fill="#000000" stroke="#000000" points="1227.9893,-843.362 1233.3332,-834.2135 1223.4506,-838.0327 1227.9893,-843.362"/>
-                    </g>
-                    <!-- USG 3.0 -->
-                    <g id="node36" class="node">
-                        <title>USG 3.0</title>
-                        <polygon fill="#eed5b7" stroke="#eed5b7" points="885.6655,-836.047 828.4542,-820.2249 843.2413,-789.0638 976.8769,-826.0216 885.6655,-836.047"/>
-                        <text text-anchor="middle" x="883.5595" y="-814.1393" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">USG 3.0</text>
-                    </g>
-                    <!-- USG 2.0&#45;&gt;USG 3.0 -->
-                    <g id="edge40" class="edge">
-                        <title>USG 2.0&#45;&gt;USG 3.0</title>
-                        <path fill="none" stroke="#000000" d="M959.5981,-889.1393C944.3808,-874.8704 924.4129,-856.1468 908.7579,-841.4674"/>
-                        <polygon fill="#000000" stroke="#000000" points="911.1477,-838.9103 901.459,-834.6233 906.3596,-844.0166 911.1477,-838.9103"/>
-                    </g>
-                    <!-- CB Unix 3 -->
-                    <g id="node33" class="node">
-                        <title>CB Unix 3</title>
-                        <polygon fill="#8b7d6b" stroke="#8b7d6b"
-                                 points="1224.6459,-724.3802 1243.3688,-739.8671 1233.899,-750.0739 1183.6655,-748.07 1118.039,-735.779 1082.0965,-721.6431 1095.7502,-712.22 1137.5965,-708.0769 1175.4633,-707.7647 1201.0701,-712.5605 1224.6459,-724.3802"/>
-                        <text text-anchor="middle" x="1169.5595" y="-722.3436" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">CB Unix 3</text>
-                    </g>
-                    <!-- CB Unix 2&#45;&gt;CB Unix 3 -->
-                    <g id="edge37" class="edge">
-                        <title>CB Unix 2&#45;&gt;CB Unix 3</title>
-                        <path fill="none" stroke="#000000" d="M1237.7207,-801.4281C1226.3645,-788.8684 1210.3893,-771.2003 1196.759,-756.1255"/>
-                        <polygon fill="#000000" stroke="#000000" points="1199.1848,-753.5897 1189.8818,-748.5195 1193.9925,-758.2844 1199.1848,-753.5897"/>
-                    </g>
-                    <!-- Unix/TS++ -->
-                    <g id="node34" class="node">
-                        <title>Unix/TS++</title>
-                        <polygon fill="#eed5d2" stroke="#eed5d2"
-                                 points="1143.5328,-648.5566 1109.2961,-661.825 1008.5102,-653.4189 987.5861,-635.5499 1044.6354,-624.1843 1099.7962,-628.785 1143.5328,-648.5566"/>
-                        <text text-anchor="middle" x="1065.5595" y="-638.3533" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">Unix/TS++</text>
-                    </g>
-                    <!-- CB Unix 3&#45;&gt;Unix/TS++ -->
-                    <g id="edge38" class="edge">
-                        <title>CB Unix 3&#45;&gt;Unix/TS++</title>
-                        <path fill="none" stroke="#000000" d="M1146.993,-707.8189C1132.1381,-695.8221 1112.5049,-679.9663 1096.2383,-666.8294"/>
-                        <polygon fill="#000000" stroke="#000000" points="1098.0607,-663.8024 1088.0819,-660.2423 1093.6626,-669.2482 1098.0607,-663.8024"/>
-                    </g>
-                    <!-- PDP&#45;11 Sys V -->
-                    <g id="node35" class="node">
-                        <title>PDP&#45;11 Sys V</title>
-                        <polygon fill="#98f5ff" stroke="#98f5ff"
-                                 points="1317.354,-646.7835 1292.166,-657.3198 1244.5949,-661.1868 1201.095,-657.4659 1175.593,-646.5333 1173.5944,-632.1395 1200.2294,-621.9104 1250.9194,-622.3067 1300.4891,-632.8336 1317.354,-646.7835"/>
-                        <text text-anchor="middle" x="1239.5595" y="-638.3533" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">PDP&#45;11 Sys V</text>
-                    </g>
-                    <!-- CB Unix 3&#45;&gt;PDP&#45;11 Sys V -->
-                    <g id="edge39" class="edge">
-                        <title>CB Unix 3&#45;&gt;PDP&#45;11 Sys V</title>
-                        <path fill="none" stroke="#000000" d="M1183.725,-709.0469C1193.65,-697.1383 1207.0893,-681.013 1218.2956,-667.567"/>
-                        <polygon fill="#000000" stroke="#000000" points="1221.2195,-669.5255 1224.9331,-659.6029 1215.8422,-665.0439 1221.2195,-669.5255"/>
-                    </g>
-                    <!-- CB Unix 3&#45;&gt;TS 4.0 -->
-                    <g id="edge46" class="edge">
-                        <title>CB Unix 3&#45;&gt;TS 4.0</title>
-                        <path fill="none" stroke="#000000"
-                              d="M1101.8413,-711.4711C1053.8294,-699.7605 995.1087,-682.1713 978.5595,-663.1353 960.2871,-642.1174 956.9059,-609.5958 957.2377,-586.2717"/>
-                        <polygon fill="#000000" stroke="#000000" points="960.7353,-586.4005 957.6114,-576.2768 953.7402,-586.139 960.7353,-586.4005"/>
-                    </g>
-                    <!-- Unix/TS++&#45;&gt;TS 4.0 -->
-                    <g id="edge45" class="edge">
-                        <title>Unix/TS++&#45;&gt;TS 4.0</title>
-                        <path fill="none" stroke="#000000" d="M1043.3384,-624.4139C1030.2254,-614.0046 1013.2657,-600.5417 998.0387,-588.4543"/>
-                        <polygon fill="#000000" stroke="#000000" points="999.8013,-585.3848 989.793,-581.9087 995.4492,-590.8674 999.8013,-585.3848"/>
-                    </g>
-                    <!-- USG 3.0&#45;&gt;Unix/TS 3.0 -->
-                    <g id="edge41" class="edge">
-                        <title>USG 3.0&#45;&gt;Unix/TS 3.0</title>
-                        <path fill="none" stroke="#000000" d="M883.5595,-800.1402C883.5595,-787.7308 883.5595,-770.8313 883.5595,-756.3051"/>
-                        <polygon fill="#000000" stroke="#000000" points="887.0596,-756.2453 883.5595,-746.2453 880.0596,-756.2453 887.0596,-756.2453"/>
-                    </g>
-                    <!-- Unix/TS 1.0 -->
-                    <g id="node37" class="node">
-                        <title>Unix/TS 1.0</title>
-                        <polygon fill="#ff4500" stroke="#ff4500" points="1036.4435,-837.3781 994.7876,-805.7633 1121.6832,-803.6191 1149.3236,-824.5967 1036.4435,-837.3781"/>
-                        <text text-anchor="middle" x="1075.5595" y="-814.1393" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">Unix/TS 1.0</text>
-                    </g>
-                    <!-- Unix/TS 1.0&#45;&gt;Unix/TS 3.0 -->
-                    <g id="edge43" class="edge">
-                        <title>Unix/TS 1.0&#45;&gt;Unix/TS 3.0</title>
-                        <path fill="none" stroke="#000000" d="M1048.0506,-804.6872C1021.5891,-792.0359 980.6413,-772.4587 946.2218,-756.0026"/>
-                        <polygon fill="#000000" stroke="#000000" points="947.6974,-752.8287 937.1658,-751.6729 944.678,-759.144 947.6974,-752.8287"/>
-                    </g>
-                    <!-- System V.0 -->
-                    <g id="node39" class="node">
-                        <title>System V.0</title>
-                        <polygon fill="#ff7f00" stroke="#ff7f00"
-                                 points="1039.7285,-467.6348 1017.5319,-478.7074 968.034,-483.6353 914.0659,-480.0598 881.3847,-469.7349 885.7873,-457.5728 924.884,-449.2113 979.7618,-448.4636 1024.8571,-455.6978 1039.7285,-467.6348"/>
-                        <text text-anchor="middle" x="959.5595" y="-461.9353" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">System V.0</text>
-                    </g>
-                    <!-- TS 4.0&#45;&gt;System V.0 -->
-                    <g id="edge47" class="edge">
-                        <title>TS 4.0&#45;&gt;System V.0</title>
-                        <path fill="none" stroke="#000000" d="M959.5595,-536.5076C959.5595,-523.7368 959.5595,-507.376 959.5595,-493.5924"/>
-                        <polygon fill="#000000" stroke="#000000" points="963.0596,-493.2084 959.5595,-483.2084 956.0596,-493.2085 963.0596,-493.2084"/>
-                    </g>
-                    <!-- System V.2 -->
-                    <g id="node40" class="node">
-                        <title>System V.2</title>
-                        <polygon fill="#6e8b3d" stroke="#6e8b3d"
-                                 points="1051.9339,-388.3852 984.8083,-394.8491 854.7634,-371.1049 867.1851,-354.653 971.9811,-355.0671 1026.6851,-365.0552 1051.9339,-388.3852"/>
-                        <text text-anchor="middle" x="959.5595" y="-367.8191" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">System V.2</text>
-                    </g>
-                    <!-- System V.0&#45;&gt;System V.2 -->
-                    <g id="edge48" class="edge">
-                        <title>System V.0&#45;&gt;System V.2</title>
-                        <path fill="none" stroke="#000000" d="M959.5595,-448.3729C959.5595,-435.0065 959.5595,-416.1919 959.5595,-400.5242"/>
-                        <polygon fill="#000000" stroke="#000000" points="963.0596,-400.2858 959.5595,-390.2858 956.0596,-400.2858 963.0596,-400.2858"/>
-                    </g>
-                    <!-- System V.3 -->
-                    <g id="node41" class="node">
-                        <title>System V.3</title>
-                        <polygon fill="#cae1ff" stroke="#cae1ff"
-                                 points="1018.1238,-302.8195 950.3062,-300.0442 904.0676,-291.4039 899.6156,-276.6666 925.6913,-260.1913 983.7731,-264.1216 1035.3387,-287.9027 1018.1238,-302.8195"/>
-                        <text text-anchor="middle" x="959.5595" y="-279.6071" font-family="Helvetica-Outline" font-size="14.00" fill="#000000">System V.3</text>
-                    </g>
-                    <!-- System V.2&#45;&gt;System V.3 -->
-                    <g id="edge49" class="edge">
-                        <title>System V.2&#45;&gt;System V.3</title>
-                        <path fill="none" stroke="#000000" d="M959.5595,-354.9271C959.5595,-342.5187 959.5595,-325.273 959.5595,-310.8139"/>
-                        <polygon fill="#000000" stroke="#000000" points="963.0596,-310.4264 959.5595,-300.4264 956.0596,-310.4264 963.0596,-310.4264"/>
-                    </g>
-                </g>
-            </svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 14.1.3 (20260303.0454)
+ -->
+<!-- Title: unix Pages: 1 -->
+<svg width="432pt" height="342pt"
+ viewBox="0.00 0.00 432.00 342.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.282957 0.282957) rotate(0) translate(4 1203.5)">
+<title>unix</title>
+<text xml:space="preserve" text-anchor="middle" x="759.37" y="-55.3" font-family="Helvetica,sans-Serif" font-style="oblique" font-size="36.00">Object Oriented Graphs</text>
+<text xml:space="preserve" text-anchor="middle" x="759.37" y="-12.55" font-family="Helvetica,sans-Serif" font-style="oblique" font-size="36.00">Stephen North, 3/19/93</text>
+<!-- 5th Edition -->
+<g id="node1" class="node">
+<title>5th Edition</title>
+<polygon fill="#ee8262" stroke="#ee8262" points="918.8,-1177.31 930.77,-1192.71 892.96,-1199.5 806.82,-1192.24 737.52,-1177.78 742.35,-1166.38 802.82,-1161.1 860.14,-1160.14 893.13,-1164.75 918.8,-1177.31"/>
+<text xml:space="preserve" text-anchor="middle" x="842.81" y="-1172.21" font-family="Helvetica-Outline" font-size="14.00">5th Edition</text>
+</g>
+<!-- 6th Edition -->
+<g id="node2" class="node">
+<title>6th Edition</title>
+<polygon fill="deepskyblue" stroke="deepskyblue" points="834.94,-1110.27 728.52,-1118.26 589.34,-1099.46 620.45,-1080.33 750.81,-1086.06 834.94,-1110.27"/>
+<text xml:space="preserve" text-anchor="middle" x="704.81" y="-1094.2" font-family="Helvetica-Outline" font-size="14.00">6th Edition</text>
+</g>
+<!-- 5th Edition&#45;&gt;6th Edition -->
+<g id="edge1" class="edge">
+<title>5th Edition&#45;&gt;6th Edition</title>
+<path fill="none" stroke="black" d="M814.89,-1160.5C795.58,-1149.87 769.52,-1135.51 747.61,-1123.45"/>
+<polygon fill="black" stroke="black" points="749.32,-1120.4 738.87,-1118.64 745.95,-1126.53 749.32,-1120.4"/>
+</g>
+<!-- PWB 1.0 -->
+<g id="node3" class="node">
+<title>PWB 1.0</title>
+<polygon fill="#eeb422" stroke="#eeb422" points="1104.89,-1116.93 1060.69,-1116.76 1022.92,-1105.99 1013.71,-1090.92 1038.62,-1080.64 1083.05,-1081.18 1120.82,-1091.95 1129.8,-1106.65 1104.89,-1116.93"/>
+<text xml:space="preserve" text-anchor="middle" x="1071.81" y="-1094.2" font-family="Helvetica-Outline" font-size="14.00">PWB 1.0</text>
+</g>
+<!-- 5th Edition&#45;&gt;PWB 1.0 -->
+<g id="edge2" class="edge">
+<title>5th Edition&#45;&gt;PWB 1.0</title>
+<path fill="none" stroke="black" d="M882.18,-1162.81C922.68,-1149.37 985.63,-1128.48 1027.76,-1114.5"/>
+<polygon fill="black" stroke="black" points="1028.7,-1117.87 1037.09,-1111.4 1026.5,-1111.23 1028.7,-1117.87"/>
+</g>
+<!-- LSX -->
+<g id="node4" class="node">
+<title>LSX</title>
+<polygon fill="#eec591" stroke="#eec591" points="993.77,-1013.16 979.26,-1022.89 952.22,-1028.15 931.14,-1027.84 916.93,-1020.02 907.27,-1006.29 912.53,-994.42 941.25,-992.51 977.95,-1000.97 993.77,-1013.16"/>
+<text xml:space="preserve" text-anchor="middle" x="945.81" y="-1007.13" font-family="Helvetica-Outline" font-size="14.00">LSX</text>
+</g>
+<!-- 6th Edition&#45;&gt;LSX -->
+<g id="edge3" class="edge">
+<title>6th Edition&#45;&gt;LSX</title>
+<path fill="none" stroke="black" d="M753.4,-1086.44C791.05,-1076.89 844.15,-1061.89 888.81,-1043.5 897.75,-1039.82 907.12,-1035.14 915.62,-1030.56"/>
+<polygon fill="black" stroke="black" points="917.1,-1033.74 924.14,-1025.82 913.7,-1027.62 917.1,-1033.74"/>
+</g>
+<!-- 1 BSD -->
+<g id="node5" class="node">
+<title>1 BSD</title>
+<polygon fill="#ffd700" stroke="#ffd700" points="238.17,-1016.75 224.87,-1031.11 178.21,-1029.58 140.29,-1014.66 146.62,-998.95 182.38,-992.32 218.15,-999.27 238.17,-1016.75"/>
+<text xml:space="preserve" text-anchor="middle" x="189.81" y="-1007.13" font-family="Helvetica-Outline" font-size="14.00">1 BSD</text>
+</g>
+<!-- 6th Edition&#45;&gt;1 BSD -->
+<g id="edge4" class="edge">
+<title>6th Edition&#45;&gt;1 BSD</title>
+<path fill="none" stroke="black" d="M608.6,-1087.24C529.39,-1077.82 414.34,-1062.6 314.81,-1043.5 290.97,-1038.92 264.85,-1032.7 242.68,-1027.06"/>
+<polygon fill="black" stroke="black" points="243.84,-1023.74 233.28,-1024.63 242.09,-1030.52 243.84,-1023.74"/>
+</g>
+<!-- Mini Unix -->
+<g id="node6" class="node">
+<title>Mini Unix</title>
+<polygon fill="greenyellow" stroke="greenyellow" points="663.63,-1029.8 533.95,-1028.41 567.14,-993.84 690.52,-995.17 663.63,-1029.8"/>
+<text xml:space="preserve" text-anchor="middle" x="613.81" y="-1007.13" font-family="Helvetica-Outline" font-size="14.00">Mini Unix</text>
+</g>
+<!-- 6th Edition&#45;&gt;Mini Unix -->
+<g id="edge5" class="edge">
+<title>6th Edition&#45;&gt;Mini Unix</title>
+<path fill="none" stroke="black" d="M688.96,-1083.06C675.56,-1070.53 656.07,-1052.31 640.3,-1037.57"/>
+<polygon fill="black" stroke="black" points="642.78,-1035.1 633.09,-1030.82 638,-1040.21 642.78,-1035.1"/>
+</g>
+<!-- Wollongong -->
+<g id="node7" class="node">
+<title>Wollongong</title>
+<polygon fill="darkseagreen" stroke="darkseagreen" points="812.91,-1031 717.09,-1019.47 730.06,-997.35 839.08,-997.31 879.92,-1013.9 812.91,-1031"/>
+<text xml:space="preserve" text-anchor="middle" x="795.81" y="-1007.13" font-family="Helvetica-Outline" font-size="14.00">Wollongong</text>
+</g>
+<!-- 6th Edition&#45;&gt;Wollongong -->
+<g id="edge6" class="edge">
+<title>6th Edition&#45;&gt;Wollongong</title>
+<path fill="none" stroke="black" d="M719.43,-1084.21C733.64,-1070.93 755.44,-1050.54 772.12,-1034.95"/>
+<polygon fill="black" stroke="black" points="774.29,-1037.71 779.21,-1028.33 769.51,-1032.6 774.29,-1037.71"/>
+</g>
+<!-- Interdata -->
+<g id="node8" class="node">
+<title>Interdata</title>
+<polygon fill="#1e90ff" stroke="#1e90ff" points="427.4,-1037.15 323.48,-1001.77 439.57,-995.77 488.79,-1012.53 427.4,-1037.15"/>
+<text xml:space="preserve" text-anchor="middle" x="419.81" y="-1007.13" font-family="Helvetica-Outline" font-size="14.00">Interdata</text>
+</g>
+<!-- 6th Edition&#45;&gt;Interdata -->
+<g id="edge7" class="edge">
+<title>6th Edition&#45;&gt;Interdata</title>
+<path fill="none" stroke="black" d="M648.51,-1081.07C596.62,-1065.58 520.33,-1042.81 470.36,-1027.89"/>
+<polygon fill="black" stroke="black" points="471.53,-1024.59 460.95,-1025.08 469.53,-1031.3 471.53,-1024.59"/>
+</g>
+<!-- PWB 1.2 -->
+<g id="node28" class="node">
+<title>PWB 1.2</title>
+<polygon fill="cyan" stroke="cyan" points="1094.72,-1041.12 1044.07,-1037.27 1011.8,-1006.81 1024.71,-980.11 1075.61,-984.71 1122.53,-1006.4 1129.24,-1026.21 1094.72,-1041.12"/>
+<text xml:space="preserve" text-anchor="middle" x="1071.81" y="-1007.13" font-family="Helvetica-Outline" font-size="14.00">PWB 1.2</text>
+</g>
+<!-- PWB 1.0&#45;&gt;PWB 1.2 -->
+<g id="edge31" class="edge">
+<title>PWB 1.0&#45;&gt;PWB 1.2</title>
+<path fill="none" stroke="black" d="M1071.81,-1080.66C1071.81,-1072.12 1071.81,-1061.45 1071.81,-1051.11"/>
+<polygon fill="black" stroke="black" points="1075.31,-1051.22 1071.81,-1041.22 1068.31,-1051.22 1075.31,-1051.22"/>
+</g>
+<!-- USG 1.0 -->
+<g id="node29" class="node">
+<title>USG 1.0</title>
+<polygon fill="blue" stroke="blue" points="1288.43,-1036.9 1150.18,-1005.96 1258.03,-995.85 1314.6,-1008.51 1288.43,-1036.9"/>
+<text xml:space="preserve" text-anchor="middle" x="1252.81" y="-1007.13" font-family="Helvetica-Outline" font-size="14.00">USG 1.0</text>
+</g>
+<!-- PWB 1.0&#45;&gt;USG 1.0 -->
+<g id="edge32" class="edge">
+<title>PWB 1.0&#45;&gt;USG 1.0</title>
+<path fill="none" stroke="black" d="M1098.52,-1085.32C1130.42,-1070.33 1183.85,-1045.22 1218.71,-1028.83"/>
+<polygon fill="black" stroke="black" points="1219.96,-1032.11 1227.52,-1024.69 1216.98,-1025.78 1219.96,-1032.11"/>
+</g>
+<!-- 2 BSD -->
+<g id="node19" class="node">
+<title>2 BSD</title>
+<polygon fill="blanchedalmond" stroke="blanchedalmond" points="139.62,-580.43 100.45,-579.76 79.65,-566.89 92.86,-551.41 130.1,-544.84 163.37,-552.3 167.63,-568.23 139.62,-580.43"/>
+<text xml:space="preserve" text-anchor="middle" x="124.81" y="-558.73" font-family="Helvetica-Outline" font-size="14.00">2 BSD</text>
+</g>
+<!-- 1 BSD&#45;&gt;2 BSD -->
+<g id="edge19" class="edge">
+<title>1 BSD&#45;&gt;2 BSD</title>
+<path fill="none" stroke="black" d="M182.86,-992.05C171.16,-958.77 148.81,-886.98 148.81,-824.34 148.81,-824.34 148.81,-824.34 148.81,-730.54 148.81,-680.97 138.21,-623.92 131.1,-591.22"/>
+<polygon fill="black" stroke="black" points="134.6,-590.81 129,-581.81 127.77,-592.34 134.6,-590.81"/>
+</g>
+<!-- Unix/TS 3.0 -->
+<g id="node9" class="node">
+<title>Unix/TS 3.0</title>
+<polygon fill="#eed2ee" stroke="#eed2ee" points="1107.07,-746.99 1073.22,-758.05 980.82,-750.15 884,-727.91 869.39,-711.24 945.56,-709.89 1037.96,-717.8 1092.47,-730.32 1107.07,-746.99"/>
+<text xml:space="preserve" text-anchor="middle" x="998.81" y="-726.87" font-family="Helvetica-Outline" font-size="14.00">Unix/TS 3.0</text>
+</g>
+<!-- Interdata&#45;&gt;Unix/TS 3.0 -->
+<g id="edge8" class="edge">
+<title>Interdata&#45;&gt;Unix/TS 3.0</title>
+<path fill="none" stroke="black" d="M446.61,-997.84C516.21,-964.17 708.45,-871.27 868.81,-794.45 898.34,-780.31 931.67,-764.44 957.2,-752.3"/>
+<polygon fill="black" stroke="black" points="958.37,-755.62 965.9,-748.16 955.37,-749.3 958.37,-755.62"/>
+</g>
+<!-- PWB 2.0 -->
+<g id="node10" class="node">
+<title>PWB 2.0</title>
+<polygon fill="#a2cd5a" stroke="#a2cd5a" points="979.32,-932.77 903.73,-936.37 800.28,-915.55 814.31,-899.57 910.84,-900.19 972.4,-912.57 979.32,-932.77"/>
+<text xml:space="preserve" text-anchor="middle" x="896.81" y="-911.49" font-family="Helvetica-Outline" font-size="14.00">PWB 2.0</text>
+</g>
+<!-- Interdata&#45;&gt;PWB 2.0 -->
+<g id="edge9" class="edge">
+<title>Interdata&#45;&gt;PWB 2.0</title>
+<path fill="none" stroke="black" d="M452.6,-999.87C473.15,-993.35 500.3,-985.36 524.81,-980.11 639.32,-955.62 670.77,-965.95 785.81,-944.11 805.91,-940.3 827.84,-935.18 846.86,-930.43"/>
+<polygon fill="black" stroke="black" points="847.68,-933.83 856.51,-927.99 845.96,-927.05 847.68,-933.83"/>
+</g>
+<!-- 7th Edition -->
+<g id="node11" class="node">
+<title>7th Edition</title>
+<polygon fill="chocolate" stroke="chocolate" points="478.5,-923.94 453.98,-935.27 416.41,-939.3 377.06,-932.78 352.14,-918.85 354.97,-904.96 385.65,-897.07 429.37,-896.48 466.37,-901.69 483.68,-911.37 478.5,-923.94"/>
+<text xml:space="preserve" text-anchor="middle" x="419.81" y="-911.49" font-family="Helvetica-Outline" font-size="14.00">7th Edition</text>
+</g>
+<!-- Interdata&#45;&gt;7th Edition -->
+<g id="edge10" class="edge">
+<title>Interdata&#45;&gt;7th Edition</title>
+<path fill="none" stroke="black" d="M419.81,-996.58C419.81,-984.43 419.81,-966.47 419.81,-950.7"/>
+<polygon fill="black" stroke="black" points="423.31,-950.72 419.81,-940.72 416.31,-950.72 423.31,-950.72"/>
+</g>
+<!-- TS 4.0 -->
+<g id="node38" class="node">
+<title>TS 4.0</title>
+<polygon fill="crimson" stroke="crimson" points="1160.79,-584.59 1136.57,-589.36 1091.81,-584.21 1050.1,-574.25 1024.89,-562.08 1017.8,-548.48 1029.06,-537.46 1060.85,-536.35 1107.51,-548.7 1148.74,-568.6 1160.79,-584.59"/>
+<text xml:space="preserve" text-anchor="middle" x="1082.81" y="-558.73" font-family="Helvetica-Outline" font-size="14.00">TS 4.0</text>
+</g>
+<!-- Unix/TS 3.0&#45;&gt;TS 4.0 -->
+<g id="edge44" class="edge">
+<title>Unix/TS 3.0&#45;&gt;TS 4.0</title>
+<path fill="none" stroke="black" d="M1006.71,-714.91C1021.15,-686.37 1051.92,-625.51 1069.59,-590.56"/>
+<polygon fill="black" stroke="black" points="1072.55,-592.46 1073.94,-581.96 1066.3,-589.3 1072.55,-592.46"/>
+</g>
+<!-- PWB 2.0&#45;&gt;Unix/TS 3.0 -->
+<g id="edge42" class="edge">
+<title>PWB 2.0&#45;&gt;Unix/TS 3.0</title>
+<path fill="none" stroke="black" d="M889.16,-899.79C878.28,-875.54 861.76,-827.74 881.81,-794.45 895.12,-772.36 919.24,-757.74 942.14,-748.28"/>
+<polygon fill="black" stroke="black" points="943.38,-751.56 951.47,-744.71 940.88,-745.02 943.38,-751.56"/>
+</g>
+<!-- 8th Edition -->
+<g id="node12" class="node">
+<title>8th Edition</title>
+<polygon fill="#00c5cd" stroke="#00c5cd" points="762.31,-486.34 700.18,-471.7 742.98,-442.18 921.78,-484.32 762.31,-486.34"/>
+<text xml:space="preserve" text-anchor="middle" x="781.81" y="-466.46" font-family="Helvetica-Outline" font-size="14.00">8th Edition</text>
+</g>
+<!-- 7th Edition&#45;&gt;8th Edition -->
+<g id="edge11" class="edge">
+<title>7th Edition&#45;&gt;8th Edition</title>
+<path fill="none" stroke="black" d="M472.64,-904.68C556.38,-887.95 710.62,-856.65 714.81,-852.23 751.88,-813.15 733.81,-786.4 733.81,-732.54 733.81,-732.54 733.81,-732.54 733.81,-646.55 733.81,-591.49 756.33,-530.04 770.52,-496.78"/>
+<polygon fill="black" stroke="black" points="773.72,-498.19 774.53,-487.63 767.31,-495.38 773.72,-498.19"/>
+</g>
+<!-- 32V -->
+<g id="node13" class="node">
+<title>32V</title>
+<polygon fill="#4f94cd" stroke="#4f94cd" points="700.2,-828.45 703.47,-845.15 647.27,-842.1 592.23,-824.91 598.11,-809.88 634.02,-803.5 666.38,-809.38 700.2,-828.45"/>
+<text xml:space="preserve" text-anchor="middle" x="648.81" y="-818.66" font-family="Helvetica-Outline" font-size="14.00">32V</text>
+</g>
+<!-- 7th Edition&#45;&gt;32V -->
+<g id="edge12" class="edge">
+<title>7th Edition&#45;&gt;32V</title>
+<path fill="none" stroke="black" d="M459.47,-900.25C492.56,-887.71 540.91,-869.17 582.81,-852.23 592.81,-848.19 603.6,-843.69 613.5,-839.5"/>
+<polygon fill="black" stroke="black" points="614.59,-842.84 622.42,-835.71 611.85,-836.4 614.59,-842.84"/>
+</g>
+<!-- V7M -->
+<g id="node14" class="node">
+<title>V7M</title>
+<polygon fill="navy" stroke="navy" points="115.62,-737.93 108.62,-748.12 82.2,-751.98 56.4,-751.27 37.27,-745.03 19.86,-731.64 7.01,-714.97 13.57,-704.64 46.95,-707.82 90.62,-722.06 115.62,-737.93"/>
+<text xml:space="preserve" text-anchor="middle" x="57.81" y="-726.87" font-family="Helvetica-Outline" font-size="14.00">V7M</text>
+</g>
+<!-- 7th Edition&#45;&gt;V7M -->
+<g id="edge13" class="edge">
+<title>7th Edition&#45;&gt;V7M</title>
+<path fill="none" stroke="black" d="M354.16,-906.65C304.87,-898.18 237.01,-881.99 183.81,-852.23 141.71,-828.67 103.04,-787.84 79.94,-760.51"/>
+<polygon fill="black" stroke="black" points="82.77,-758.43 73.69,-752.97 77.38,-762.9 82.77,-758.43"/>
+</g>
+<!-- Ultrix&#45;11 -->
+<g id="node15" class="node">
+<title>Ultrix&#45;11</title>
+<polygon fill="#698b69" stroke="#698b69" points="191.33,-370.51 193.34,-381.37 165.73,-390.56 131.54,-395.28 99.05,-393.46 65.25,-384.93 38.29,-372.67 40.93,-362.08 84.66,-357.89 148,-361.44 191.33,-370.51"/>
+<text xml:space="preserve" text-anchor="middle" x="115.81" y="-372.34" font-family="Helvetica-Outline" font-size="14.00">Ultrix&#45;11</text>
+</g>
+<!-- 7th Edition&#45;&gt;Ultrix&#45;11 -->
+<g id="edge14" class="edge">
+<title>7th Edition&#45;&gt;Ultrix&#45;11</title>
+<path fill="none" stroke="black" d="M353.38,-912.16C308.17,-906.44 250.63,-891.27 216.81,-852.23 181.55,-811.52 197.81,-786.4 197.81,-732.54 197.81,-732.54 197.81,-732.54 197.81,-562.41 197.81,-501.56 160.07,-438.41 135.8,-404.09"/>
+<polygon fill="black" stroke="black" points="138.94,-402.46 130.24,-396.42 133.28,-406.57 138.94,-402.46"/>
+</g>
+<!-- Xenix -->
+<g id="node16" class="node">
+<title>Xenix</title>
+<polygon fill="coral" stroke="coral" points="335.05,-841.93 298.19,-843.69 255.01,-835.36 230.81,-821.83 233.21,-807.34 260.8,-800.4 303.97,-808.72 337.45,-827.45 335.05,-841.93"/>
+<text xml:space="preserve" text-anchor="middle" x="281.81" y="-818.66" font-family="Helvetica-Outline" font-size="14.00">Xenix</text>
+</g>
+<!-- 7th Edition&#45;&gt;Xenix -->
+<g id="edge15" class="edge">
+<title>7th Edition&#45;&gt;Xenix</title>
+<path fill="none" stroke="black" d="M391.55,-896.57C370.99,-883.04 342.91,-864.55 320.3,-849.67"/>
+<polygon fill="black" stroke="black" points="322.53,-846.95 312.25,-844.37 318.68,-852.79 322.53,-846.95"/>
+</g>
+<!-- UniPlus+ -->
+<g id="node17" class="node">
+<title>UniPlus+</title>
+<polygon fill="#a2cd5a" stroke="#a2cd5a" points="547.57,-837.61 509.41,-848.25 413.04,-834.35 355.66,-812.16 405.1,-804.17 488.55,-808.04 534.37,-818.8 547.57,-837.61"/>
+<text xml:space="preserve" text-anchor="middle" x="464.81" y="-818.66" font-family="Helvetica-Outline" font-size="14.00">UniPlus+</text>
+</g>
+<!-- 7th Edition&#45;&gt;UniPlus+ -->
+<g id="edge16" class="edge">
+<title>7th Edition&#45;&gt;UniPlus+</title>
+<path fill="none" stroke="black" d="M429.14,-896.35C435.64,-883.22 444.41,-865.51 451.63,-850.94"/>
+<polygon fill="black" stroke="black" points="454.58,-852.87 455.89,-842.35 448.31,-849.76 454.58,-852.87"/>
+</g>
+<!-- 9th Edition -->
+<g id="node18" class="node">
+<title>9th Edition</title>
+<polygon fill="#cd5b45" stroke="#cd5b45" points="894.66,-390.95 847.7,-400.81 788.06,-391.43 764.38,-371.2 798.21,-356.67 858.71,-356.88 898.97,-371.19 894.66,-390.95"/>
+<text xml:space="preserve" text-anchor="middle" x="835.81" y="-372.34" font-family="Helvetica-Outline" font-size="14.00">9th Edition</text>
+</g>
+<!-- 8th Edition&#45;&gt;9th Edition -->
+<g id="edge18" class="edge">
+<title>8th Edition&#45;&gt;9th Edition</title>
+<path fill="none" stroke="black" d="M791.72,-453.24C799.31,-440.29 809.97,-422.11 818.9,-406.87"/>
+<polygon fill="black" stroke="black" points="821.67,-409.06 823.71,-398.66 815.63,-405.52 821.67,-409.06"/>
+</g>
+<!-- 3 BSD -->
+<g id="node22" class="node">
+<title>3 BSD</title>
+<polygon fill="lemonchiffon" stroke="lemonchiffon" points="635.1,-727.42 634.47,-738.86 614.11,-747.51 578.18,-749.54 541.77,-744.38 523.28,-734.64 531.15,-724.22 558.76,-716.6 591.93,-714.18 619.38,-718.07 635.1,-727.42"/>
+<text xml:space="preserve" text-anchor="middle" x="582.81" y="-726.87" font-family="Helvetica-Outline" font-size="14.00">3 BSD</text>
+</g>
+<!-- 32V&#45;&gt;3 BSD -->
+<g id="edge23" class="edge">
+<title>32V&#45;&gt;3 BSD</title>
+<path fill="none" stroke="black" d="M634.82,-803.3C625.07,-790.04 611.97,-772.21 601.35,-757.77"/>
+<polygon fill="black" stroke="black" points="604.44,-756.05 595.69,-750.07 598.8,-760.2 604.44,-756.05"/>
+</g>
+<!-- V7M&#45;&gt;Ultrix&#45;11 -->
+<g id="edge17" class="edge">
+<title>V7M&#45;&gt;Ultrix&#45;11</title>
+<path fill="none" stroke="black" d="M57.77,-711.09C57.99,-675.93 59.83,-599.6 70.81,-536.35 78.96,-489.41 95.58,-436.47 106.18,-405.24"/>
+<polygon fill="black" stroke="black" points="109.48,-406.42 109.43,-395.82 102.86,-404.14 109.48,-406.42"/>
+</g>
+<!-- 2.8 BSD -->
+<g id="node20" class="node">
+<title>2.8 BSD</title>
+<polygon fill="#b0e2ff" stroke="#b0e2ff" points="301.43,-488.25 238.45,-472.81 293.98,-451.03 381.39,-472.45 301.43,-488.25"/>
+<text xml:space="preserve" text-anchor="middle" x="303.81" y="-466.46" font-family="Helvetica-Outline" font-size="14.00">2.8 BSD</text>
+</g>
+<!-- 2 BSD&#45;&gt;2.8 BSD -->
+<g id="edge20" class="edge">
+<title>2 BSD&#45;&gt;2.8 BSD</title>
+<path fill="none" stroke="black" d="M151.22,-549.09C183.04,-533.04 236.5,-506.08 270.95,-488.71"/>
+<polygon fill="black" stroke="black" points="272.28,-491.96 279.63,-484.33 269.13,-485.71 272.28,-491.96"/>
+</g>
+<!-- 2.8 BSD&#45;&gt;Ultrix&#45;11 -->
+<g id="edge21" class="edge">
+<title>2.8 BSD&#45;&gt;Ultrix&#45;11</title>
+<path fill="none" stroke="black" d="M277.27,-457.13C246.1,-441.86 193.99,-416.32 157.42,-398.41"/>
+<polygon fill="black" stroke="black" points="159.43,-395.49 148.91,-394.24 156.35,-401.78 159.43,-395.49"/>
+</g>
+<!-- 2.9 BSD -->
+<g id="node21" class="node">
+<title>2.9 BSD</title>
+<polygon fill="#76eec6" stroke="#76eec6" points="271.43,-391.66 231.61,-363.89 315.73,-348.11 396.47,-404.41 271.43,-391.66"/>
+<text xml:space="preserve" text-anchor="middle" x="303.81" y="-372.34" font-family="Helvetica-Outline" font-size="14.00">2.9 BSD</text>
+</g>
+<!-- 2.8 BSD&#45;&gt;2.9 BSD -->
+<g id="edge22" class="edge">
+<title>2.8 BSD&#45;&gt;2.9 BSD</title>
+<path fill="none" stroke="black" d="M303.81,-453.24C303.81,-440.29 303.81,-422.11 303.81,-406.87"/>
+<polygon fill="black" stroke="black" points="307.31,-406.95 303.81,-396.95 300.31,-406.95 307.31,-406.95"/>
+</g>
+<!-- 4 BSD -->
+<g id="node23" class="node">
+<title>4 BSD</title>
+<polygon fill="#ff7f00" stroke="#ff7f00" points="615.15,-660.07 553.7,-663.89 521.43,-645.13 542.55,-626.47 641.23,-642.2 615.15,-660.07"/>
+<text xml:space="preserve" text-anchor="middle" x="574.81" y="-642.88" font-family="Helvetica-Outline" font-size="14.00">4 BSD</text>
+</g>
+<!-- 3 BSD&#45;&gt;4 BSD -->
+<g id="edge24" class="edge">
+<title>3 BSD&#45;&gt;4 BSD</title>
+<path fill="none" stroke="black" d="M581.27,-714.74C580.15,-703.26 578.61,-687.49 577.32,-674.23"/>
+<polygon fill="black" stroke="black" points="580.82,-674.06 576.36,-664.45 573.85,-674.74 580.82,-674.06"/>
+</g>
+<!-- 4.1 BSD -->
+<g id="node24" class="node">
+<title>4.1 BSD</title>
+<polygon fill="#ffffe0" stroke="#ffffe0" points="580.51,-583.86 495.28,-566.96 524.47,-540.45 634.99,-562.36 580.51,-583.86"/>
+<text xml:space="preserve" text-anchor="middle" x="558.81" y="-558.73" font-family="Helvetica-Outline" font-size="14.00">4.1 BSD</text>
+</g>
+<!-- 4 BSD&#45;&gt;4.1 BSD -->
+<g id="edge25" class="edge">
+<title>4 BSD&#45;&gt;4.1 BSD</title>
+<path fill="none" stroke="black" d="M571.73,-630.72C569.57,-619.65 566.64,-604.59 564.11,-591.63"/>
+<polygon fill="black" stroke="black" points="567.58,-591.11 562.23,-581.96 560.71,-592.45 567.58,-591.11"/>
+</g>
+<!-- 4.1 BSD&#45;&gt;8th Edition -->
+<g id="edge28" class="edge">
+<title>4.1 BSD&#45;&gt;8th Edition</title>
+<path fill="none" stroke="black" d="M584.39,-552.05C622.84,-536.49 695.87,-506.93 741.52,-488.45"/>
+<polygon fill="black" stroke="black" points="742.58,-491.79 750.53,-484.8 739.95,-485.31 742.58,-491.79"/>
+</g>
+<!-- 4.1 BSD&#45;&gt;2.8 BSD -->
+<g id="edge27" class="edge">
+<title>4.1 BSD&#45;&gt;2.8 BSD</title>
+<path fill="none" stroke="black" d="M516.42,-547.4C468.3,-530.37 390.42,-502.8 343.47,-486.17"/>
+<polygon fill="black" stroke="black" points="344.82,-482.94 334.23,-482.9 342.49,-489.54 344.82,-482.94"/>
+</g>
+<!-- 4.2 BSD -->
+<g id="node25" class="node">
+<title>4.2 BSD</title>
+<polygon fill="#68228b" stroke="#68228b" points="623.76,-494.11 594.14,-498.52 538.81,-492.47 488.57,-482.21 458.91,-470.15 449.21,-456.03 459.48,-443.75 495.46,-441.92 553.1,-455.19 606.67,-476.99 623.76,-494.11"/>
+<text xml:space="preserve" text-anchor="middle" x="526.81" y="-466.46" font-family="Helvetica-Outline" font-size="14.00">4.2 BSD</text>
+</g>
+<!-- 4.1 BSD&#45;&gt;4.2 BSD -->
+<g id="edge26" class="edge">
+<title>4.1 BSD&#45;&gt;4.2 BSD</title>
+<path fill="none" stroke="black" d="M552.94,-545.85C548.63,-533.68 542.65,-516.81 537.49,-502.27"/>
+<polygon fill="black" stroke="black" points="540.9,-501.41 534.26,-493.16 534.31,-503.75 540.9,-501.41"/>
+</g>
+<!-- 4.3 BSD -->
+<g id="node26" class="node">
+<title>4.3 BSD</title>
+<polygon fill="#eee9bf" stroke="#eee9bf" points="738.75,-389.73 713.63,-401.91 680.94,-404.58 653.32,-396.92 641.26,-381.77 649.18,-364.68 674,-352.13 706.38,-349.08 734.12,-356.89 746.55,-372.51 738.75,-389.73"/>
+<text xml:space="preserve" text-anchor="middle" x="693.81" y="-372.34" font-family="Helvetica-Outline" font-size="14.00">4.3 BSD</text>
+</g>
+<!-- 4.2 BSD&#45;&gt;4.3 BSD -->
+<g id="edge29" class="edge">
+<title>4.2 BSD&#45;&gt;4.3 BSD</title>
+<path fill="none" stroke="black" d="M554.02,-455.13C579.18,-441.25 617.1,-420.33 647.1,-403.78"/>
+<polygon fill="black" stroke="black" points="648.55,-406.98 655.62,-399.09 645.17,-400.85 648.55,-406.98"/>
+</g>
+<!-- Ultrix&#45;32 -->
+<g id="node27" class="node">
+<title>Ultrix&#45;32</title>
+<polygon fill="#cd9b1d" stroke="#cd9b1d" points="553.76,-393.82 460.75,-385.38 438.08,-356.06 622.66,-372.81 553.76,-393.82"/>
+<text xml:space="preserve" text-anchor="middle" x="518.81" y="-372.34" font-family="Helvetica-Outline" font-size="14.00">Ultrix&#45;32</text>
+</g>
+<!-- 4.2 BSD&#45;&gt;Ultrix&#45;32 -->
+<g id="edge30" class="edge">
+<title>4.2 BSD&#45;&gt;Ultrix&#45;32</title>
+<path fill="none" stroke="black" d="M524.92,-448.31C523.72,-434.56 522.18,-416.79 520.94,-402.56"/>
+<polygon fill="black" stroke="black" points="524.44,-402.32 520.08,-392.66 517.46,-402.93 524.44,-402.32"/>
+</g>
+<!-- PWB 1.2&#45;&gt;PWB 2.0 -->
+<g id="edge33" class="edge">
+<title>PWB 1.2&#45;&gt;PWB 2.0</title>
+<path fill="none" stroke="black" d="M1022.6,-984.47C996.92,-970.73 965.76,-954.06 940.88,-940.75"/>
+<polygon fill="black" stroke="black" points="942.79,-937.8 932.32,-936.17 939.49,-943.97 942.79,-937.8"/>
+</g>
+<!-- CB Unix 1 -->
+<g id="node30" class="node">
+<title>CB Unix 1</title>
+<polygon fill="firebrick" stroke="firebrick" points="1371.54,-924.17 1356.04,-936.53 1313.46,-940 1268.44,-934.17 1234.82,-919.91 1221.12,-902.06 1238.46,-890.18 1287.57,-892.07 1343.86,-906.45 1371.54,-924.17"/>
+<text xml:space="preserve" text-anchor="middle" x="1292.81" y="-911.49" font-family="Helvetica-Outline" font-size="14.00">CB Unix 1</text>
+</g>
+<!-- USG 1.0&#45;&gt;CB Unix 1 -->
+<g id="edge34" class="edge">
+<title>USG 1.0&#45;&gt;CB Unix 1</title>
+<path fill="none" stroke="black" d="M1259.24,-995.76C1264.85,-982.61 1273.17,-963.14 1280.13,-946.87"/>
+<polygon fill="black" stroke="black" points="1283.15,-948.7 1283.86,-938.12 1276.71,-945.95 1283.15,-948.7"/>
+</g>
+<!-- USG 2.0 -->
+<g id="node31" class="node">
+<title>USG 2.0</title>
+<polygon fill="#458b00" stroke="#458b00" points="1083.73,-943.21 1020.3,-888.23 1142.84,-902.09 1176.38,-931.16 1083.73,-943.21"/>
+<text xml:space="preserve" text-anchor="middle" x="1105.81" y="-911.49" font-family="Helvetica-Outline" font-size="14.00">USG 2.0</text>
+</g>
+<!-- USG 1.0&#45;&gt;USG 2.0 -->
+<g id="edge35" class="edge">
+<title>USG 1.0&#45;&gt;USG 2.0</title>
+<path fill="none" stroke="black" d="M1232.37,-997.79C1210.14,-983.63 1174.05,-960.63 1146.08,-942.82"/>
+<polygon fill="black" stroke="black" points="1148.16,-939.99 1137.84,-937.57 1144.4,-945.9 1148.16,-939.99"/>
+</g>
+<!-- CB Unix 2 -->
+<g id="node32" class="node">
+<title>CB Unix 2</title>
+<polygon fill="greenyellow" stroke="greenyellow" points="1486.71,-821.79 1496.35,-835.99 1479.05,-845.37 1425.4,-843.45 1362.01,-832.08 1332.89,-819.14 1355.27,-810.68 1404.6,-807.06 1446.02,-806.78 1469.82,-811.05 1486.71,-821.79"/>
+<text xml:space="preserve" text-anchor="middle" x="1425.81" y="-818.66" font-family="Helvetica-Outline" font-size="14.00">CB Unix 2</text>
+</g>
+<!-- CB Unix 1&#45;&gt;CB Unix 2 -->
+<g id="edge36" class="edge">
+<title>CB Unix 1&#45;&gt;CB Unix 2</title>
+<path fill="none" stroke="black" d="M1316.28,-899.14C1337.78,-884.46 1369.79,-862.6 1393.67,-846.29"/>
+<polygon fill="black" stroke="black" points="1395.49,-849.29 1401.77,-840.76 1391.54,-843.51 1395.49,-849.29"/>
+</g>
+<!-- USG 3.0 -->
+<g id="node36" class="node">
+<title>USG 3.0</title>
+<polygon fill="#eed5b7" stroke="#eed5b7" points="1001.25,-841.62 935.07,-825.73 952.18,-794.45 1106.75,-831.55 1001.25,-841.62"/>
+<text xml:space="preserve" text-anchor="middle" x="998.81" y="-818.66" font-family="Helvetica-Outline" font-size="14.00">USG 3.0</text>
+</g>
+<!-- USG 2.0&#45;&gt;USG 3.0 -->
+<g id="edge40" class="edge">
+<title>USG 2.0&#45;&gt;USG 3.0</title>
+<path fill="none" stroke="black" d="M1081.8,-894.79C1065.32,-880.8 1043.42,-862.21 1026.26,-847.64"/>
+<polygon fill="black" stroke="black" points="1028.81,-845.21 1018.92,-841.41 1024.28,-850.55 1028.81,-845.21"/>
+</g>
+<!-- CB Unix 3 -->
+<g id="node33" class="node">
+<title>CB Unix 3</title>
+<polygon fill="#8b7d6b" stroke="#8b7d6b" points="1395.27,-729.86 1417.52,-745.5 1406.26,-755.81 1346.57,-753.78 1268.59,-741.37 1225.88,-727.1 1242.11,-717.59 1291.83,-713.4 1336.83,-713.09 1367.26,-717.93 1395.27,-729.86"/>
+<text xml:space="preserve" text-anchor="middle" x="1329.81" y="-726.87" font-family="Helvetica-Outline" font-size="14.00">CB Unix 3</text>
+</g>
+<!-- CB Unix 2&#45;&gt;CB Unix 3 -->
+<g id="edge37" class="edge">
+<title>CB Unix 2&#45;&gt;CB Unix 3</title>
+<path fill="none" stroke="black" d="M1409.09,-806.7C1395.92,-794.37 1377.17,-776.84 1361.22,-761.92"/>
+<polygon fill="black" stroke="black" points="1363.97,-759.7 1354.28,-755.43 1359.19,-764.82 1363.97,-759.7"/>
+</g>
+<!-- Unix/TS++ -->
+<g id="node34" class="node">
+<title>Unix/TS++</title>
+<polygon fill="#eed5d2" stroke="#eed5d2" points="1302.53,-654.09 1260.5,-667.44 1136.78,-658.98 1111.09,-641.01 1181.13,-629.58 1248.84,-634.21 1302.53,-654.09"/>
+<text xml:space="preserve" text-anchor="middle" x="1206.81" y="-642.88" font-family="Helvetica-Outline" font-size="14.00">Unix/TS++</text>
+</g>
+<!-- CB Unix 3&#45;&gt;Unix/TS++ -->
+<g id="edge38" class="edge">
+<title>CB Unix 3&#45;&gt;Unix/TS++</title>
+<path fill="none" stroke="black" d="M1303.43,-712.95C1285.55,-701.04 1261.73,-685.16 1242.21,-672.15"/>
+<polygon fill="black" stroke="black" points="1244.25,-669.31 1233.99,-666.67 1240.37,-675.13 1244.25,-669.31"/>
+</g>
+<!-- PDP&#45;11 Sys V -->
+<g id="node35" class="node">
+<title>PDP&#45;11 Sys V</title>
+<polygon fill="#98f5ff" stroke="#98f5ff" points="1499.11,-652.27 1470.2,-662.77 1415.59,-666.62 1365.66,-662.91 1336.39,-652.02 1334.09,-637.67 1364.67,-627.48 1422.85,-627.88 1479.75,-638.37 1499.11,-652.27"/>
+<text xml:space="preserve" text-anchor="middle" x="1409.81" y="-642.88" font-family="Helvetica-Outline" font-size="14.00">PDP&#45;11 Sys V</text>
+</g>
+<!-- CB Unix 3&#45;&gt;PDP&#45;11 Sys V -->
+<g id="edge39" class="edge">
+<title>CB Unix 3&#45;&gt;PDP&#45;11 Sys V</title>
+<path fill="none" stroke="black" d="M1345.62,-714.34C1357.08,-702.6 1372.79,-686.49 1385.8,-673.16"/>
+<polygon fill="black" stroke="black" points="1387.95,-675.97 1392.43,-666.36 1382.94,-671.08 1387.95,-675.97"/>
+</g>
+<!-- CB Unix 3&#45;&gt;TS 4.0 -->
+<g id="edge46" class="edge">
+<title>CB Unix 3&#45;&gt;TS 4.0</title>
+<path fill="none" stroke="black" d="M1243.76,-716.95C1187.6,-706.31 1121.24,-689.78 1101.81,-668.64 1083.27,-648.45 1079.88,-616.45 1080.28,-593.22"/>
+<polygon fill="black" stroke="black" points="1083.76,-593.65 1080.71,-583.5 1076.77,-593.34 1083.76,-593.65"/>
+</g>
+<!-- Unix/TS++&#45;&gt;TS 4.0 -->
+<g id="edge45" class="edge">
+<title>Unix/TS++&#45;&gt;TS 4.0</title>
+<path fill="none" stroke="black" d="M1180.82,-629.33C1165.21,-619 1144.96,-605.58 1126.91,-593.62"/>
+<polygon fill="black" stroke="black" points="1129.24,-590.97 1118.97,-588.36 1125.38,-596.81 1129.24,-590.97"/>
+</g>
+<!-- USG 3.0&#45;&gt;Unix/TS 3.0 -->
+<g id="edge41" class="edge">
+<title>USG 3.0&#45;&gt;Unix/TS 3.0</title>
+<path fill="none" stroke="black" d="M998.81,-805.45C998.81,-793.62 998.81,-777.48 998.81,-763.38"/>
+<polygon fill="black" stroke="black" points="1002.31,-763.69 998.81,-753.69 995.31,-763.69 1002.31,-763.69"/>
+</g>
+<!-- Unix/TS 1.0 -->
+<g id="node37" class="node">
+<title>Unix/TS 1.0</title>
+<polygon fill="orangered" stroke="orangered" points="1173.57,-842.86 1124.33,-811.28 1274.34,-809.13 1307.01,-830.09 1173.57,-842.86"/>
+<text xml:space="preserve" text-anchor="middle" x="1219.81" y="-818.66" font-family="Helvetica-Outline" font-size="14.00">Unix/TS 1.0</text>
+</g>
+<!-- Unix/TS 1.0&#45;&gt;Unix/TS 3.0 -->
+<g id="edge43" class="edge">
+<title>Unix/TS 1.0&#45;&gt;Unix/TS 3.0</title>
+<path fill="none" stroke="black" d="M1189.08,-809.85C1158.49,-797.42 1110.43,-777.89 1070.26,-761.58"/>
+<polygon fill="black" stroke="black" points="1071.69,-758.38 1061.11,-757.85 1069.05,-764.86 1071.69,-758.38"/>
+</g>
+<!-- System V.0 -->
+<g id="node39" class="node">
+<title>System V.0</title>
+<polygon fill="#ff7f00" stroke="#ff7f00" points="1176.83,-473.13 1150.8,-484.21 1092.75,-489.14 1029.46,-485.56 991.14,-475.23 996.3,-463.07 1042.15,-454.71 1106.5,-453.96 1159.39,-461.2 1176.83,-473.13"/>
+<text xml:space="preserve" text-anchor="middle" x="1082.81" y="-466.46" font-family="Helvetica-Outline" font-size="14.00">System V.0</text>
+</g>
+<!-- TS 4.0&#45;&gt;System V.0 -->
+<g id="edge47" class="edge">
+<title>TS 4.0&#45;&gt;System V.0</title>
+<path fill="none" stroke="black" d="M1082.81,-541.92C1082.81,-529.53 1082.81,-513.56 1082.81,-500.03"/>
+<polygon fill="black" stroke="black" points="1086.31,-500.43 1082.81,-490.43 1079.31,-500.43 1086.31,-500.43"/>
+</g>
+<!-- System V.2 -->
+<g id="node40" class="node">
+<title>System V.2</title>
+<polygon fill="#6e8b3d" stroke="#6e8b3d" points="1191.02,-393.77 1112.39,-400.18 960.05,-376.61 974.6,-360.27 1097.36,-360.68 1161.44,-370.6 1191.02,-393.77"/>
+<text xml:space="preserve" text-anchor="middle" x="1082.81" y="-372.34" font-family="Helvetica-Outline" font-size="14.00">System V.2</text>
+</g>
+<!-- System V.0&#45;&gt;System V.2 -->
+<g id="edge48" class="edge">
+<title>System V.0&#45;&gt;System V.2</title>
+<path fill="none" stroke="black" d="M1082.81,-454.09C1082.81,-441.19 1082.81,-422.73 1082.81,-407.23"/>
+<polygon fill="black" stroke="black" points="1086.31,-407.6 1082.81,-397.6 1079.31,-407.6 1086.31,-407.6"/>
+</g>
+<!-- System V.3 -->
+<g id="node41" class="node">
+<title>System V.3</title>
+<polygon fill="#cae1ff" stroke="#cae1ff" points="1151.45,-308.48 1071.97,-305.68 1017.78,-296.97 1012.56,-282.11 1043.12,-265.5 1111.19,-269.46 1171.62,-293.44 1151.45,-308.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1082.81" y="-284.13" font-family="Helvetica-Outline" font-size="14.00">System V.3</text>
+</g>
+<!-- System V.2&#45;&gt;System V.3 -->
+<g id="edge49" class="edge">
+<title>System V.2&#45;&gt;System V.3</title>
+<path fill="none" stroke="black" d="M1082.81,-360.21C1082.81,-348.28 1082.81,-331.62 1082.81,-317.5"/>
+<polygon fill="black" stroke="black" points="1086.31,-317.91 1082.81,-307.91 1079.31,-317.91 1086.31,-317.91"/>
+</g>
+</g>
+</svg>

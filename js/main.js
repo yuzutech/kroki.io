@@ -93,6 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
       var urlPath = diagramType + '/svg/' + btoa(pako.deflate(textEncode(source), { level: 9, to: 'string' }))
         .replace(/\+/g, '-')
         .replace(/\//g, '_')
+      if (diagramType === 'svgbob') {
+        urlPath += '?background=transparent'
+      }
       var url = 'https://kroki.io/' + urlPath
       diagramUrlPathElement.innerText = urlPath
       diagramUrlButtonElement.setAttribute('data-clipboard-text', url)

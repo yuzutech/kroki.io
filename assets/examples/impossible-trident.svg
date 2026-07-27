@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="kroki-output kroki-output-pikchr-syntax pikchr" viewBox="0 0 327.47 146.052" height="146.052" width="327.47" style="width: 327.47px; height: 146.052px;">
-                <ellipse cx="7" cy="16" rx="5.66929" ry="14.1732" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></ellipse>
-                <path d="M7,2L279,2" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
-                <path d="M7,30L257,30" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
-                <path d="M257,30L257,58" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></path>
-                <ellipse cx="30" cy="73" rx="5.66929" ry="14.1732" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></ellipse>
-                <path d="M30,58L257,58L257,58L268,87" style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);"></path>
-                <path d="M30,87L279,87L257,30" style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);"></path>
-                <ellipse cx="53" cy="129" rx="5.66929" ry="14.1732" style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);"></ellipse>
-                <path d="M53,115L325,115L279,2" style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);"></path>
-                <path d="M53,143L325,143L325,115" style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);"></path>
-            </svg>
+<svg xmlns='http://www.w3.org/2000/svg' style='font-size:initial;' class="pikchr" viewBox="0 0 327.47 146.052">
+<ellipse cx="7.82929" cy="16.3332" rx="5.66929" ry="14.1732"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<path d="M7.82929,2.16L279.955,2.16"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<path d="M7.82929,30.5065L257.278,30.5065"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<path d="M257.278,30.5065L257.278,58.8529"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<ellipse cx="30.5065" cy="73.0261" rx="5.66929" ry="14.1732"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<path d="M30.5065,58.8529L257.278,58.8529L257.278,58.8529L268.617,87.1994"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);" />
+<path d="M30.5065,87.1994L279.955,87.1994L257.278,30.5065"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);" />
+<ellipse cx="53.1836" cy="129.719" rx="5.66929" ry="14.1732"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<path d="M53.1836,115.546L325.31,115.546L279.955,2.16"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);" />
+<path d="M53.1836,143.892L325.31,143.892L325.31,115.546"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);" />
+</svg>
+

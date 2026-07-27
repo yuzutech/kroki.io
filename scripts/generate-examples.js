@@ -8,6 +8,7 @@
 
 const fs = require('fs')
 const path = require('path')
+const { buildUrl } = require('./kroki-url')
 
 const root = path.join(__dirname, '..')
 const dataPath = path.join(root, 'assets', 'examples', 'data.json')
@@ -47,15 +48,16 @@ function renderFigure (example) {
   return openingTag + svgContent.slice(svgTagEnd)
 }
 
-function renderExample (example, isFirst) {
+function renderExample (example, isFirst, typeSlug) {
+  const { getPath, clipboard } = buildUrl(typeSlug, 'svg', example.source, example.params)
   return `<div class="catalog-example" data-example="${example.anchor}"${isFirst ? '' : ' hidden'}>
                         ${renderFigure(example)}
                         <div class="catalog-example-code">
                             <code class="snippet-name">${example.anchor}.${example.lang}</code>
                             <pre class="catalog-example-source"><code class="language-${example.lang}">${example.source}</code></pre>
                             <div class="highlight">
-                                <pre><code class="language-http static"><span class="token verb-get">GET</span> <span class="token host">https://kroki.io</span>/<span class="token path">${example.getPath}</span></code></pre>
-                                ${copyButton(example.clipboard)}
+                                <pre><code class="language-http static"><span class="token verb-get">GET</span> <span class="token host">https://kroki.io</span>/<span class="token path">${getPath}</span></code></pre>
+                                ${copyButton(clipboard)}
                             </div>
                         </div>
                     </div>`
@@ -87,7 +89,7 @@ function renderCard (type) {
 function renderDetail (type) {
   const formatPills = type.formats.map((f) => `<span class="diagram-support-format">${f}</span>`).join('')
   const detailId = `detail-${type.type}`
-  const examplesHtml = type.examples.map((e, i) => renderExample(e, i === 0)).join('\n                    ')
+  const examplesHtml = type.examples.map((e, i) => renderExample(e, i === 0, type.type)).join('\n                    ')
 
   return `<div class="catalog-detail" id="${detailId}" hidden>
                 <div class="catalog-detail-header">

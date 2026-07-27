@@ -1,0 +1,8 @@
+{
+  "name": "kroki-cheatsheet-generator",
+  "private": true,
+  "description": "Occasional-use Puppeteer dependency for scripts/cheatsheet/generate.js, isolated from the project's own package.json.",
+  "dependencies": {
+    "puppeteer": "^24.43.1"
+  }
+}
