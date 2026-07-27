@@ -23,6 +23,90 @@ $spacer-1: round($spacer / 2) !default
 $spacer-2: $spacer !default
 $spacer-3: $spacer * 2 !default
 
+// Reference design-system palette (sampled from the provided brand
+// palette image). Not wired into any component yet — declared so the
+// tokens exist as a single source of truth once we pick where to use
+// them.
+$palette-primary-50: #f3f8ff !default
+$palette-primary-100: #e8f1ff !default
+$palette-primary-200: #b3ccff !default
+$palette-primary-300: #85a8ff !default
+$palette-primary-400: #2f45ff !default
+$palette-primary-500: #0000ee !default
+$palette-primary-600: #0609cd !default
+$palette-primary-700: #10169f !default
+
+$palette-secondary-200: #f3faf8 !default
+$palette-secondary-300: #d6f1ea !default
+$palette-secondary-400: #74c8b8 !default
+$palette-secondary-500: #389487 !default
+$palette-secondary-600: #2b766d !default
+$palette-secondary-700: #265f59 !default
+$palette-secondary-800: #20413e !default
+
+$palette-red: #da7870 !default
+$palette-yellow: #f2c114 !default
+$palette-pink: #bc27b6 !default
+$palette-violet: #7f2eef !default
+$palette-brown: #7f4400 !default
+
+$palette-grey-1: #6d6d6d !default
+$palette-grey-2: #9c9c9c !default
+$palette-grey-3: #cccccc !default
+$palette-grey-4: #e8e8e8 !default
+$palette-grey-5: #f4f4f4 !default
+$palette-grey-6: #f9f9f9 !default
+
+$palette-success-200: #f2f8ec !default
+$palette-success-300: #d1e7bc !default
+$palette-success-400: #aad282 !default
+$palette-success-500: #5ba90e !default
+$palette-success-600: #52980d !default
+$palette-success-700: #447f0b !default
+$palette-success-800: #2e5507 !default
+
+$palette-warning-200: #fff4eb !default
+$palette-warning-300: #ffdab8 !default
+$palette-warning-400: #ffba7a !default
+$palette-warning-500: #ff7b00 !default
+$palette-warning-600: #e56f00 !default
+$palette-warning-700: #bf5c00 !default
+$palette-warning-900: #803e00 !default
+
+$palette-error-200: #fceeec !default
+$palette-error-300: #f5c3bb !default
+$palette-error-400: #ed8f81 !default
+$palette-error-500: #dd280c !default
+$palette-error-600: #c7240b !default
+$palette-error-700: #a61e09 !default
+$palette-error-800: #6f1406 !default
+
+$palette-basic-dark: #2a2d31 !default
+$palette-basic-light: #ffffff !default
+$palette-basic-fond: #fafafa !default
+
+// Electric blue is the Kroki brand color: the CTA button (see
+// .examples-gallery-cta in kroki.sass) plus links and hover/focus
+// feedback, so it stays the color people click on. Static, non-clickable
+// chrome (the is-highlight tag, info messages, the keyword color inside
+// code samples) uses the softer $soft-blue instead so it doesn't read
+// as another interactive target.
+$accent: $palette-primary-500 !default
+$link: $palette-primary-500 !default
+$primary: $palette-primary-500 !default
+$soft-blue: $palette-primary-300 !default
+$info: $palette-primary-300 !default
+
+// Code-sample accent for values/highlighted tokens (see kroki.sass).
+$red-accent: $palette-error-700 !default
+
+// HTTP verb badges follow the widely-recognized Swagger/OpenAPI color
+// convention rather than the brand palette, since developers already
+// read these colors as GET/POST/PUT/DELETE regardless of a site's
+// branding.
+$http-get: $palette-primary-400 !default
+$http-post: $palette-success-600 !default
+
 @import "../node_modules/bulma/sass/utilities/_all"
 @import "../node_modules/bulma/sass/base/_all"
 @import "../node_modules/bulma/sass/grid/tiles"

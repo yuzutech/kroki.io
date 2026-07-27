@@ -7,6 +7,9 @@
 .menu
   padding-bottom: 3rem
 
+.anchors-list a:hover
+  color: $link
+
 .tag.is-small
   height: 1rem
   padding-left: .25em
@@ -42,8 +45,27 @@ ul.sponsors
       padding-top: 0.5em
 
 .tag.is-highlight
-  background-color: #ff3860
-  color: white
+  background-color: $palette-primary-50
+  color: $palette-primary-600
+
+.tags.diagram-types
+  margin: 1em 0 1.5em
+
+  a.tag
+    background-color: $white
+    border: 1px solid hsl(0, 0%, 86%)
+    color: $text
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease
+
+    &:hover
+      background-color: $link
+      border-color: $link
+      color: $white
+
+  .tag.is-more
+    background-color: transparent
+    border: 1px dashed hsl(0, 0%, 86%)
+    color: hsl(0, 0%, 48%)
 
 code.snippet-name
   background-color: transparent
@@ -54,7 +76,7 @@ code.snippet-name
 .section
   min-height: calc(100vh - 174px)
 
-svg.kroki-output
+.kroki-output
   max-width: 50rem
   margin: auto
   display: block
@@ -126,14 +148,14 @@ pre[class*="static-"]
   color: white
   border-radius: 0.25rem
   padding: 0.1rem 0.25rem
-  background-color: hsl(204, 86%, 53%)
+  background-color: $palette-primary-400
   font-weight: 600
 
 .token.verb-post
   color: white
   border-radius: 0.25rem
   padding: 0.1rem 0.25rem
-  background-color: hsl(348, 100%, 61%)
+  background-color: $http-post
   font-weight: 600
 
 .token.host
@@ -145,18 +167,24 @@ pre[class*="static-"]
 
   &.bd-is-hovering
     border-radius: 2px
-    box-shadow: 0 0 0 2px hsl(204, 86%, 53%)
+    box-shadow: 0 0 0 2px $link
 
   pre:not(:last-child)
     margin-bottom: 0
 
 .token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted
-  color: hsl(348, 100%, 61%)
+  color: $palette-error-500
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection, code[class*="language-"]::selection, code[class*="language-"] ::selection
+  background: mix($white, $soft-blue, 80%)
+
+pre[class*="language-"], :not(pre) > code[class*="language-"]
+  background: hsl(0, 0%, 98%)
 
 // copy
 
 .highlight .bd-copy:hover, .highlight .bd-expand:hover
-  background-color: hsl(204, 86%, 53%)
+  background-color: $link
   color: white
 
 .highlight .bd-copy:active, .highlight .bd-copy:focus, .highlight .bd-expand:active, .highlight .bd-expand:focus
@@ -240,15 +268,429 @@ svg:not(:root)
   text-align: center
   width: 1.25em
 
-// Try
+// Examples gallery — a scannable preview instead of a plain text link
 
-.try-columns
+.examples-gallery
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr))
+  gap: 1em
+  margin: 1.25em 0
+
+.examples-gallery-item
+  display: block
+  border: 1px solid hsl(0, 0%, 88%)
+  border-radius: $border-radius-3
+  overflow: hidden
+  background-color: $white
+  transition: border-color 0.15s ease, box-shadow 0.15s ease
+
+  &:hover
+    border-color: $link
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08)
+
+.examples-gallery-thumb
+  display: flex
+  height: 8.5rem
+  padding: 0.75em
+  background-color: hsl(0, 0%, 98.5%)
+  background-image: radial-gradient(circle, hsl(0, 0%, 88%) 1px, transparent 1px)
+  background-size: 16px 16px
+
+  svg, img
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+.examples-gallery-caption
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 0.5em
+  padding: 0.6em 0.85em
+  border-top: 1px solid hsl(0, 0%, 92%)
+  font-size: 0.9rem
+  color: $text
+
+.examples-gallery-cta
+  margin-top: 0.25em
+
+// Bulma's .button.is-link rule is two classes (background-color: $link);
+// matching that specificity here (rather than the single-class selector
+// above) so this CTA reliably wins instead of silently losing to it.
+.button.is-link.examples-gallery-cta
+  background-color: $accent
+  border-color: $accent
+
+  &:hover, &.is-hovered
+    background-color: darken($accent, 2.5%)
+    border-color: darken($accent, 2.5%)
+
+  &:active, &.is-active
+    background-color: darken($accent, 5%)
+    border-color: darken($accent, 5%)
+
+// Diagram type support — compact cards instead of a wide checkmark matrix
+
+.diagram-support-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr))
+  gap: 0.75em
+  margin: 1.25em 0
+
+.diagram-support-card
+  border: 1px solid hsl(0, 0%, 90%)
+  border-radius: $border-radius-2
+  padding: 0.75em 0.9em
+  display: flex
+  flex-direction: column
+
+  a
+    font-weight: 600
+    color: $palette-basic-dark
+
+  a:hover
+    color: $primary
+
+.diagram-support-formats
+  display: flex
   flex-wrap: wrap
+  gap: 0.3em
+  margin-top: 0.5em
 
-#diagram-source
+// Output-format pills use the accent color so they read as a distinct kind
+// of tag from the neutral grey usage-category tags (.tag.is-small) they
+// often sit next to.
+.diagram-support-format
+  font-size: 0.7rem
+  text-transform: uppercase
+  letter-spacing: 0.02em
+  padding: 0.15em 0.55em
+  border-radius: 999px
+  background-color: $palette-grey-5
+  color: $palette-basic-dark
+
+// Examples catalog (examples.html) — filterable per-type cards with an
+// expandable detail panel showing the working example(s)
+
+.catalog-filters
+  display: flex
+  flex-wrap: wrap
+  gap: 0.5em
+  margin: 1em 0 1.5em
+
+.catalog-filter
+  border: 1px solid hsl(0, 0%, 85%)
+  border-radius: 999px
+  background-color: $white
+  color: $text
+  font-size: 0.85rem
+  padding: 0.35em 0.9em
+  cursor: pointer
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease
+
+  &:hover
+    border-color: $link
+    color: $link
+
+  &.is-active
+    background-color: $link
+    border-color: $link
+    color: $white
+
+.catalog-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr))
+  gap: 0.75em
+  margin: 1.25em 0
+  align-items: start
+
+.catalog-card
+  border: 1px solid hsl(0, 0%, 90%)
+  border-radius: $border-radius-2
+  padding: 0.75em 0.9em
+  transition: border-color 0.15s ease, box-shadow 0.15s ease
+
+  &[hidden]
+    display: none
+
+  // Distinct style for whichever card's detail is currently open below
+  // the grid, so it's clear which card the detail panel belongs to.
+  &.is-active
+    border-color: $link
+    box-shadow: 0 0 0 1px $link
+
+.catalog-card-toggle
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 0.5em
+  width: 100%
+  border: none
+  background: none
+  padding: 0
+  font: inherit
+  font-weight: 600
+  color: $text
+  cursor: pointer
+  text-align: left
+
+  &:hover
+    color: $link
+
+.catalog-card-chevron
+  font-size: 0.7em
+  color: hsl(0, 0%, 60%)
+  transition: transform 0.15s ease
+
+.catalog-card.is-active .catalog-card-chevron
+  color: $link
+  transform: rotate(180deg)
+
+.catalog-card-tags
+  display: flex
+  flex-wrap: wrap
+  gap: 0.3em
+  margin-top: 0.5em
+
+.catalog-card-link
+  display: inline-block
+  font-size: 0.8rem
+  color: hsl(0, 0%, 45%)
+
+  &:hover
+    color: $link
+
+// A single shared area below the whole grid, instead of interleaving each
+// card's detail between cards — expanding a card never cuts the list.
+.catalog-details
+  margin-top: 1em
+
+.catalog-detail
+  border: 1px solid hsl(0, 0%, 88%)
+  border-radius: $border-radius-3
+  background-color: hsl(0, 0%, 99%)
+  padding: 1.25em
+  scroll-margin-top: 1rem
+
+  &[hidden]
+    display: none
+
+.catalog-detail-header
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  gap: 0.75em
+  margin-bottom: 1em
+  padding-bottom: 1em
+  border-bottom: 1px solid hsl(0, 0%, 90%)
+
+  .diagram-support-formats
+    margin-top: 0
+
+.catalog-detail-switcher
+  display: flex
+  flex-wrap: wrap
+  gap: 0.4em
+  margin-bottom: 1em
+
+.catalog-example-toggle
+  border: 1px solid hsl(0, 0%, 85%)
+  border-radius: $border-radius-1
+  background-color: $white
+  color: $text
+  font-size: 0.8rem
+  padding: 0.3em 0.7em
+  cursor: pointer
+
+  &:hover
+    border-color: $link
+    color: $link
+
+  &.is-active
+    background-color: $link
+    border-color: $link
+    color: $white
+
+.catalog-example
+  &[hidden]
+    display: none
+
+// Fixed box for every example image (rather than max-width/height:auto) so
+// a very wide-but-short diagram and a narrow-but-tall one read at the same
+// visual scale instead of one looking huge and the other tiny.
+.catalog-example-image
+  display: block
+  width: 100%
+  height: 18rem
+  object-fit: contain
+  margin: 0 auto 1.25em
+  background-color: hsl(0, 0%, 98.5%)
+  background-image: radial-gradient(circle, hsl(0, 0%, 88%) 1px, transparent 1px)
+  background-size: 16px 16px
+  border-radius: $border-radius-1
+
+.catalog-example-code
+  code.snippet-name
+    display: block
+    margin-bottom: 0.25em
+
+  // Some sources (BPMN, UMLet, Structurizr...) are thousands of lines;
+  // cap the block and let it scroll instead of dominating the page.
+  .catalog-example-source
+    max-height: 18rem
+    overflow-y: auto
+
+// Try — the editor component (toolbar + source/preview panes + status bar)
+
+.editor
+  margin: 1em 0 1.5em
+  border: 1px solid hsl(0, 0%, 86%)
+  border-radius: $border-radius-3
+  background-color: $white
+  overflow: hidden
+
+.editor-toolbar
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  gap: 0.6em
+  padding: 0.6em 0.85em
+  background-color: hsl(0, 0%, 98%)
+  border-bottom: 1px solid hsl(0, 0%, 90%)
+
+.editor-toolbar-actions
+  display: flex
+  align-items: center
+  gap: 1em
+  font-size: 0.9rem
+
+  .checkbox
+    display: inline-flex
+    align-items: center
+    gap: 0.4em
+    cursor: pointer
+
+.editor-body
+  display: flex
+  height: 32rem
+
+  +until($desktop)
+    flex-direction: column
+    height: auto
+
+.editor-pane
+  flex: 1 1 50%
+  min-width: 0
+  overflow: auto
+
+.editor-pane-source
+  border-right: 1px solid hsl(0, 0%, 90%)
+
+  +until($desktop)
+    border-right: none
+    border-bottom: 1px solid hsl(0, 0%, 90%)
+    height: 20rem
+    flex: none
+
+.editor-pane-preview
+  position: relative
+  overflow: hidden
+  padding: 0
+  background-color: $white
+
+  +until($desktop)
+    height: 20rem
+    flex: none
+
+  #diagram-error
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: 2
+    max-width: calc(100% - 2em)
+    transform: translate(-50%, -50%)
+
+// A pannable, zoomable canvas for the diagram preview (drag to pan, wheel
+// to zoom) so a tall/wide diagram never changes the editor's height.
+.editor-canvas
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  cursor: grab
+  background-color: hsl(0, 0%, 99%)
+  background-image: radial-gradient(circle, hsl(0, 0%, 82%) 1px, transparent 1px)
+  background-size: 20px 20px
+  user-select: none
+
+  &.is-panning
+    cursor: grabbing
+
+.editor-canvas-viewport
+  position: absolute
+  top: 0
+  left: 0
+  transform-origin: 0 0
+
+.editor-canvas-controls
+  position: absolute
+  right: 0.6em
+  bottom: 0.6em
+  z-index: 2
+  display: flex
+  gap: 0.25em
+
+  button
+    width: 1.75rem
+    height: 1.75rem
+    padding: 0
+    line-height: 1
+    border: 1px solid hsl(0, 0%, 82%)
+    border-radius: $border-radius-1
+    background-color: rgba(255, 255, 255, 0.9)
+    color: $text
+    cursor: pointer
+    transition: color 0.15s ease, border-color 0.15s ease
+
+    &:hover
+      border-color: $link
+      color: $link
+      background-color: $white
+
+.editor-textarea
+  display: block
+  width: 100%
+  height: 100%
+  min-height: 28rem
+  padding: 1em
+  border: none
+  outline: none
+  resize: none
+  background: transparent
+  color: $text
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
-  overflow-x: scroll
+  font-size: 0.95rem
+  line-height: 1.5
   white-space: pre
+
+  +until($desktop)
+    min-height: 20rem
+
+.editor-statusbar
+  background-color: hsl(0, 0%, 98%)
+  border-top: 1px solid hsl(0, 0%, 90%)
+
+  .highlight
+    margin-bottom: 0
+
+  pre
+    margin: 0
+    padding: 0.6em 1em
+    overflow-x: auto
+    background: transparent
 
 #diagram-result
   display: flex
@@ -259,17 +701,11 @@ svg:not(:root)
 #diagram-result.diagram-actdiag,
 #diagram-result.diagram-nwdiag,
 #diagram-result.diagram-mermaid
-  > svg
-    width: 100%
-    height: 100%
-    .label
-      color: inherit
-      display: inherit
-      font-size: inherit
-      font-weight: inherit
-
-#diagram-url > pre
-  overflow-x: scroll
+  > svg .label
+    color: inherit
+    display: inherit
+    font-size: inherit
+    font-weight: inherit
 
 .container > .duo
   display: flex
@@ -303,6 +739,9 @@ svg:not(:root)
   position: absolute
   right: calc(100% + 0.1rem)
 
+  &:hover
+    color: $link
+
 hr.menu-divider
   margin: 0.5rem
 
@@ -313,15 +752,6 @@ svg
     font-weight: inherit
     line-height: inherit
 
-.download-cheat-sheet
-  padding: 1em
-  display: flex
-  border: 1px solid #e0e0e0
-  font-weight: 600
-  flex-direction: column
-  img
-    padding-bottom: 0.75em
-
 .link.has-icon
   display: inline-flex
   align-items: center
@@ -329,3 +759,74 @@ svg
 
 .message.is-important
   font-size: 1.1em
+
+// Cheat sheet (cheatsheet.html) — one card per diagram type, generated by
+// scripts/generate-cheatsheet.js and printed to PDF by the same script
+// via Puppeteer.
+
+// Reuses .examples-gallery-item as a single standalone card (not inside
+// the grid it's normally repeated in), so it needs its own max-width.
+.cheat-sheet-teaser
+  max-width: 320px
+
+.download-cheat-sheet
+  background-color: $accent
+  border-color: $accent
+  margin: 0.5em 0 1.25em
+
+  &:hover, &.is-hovered
+    background-color: darken($accent, 2.5%)
+    border-color: darken($accent, 2.5%)
+
+  &:active, &.is-active
+    background-color: darken($accent, 5%)
+    border-color: darken($accent, 5%)
+
+.cheatsheet-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr))
+  gap: 1em
+  margin: 1.25em 0
+
+.cheatsheet-card
+  display: flex
+  flex-direction: column
+  border: 1px solid hsl(0, 0%, 88%)
+  border-radius: $border-radius-3
+  overflow: hidden
+  background-color: $white
+  break-inside: avoid
+  page-break-inside: avoid
+
+.cheatsheet-card-thumb
+  display: flex
+  height: 7rem
+  padding: 0.6em
+  background-color: hsl(0, 0%, 98.5%)
+  border-bottom: 1px solid hsl(0, 0%, 92%)
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+.cheatsheet-card-body
+  display: flex
+  flex-direction: column
+  gap: 0.35em
+  padding: 0.6em 0.85em
+
+.cheatsheet-card-name
+  font-weight: 600
+
+.cheatsheet-card-slug
+  font-size: 0.8rem
+  color: hsl(0, 0%, 45%)
+  background: none
+  padding: 0
+
+// Elements that make sense on screen (download CTA, nav, sponsor banner)
+// but shouldn't take up space in the printed PDF.
+@media print
+  .no-print
+    display: none !important

@@ -1,0 +1,720 @@
+{
+  "categories": [
+    {
+      "slug": "diagram",
+      "label": "Diagram"
+    },
+    {
+      "slug": "graph",
+      "label": "Graph"
+    },
+    {
+      "slug": "c4",
+      "label": "C4"
+    },
+    {
+      "slug": "visualization",
+      "label": "Visualization"
+    },
+    {
+      "slug": "drawing",
+      "label": "Drawing"
+    },
+    {
+      "slug": "hardware",
+      "label": "Hardware architecture"
+    }
+  ],
+  "types": [
+    {
+      "type": "blockdiag",
+      "name": "BlockDiag",
+      "href": "https://github.com/blockdiag/blockdiag",
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "blockdiag",
+          "title": "Block diagram",
+          "lang": "diag",
+          "source": "blockdiag {\n  blockdiag -&gt; generates -&gt; \"block-diagrams\";\n  blockdiag -&gt; is -&gt; \"very easy!\";\n\n  blockdiag [color = \"greenyellow\"];\n  \"block-diagrams\" [color = \"pink\"];\n  \"very easy!\" [color = \"orange\"];\n}",
+          "svg": "assets/examples/blockdiag.svg"
+        }
+      ]
+    },
+    {
+      "type": "bpmn",
+      "name": "BPMN",
+      "href": "https://github.com/bpmn-io/bpmn-js",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "bpmn",
+          "title": "BPMN",
+          "lang": "xml",
+          "source": "&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;\n&lt;semantic:definitions xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:di=&quot;http://www.omg.org/spec/DD/20100524/DI&quot; xmlns:bpmndi=&quot;http://www.omg.org/spec/BPMN/20100524/DI&quot; xmlns:dc=&quot;http://www.omg.org/spec/DD/20100524/DC&quot; xmlns:semantic=&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot; id=&quot;_1275940932088&quot; targetNamespace=&quot;http://www.trisotech.com/definitions/_1275940932088&quot; exporter=&quot;Camunda Modeler&quot; exporterVersion=&quot;1.16.0&quot;&gt;\n  &lt;semantic:message id=&quot;_1275940932310&quot; /&gt;\n  &lt;semantic:message id=&quot;_1275940932433&quot; /&gt;\n  &lt;semantic:process id=&quot;_6-1&quot; isExecutable=&quot;false&quot;&gt;\n    &lt;semantic:laneSet id=&quot;ls_6-438&quot;&gt;\n      &lt;semantic:lane id=&quot;_6-650&quot; name=&quot;clerk&quot;&gt;\n        &lt;semantic:flowNodeRef&gt;OrderReceivedEvent&lt;/semantic:flowNodeRef&gt;\n        &lt;semantic:flowNodeRef&gt;_6-652&lt;/semantic:flowNodeRef&gt;\n        &lt;semantic:flowNodeRef&gt;_6-674&lt;/semantic:flowNodeRef&gt;\n        &lt;semantic:flowNodeRef&gt;CalmCustomerTask&lt;/semantic:flowNodeRef&gt;\n      &lt;/semantic:lane&gt;\n      &lt;semantic:lane id=&quot;_6-446&quot; name=&quot;pizza chef&quot;&gt;\n        &lt;semantic:flowNodeRef&gt;_6-463&lt;/semantic:flowNodeRef&gt;\n      &lt;/semantic:lane&gt;\n      &lt;semantic:lane id=&quot;_6-448&quot; name=&quot;delivery boy&quot;&gt;\n        &lt;semantic:flowNodeRef&gt;_6-514&lt;/semantic:flowNodeRef&gt;\n        &lt;semantic:flowNodeRef&gt;_6-565&lt;/semantic:flowNodeRef&gt;\n        &lt;semantic:flowNodeRef&gt;_6-616&lt;/semantic:flowNodeRef&gt;\n      &lt;/semantic:lane&gt;\n    &lt;/semantic:laneSet&gt;\n    &lt;semantic:startEvent id=&quot;OrderReceivedEvent&quot; name=&quot;Order received&quot;&gt;\n      &lt;semantic:outgoing&gt;_6-630&lt;/semantic:outgoing&gt;\n      &lt;semantic:messageEventDefinition messageRef=&quot;_1275940932310&quot; /&gt;\n    &lt;/semantic:startEvent&gt;\n    &lt;semantic:parallelGateway id=&quot;_6-652&quot; name=&quot;&quot;&gt;\n      &lt;semantic:incoming&gt;_6-630&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-691&lt;/semantic:outgoing&gt;\n      &lt;semantic:outgoing&gt;_6-693&lt;/semantic:outgoing&gt;\n    &lt;/semantic:parallelGateway&gt;\n    &lt;semantic:intermediateCatchEvent id=&quot;_6-674&quot; name=&quot;„where is my pizza?“&quot;&gt;\n      &lt;semantic:incoming&gt;_6-691&lt;/semantic:incoming&gt;\n      &lt;semantic:incoming&gt;_6-746&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-748&lt;/semantic:outgoing&gt;\n      &lt;semantic:messageEventDefinition messageRef=&quot;_1275940932433&quot; /&gt;\n    &lt;/semantic:intermediateCatchEvent&gt;\n    &lt;semantic:task id=&quot;CalmCustomerTask&quot; name=&quot;Calm customer&quot;&gt;\n      &lt;semantic:incoming&gt;_6-748&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-746&lt;/semantic:outgoing&gt;\n    &lt;/semantic:task&gt;\n    &lt;semantic:task id=&quot;_6-463&quot; name=&quot;Bake the pizza&quot;&gt;\n      &lt;semantic:incoming&gt;_6-693&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-632&lt;/semantic:outgoing&gt;\n    &lt;/semantic:task&gt;\n    &lt;semantic:task id=&quot;_6-514&quot; name=&quot;Deliver the pizza&quot;&gt;\n      &lt;semantic:incoming&gt;_6-632&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-634&lt;/semantic:outgoing&gt;\n    &lt;/semantic:task&gt;\n    &lt;semantic:task id=&quot;_6-565&quot; name=&quot;Receive payment&quot;&gt;\n      &lt;semantic:incoming&gt;_6-634&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-636&lt;/semantic:outgoing&gt;\n    &lt;/semantic:task&gt;\n    &lt;semantic:endEvent id=&quot;_6-616&quot; name=&quot;&quot;&gt;\n      &lt;semantic:incoming&gt;_6-636&lt;/semantic:incoming&gt;\n      &lt;semantic:terminateEventDefinition /&gt;\n    &lt;/semantic:endEvent&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-630&quot; name=&quot;&quot; sourceRef=&quot;OrderReceivedEvent&quot; targetRef=&quot;_6-652&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-632&quot; name=&quot;&quot; sourceRef=&quot;_6-463&quot; targetRef=&quot;_6-514&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-634&quot; name=&quot;&quot; sourceRef=&quot;_6-514&quot; targetRef=&quot;_6-565&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-636&quot; name=&quot;&quot; sourceRef=&quot;_6-565&quot; targetRef=&quot;_6-616&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-691&quot; name=&quot;&quot; sourceRef=&quot;_6-652&quot; targetRef=&quot;_6-674&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-693&quot; name=&quot;&quot; sourceRef=&quot;_6-652&quot; targetRef=&quot;_6-463&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-746&quot; name=&quot;&quot; sourceRef=&quot;CalmCustomerTask&quot; targetRef=&quot;_6-674&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-748&quot; name=&quot;&quot; sourceRef=&quot;_6-674&quot; targetRef=&quot;CalmCustomerTask&quot; /&gt;\n  &lt;/semantic:process&gt;\n  &lt;semantic:message id=&quot;_1275940932198&quot; /&gt;\n  &lt;semantic:process id=&quot;_6-2&quot; isExecutable=&quot;false&quot;&gt;\n    &lt;semantic:startEvent id=&quot;_6-61&quot; name=&quot;Hungry for pizza&quot;&gt;\n      &lt;semantic:outgoing&gt;_6-125&lt;/semantic:outgoing&gt;\n    &lt;/semantic:startEvent&gt;\n    &lt;semantic:task id=&quot;SelectAPizzaTask&quot; name=&quot;Select a pizza&quot;&gt;\n      &lt;semantic:incoming&gt;_6-125&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-178&lt;/semantic:outgoing&gt;\n    &lt;/semantic:task&gt;\n    &lt;semantic:task id=&quot;_6-127&quot; name=&quot;Order a pizza&quot;&gt;\n      &lt;semantic:incoming&gt;_6-178&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-420&lt;/semantic:outgoing&gt;\n    &lt;/semantic:task&gt;\n    &lt;semantic:eventBasedGateway id=&quot;_6-180&quot; name=&quot;&quot;&gt;\n      &lt;semantic:incoming&gt;_6-420&lt;/semantic:incoming&gt;\n      &lt;semantic:incoming&gt;_6-430&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-422&lt;/semantic:outgoing&gt;\n      &lt;semantic:outgoing&gt;_6-424&lt;/semantic:outgoing&gt;\n    &lt;/semantic:eventBasedGateway&gt;\n    &lt;semantic:intermediateCatchEvent id=&quot;_6-202&quot; name=&quot;pizza received&quot;&gt;\n      &lt;semantic:incoming&gt;_6-422&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-428&lt;/semantic:outgoing&gt;\n      &lt;semantic:messageEventDefinition messageRef=&quot;_1275940932198&quot; /&gt;\n    &lt;/semantic:intermediateCatchEvent&gt;\n    &lt;semantic:intermediateCatchEvent id=&quot;_6-219&quot; name=&quot;60 minutes&quot;&gt;\n      &lt;semantic:incoming&gt;_6-424&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-426&lt;/semantic:outgoing&gt;\n      &lt;semantic:timerEventDefinition&gt;\n        &lt;semantic:timeDate /&gt;\n      &lt;/semantic:timerEventDefinition&gt;\n    &lt;/semantic:intermediateCatchEvent&gt;\n    &lt;semantic:task id=&quot;_6-236&quot; name=&quot;Ask for the pizza&quot;&gt;\n      &lt;semantic:incoming&gt;_6-426&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-430&lt;/semantic:outgoing&gt;\n    &lt;/semantic:task&gt;\n    &lt;semantic:task id=&quot;_6-304&quot; name=&quot;Pay the pizza&quot;&gt;\n      &lt;semantic:incoming&gt;_6-428&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-434&lt;/semantic:outgoing&gt;\n    &lt;/semantic:task&gt;\n    &lt;semantic:task id=&quot;_6-355&quot; name=&quot;Eat the pizza&quot;&gt;\n      &lt;semantic:incoming&gt;_6-434&lt;/semantic:incoming&gt;\n      &lt;semantic:outgoing&gt;_6-436&lt;/semantic:outgoing&gt;\n    &lt;/semantic:task&gt;\n    &lt;semantic:endEvent id=&quot;_6-406&quot; name=&quot;Hunger satisfied&quot;&gt;\n      &lt;semantic:incoming&gt;_6-436&lt;/semantic:incoming&gt;\n    &lt;/semantic:endEvent&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-125&quot; name=&quot;&quot; sourceRef=&quot;_6-61&quot; targetRef=&quot;SelectAPizzaTask&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-178&quot; name=&quot;&quot; sourceRef=&quot;SelectAPizzaTask&quot; targetRef=&quot;_6-127&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-420&quot; name=&quot;&quot; sourceRef=&quot;_6-127&quot; targetRef=&quot;_6-180&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-422&quot; name=&quot;&quot; sourceRef=&quot;_6-180&quot; targetRef=&quot;_6-202&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-424&quot; name=&quot;&quot; sourceRef=&quot;_6-180&quot; targetRef=&quot;_6-219&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-426&quot; name=&quot;&quot; sourceRef=&quot;_6-219&quot; targetRef=&quot;_6-236&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-428&quot; name=&quot;&quot; sourceRef=&quot;_6-202&quot; targetRef=&quot;_6-304&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-430&quot; name=&quot;&quot; sourceRef=&quot;_6-236&quot; targetRef=&quot;_6-180&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-434&quot; name=&quot;&quot; sourceRef=&quot;_6-304&quot; targetRef=&quot;_6-355&quot; /&gt;\n    &lt;semantic:sequenceFlow id=&quot;_6-436&quot; name=&quot;&quot; sourceRef=&quot;_6-355&quot; targetRef=&quot;_6-406&quot; /&gt;\n  &lt;/semantic:process&gt;\n  &lt;semantic:collaboration id=&quot;C1275940932557&quot;&gt;\n    &lt;semantic:participant id=&quot;_6-53&quot; name=&quot;Pizza Customer&quot; processRef=&quot;_6-2&quot; /&gt;\n    &lt;semantic:participant id=&quot;_6-438&quot; name=&quot;Pizza vendor&quot; processRef=&quot;_6-1&quot; /&gt;\n    &lt;semantic:messageFlow id=&quot;_6-638&quot; name=&quot;pizza order&quot; sourceRef=&quot;_6-127&quot; targetRef=&quot;OrderReceivedEvent&quot; /&gt;\n    &lt;semantic:messageFlow id=&quot;_6-642&quot; name=&quot;&quot; sourceRef=&quot;_6-236&quot; targetRef=&quot;_6-674&quot; /&gt;\n    &lt;semantic:messageFlow id=&quot;_6-646&quot; name=&quot;receipt&quot; sourceRef=&quot;_6-565&quot; targetRef=&quot;_6-304&quot; /&gt;\n    &lt;semantic:messageFlow id=&quot;_6-648&quot; name=&quot;money&quot; sourceRef=&quot;_6-304&quot; targetRef=&quot;_6-565&quot; /&gt;\n    &lt;semantic:messageFlow id=&quot;_6-640&quot; name=&quot;pizza&quot; sourceRef=&quot;_6-514&quot; targetRef=&quot;_6-202&quot; /&gt;\n    &lt;semantic:messageFlow id=&quot;_6-750&quot; name=&quot;&quot; sourceRef=&quot;CalmCustomerTask&quot; targetRef=&quot;_6-236&quot; /&gt;\n  &lt;/semantic:collaboration&gt;\n  &lt;bpmndi:BPMNDiagram id=&quot;Trisotech.Visio-_6&quot; name=&quot;Untitled Diagram&quot; documentation=&quot;&quot; resolution=&quot;96.00000267028808&quot;&gt;\n    &lt;bpmndi:BPMNPlane bpmnElement=&quot;C1275940932557&quot;&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6-53&quot; bpmnElement=&quot;_6-53&quot; isHorizontal=&quot;true&quot;&gt;\n        &lt;dc:Bounds x=&quot;12&quot; y=&quot;12&quot; width=&quot;1044&quot; height=&quot;294&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6-438&quot; bpmnElement=&quot;_6-438&quot; isHorizontal=&quot;true&quot;&gt;\n        &lt;dc:Bounds x=&quot;12&quot; y=&quot;372&quot; width=&quot;905&quot; height=&quot;337&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-650&quot; bpmnElement=&quot;_6-650&quot; isHorizontal=&quot;true&quot;&gt;\n        &lt;dc:Bounds x=&quot;42&quot; y=&quot;372&quot; width=&quot;875&quot; height=&quot;114&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-446&quot; bpmnElement=&quot;_6-446&quot; isHorizontal=&quot;true&quot;&gt;\n        &lt;dc:Bounds x=&quot;42&quot; y=&quot;486&quot; width=&quot;875&quot; height=&quot;114&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-448&quot; bpmnElement=&quot;_6-448&quot; isHorizontal=&quot;true&quot;&gt;\n        &lt;dc:Bounds x=&quot;42&quot; y=&quot;600&quot; width=&quot;875&quot; height=&quot;109&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6_OrderReceivedEvent&quot; bpmnElement=&quot;OrderReceivedEvent&quot;&gt;\n        &lt;dc:Bounds x=&quot;79&quot; y=&quot;405&quot; width=&quot;30&quot; height=&quot;30&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-652&quot; bpmnElement=&quot;_6-652&quot;&gt;\n        &lt;dc:Bounds x=&quot;140&quot; y=&quot;399&quot; width=&quot;42&quot; height=&quot;42&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-674&quot; bpmnElement=&quot;_6-674&quot;&gt;\n        &lt;dc:Bounds x=&quot;218&quot; y=&quot;404&quot; width=&quot;32&quot; height=&quot;32&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6_CalmCustomerTask&quot; bpmnElement=&quot;CalmCustomerTask&quot;&gt;\n        &lt;dc:Bounds x=&quot;286&quot; y=&quot;386&quot; width=&quot;83&quot; height=&quot;68&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-463&quot; bpmnElement=&quot;_6-463&quot;&gt;\n        &lt;dc:Bounds x=&quot;252&quot; y=&quot;521&quot; width=&quot;83&quot; height=&quot;68&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-514&quot; bpmnElement=&quot;_6-514&quot;&gt;\n        &lt;dc:Bounds x=&quot;464&quot; y=&quot;629&quot; width=&quot;83&quot; height=&quot;68&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-565&quot; bpmnElement=&quot;_6-565&quot;&gt;\n        &lt;dc:Bounds x=&quot;603&quot; y=&quot;629&quot; width=&quot;83&quot; height=&quot;68&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-616&quot; bpmnElement=&quot;_6-616&quot;&gt;\n        &lt;dc:Bounds x=&quot;722&quot; y=&quot;647&quot; width=&quot;32&quot; height=&quot;32&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-61&quot; bpmnElement=&quot;_6-61&quot;&gt;\n        &lt;dc:Bounds x=&quot;66&quot; y=&quot;96&quot; width=&quot;30&quot; height=&quot;30&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-74&quot; bpmnElement=&quot;SelectAPizzaTask&quot;&gt;\n        &lt;dc:Bounds x=&quot;145&quot; y=&quot;77&quot; width=&quot;83&quot; height=&quot;68&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-127&quot; bpmnElement=&quot;_6-127&quot;&gt;\n        &lt;dc:Bounds x=&quot;265&quot; y=&quot;77&quot; width=&quot;83&quot; height=&quot;68&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-180&quot; bpmnElement=&quot;_6-180&quot;&gt;\n        &lt;dc:Bounds x=&quot;378&quot; y=&quot;90&quot; width=&quot;42&quot; height=&quot;42&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-202&quot; bpmnElement=&quot;_6-202&quot;&gt;\n        &lt;dc:Bounds x=&quot;647&quot; y=&quot;95&quot; width=&quot;32&quot; height=&quot;32&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-219&quot; bpmnElement=&quot;_6-219&quot;&gt;\n        &lt;dc:Bounds x=&quot;448&quot; y=&quot;184&quot; width=&quot;32&quot; height=&quot;32&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-236&quot; bpmnElement=&quot;_6-236&quot;&gt;\n        &lt;dc:Bounds x=&quot;517&quot; y=&quot;166&quot; width=&quot;83&quot; height=&quot;68&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-304&quot; bpmnElement=&quot;_6-304&quot;&gt;\n        &lt;dc:Bounds x=&quot;726&quot; y=&quot;77&quot; width=&quot;83&quot; height=&quot;68&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-355&quot; bpmnElement=&quot;_6-355&quot;&gt;\n        &lt;dc:Bounds x=&quot;834&quot; y=&quot;77&quot; width=&quot;83&quot; height=&quot;68&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNShape id=&quot;Trisotech.Visio__6__6-406&quot; bpmnElement=&quot;_6-406&quot;&gt;\n        &lt;dc:Bounds x=&quot;956&quot; y=&quot;95&quot; width=&quot;32&quot; height=&quot;32&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNShape&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-640&quot; bpmnElement=&quot;_6-640&quot;&gt;\n        &lt;di:waypoint x=&quot;506&quot; y=&quot;629&quot; /&gt;\n        &lt;di:waypoint x=&quot;506&quot; y=&quot;384&quot; /&gt;\n        &lt;di:waypoint x=&quot;663&quot; y=&quot;384&quot; /&gt;\n        &lt;di:waypoint x=&quot;663&quot; y=&quot;127&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-630&quot; bpmnElement=&quot;_6-630&quot;&gt;\n        &lt;di:waypoint x=&quot;109&quot; y=&quot;420&quot; /&gt;\n        &lt;di:waypoint x=&quot;140&quot; y=&quot;420&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-691&quot; bpmnElement=&quot;_6-691&quot;&gt;\n        &lt;di:waypoint x=&quot;182&quot; y=&quot;420&quot; /&gt;\n        &lt;di:waypoint x=&quot;200&quot; y=&quot;420&quot; /&gt;\n        &lt;di:waypoint x=&quot;218&quot; y=&quot;420&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-648&quot; bpmnElement=&quot;_6-648&quot;&gt;\n        &lt;di:waypoint x=&quot;754&quot; y=&quot;145&quot; /&gt;\n        &lt;di:waypoint x=&quot;754&quot; y=&quot;408&quot; /&gt;\n        &lt;di:waypoint x=&quot;630&quot; y=&quot;408&quot; /&gt;\n        &lt;di:waypoint x=&quot;631&quot; y=&quot;629&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-422&quot; bpmnElement=&quot;_6-422&quot;&gt;\n        &lt;di:waypoint x=&quot;420&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;438&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;647&quot; y=&quot;111&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-646&quot; bpmnElement=&quot;_6-646&quot; messageVisibleKind=&quot;non_initiating&quot;&gt;\n        &lt;di:waypoint x=&quot;658&quot; y=&quot;629&quot; /&gt;\n        &lt;di:waypoint x=&quot;658&quot; y=&quot;432&quot; /&gt;\n        &lt;di:waypoint x=&quot;782&quot; y=&quot;432&quot; /&gt;\n        &lt;di:waypoint x=&quot;782&quot; y=&quot;145&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-428&quot; bpmnElement=&quot;_6-428&quot;&gt;\n        &lt;di:waypoint x=&quot;679&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;726&quot; y=&quot;111&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-748&quot; bpmnElement=&quot;_6-748&quot;&gt;\n        &lt;di:waypoint x=&quot;250&quot; y=&quot;420&quot; /&gt;\n        &lt;di:waypoint x=&quot;268&quot; y=&quot;420&quot; /&gt;\n        &lt;di:waypoint x=&quot;286&quot; y=&quot;420&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-420&quot; bpmnElement=&quot;_6-420&quot;&gt;\n        &lt;di:waypoint x=&quot;348&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;366&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;378&quot; y=&quot;111&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-636&quot; bpmnElement=&quot;_6-636&quot;&gt;\n        &lt;di:waypoint x=&quot;686&quot; y=&quot;663&quot; /&gt;\n        &lt;di:waypoint x=&quot;704&quot; y=&quot;663&quot; /&gt;\n        &lt;di:waypoint x=&quot;722&quot; y=&quot;663&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-750&quot; bpmnElement=&quot;_6-750&quot;&gt;\n        &lt;di:waypoint x=&quot;328&quot; y=&quot;386&quot; /&gt;\n        &lt;di:waypoint x=&quot;328&quot; y=&quot;348&quot; /&gt;\n        &lt;di:waypoint x=&quot;572&quot; y=&quot;348&quot; /&gt;\n        &lt;di:waypoint x=&quot;572&quot; y=&quot;234&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-436&quot; bpmnElement=&quot;_6-436&quot;&gt;\n        &lt;di:waypoint x=&quot;918&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;936&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;956&quot; y=&quot;111&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-632&quot; bpmnElement=&quot;_6-632&quot;&gt;\n        &lt;di:waypoint x=&quot;335&quot; y=&quot;555&quot; /&gt;\n        &lt;di:waypoint x=&quot;353&quot; y=&quot;555&quot; /&gt;\n        &lt;di:waypoint x=&quot;353&quot; y=&quot;663&quot; /&gt;\n        &lt;di:waypoint x=&quot;464&quot; y=&quot;663&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-634&quot; bpmnElement=&quot;_6-634&quot;&gt;\n        &lt;di:waypoint x=&quot;548&quot; y=&quot;663&quot; /&gt;\n        &lt;di:waypoint x=&quot;603&quot; y=&quot;663&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-125&quot; bpmnElement=&quot;_6-125&quot;&gt;\n        &lt;di:waypoint x=&quot;96&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;114&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;145&quot; y=&quot;111&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-430&quot; bpmnElement=&quot;_6-430&quot;&gt;\n        &lt;di:waypoint x=&quot;600&quot; y=&quot;200&quot; /&gt;\n        &lt;di:waypoint x=&quot;618&quot; y=&quot;200&quot; /&gt;\n        &lt;di:waypoint x=&quot;618&quot; y=&quot;252&quot; /&gt;\n        &lt;di:waypoint x=&quot;576&quot; y=&quot;252&quot; /&gt;\n        &lt;di:waypoint x=&quot;549&quot; y=&quot;252&quot; /&gt;\n        &lt;di:waypoint x=&quot;360&quot; y=&quot;252&quot; /&gt;\n        &lt;di:waypoint x=&quot;360&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;378&quot; y=&quot;111&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-642&quot; bpmnElement=&quot;_6-642&quot;&gt;\n        &lt;di:waypoint x=&quot;545&quot; y=&quot;234&quot; /&gt;\n        &lt;di:waypoint x=&quot;545&quot; y=&quot;324&quot; /&gt;\n        &lt;di:waypoint x=&quot;234&quot; y=&quot;324&quot; /&gt;\n        &lt;di:waypoint x=&quot;234&quot; y=&quot;404&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-424&quot; bpmnElement=&quot;_6-424&quot;&gt;\n        &lt;di:waypoint x=&quot;399&quot; y=&quot;132&quot; /&gt;\n        &lt;di:waypoint x=&quot;399&quot; y=&quot;200&quot; /&gt;\n        &lt;di:waypoint x=&quot;448&quot; y=&quot;200&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-638&quot; bpmnElement=&quot;_6-638&quot;&gt;\n        &lt;di:waypoint x=&quot;306&quot; y=&quot;145&quot; /&gt;\n        &lt;di:waypoint x=&quot;306&quot; y=&quot;252&quot; /&gt;\n        &lt;di:waypoint x=&quot;94&quot; y=&quot;252&quot; /&gt;\n        &lt;di:waypoint x=&quot;94&quot; y=&quot;405&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-426&quot; bpmnElement=&quot;_6-426&quot;&gt;\n        &lt;di:waypoint x=&quot;480&quot; y=&quot;200&quot; /&gt;\n        &lt;di:waypoint x=&quot;498&quot; y=&quot;200&quot; /&gt;\n        &lt;di:waypoint x=&quot;517&quot; y=&quot;200&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-693&quot; bpmnElement=&quot;_6-693&quot;&gt;\n        &lt;di:waypoint x=&quot;161&quot; y=&quot;441&quot; /&gt;\n        &lt;di:waypoint x=&quot;161&quot; y=&quot;556&quot; /&gt;\n        &lt;di:waypoint x=&quot;252&quot; y=&quot;555&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-178&quot; bpmnElement=&quot;_6-178&quot;&gt;\n        &lt;di:waypoint x=&quot;228&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;265&quot; y=&quot;111&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-746&quot; bpmnElement=&quot;_6-746&quot;&gt;\n        &lt;di:waypoint x=&quot;370&quot; y=&quot;420&quot; /&gt;\n        &lt;di:waypoint x=&quot;386&quot; y=&quot;420&quot; /&gt;\n        &lt;di:waypoint x=&quot;386&quot; y=&quot;474&quot; /&gt;\n        &lt;di:waypoint x=&quot;191&quot; y=&quot;474&quot; /&gt;\n        &lt;di:waypoint x=&quot;191&quot; y=&quot;420&quot; /&gt;\n        &lt;di:waypoint x=&quot;218&quot; y=&quot;420&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n      &lt;bpmndi:BPMNEdge id=&quot;Trisotech.Visio__6__6-434&quot; bpmnElement=&quot;_6-434&quot;&gt;\n        &lt;di:waypoint x=&quot;810&quot; y=&quot;111&quot; /&gt;\n        &lt;di:waypoint x=&quot;834&quot; y=&quot;111&quot; /&gt;\n        &lt;bpmndi:BPMNLabel /&gt;\n      &lt;/bpmndi:BPMNEdge&gt;\n    &lt;/bpmndi:BPMNPlane&gt;\n  &lt;/bpmndi:BPMNDiagram&gt;\n&lt;/semantic:definitions&gt;\n",
+          "svg": "assets/examples/bpmn.svg"
+        }
+      ]
+    },
+    {
+      "type": "bytefield",
+      "name": "Bytefield",
+      "href": "https://github.com/Deep-Symmetry/bytefield-svg/",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "bytefield",
+          "title": "Bytefield",
+          "lang": "clojure",
+          "source": "(defattrs :bg-green {:fill \"#a0ffa0\"})\n(defattrs :bg-yellow {:fill \"#ffffa0\"})\n(defattrs :bg-pink {:fill \"#ffb0a0\"})\n(defattrs :bg-cyan {:fill \"#a0fafa\"})\n(defattrs :bg-purple {:fill \"#e4b5f7\"})\n\n(defn draw-group-label-header\n  \"Creates a small borderless box used to draw the textual label headers\n  used below the byte labels for remotedb message diagrams.\n  Arguments are the number of columns to span and the text of the\n  label.\"\n  [span label]\n  (draw-box (text label [:math {:font-size 12}]) {:span    span\n                                                  :borders #{}\n                                                  :height  14}))\n\n(defn draw-remotedb-header\n  \"Generates the byte and field labels and standard header fields of a\n  request or response message for the remotedb database server with\n  the specified kind and args values.\"\n  [kind args]\n  (draw-column-headers)\n  (draw-group-label-header 5 \"start\")\n  (draw-group-label-header 5 \"TxID\")\n  (draw-group-label-header 3 \"type\")\n  (draw-group-label-header 2 \"args\")\n  (draw-group-label-header 1 \"tags\")\n  (next-row 18)\n\n  (draw-box 0x11 :bg-green)\n  (draw-box 0x872349ae [{:span 4} :bg-green])\n  (draw-box 0x11 :bg-yellow)\n  (draw-box (text \"TxID\" :math) [{:span 4} :bg-yellow])\n  (draw-box 0x10 :bg-pink)\n  (draw-box (hex-text kind 4 :bold) [{:span 2} :bg-pink])\n  (draw-box 0x0f :bg-cyan)\n  (draw-box (hex-text args 2 :bold) :bg-cyan)\n  (draw-box 0x14 :bg-purple)\n\n  (draw-box (text \"0000000c\" :hex [[:plain {:font-weight \"light\" :font-size 16}] \" (12)\"])\n            [{:span 4} :bg-purple])\n  (draw-box (hex-text 6 2 :bold) [:box-first :bg-purple])\n  (doseq [val [6 6 3 6 6 6 6 3]]\n    (draw-box (hex-text val 2 :bold) [:box-related :bg-purple]))\n  (doseq [val [0 0]]\n    (draw-box val [:box-related :bg-purple]))\n  (draw-box 0 [:box-last :bg-purple]))\n\n(draw-remotedb-header 0x4702 9)\n\n(draw-box 0x11)\n(draw-box 0x2104 {:span 4})\n(draw-box 0x11)\n(draw-box 0 {:span 4})\n(draw-box 0x11)\n(draw-box (text \"length\" [:math] [:sub 1]) {:span 4})\n(draw-box 0x14)\n\n(draw-box (text \"length\" [:math] [:sub 1]) {:span 4})\n(draw-gap \"Cue and loop point bytes\")\n\n(draw-box nil :box-below)\n(draw-box 0x11)\n(draw-box 0x36 {:span 4})\n(draw-box 0x11)\n(draw-box (text \"num\" [:math] [:sub \"hot\"]) {:span 4})\n(draw-box 0x11)\n(draw-box (text \"num\" [:math] [:sub \"cue\"]) {:span 4})\n\n(draw-box 0x11)\n(draw-box (text \"length\" [:math] [:sub 2]) {:span 4})\n(draw-box 0x14)\n(draw-box (text \"length\" [:math] [:sub 2]) {:span 4})\n(draw-gap \"Unknown bytes\" {:min-label-columns 6})\n(draw-bottom)\n",
+          "svg": "assets/examples/bytefield.svg"
+        }
+      ]
+    },
+    {
+      "type": "seqdiag",
+      "name": "SeqDiag",
+      "href": "https://github.com/blockdiag/seqdiag",
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "seqdiag",
+          "title": "Sequence diagram",
+          "lang": "diag",
+          "source": "seqdiag {\n  browser  -&gt; webserver [label = \"GET /index.html\"];\n  browser &lt;-- webserver;\n  browser  -&gt; webserver [label = \"POST /blog/comment\"];\n  webserver  -&gt; database [label = \"INSERT comment\"];\n  webserver &lt;-- database;\n  browser &lt;-- webserver;\n}",
+          "svg": "assets/examples/seqdiag.svg"
+        }
+      ]
+    },
+    {
+      "type": "actdiag",
+      "name": "ActDiag",
+      "href": "https://github.com/blockdiag/actdiag",
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "actdiag",
+          "title": "Activity diagram",
+          "lang": "diag",
+          "source": "actdiag {\n  write -&gt; convert -&gt; image\n\n  lane user {\n    label = \"User\"\n    write [label = \"Writing reST\"];\n    image [label = \"Get diagram IMAGE\"];\n  }\n  lane actdiag {\n    convert [label = \"Convert reST to Image\"];\n  }\n}",
+          "svg": "assets/examples/actdiag.svg"
+        }
+      ]
+    },
+    {
+      "type": "nwdiag",
+      "name": "NwDiag",
+      "href": "https://github.com/blockdiag/nwdiag",
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "nwdiag",
+          "title": "Network diagram",
+          "lang": "diag",
+          "source": "nwdiag {\n  network dmz {\n    address = \"210.x.x.x/24\"\n\n    web01 [address = \"210.x.x.1\"];\n    web02 [address = \"210.x.x.2\"];\n  }\n  network internal {\n    address = \"172.x.x.x/24\";\n\n    web01 [address = \"172.x.x.1\"];\n    web02 [address = \"172.x.x.2\"];\n    db01;\n    db02;\n  }\n}",
+          "svg": "assets/examples/nwdiag.svg"
+        }
+      ]
+    },
+    {
+      "type": "packetdiag",
+      "name": "PacketDiag",
+      "href": "https://github.com/blockdiag/nwdiag",
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "packetdiag",
+          "title": "Packet diagram",
+          "lang": "diag",
+          "source": "packetdiag {\n  colwidth = 32;\n  node_height = 72;\n\n  0-15: Source Port;\n  16-31: Destination Port;\n  32-63: Sequence Number;\n  64-95: Acknowledgment Number;\n  96-99: Data Offset;\n  100-103: Reserved;\n  104: CWR [rotate = 270];\n  105: ECE [rotate = 270];\n  106: URG [rotate = 270];\n  107: ACK [rotate = 270];\n  108: PSH [rotate = 270];\n  109: RST [rotate = 270];\n  110: SYN [rotate = 270];\n  111: FIN [rotate = 270];\n  112-127: Window;\n  128-143: Checksum;\n  144-159: Urgent Pointer;\n  160-191: (Options and Padding);\n  192-223: data [colheight = 3];\n}",
+          "svg": "assets/examples/packetdiag.svg"
+        }
+      ]
+    },
+    {
+      "type": "rackdiag",
+      "name": "RackDiag",
+      "href": "https://github.com/blockdiag/nwdiag",
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ],
+      "categories": [
+        "hardware"
+      ],
+      "examples": [
+        {
+          "anchor": "rackdiag",
+          "title": "Rack diagram",
+          "lang": "diag",
+          "source": "rackdiag {\n  16U;\n  1: UPS [2U];\n  3: DB Server;\n  4: Web Server;\n  5: Web Server;\n  6: Web Server;\n  7: Load Balancer;\n  8: L3 Switch;\n}",
+          "svg": "assets/examples/rackdiag.svg"
+        }
+      ]
+    },
+    {
+      "type": "c4plantuml",
+      "name": "C4 with PlantUML",
+      "href": "https://github.com/RicardoNiepel/C4-PlantUML",
+      "formats": [
+        "png",
+        "svg",
+        "pdf",
+        "txt",
+        "base64"
+      ],
+      "categories": [
+        "c4"
+      ],
+      "examples": [
+        {
+          "anchor": "c4-context",
+          "title": "Context diagram",
+          "lang": "plantuml",
+          "source": "@startuml\n!include C4_Context.puml\nskinparam backgroundColor transparent\n\nLAYOUT_WITH_LEGEND()\n\ntitle System Context diagram for Internet Banking System\n\nPerson(customer, \"Personal Banking Customer\", \"A customer of the bank, with personal bank accounts.\")\nSystem(banking_system, \"Internet Banking System\", \"Allows customers to view information about their bank accounts, and make payments.\")\n\nSystem_Ext(mail_system, \"E-mail system\", \"The internal Microsoft Exchange e-mail system.\")\nSystem_Ext(mainframe, \"Mainframe Banking System\", \"Stores all of the core banking information about customers, accounts, transactions, etc.\")\n\nRel(customer, banking_system, \"Uses\")\nRel_Back(customer, mail_system, \"Sends e-mails to\")\nRel_Neighbor(banking_system, mail_system, \"Sends e-mails\", \"SMTP\")\nRel(banking_system, mainframe, \"Uses\")\n@enduml\n",
+          "svg": "assets/examples/c4-context.svg"
+        },
+        {
+          "anchor": "c4-container",
+          "title": "Container diagram",
+          "lang": "plantuml",
+          "source": "@startuml\n!include C4_Container.puml\nskinparam backgroundColor transparent\n\nLAYOUT_TOP_DOWN()\nLAYOUT_WITH_LEGEND()\n\ntitle Container diagram for Internet Banking System\n\nPerson(customer, Customer, \"A customer of the bank, with personal bank accounts\")\n\nSystem_Boundary(c1, \"Internet Banking\") {\n    Container(web_app, \"Web Application\", \"Java, Spring MVC\", \"Delivers the static content and the Internet banking SPA\")\n    Container(spa, \"Single-Page App\", \"JavaScript, Angular\", \"Provides all the Internet banking functionality to cutomers via their web browser\")\n    Container(mobile_app, \"Mobile App\", \"C#, Xamarin\", \"Provides a limited subset of the Internet banking functionality to customers via their mobile device\")\n    ContainerDb(database, \"Database\", \"SQL Database\", \"Stores user registraion information, hased auth credentials, access logs, etc.\")\n    Container(backend_api, \"API Application\", \"Java, Docker Container\", \"Provides Internet banking functionality via API\")\n}\n\nSystem_Ext(email_system, \"E-Mail System\", \"The internal Microsoft Exchange system\")\nSystem_Ext(banking_system, \"Mainframe Banking System\", \"Stores all of the core banking information about customers, accounts, transactions, etc.\")\n\nRel(customer, web_app, \"Uses\", \"HTTPS\")\nRel(customer, spa, \"Uses\", \"HTTPS\")\nRel(customer, mobile_app, \"Uses\")\n\nRel_Neighbor(web_app, spa, \"Delivers\")\nRel(spa, backend_api, \"Uses\", \"async, JSON/HTTPS\")\nRel(mobile_app, backend_api, \"Uses\", \"async, JSON/HTTPS\")\nRel_Back_Neighbor(database, backend_api, \"Reads from and writes to\", \"sync, JDBC\")\n\nRel_Back(customer, email_system, \"Sends e-mails to\")\nRel_Back(email_system, backend_api, \"Sends e-mails using\", \"sync, SMTP\")\nRel_Neighbor(backend_api, banking_system, \"Uses\", \"sync/async, XML/HTTPS\")\n@enduml\n",
+          "svg": "assets/examples/c4-container.svg"
+        },
+        {
+          "anchor": "c4-component",
+          "title": "Component diagram",
+          "lang": "plantuml",
+          "source": "@startuml\n!include C4_Component.puml\nskinparam backgroundColor transparent\n\nLAYOUT_WITH_LEGEND()\n\ntitle Component diagram for Internet Banking System - API Application\n\nContainer(spa, \"Single Page Application\", \"javascript and angular\", \"Provides all the internet banking functionality to customers via their web browser.\")\nContainer(ma, \"Mobile App\", \"Xamarin\", \"Provides a limited subset ot the internet banking functionality to customers via their mobile mobile device.\")\nContainerDb(db, \"Database\", \"Relational Database Schema\", \"Stores user registration information, hashed authentication credentials, access logs, etc.\")\nSystem_Ext(mbs, \"Mainframe Banking System\", \"Stores all of the core banking information about customers, accounts, transactions, etc.\")\n\nContainer_Boundary(api, \"API Application\") {\n    Component(sign, \"Sign In Controller\", \"MVC Rest Controlle\", \"Allows users to sign in to the internet banking system\")\n    Component(accounts, \"Accounts Summary Controller\", \"MVC Rest Controlle\", \"Provides customers with a summary of their bank accounts\")\n    Component(security, \"Security Component\", \"Spring Bean\", \"Provides functionality related to singing in, changing passwords, etc.\")\n    Component(mbsfacade, \"Mainframe Banking System Facade\", \"Spring Bean\", \"A facade onto the mainframe banking system.\")\n\n    Rel(sign, security, \"Uses\")\n    Rel(accounts, mbsfacade, \"Uses\")\n    Rel(security, db, \"Read & write to\", \"JDBC\")\n    Rel(mbsfacade, mbs, \"Uses\", \"XML/HTTPS\")\n}\n\nRel(spa, sign, \"Uses\", \"JSON/HTTPS\")\nRel(spa, accounts, \"Uses\", \"JSON/HTTPS\")\n\nRel(ma, sign, \"Uses\", \"JSON/HTTPS\")\nRel(ma, accounts, \"Uses\", \"JSON/HTTPS\")\n@enduml\n",
+          "svg": "assets/examples/c4-component.svg"
+        }
+      ]
+    },
+    {
+      "type": "d2",
+      "name": "D2",
+      "href": "https://github.com/terrastruct/d2",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "d2",
+          "title": "Simple flow",
+          "lang": "d2",
+          "source": "style: {\n  fill: transparent\n}\n\nClient -&gt; Kroki: request\nKroki -&gt; Client: svg",
+          "svg": "assets/examples/d2.svg"
+        }
+      ]
+    },
+    {
+      "type": "dbml",
+      "name": "DBML",
+      "href": "https://github.com/softwaretechnik-berlin/dbml-renderer",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "dbml",
+          "title": "Two related tables",
+          "lang": "dbml",
+          "source": "Table users {\n  id integer [primary key]\n  name varchar\n}\n\nTable posts {\n  id integer [primary key]\n  user_id integer\n  title varchar\n}\n\nRef: posts.user_id &gt; users.id",
+          "svg": "assets/examples/dbml.svg"
+        }
+      ]
+    },
+    {
+      "type": "ditaa",
+      "name": "Ditaa",
+      "href": "https://ditaa.sourceforge.net",
+      "formats": [
+        "png",
+        "svg"
+      ],
+      "categories": [
+        "drawing"
+      ],
+      "examples": [
+        {
+          "anchor": "conjugate",
+          "title": "Conjugate prior relationships",
+          "lang": "ascii",
+          "source": "                          +-------------+\n                          |             |\n                          | Exponential |\n                          |             |\n                          +-------------+\n                                 |\n                          lambda |\n                                 v\n+-------------+           +-------------+           +-------------+\n|             |   tau     |             |   lambda  |             |\n|  Lognormal  |---------->|    Gamma    |<----------| Poisson     |\n|             |           |             |---+       |             |\n+-------------+           +-------------+   |       +-------------+\n      |                         ^ ^         | beta\n      |                   tau   | |         |\n      | tau                     | +---------+\n      |                   +-------------+\n      +------------------>|             |\n                          |     Normal  |\n                          |             |----+\n                          +-------------+    |\n                                     ^       | mu\n                                     |       |\n                                     +-------+\n",
+          "svg": "assets/examples/conjugate.svg"
+        }
+      ]
+    },
+    {
+      "type": "erd",
+      "name": "Erd",
+      "href": "https://github.com/BurntSushi/erd",
+      "formats": [
+        "png",
+        "svg",
+        "jpeg",
+        "pdf"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "erd",
+          "title": "Entity Relationship Diagram",
+          "lang": "erd",
+          "source": "[Person]\n*name\nheight\nweight\n+birth_location_id\n\n[Location]\n*id\ncity\nstate\ncountry\n\nPerson *--1 Location",
+          "svg": "assets/examples/erd.svg"
+        }
+      ]
+    },
+    {
+      "type": "excalidraw",
+      "name": "Excalidraw",
+      "href": "https://github.com/excalidraw/excalidraw",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "drawing"
+      ],
+      "examples": [
+        {
+          "anchor": "excalidraw",
+          "title": "Hand-drawn like diagrams",
+          "lang": "json",
+          "source": "{\n  \"type\": \"excalidraw\",\n  \"version\": 2,\n  \"source\": \"https://excalidraw.com\",\n  \"elements\": [\n    {\n      \"type\": \"rectangle\",\n      \"version\": 175,\n      \"versionNonce\": 279344008,\n      \"isDeleted\": false,\n      \"id\": \"2ZYh24ed28FJ0yE-S3YNY\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 580,\n      \"y\": 140,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#15aabf\",\n      \"width\": 80,\n      \"height\": 19.999999999999996,\n      \"seed\": 521916552,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"Be1y2yzhV3Zd4nwCro__8\"\n      ]\n    },\n    {\n      \"type\": \"rectangle\",\n      \"version\": 180,\n      \"versionNonce\": 164784376,\n      \"isDeleted\": false,\n      \"id\": \"bO0OVt6m7LowYpq22ePCA\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 660,\n      \"y\": 140,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#4c6ef5\",\n      \"width\": 120,\n      \"height\": 19.999999999999996,\n      \"seed\": 1303206904,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"KaCO9-QjUenSyCuuanoTo\"\n      ]\n    },\n    {\n      \"type\": \"rectangle\",\n      \"version\": 183,\n      \"versionNonce\": 27181704,\n      \"isDeleted\": false,\n      \"id\": \"jz0Huq9-s6pNxDw0RqHcR\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 780,\n      \"y\": 140,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#fab005\",\n      \"width\": 180,\n      \"height\": 19.999999999999996,\n      \"seed\": 861962120,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"74ifmqmu0vN0NK0_0FwPm\"\n      ]\n    },\n    {\n      \"type\": \"rectangle\",\n      \"version\": 192,\n      \"versionNonce\": 2123008504,\n      \"isDeleted\": false,\n      \"id\": \"UnmNTmwJtm6moubcGtSgB\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 960,\n      \"y\": 140,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#fa5252\",\n      \"width\": 80,\n      \"height\": 19.999999999999996,\n      \"seed\": 277814520,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"1v60NED2criGG-wo9-oQL\"\n      ]\n    },\n    {\n      \"type\": \"rectangle\",\n      \"version\": 202,\n      \"versionNonce\": 1823814024,\n      \"isDeleted\": false,\n      \"id\": \"of76J4WOJHnHi0L61Vst_\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 1040,\n      \"y\": 140,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#be4bdb\",\n      \"width\": 180,\n      \"height\": 19.999999999999996,\n      \"seed\": 1496796808,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"jjuPzyRneMv3f65lps_6a\"\n      ]\n    },\n    {\n      \"type\": \"rectangle\",\n      \"version\": 193,\n      \"versionNonce\": 1234602744,\n      \"isDeleted\": false,\n      \"id\": \"SlvbjeV-9lXbcrlKib-hj\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 1220,\n      \"y\": 140,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 60,\n      \"height\": 19.999999999999996,\n      \"seed\": 1938865656,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"5QQzhw_uqk_rBaW2wMriT\"\n      ]\n    },\n    {\n      \"type\": \"text\",\n      \"version\": 81,\n      \"versionNonce\": 1188901129,\n      \"isDeleted\": false,\n      \"id\": \"vrdt3JfbD2Xwz4K4TWScI\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 840,\n      \"y\": -60,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 190,\n      \"height\": 45,\n      \"seed\": 1499217288,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [],\n      \"fontSize\": 36,\n      \"fontFamily\": 1,\n      \"text\": \"JavaScript\",\n      \"baseline\": 32,\n      \"textAlign\": \"left\",\n      \"verticalAlign\": \"top\"\n    },\n    {\n      \"type\": \"arrow\",\n      \"version\": 343,\n      \"versionNonce\": 1369065096,\n      \"isDeleted\": false,\n      \"id\": \"Be1y2yzhV3Zd4nwCro__8\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 597.5075333823274,\n      \"y\": 299,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 40,\n      \"height\": 139,\n      \"seed\": 666255096,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"round\",\n      \"boundElementIds\": [],\n      \"startBinding\": {\n        \"focus\": -0.41953339688473495,\n        \"gap\": 1,\n        \"elementId\": \"UxgtvUBaIPnDWJZ9kUQH8\"\n      },\n      \"endBinding\": {\n        \"focus\": -0.11111111111111113,\n        \"gap\": 1,\n        \"elementId\": \"2ZYh24ed28FJ0yE-S3YNY\"\n      },\n      \"points\": [\n        [\n          0,\n          0\n        ],\n        [\n          -17.507533382327438,\n          -59\n        ],\n        [\n          22.492466617672562,\n          -139\n        ]\n      ],\n      \"lastCommittedPoint\": null,\n      \"startArrowhead\": null,\n      \"endArrowhead\": \"arrow\"\n    },\n    {\n      \"type\": \"text\",\n      \"version\": 81,\n      \"versionNonce\": 690339976,\n      \"isDeleted\": false,\n      \"id\": \"UxgtvUBaIPnDWJZ9kUQH8\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 580,\n      \"y\": 300,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 94,\n      \"height\": 45,\n      \"seed\": 84626568,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"Be1y2yzhV3Zd4nwCro__8\"\n      ],\n      \"fontSize\": 36,\n      \"fontFamily\": 1,\n      \"text\": \"Fetch\",\n      \"baseline\": 32,\n      \"textAlign\": \"left\",\n      \"verticalAlign\": \"top\"\n    },\n    {\n      \"type\": \"rectangle\",\n      \"version\": 60,\n      \"versionNonce\": 897215480,\n      \"isDeleted\": false,\n      \"id\": \"-Lq0agjWQ31TR_Av5Z4HW\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 520,\n      \"y\": -60,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"transparent\",\n      \"width\": 820,\n      \"height\": 540,\n      \"seed\": 495165432,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"jjuPzyRneMv3f65lps_6a\"\n      ]\n    },\n    {\n      \"type\": \"arrow\",\n      \"version\": 537,\n      \"versionNonce\": 1626949112,\n      \"isDeleted\": false,\n      \"id\": \"KaCO9-QjUenSyCuuanoTo\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 721.0588599991052,\n      \"y\": 60.17790458606555,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 1.0588599991051524,\n      \"height\": 79.82209541393445,\n      \"seed\": 637565832,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"round\",\n      \"boundElementIds\": [],\n      \"startBinding\": null,\n      \"endBinding\": {\n        \"focus\": 0,\n        \"gap\": 1,\n        \"elementId\": \"bO0OVt6m7LowYpq22ePCA\"\n      },\n      \"points\": [\n        [\n          0,\n          0\n        ],\n        [\n          -1.0588599991051524,\n          39.82209541393445\n        ],\n        [\n          -1.0588599991051524,\n          79.82209541393445\n        ]\n      ],\n      \"lastCommittedPoint\": null,\n      \"startArrowhead\": null,\n      \"endArrowhead\": \"arrow\"\n    },\n    {\n      \"type\": \"text\",\n      \"version\": 112,\n      \"versionNonce\": 358083143,\n      \"isDeleted\": false,\n      \"id\": \"4hEOdlcwK6AHyVhjc-MXS\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 660,\n      \"y\": 20,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 103,\n      \"height\": 45,\n      \"seed\": 352116984,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [],\n      \"fontSize\": 36,\n      \"fontFamily\": 1,\n      \"text\": \"Parse\",\n      \"baseline\": 32,\n      \"textAlign\": \"left\",\n      \"verticalAlign\": \"top\"\n    },\n    {\n      \"type\": \"arrow\",\n      \"version\": 534,\n      \"versionNonce\": 983577992,\n      \"isDeleted\": false,\n      \"id\": \"74ifmqmu0vN0NK0_0FwPm\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 841.6574209245741,\n      \"y\": 219,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 43.15128973100309,\n      \"height\": 59.174989629909305,\n      \"seed\": 1853344392,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"round\",\n      \"boundElementIds\": [],\n      \"startBinding\": {\n        \"focus\": 0.09211398277003865,\n        \"gap\": 1,\n        \"elementId\": \"K4so-arfr0JX0NJx8vd7T\"\n      },\n      \"endBinding\": {\n        \"focus\": -0.2163077865936296,\n        \"gap\": 1,\n        \"elementId\": \"jz0Huq9-s6pNxDw0RqHcR\"\n      },\n      \"points\": [\n        [\n          0,\n          0\n        ],\n        [\n          -1.6574209245741258,\n          1\n        ],\n        [\n          41.493868806428964,\n          -58.174989629909305\n        ]\n      ],\n      \"lastCommittedPoint\": null,\n      \"startArrowhead\": null,\n      \"endArrowhead\": \"arrow\"\n    },\n    {\n      \"type\": \"text\",\n      \"version\": 118,\n      \"versionNonce\": 1185705864,\n      \"isDeleted\": false,\n      \"id\": \"K4so-arfr0JX0NJx8vd7T\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 640,\n      \"y\": 220,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 366,\n      \"height\": 45,\n      \"seed\": 765854200,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"74ifmqmu0vN0NK0_0FwPm\"\n      ],\n      \"fontSize\": 36,\n      \"fontFamily\": 1,\n      \"text\": \"Compile and Optimize\",\n      \"baseline\": 32,\n      \"textAlign\": \"left\",\n      \"verticalAlign\": \"top\"\n    },\n    {\n      \"type\": \"arrow\",\n      \"version\": 791,\n      \"versionNonce\": 1724761848,\n      \"isDeleted\": false,\n      \"id\": \"1v60NED2criGG-wo9-oQL\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 960,\n      \"y\": 320,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 80,\n      \"height\": 160,\n      \"seed\": 1764571528,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"round\",\n      \"boundElementIds\": [],\n      \"startBinding\": {\n        \"focus\": -0.1637630662020906,\n        \"gap\": 1,\n        \"elementId\": \"dviXudWNxiHYQMZfqHWsH\"\n      },\n      \"endBinding\": {\n        \"focus\": 0.07692307692307691,\n        \"gap\": 1,\n        \"elementId\": \"UnmNTmwJtm6moubcGtSgB\"\n      },\n      \"points\": [\n        [\n          0,\n          0\n        ],\n        [\n          80,\n          -40\n        ],\n        [\n          40,\n          -160\n        ]\n      ],\n      \"lastCommittedPoint\": null,\n      \"startArrowhead\": null,\n      \"endArrowhead\": \"arrow\"\n    },\n    {\n      \"type\": \"text\",\n      \"version\": 194,\n      \"versionNonce\": 473574648,\n      \"isDeleted\": false,\n      \"id\": \"dviXudWNxiHYQMZfqHWsH\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 720,\n      \"y\": 320,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 484,\n      \"height\": 45,\n      \"seed\": 1988297464,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"1v60NED2criGG-wo9-oQL\"\n      ],\n      \"fontSize\": 36,\n      \"fontFamily\": 1,\n      \"text\": \"Re-optimize and Deoptimize\",\n      \"baseline\": 32,\n      \"textAlign\": \"left\",\n      \"verticalAlign\": \"top\"\n    },\n    {\n      \"type\": \"arrow\",\n      \"version\": 708,\n      \"versionNonce\": 185615496,\n      \"isDeleted\": false,\n      \"id\": \"jjuPzyRneMv3f65lps_6a\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 1140,\n      \"y\": 80,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 20,\n      \"height\": 60,\n      \"seed\": 1767688328,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"round\",\n      \"boundElementIds\": [],\n      \"startBinding\": {\n        \"focus\": -0.3021784319542362,\n        \"gap\": 14.800415739789742,\n        \"elementId\": \"qhkjvI1VmWZdnKvU5QKZK\"\n      },\n      \"endBinding\": {\n        \"focus\": 0.15789473684210528,\n        \"gap\": 1,\n        \"elementId\": \"of76J4WOJHnHi0L61Vst_\"\n      },\n      \"points\": [\n        [\n          0,\n          0\n        ],\n        [\n          -20,\n          20\n        ],\n        [\n          0,\n          60\n        ]\n      ],\n      \"lastCommittedPoint\": null,\n      \"startArrowhead\": null,\n      \"endArrowhead\": \"arrow\"\n    },\n    {\n      \"type\": \"text\",\n      \"version\": 213,\n      \"versionNonce\": 2105884296,\n      \"isDeleted\": false,\n      \"id\": \"qhkjvI1VmWZdnKvU5QKZK\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 1080,\n      \"y\": 20.19958426021026,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 139,\n      \"height\": 45,\n      \"seed\": 2115494904,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"jjuPzyRneMv3f65lps_6a\"\n      ],\n      \"fontSize\": 36,\n      \"fontFamily\": 1,\n      \"text\": \"Execute\",\n      \"baseline\": 32,\n      \"textAlign\": \"left\",\n      \"verticalAlign\": \"top\"\n    },\n    {\n      \"type\": \"arrow\",\n      \"version\": 707,\n      \"versionNonce\": 543827960,\n      \"isDeleted\": false,\n      \"id\": \"5QQzhw_uqk_rBaW2wMriT\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 1220,\n      \"y\": 240,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 20,\n      \"height\": 80,\n      \"seed\": 2059564936,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"round\",\n      \"boundElementIds\": [],\n      \"startBinding\": {\n        \"focus\": 0.7391304347826086,\n        \"gap\": 2,\n        \"elementId\": \"C6fyzTg2FHAmrRYfC_THm\"\n      },\n      \"endBinding\": {\n        \"focus\": 0.3333333333333333,\n        \"gap\": 1,\n        \"elementId\": \"SlvbjeV-9lXbcrlKib-hj\"\n      },\n      \"points\": [\n        [\n          0,\n          0\n        ],\n        [\n          20,\n          -40\n        ],\n        [\n          20,\n          -80\n        ]\n      ],\n      \"lastCommittedPoint\": null,\n      \"startArrowhead\": null,\n      \"endArrowhead\": \"arrow\"\n    },\n    {\n      \"type\": \"text\",\n      \"version\": 227,\n      \"versionNonce\": 2002374136,\n      \"isDeleted\": false,\n      \"id\": \"C6fyzTg2FHAmrRYfC_THm\",\n      \"fillStyle\": \"hachure\",\n      \"strokeWidth\": 1,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"angle\": 0,\n      \"x\": 1160,\n      \"y\": 220,\n      \"strokeColor\": \"#000000\",\n      \"backgroundColor\": \"#868e96\",\n      \"width\": 58,\n      \"height\": 45,\n      \"seed\": 1651025144,\n      \"groupIds\": [],\n      \"strokeSharpness\": \"sharp\",\n      \"boundElementIds\": [\n        \"5QQzhw_uqk_rBaW2wMriT\"\n      ],\n      \"fontSize\": 36,\n      \"fontFamily\": 1,\n      \"text\": \"GC\",\n      \"baseline\": 32,\n      \"textAlign\": \"left\",\n      \"verticalAlign\": \"top\"\n    }\n  ],\n  \"appState\": {\n    \"viewBackgroundColor\": \"#ffffff\",\n    \"gridSize\": 20\n  }\n}",
+          "svg": "assets/examples/excalidraw.svg",
+          "inline": true
+        }
+      ]
+    },
+    {
+      "type": "goat",
+      "name": "GoAT",
+      "href": "https://github.com/blampe/goat",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "drawing"
+      ],
+      "examples": [
+        {
+          "anchor": "goat",
+          "title": "Simple flow",
+          "lang": "goat",
+          "source": "+-------+     +-------+\n| Alice |----&gt;|  Bob  |\n+-------+     +-------+",
+          "svg": "assets/examples/goat.svg"
+        }
+      ]
+    },
+    {
+      "type": "graphviz",
+      "name": "GraphViz",
+      "href": "https://www.graphviz.org/",
+      "formats": [
+        "png",
+        "svg",
+        "jpeg",
+        "pdf"
+      ],
+      "categories": [
+        "graph"
+      ],
+      "examples": [
+        {
+          "anchor": "oo-graph",
+          "title": "Object Oriented Graph",
+          "lang": "diag",
+          "source": "digraph \"unix\" {\n  graph [ fontname = \"Helvetica-Oblique\",\n          bgcolor = \"transparent\",\n          fontsize = 36,\n          label = \"\\n\\n\\n\\nObject Oriented Graphs\\nStephen North, 3/19/93\",\n          size = \"6,6\" ];\n  node [ shape = polygon,\n         sides = 4,\n         distortion = \"0.0\",\n         orientation = \"0.0\",\n         skew = \"0.0\",\n         color = white,\n         style = filled,\n         fontname = \"Helvetica-Outline\" ];\n  \"5th Edition\" [sides=9, distortion=\"0.936354\", orientation=28, skew=\"-0.126818\", color=salmon2];\n  \"6th Edition\" [sides=5, distortion=\"0.238792\", orientation=11, skew=\"0.995935\", color=deepskyblue];\n  \"PWB 1.0\" [sides=8, distortion=\"0.019636\", orientation=79, skew=\"-0.440424\", color=goldenrod2];\n  LSX [sides=9, distortion=\"-0.698271\", orientation=22, skew=\"-0.195492\", color=burlywood2];\n  \"1 BSD\" [sides=7, distortion=\"0.265084\", orientation=26, skew=\"0.403659\", color=gold1];\n  \"Mini Unix\" [distortion=\"0.039386\", orientation=2, skew=\"-0.461120\", color=greenyellow];\n  Wollongong [sides=5, distortion=\"0.228564\", orientation=63, skew=\"-0.062846\", color=darkseagreen];\n  Interdata [distortion=\"0.624013\", orientation=56, skew=\"0.101396\", color=dodgerblue1];\n  \"Unix/TS 3.0\" [sides=8, distortion=\"0.731383\", orientation=43, skew=\"-0.824612\", color=thistle2];\n  \"PWB 2.0\" [sides=6, distortion=\"0.592100\", orientation=34, skew=\"-0.719269\", color=darkolivegreen3];\n  \"7th Edition\" [sides=10, distortion=\"0.298417\", orientation=65, skew=\"0.310367\", color=chocolate];\n  \"8th Edition\" [distortion=\"-0.997093\", orientation=50, skew=\"-0.061117\", color=turquoise3];\n  \"32V\" [sides=7, distortion=\"0.878516\", orientation=19, skew=\"0.592905\", color=steelblue3];\n  V7M [sides=10, distortion=\"-0.960249\", orientation=32, skew=\"0.460424\", color=navy];\n  \"Ultrix-11\" [sides=10, distortion=\"-0.633186\", orientation=10, skew=\"0.333125\", color=darkseagreen4];\n  Xenix [sides=8, distortion=\"-0.337997\", orientation=52, skew=\"-0.760726\", color=coral];\n  \"UniPlus+\" [sides=7, distortion=\"0.788483\", orientation=39, skew=\"-0.526284\", color=darkolivegreen3];\n  \"9th Edition\" [sides=7, distortion=\"0.138690\", orientation=55, skew=\"0.554049\", color=coral3];\n  \"2 BSD\" [sides=7, distortion=\"-0.010661\", orientation=84, skew=\"0.179249\", color=blanchedalmond];\n  \"2.8 BSD\" [distortion=\"-0.239422\", orientation=44, skew=\"0.053841\", color=lightskyblue1];\n  \"2.9 BSD\" [distortion=\"-0.843381\", orientation=70, skew=\"-0.601395\", color=aquamarine2];\n  \"3 BSD\" [sides=10, distortion=\"0.251820\", orientation=18, skew=\"-0.530618\", color=lemonchiffon];\n  \"4 BSD\" [sides=5, distortion=\"-0.772300\", orientation=24, skew=\"-0.028475\", color=darkorange1];\n  \"4.1 BSD\" [distortion=\"-0.226170\", orientation=38, skew=\"0.504053\", color=lightyellow1];\n  \"4.2 BSD\" [sides=10, distortion=\"-0.807349\", orientation=50, skew=\"-0.908842\", color=darkorchid4];\n  \"4.3 BSD\" [sides=10, distortion=\"-0.030619\", orientation=76, skew=\"0.985021\", color=lemonchiffon2];\n  \"Ultrix-32\" [distortion=\"-0.644209\", orientation=21, skew=\"0.307836\", color=goldenrod3];\n  \"PWB 1.2\" [sides=7, distortion=\"0.640971\", orientation=84, skew=\"-0.768455\", color=cyan];\n  \"USG 1.0\" [distortion=\"0.758942\", orientation=42, skew=\"0.039886\", color=blue];\n  \"CB Unix 1\" [sides=9, distortion=\"-0.348692\", orientation=42, skew=\"0.767058\", color=firebrick];\n  \"USG 2.0\" [distortion=\"0.748625\", orientation=74, skew=\"-0.647656\", color=chartreuse4];\n  \"CB Unix 2\" [sides=10, distortion=\"0.851818\", orientation=32, skew=\"-0.020120\", color=greenyellow];\n  \"CB Unix 3\" [sides=10, distortion=\"0.992237\", orientation=29, skew=\"0.256102\", color=bisque4];\n  \"Unix/TS++\" [sides=6, distortion=\"0.545461\", orientation=16, skew=\"0.313589\", color=mistyrose2];\n  \"PDP-11 Sys V\" [sides=9, distortion=\"-0.267769\", orientation=40, skew=\"0.271226\", color=cadetblue1];\n  \"USG 3.0\" [distortion=\"-0.848455\", orientation=44, skew=\"0.267152\", color=bisque2];\n  \"Unix/TS 1.0\" [distortion=\"0.305594\", orientation=75, skew=\"0.070516\", color=orangered];\n  \"TS 4.0\" [sides=10, distortion=\"-0.641701\", orientation=50, skew=\"-0.952502\", color=crimson];\n  \"System V.0\" [sides=9, distortion=\"0.021556\", orientation=26, skew=\"-0.729938\", color=darkorange1];\n  \"System V.2\" [sides=6, distortion=\"0.985153\", orientation=33, skew=\"-0.399752\", color=darkolivegreen4];\n  \"System V.3\" [sides=7, distortion=\"-0.687574\", orientation=58, skew=\"-0.180116\", color=lightsteelblue1];\n  \"5th Edition\" -> \"6th Edition\";\n  \"5th Edition\" -> \"PWB 1.0\";\n  \"6th Edition\" -> LSX;\n  \"6th Edition\" -> \"1 BSD\";\n  \"6th Edition\" -> \"Mini Unix\";\n  \"6th Edition\" -> Wollongong;\n  \"6th Edition\" -> Interdata;\n  Interdata -> \"Unix/TS 3.0\";\n  Interdata -> \"PWB 2.0\";\n  Interdata -> \"7th Edition\";\n  \"7th Edition\" -> \"8th Edition\";\n  \"7th Edition\" -> \"32V\";\n  \"7th Edition\" -> V7M;\n  \"7th Edition\" -> \"Ultrix-11\";\n  \"7th Edition\" -> Xenix;\n  \"7th Edition\" -> \"UniPlus+\";\n  V7M -> \"Ultrix-11\";\n  \"8th Edition\" -> \"9th Edition\";\n  \"1 BSD\" -> \"2 BSD\";\n  \"2 BSD\" -> \"2.8 BSD\";\n  \"2.8 BSD\" -> \"Ultrix-11\";\n  \"2.8 BSD\" -> \"2.9 BSD\";\n  \"32V\" -> \"3 BSD\";\n  \"3 BSD\" -> \"4 BSD\";\n  \"4 BSD\" -> \"4.1 BSD\";\n  \"4.1 BSD\" -> \"4.2 BSD\";\n  \"4.1 BSD\" -> \"2.8 BSD\";\n  \"4.1 BSD\" -> \"8th Edition\";\n  \"4.2 BSD\" -> \"4.3 BSD\";\n  \"4.2 BSD\" -> \"Ultrix-32\";\n  \"PWB 1.0\" -> \"PWB 1.2\";\n  \"PWB 1.0\" -> \"USG 1.0\";\n  \"PWB 1.2\" -> \"PWB 2.0\";\n  \"USG 1.0\" -> \"CB Unix 1\";\n  \"USG 1.0\" -> \"USG 2.0\";\n  \"CB Unix 1\" -> \"CB Unix 2\";\n  \"CB Unix 2\" -> \"CB Unix 3\";\n  \"CB Unix 3\" -> \"Unix/TS++\";\n  \"CB Unix 3\" -> \"PDP-11 Sys V\";\n  \"USG 2.0\" -> \"USG 3.0\";\n  \"USG 3.0\" -> \"Unix/TS 3.0\";\n  \"PWB 2.0\" -> \"Unix/TS 3.0\";\n  \"Unix/TS 1.0\" -> \"Unix/TS 3.0\";\n  \"Unix/TS 3.0\" -> \"TS 4.0\";\n  \"Unix/TS++\" -> \"TS 4.0\";\n  \"CB Unix 3\" -> \"TS 4.0\";\n  \"TS 4.0\" -> \"System V.0\";\n  \"System V.0\" -> \"System V.2\";\n  \"System V.2\" -> \"System V.3\";\n}",
+          "svg": "assets/examples/oo-graph.svg"
+        }
+      ]
+    },
+    {
+      "type": "mermaid",
+      "name": "Mermaid",
+      "href": "https://github.com/knsv/mermaid",
+      "formats": [
+        "png",
+        "svg"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "mermaid-seqdiag",
+          "title": "Sequence diagram",
+          "lang": "mermaid",
+          "source": "sequenceDiagram\n    participant Alice\n    participant Bob\n    Alice->John: Hello John, how are you?\n    loop Healthcheck\n        John->John: Fight against hypochondria\n    end\n    Note right of John: Rational thoughts <br/>prevail...\n    John-->Alice: Great!\n    John->Bob: How about you?\n    Bob-->John: Jolly good!\n",
+          "svg": "assets/examples/mermaid-seqdiag.svg"
+        },
+        {
+          "anchor": "gantt",
+          "title": "Gantt",
+          "lang": "mermaid",
+          "source": "gantt\n    title A Gantt Diagram\n    dateFormat  YYYY-MM-DD\n    section Section\n    A task           :a1, 2014-01-01, 30d\n    Another task     :after a1, 20d\n    section Another\n    Task in sec      :2014-01-12, 12d\n    another task     :24d\n",
+          "svg": "assets/examples/gantt.svg"
+        }
+      ]
+    },
+    {
+      "type": "nomnoml",
+      "name": "Nomnoml",
+      "href": "https://github.com/skanaar/nomnoml",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "uml-diag",
+          "title": "UML diagram",
+          "lang": "nomnoml",
+          "source": "[Pirate|eyeCount: Int|raid();pillage()|\n  [beard]--[parrot]\n  [beard]-:&gt;[foul mouth]\n]\n\n[&lt;abstract&gt;Marauder]&lt;:--[Pirate]\n[Pirate]- 0..7[mischief]\n[jollyness]-&gt;[Pirate]\n[jollyness]-&gt;[rum]\n[jollyness]-&gt;[singing]\n[Pirate]-&gt; *[rum|tastiness: Int|swig()]\n[Pirate]-&gt;[singing]\n[singing]<-&gt;[rum]\n\n[&lt;start&gt;st]-&gt;[&lt;state&gt;plunder]\n[plunder]-&gt;[&lt;choice&gt;more loot]\n[more loot]-&gt;[st]\n[more loot] no -&gt;[&lt;end&gt;e]\n\n[&lt;actor&gt;Sailor] - [&lt;usecase&gt;shiver me;timbers]\n",
+          "svg": "assets/examples/uml-diag.svg"
+        }
+      ]
+    },
+    {
+      "type": "pikchr",
+      "name": "Pikchr",
+      "href": "https://github.com/drhsqlite/pikchr",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "diagram",
+        "graph",
+        "drawing"
+      ],
+      "examples": [
+        {
+          "anchor": "syntax",
+          "title": "Syntax diagram",
+          "lang": "pikchr",
+          "source": "$r = 0.2in\nlinerad = 0.75*$r\nlinewid = 0.25\n\n# Start and end blocks\n#\nbox \"element\" bold fit\nline down 50% from last box.sw\ndot rad 250% color black\nX0: last.e + (0.3,0)\narrow from last dot to X0\nmove right 3.9in\nbox wid 5% ht 25% fill black\nX9: last.w - (0.3,0)\narrow from X9 to last box.w\n\n\n# The main rule that goes straight through from start to finish\n#\nbox \"object-definition\" italic fit at 11/16 way between X0 and X9\narrow to X9\narrow from X0 to last box.w\n\n# The LABEL: rule\n#\narrow right $r from X0 then down 1.25*$r then right $r\noval \" LABEL \" fit\narrow 50%\noval \"\\\":\\\"\" fit\narrow 200%\nbox \"position\" italic fit\narrow\nline right until even with X9 - ($r,0) \\\n  then up until even with X9 then to X9\narrow from last oval.e right $r*0.5 then up $r*0.8 right $r*0.8\nline up $r*0.45 right $r*0.45 then right\n\n# The VARIABLE = rule\n#\narrow right $r from X0 then down 2.5*$r then right $r\noval \" VARIABLE \" fit\narrow 70%\nbox \"assignment-operator\" italic fit\narrow 70%\nbox \"expr\" italic fit\nline right until even with X9 - ($r,0) \\\n  then up until even with X9 then to X9\n\n# The PRINT rule\n#\narrow right $r from X0 then down 3.75*$r then right $r\noval \"\\\"print\\\"\" fit\narrow\nbox \"print-args\" italic fit\nline right until even with X9 - ($r,0) \\\n  then up until even with X9 then to X9",
+          "svg": "assets/examples/syntax.svg"
+        },
+        {
+          "anchor": "commit-graph",
+          "title": "Commit Graph",
+          "lang": "pikchr",
+          "source": "scale = 0.8\nfill = white\nlinewid *= 0.5\ncircle \"C0\" fit\ncirclerad = previous.radius\narrow\ncircle \"C1\"\narrow\ncircle \"C2\"\narrow\ncircle \"C4\"\narrow\ncircle \"C6\"\ncircle \"C3\" at dist(C2,C4) heading 30 from C2\narrow\ncircle \"C5\"\narrow from C2 to C3 chop\nC3P: circle \"C3'\" at dist(C4,C6) heading 30 from C6\narrow right from C3P.e\nC5P: circle \"C5'\"\narrow from C6 to C3P chop\n\nbox height C3.y-C2.y \\\n    width (C5P.e.x-C0.w.x)+linewid \\\n    with .w at 0.5*linewid west of C0.w \\\n    behind C0 \\\n    fill 0xc6e2ff thin color gray\nbox same width previous.e.x - C2.w.x \\\n    with .se at previous.ne \\\n    fill 0x9accfc\n\"trunk\" below at 2nd last box.s\n\"feature branch\" above at last box.n\n\ncircle \"C0\" at 3.7cm south of C0\narrow\ncircle \"C1\"\narrow\ncircle \"C2\"\narrow\ncircle \"C4\"\narrow\ncircle \"C6\"\ncircle \"C3\" at dist(C2,C4) heading 30 from C2\narrow\ncircle \"C5\"\narrow\ncircle \"C7\"\narrow from C2 to C3 chop\narrow from C6 to C7 chop\n\nbox height C3.y-C2.y \\\n    width (C7.e.x-C0.w.x)+1.5*C1.radius \\\n    with .w at 0.5*linewid west of C0.w \\\n    behind C0 \\\n    fill 0xc6e2ff thin color gray\nbox same width previous.e.x - C2.w.x \\\n    with .se at previous.ne \\\n    fill 0x9accfc\n\"trunk\" below at 2nd last box.s\n\"feature branch\" above at last box.n",
+          "svg": "assets/examples/commit-graph.svg"
+        },
+        {
+          "anchor": "impossible-trident",
+          "title": "Impossible trident",
+          "lang": "pikchr",
+          "source": "# Impossible trident pikchr script\n# https://en.wikipedia.org/wiki/Impossible_trident\n# pikchr script by Kees Nuyt, license Creative Commons BY-NC-SA\n# https://creativecommons.org/licenses/by-nc-sa/4.0/\n\nscale = 1.0\neh = 0.5cm\new = 0.2cm\ned = 2 * eh\ner = 0.4cm\nlws = 4.0cm\nlwm = lws + er\nlwl = lwm + er\n\nellipse height eh width ew\nL1: line width lwl from last ellipse.n\nline width lwm from last ellipse.s\nLV: line height eh down\n\nmove right er down ed from last ellipse.n\nellipse height eh width ew\nL3: line width lws right from last ellipse.n to LV.end then down eh right ew\nline width lwm right from last ellipse.s then to LV.start\n\nmove right er down ed from last ellipse.n\nellipse height eh width ew\nline width lwl right from last ellipse.n then to L1.end\nline width lwl right from last ellipse.s then up eh",
+          "svg": "assets/examples/impossible-trident.svg"
+        }
+      ]
+    },
+    {
+      "type": "plantuml",
+      "name": "PlantUML",
+      "href": "https://github.com/plantuml/plantuml",
+      "formats": [
+        "png",
+        "svg",
+        "pdf",
+        "txt",
+        "base64"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "use-case",
+          "title": "Use case diagram",
+          "lang": "plantuml",
+          "source": "@startuml\nskinparam backgroundColor transparent\nleft to right direction\nskinparam packageStyle rectangle\nskinparam monochrome true\nactor customer\nactor clerk\nrectangle checkout {\n  customer -- (checkout)\n  (checkout) .> (payment) : include\n  (help) .> (checkout) : extends\n  (checkout) -- clerk\n}\n@enduml\n",
+          "svg": "assets/examples/use-case.svg"
+        },
+        {
+          "anchor": "wbs",
+          "title": "Work Breakdown Structure",
+          "lang": "plantuml",
+          "source": "@startwbs\nskinparam backgroundColor transparent\nskinparam monochrome true\n* Business Process Modelling WBS\n** Launch the project\n*** Complete Stakeholder Research\n*** Initial Implementation Plan\n** Design phase\n*** Model of AsIs Processes Completed\n**** Model of AsIs Processes Completed1\n**** Model of AsIs Processes Completed2\n*** Measure AsIs performance metrics\n*** Identify Quick Wins\n** Complete innovate phase\n@endwbs\n",
+          "svg": "assets/examples/wbs.svg"
+        },
+        {
+          "anchor": "mind-map",
+          "title": "Mind Map",
+          "lang": "plantuml",
+          "source": "@startmindmap\nskinparam backgroundColor transparent\nskinparam monochrome true\n+ OS\n++ Ubuntu\n+++ Linux Mint\n+++ Kubuntu\n+++ Lubuntu\n+++ KDE Neon\n++ LMDE\n++ SolydXK\n++ SteamOS\n++ Raspbian\n-- Windows 95\n-- Windows 98\n-- Windows NT\n--- Windows 8\n--- Windows 10\n@endmindmap\n",
+          "svg": "assets/examples/mind-map.svg"
+        }
+      ]
+    },
+    {
+      "type": "structurizr",
+      "name": "Structurizr",
+      "href": "https://github.com/structurizr/dsl",
+      "formats": [
+        "png",
+        "svg",
+        "pdf",
+        "txt",
+        "base64"
+      ],
+      "categories": [
+        "c4"
+      ],
+      "examples": [
+        {
+          "anchor": "structurizr-container",
+          "title": "Container diagram",
+          "lang": "structurizr",
+          "source": "workspace \"Big Bank plc\" \"This is an example workspace to illustrate the key features of Structurizr, via the DSL, based around a fictional online banking system.\" {\n\n    model {\n        customer = person \"Personal Banking Customer\" \"A customer of the bank, with personal bank accounts.\" \"Customer\"\n\n        group \"Big Bank plc\" {\n            supportStaff = person \"Customer Service Staff\" \"Customer service staff within the bank.\" \"Bank Staff\"\n            backoffice = person \"Back Office Staff\" \"Administration and support staff within the bank.\" \"Bank Staff\"\n\n            mainframe = softwaresystem \"Mainframe Banking System\" \"Stores all of the core banking information about customers, accounts, transactions, etc.\" \"Existing System\"\n            email = softwaresystem \"E-mail System\" \"The internal Microsoft Exchange e-mail system.\" \"Existing System\"\n            atm = softwaresystem \"ATM\" \"Allows customers to withdraw cash.\" \"Existing System\"\n\n            internetBankingSystem = softwaresystem \"Internet Banking System\" \"Allows customers to view information about their bank accounts, and make payments.\" {\n                singlePageApplication = container \"Single-Page Application\" \"Provides all of the Internet banking functionality to customers via their web browser.\" \"JavaScript and Angular\" \"Web Browser\"\n                mobileApp = container \"Mobile App\" \"Provides a limited subset of the Internet banking functionality to customers via their mobile device.\" \"Xamarin\" \"Mobile App\"\n                webApplication = container \"Web Application\" \"Delivers the static content and the Internet banking single page application.\" \"Java and Spring MVC\"\n                apiApplication = container \"API Application\" \"Provides Internet banking functionality via a JSON/HTTPS API.\" \"Java and Spring MVC\" {\n                    signinController = component \"Sign In Controller\" \"Allows users to sign in to the Internet Banking System.\" \"Spring MVC Rest Controller\"\n                    accountsSummaryController = component \"Accounts Summary Controller\" \"Provides customers with a summary of their bank accounts.\" \"Spring MVC Rest Controller\"\n                    resetPasswordController = component \"Reset Password Controller\" \"Allows users to reset their passwords with a single use URL.\" \"Spring MVC Rest Controller\"\n                    securityComponent = component \"Security Component\" \"Provides functionality related to signing in, changing passwords, etc.\" \"Spring Bean\"\n                    mainframeBankingSystemFacade = component \"Mainframe Banking System Facade\" \"A facade onto the mainframe banking system.\" \"Spring Bean\"\n                    emailComponent = component \"E-mail Component\" \"Sends e-mails to users.\" \"Spring Bean\"\n                }\n                database = container \"Database\" \"Stores user registration information, hashed authentication credentials, access logs, etc.\" \"Oracle Database Schema\" \"Database\"\n            }\n        }\n\n        # relationships between people and software systems\n        customer -> internetBankingSystem \"Views account balances, and makes payments using\"\n        internetBankingSystem -> mainframe \"Gets account information from, and makes payments using\"\n        internetBankingSystem -> email \"Sends e-mail using\"\n        email -> customer \"Sends e-mails to\"\n        customer -> supportStaff \"Asks questions to\" \"Telephone\"\n        supportStaff -> mainframe \"Uses\"\n        customer -> atm \"Withdraws cash using\"\n        atm -> mainframe \"Uses\"\n        backoffice -> mainframe \"Uses\"\n\n        # relationships to/from containers\n        customer -> webApplication \"Visits bigbank.com/ib using\" \"HTTPS\"\n        customer -> singlePageApplication \"Views account balances, and makes payments using\"\n        customer -> mobileApp \"Views account balances, and makes payments using\"\n        webApplication -> singlePageApplication \"Delivers to the customer's web browser\"\n\n        # relationships to/from components\n        singlePageApplication -> signinController \"Makes API calls to\" \"JSON/HTTPS\"\n        singlePageApplication -> accountsSummaryController \"Makes API calls to\" \"JSON/HTTPS\"\n        singlePageApplication -> resetPasswordController \"Makes API calls to\" \"JSON/HTTPS\"\n        mobileApp -> signinController \"Makes API calls to\" \"JSON/HTTPS\"\n        mobileApp -> accountsSummaryController \"Makes API calls to\" \"JSON/HTTPS\"\n        mobileApp -> resetPasswordController \"Makes API calls to\" \"JSON/HTTPS\"\n        signinController -> securityComponent \"Uses\"\n        accountsSummaryController -> mainframeBankingSystemFacade \"Uses\"\n        resetPasswordController -> securityComponent \"Uses\"\n        resetPasswordController -> emailComponent \"Uses\"\n        securityComponent -> database \"Reads from and writes to\" \"JDBC\"\n        mainframeBankingSystemFacade -> mainframe \"Makes API calls to\" \"XML/HTTPS\"\n        emailComponent -> email \"Sends e-mail using\"\n\n        deploymentEnvironment \"Development\" {\n            deploymentNode \"Developer Laptop\" \"\" \"Microsoft Windows 10 or Apple macOS\" {\n                deploymentNode \"Web Browser\" \"\" \"Chrome, Firefox, Safari, or Edge\" {\n                    developerSinglePageApplicationInstance = containerInstance singlePageApplication\n                }\n                deploymentNode \"Docker Container - Web Server\" \"\" \"Docker\" {\n                    deploymentNode \"Apache Tomcat\" \"\" \"Apache Tomcat 8.x\" {\n                        developerWebApplicationInstance = containerInstance webApplication\n                        developerApiApplicationInstance = containerInstance apiApplication\n                    }\n                }\n                deploymentNode \"Docker Container - Database Server\" \"\" \"Docker\" {\n                    deploymentNode \"Database Server\" \"\" \"Oracle 12c\" {\n                        developerDatabaseInstance = containerInstance database\n                    }\n                }\n            }\n            deploymentNode \"Big Bank plc\" \"\" \"Big Bank plc data center\" \"\" {\n                deploymentNode \"bigbank-dev001\" \"\" \"\" \"\" {\n                    softwareSystemInstance mainframe\n                }\n            }\n\n        }\n\n        deploymentEnvironment \"Live\" {\n            deploymentNode \"Customer's mobile device\" \"\" \"Apple iOS or Android\" {\n                liveMobileAppInstance = containerInstance mobileApp\n            }\n            deploymentNode \"Customer's computer\" \"\" \"Microsoft Windows or Apple macOS\" {\n                deploymentNode \"Web Browser\" \"\" \"Chrome, Firefox, Safari, or Edge\" {\n                    liveSinglePageApplicationInstance = containerInstance singlePageApplication\n                }\n            }\n\n            deploymentNode \"Big Bank plc\" \"\" \"Big Bank plc data center\" {\n                deploymentNode \"bigbank-web***\" \"\" \"Ubuntu 16.04 LTS\" \"\" 4 {\n                    deploymentNode \"Apache Tomcat\" \"\" \"Apache Tomcat 8.x\" {\n                        liveWebApplicationInstance = containerInstance webApplication\n                    }\n                }\n                deploymentNode \"bigbank-api***\" \"\" \"Ubuntu 16.04 LTS\" \"\" 8 {\n                    deploymentNode \"Apache Tomcat\" \"\" \"Apache Tomcat 8.x\" {\n                        liveApiApplicationInstance = containerInstance apiApplication\n                    }\n                }\n\n                deploymentNode \"bigbank-db01\" \"\" \"Ubuntu 16.04 LTS\" {\n                    primaryDatabaseServer = deploymentNode \"Oracle - Primary\" \"\" \"Oracle 12c\" {\n                        livePrimaryDatabaseInstance = containerInstance database\n                    }\n                }\n                deploymentNode \"bigbank-db02\" \"\" \"Ubuntu 16.04 LTS\" \"Failover\" {\n                    secondaryDatabaseServer = deploymentNode \"Oracle - Secondary\" \"\" \"Oracle 12c\" \"Failover\" {\n                        liveSecondaryDatabaseInstance = containerInstance database \"Failover\"\n                    }\n                }\n                deploymentNode \"bigbank-prod001\" \"\" \"\" \"\" {\n                    softwareSystemInstance mainframe\n                }\n            }\n\n            primaryDatabaseServer -> secondaryDatabaseServer \"Replicates data to\"\n        }\n    }\n\n    views {\n        systemlandscape \"SystemLandscape\" {\n            include *\n            autoLayout\n        }\n\n        systemcontext internetBankingSystem \"SystemContext\" {\n            include *\n            animation {\n                internetBankingSystem\n                customer\n                mainframe\n                email\n            }\n            autoLayout\n        }\n\n        container internetBankingSystem \"Containers\" {\n            include *\n            animation {\n                customer mainframe email\n                webApplication\n                singlePageApplication\n                mobileApp\n                apiApplication\n                database\n            }\n            autoLayout\n        }\n\n        component apiApplication \"Components\" {\n            include *\n            animation {\n                singlePageApplication mobileApp database email mainframe\n                signinController securityComponent\n                accountsSummaryController mainframeBankingSystemFacade\n                resetPasswordController emailComponent\n            }\n            autoLayout\n        }\n\n        dynamic apiApplication \"SignIn\" \"Summarises how the sign in feature works in the single-page application.\" {\n            singlePageApplication -> signinController \"Submits credentials to\"\n            signinController -> securityComponent \"Validates credentials using\"\n            securityComponent -> database \"select * from users where username = ?\"\n            database -> securityComponent \"Returns user data to\"\n            securityComponent -> signinController \"Returns true if the hashed password matches\"\n            signinController -> singlePageApplication \"Sends back an authentication token to\"\n            autoLayout\n        }\n\n        deployment internetBankingSystem \"Development\" \"DevelopmentDeployment\" {\n            include *\n            animation {\n                developerSinglePageApplicationInstance\n                developerWebApplicationInstance developerApiApplicationInstance\n                developerDatabaseInstance\n            }\n            autoLayout\n        }\n\n        deployment internetBankingSystem \"Live\" \"LiveDeployment\" {\n            include *\n            animation {\n                liveSinglePageApplicationInstance\n                liveMobileAppInstance\n                liveWebApplicationInstance liveApiApplicationInstance\n                livePrimaryDatabaseInstance\n                liveSecondaryDatabaseInstance\n            }\n            autoLayout\n        }\n\n        styles {\n            element \"Person\" {\n                color #ffffff\n                fontSize 22\n                shape Person\n            }\n            element \"Customer\" {\n                background #08427b\n            }\n            element \"Bank Staff\" {\n                background #999999\n            }\n            element \"Software System\" {\n                background #1168bd\n                color #ffffff\n            }\n            element \"Existing System\" {\n                background #999999\n                color #ffffff\n            }\n            element \"Container\" {\n                background #438dd5\n                color #ffffff\n            }\n            element \"Web Browser\" {\n                shape WebBrowser\n            }\n            element \"Mobile App\" {\n                shape MobileDeviceLandscape\n            }\n            element \"Database\" {\n                shape Cylinder\n            }\n            element \"Component\" {\n                background #85bbf0\n                color #000000\n            }\n            element \"Failover\" {\n                opacity 25\n            }\n        }\n    }\n}\n",
+          "svg": "assets/examples/structurizr-container.svg",
+          "params": {
+            "view-key": "Containers"
+          }
+        }
+      ]
+    },
+    {
+      "type": "svgbob",
+      "name": "Svgbob",
+      "href": "https://github.com/ivanceras/svgbob",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "drawing"
+      ],
+      "examples": [
+        {
+          "anchor": "connected-servers",
+          "title": "Connected Servers",
+          "lang": "plain",
+          "source": "                  .-,(  ),-.\n   ___  _      .-(          )-.\n  [___]|=| -->(                )      __________\n  /::/ |_|     '-(          ).-' --->[_...__...°]\n                  '-.( ).-'\n                          \\      ____   __\n                           '--->|    | |==|\n                                |____| |  |\n                                /::::/ |__|\n",
+          "svg": "assets/examples/connected-servers.svg",
+          "params": {
+            "background": "transparent"
+          }
+        },
+        {
+          "anchor": "ascii-art",
+          "title": "Ascii Art",
+          "lang": "plain",
+          "source": "  _____\n /  O__]\n/  ___]\n\\   \\\n |   |\n |   |\n /   /\n \\   \\\n /   /\n",
+          "svg": "assets/examples/ascii-art.svg",
+          "params": {
+            "background": "transparent"
+          }
+        }
+      ]
+    },
+    {
+      "type": "symbolator",
+      "name": "Symbolator",
+      "href": "https://github.com/kevinpt/symbolator",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "hardware"
+      ],
+      "examples": [
+        {
+          "anchor": "hardware-struct",
+          "title": "Hardware structure/behavior",
+          "lang": "vhdl",
+          "source": "module demo_device #(\n    //# {{}}\n    parameter SIZE = 8,\n    parameter RESET_ACTIVE_LEVEL = 1\n) (\n    //# {{clocks|Clocking}}\n    input wire clock,\n    //# {{control|Control signals}}\n    input wire reset,\n    input wire enable,\n    //# {{data|Data ports}}\n    input wire [SIZE-1:0] data_in,\n    output wire [SIZE-1:0] data_out\n);\n  // ...\nendmodule",
+          "svg": "assets/examples/hardware-struct.svg"
+        }
+      ]
+    },
+    {
+      "type": "tikz",
+      "name": "TikZ",
+      "href": "https://github.com/pgf-tikz/pgf",
+      "formats": [
+        "png",
+        "svg",
+        "jpeg",
+        "pdf"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "tikz",
+          "title": "Circle and diagonal",
+          "lang": "tikz",
+          "source": "\\documentclass{article}\n\\usepackage{tikz}\n\\begin{document}\n\\begin{tikzpicture}\n\\draw (0,0) circle (1);\n\\draw (-1,-1) -- (1,1);\n\\end{tikzpicture}\n\\end{document}",
+          "svg": "assets/examples/tikz.svg"
+        }
+      ]
+    },
+    {
+      "type": "umlet",
+      "name": "UMlet",
+      "href": "https://github.com/umlet/umlet",
+      "formats": [
+        "png",
+        "svg",
+        "jpeg"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "state-machine",
+          "title": "State machine",
+          "lang": "xml",
+          "source": "&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;\n&lt;umlet_diagram&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;739&lt;/x&gt;\n            &lt;y&gt;16&lt;/y&gt;\n            &lt;w&gt;232&lt;/w&gt;\n            &lt;h&gt;264&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-\nwhen(spidersensor=&quot;rotate&quot;)\n/block spider\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;161;244;161;34;71;34;71;74&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.FinalState&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;890&lt;/x&gt;\n            &lt;y&gt;260&lt;/y&gt;\n            &lt;w&gt;20&lt;/w&gt;\n            &lt;h&gt;20&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;&lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;750&lt;/x&gt;\n            &lt;y&gt;170&lt;/y&gt;\n            &lt;w&gt;160&lt;/w&gt;\n            &lt;h&gt;137&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-\nafter (10s)\n/ block spider\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;140;100;66;100;66;20&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.State&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;340&lt;/x&gt;\n            &lt;y&gt;420&lt;/y&gt;\n            &lt;w&gt;100&lt;/w&gt;\n            &lt;h&gt;40&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;wait&lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.HistoryState&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;230&lt;/x&gt;\n            &lt;y&gt;440&lt;/y&gt;\n            &lt;w&gt;20&lt;/w&gt;\n            &lt;h&gt;20&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;&lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;230&lt;/x&gt;\n            &lt;y&gt;416&lt;/y&gt;\n            &lt;w&gt;130&lt;/w&gt;\n            &lt;h&gt;54&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-\nrestart\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;20;34;110;34&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;270&lt;/x&gt;\n            &lt;y&gt;396&lt;/y&gt;\n            &lt;w&gt;90&lt;/w&gt;\n            &lt;h&gt;54&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-\npause\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;70;34;20;34&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.FinalState&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;90&lt;/x&gt;\n            &lt;y&gt;400&lt;/y&gt;\n            &lt;w&gt;20&lt;/w&gt;\n            &lt;h&gt;20&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;&lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;46&lt;/x&gt;\n            &lt;y&gt;256&lt;/y&gt;\n            &lt;w&gt;114&lt;/w&gt;\n            &lt;h&gt;164&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-\nafter (10s)\n/timeout\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;54;144;54;34;94;34&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;230&lt;/x&gt;\n            &lt;y&gt;110&lt;/y&gt;\n            &lt;w&gt;190&lt;/w&gt;\n            &lt;h&gt;170&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-\ntimeout\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;20;150;110;150;110;20;170;20&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.State&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;700&lt;/x&gt;\n            &lt;y&gt;90&lt;/y&gt;\n            &lt;w&gt;180&lt;/w&gt;\n            &lt;h&gt;100&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;accept\nboarding pass\n--\nentry/ release card\ndo/release spider\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=true&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;540&lt;/x&gt;\n            &lt;y&gt;140&lt;/y&gt;\n            &lt;w&gt;205&lt;/w&gt;\n            &lt;h&gt;100&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-\n[passenger booked]\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;160;20;120;80;20;80&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;450&lt;/x&gt;\n            &lt;y&gt;210&lt;/y&gt;\n            &lt;w&gt;239&lt;/w&gt;\n            &lt;h&gt;190&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-\n[passenger not booked]\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;219;170;99;170;99;20&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.State&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;670&lt;/x&gt;\n            &lt;y&gt;350&lt;/y&gt;\n            &lt;w&gt;120&lt;/w&gt;\n            &lt;h&gt;50&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;reject\nboarding pass\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;480&lt;/x&gt;\n            &lt;y&gt;130&lt;/y&gt;\n            &lt;w&gt;142&lt;/w&gt;\n            &lt;h&gt;100&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-\nresult of search\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;71;80;71;20&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;270&lt;/x&gt;\n            &lt;y&gt;70&lt;/y&gt;\n            &lt;w&gt;150&lt;/w&gt;\n            &lt;h&gt;40&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-&lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;130;20;20;20&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.ThreeWayRelation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;540&lt;/x&gt;\n            &lt;y&gt;210&lt;/y&gt;\n            &lt;w&gt;20&lt;/w&gt;\n            &lt;h&gt;20&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;&lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.State&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;140&lt;/x&gt;\n            &lt;y&gt;60&lt;/y&gt;\n            &lt;w&gt;150&lt;/w&gt;\n            &lt;h&gt;420&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;read boarding pass\n--\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=true&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.State&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;400&lt;/x&gt;\n            &lt;y&gt;60&lt;/y&gt;\n            &lt;w&gt;180&lt;/w&gt;\n            &lt;h&gt;90&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;check passenger\n--\nentry/start search\ndo/blink lamp\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=true&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.FinalState&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;170&lt;/x&gt;\n            &lt;y&gt;410&lt;/y&gt;\n            &lt;w&gt;20&lt;/w&gt;\n            &lt;h&gt;20&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;&lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.State&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;150&lt;/x&gt;\n            &lt;y&gt;240&lt;/y&gt;\n            &lt;w&gt;100&lt;/w&gt;\n            &lt;h&gt;40&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;read\npassenger ID\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.State&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;150&lt;/x&gt;\n            &lt;y&gt;330&lt;/y&gt;\n            &lt;w&gt;100&lt;/w&gt;\n            &lt;h&gt;40&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;identify\npassenger\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;160&lt;/x&gt;\n            &lt;y&gt;260&lt;/y&gt;\n            &lt;w&gt;40&lt;/w&gt;\n            &lt;h&gt;90&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-&lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;20;70;20;20&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;160&lt;/x&gt;\n            &lt;y&gt;100&lt;/y&gt;\n            &lt;w&gt;40&lt;/w&gt;\n            &lt;h&gt;70&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-&lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;20;50;20;20&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;160&lt;/x&gt;\n            &lt;y&gt;350&lt;/y&gt;\n            &lt;w&gt;40&lt;/w&gt;\n            &lt;h&gt;80&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-&lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;20;60;20;20&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.base.Relation&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;140&lt;/x&gt;\n            &lt;y&gt;170&lt;/y&gt;\n            &lt;w&gt;78&lt;/w&gt;\n            &lt;h&gt;90&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;lt=&amp;lt;-\n[valid]\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;39;70;39;20&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.State&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;150&lt;/x&gt;\n            &lt;y&gt;150&lt;/y&gt;\n            &lt;w&gt;100&lt;/w&gt;\n            &lt;h&gt;40&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;check\nvalidity\n        &lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n    &lt;element&gt;\n        &lt;type&gt;com.umlet.element.custom.InitialState&lt;/type&gt;\n        &lt;coordinates&gt;\n            &lt;x&gt;170&lt;/x&gt;\n            &lt;y&gt;100&lt;/y&gt;\n            &lt;w&gt;20&lt;/w&gt;\n            &lt;h&gt;20&lt;/h&gt;\n        &lt;/coordinates&gt;\n        &lt;panel_attributes&gt;&lt;/panel_attributes&gt;\n        &lt;additional_attributes&gt;transparentSelection=false&lt;/additional_attributes&gt;\n    &lt;/element&gt;\n&lt;/umlet_diagram&gt;",
+          "svg": "assets/examples/state-machine.svg"
+        }
+      ]
+    },
+    {
+      "type": "vega",
+      "name": "Vega",
+      "href": "https://github.com/vega/vega",
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ],
+      "categories": [
+        "visualization"
+      ],
+      "examples": [
+        {
+          "anchor": "word-cloud",
+          "title": "Word Cloud",
+          "lang": "json",
+          "source": "{\n  \"$schema\": \"https://vega.github.io/schema/vega/v5.json\",\n  \"width\": 800,\n  \"height\": 400,\n  \"padding\": 0,\n\n  \"data\": [\n    {\n      \"name\": \"table\",\n      \"values\": [\n        \"Declarative visualization grammars can accelerate development, facilitate retargeting across platforms, and allow language-level optimizations. However, existing declarative visualization languages are primarily concerned with visual encoding, and rely on imperative event handlers for interactive behaviors. In response, we introduce a model of declarative interaction design for data visualizations. Adopting methods from reactive programming, we model low-level events as composable data streams from which we form higher-level semantic signals. Signals feed predicates and scale inversions, which allow us to generalize interactive selections at the level of item geometry (pixels) into interactive queries over the data domain. Production rules then use these queries to manipulate the visualization’s appearance. To facilitate reuse and sharing, these constructs can be encapsulated as named interactors: standalone, purely declarative specifications of interaction techniques. We assess our model’s feasibility and expressivity by instantiating it with extensions to the Vega visualization grammar. Through a diverse range of examples, we demonstrate coverage over an established taxonomy of visualization interaction techniques.\",\n        \"We present Reactive Vega, a system architecture that provides the first robust and comprehensive treatment of declarative visual and interaction design for data visualization. Starting from a single declarative specification, Reactive Vega constructs a dataflow graph in which input data, scene graph elements, and interaction events are all treated as first-class streaming data sources. To support expressive interactive visualizations that may involve time-varying scalar, relational, or hierarchical data, Reactive Vega’s dataflow graph can dynamically re-write itself at runtime by extending or pruning branches in a data-driven fashion. We discuss both compile- and run-time optimizations applied within Reactive Vega, and share the results of benchmark studies that indicate superior interactive performance to both D3 and the original, non-reactive Vega system.\",\n        \"We present Vega-Lite, a high-level grammar that enables rapid specification of interactive data visualizations. Vega-Lite combines a traditional grammar of graphics, providing visual encoding rules and a composition algebra for layered and multi-view displays, with a novel grammar of interaction. Users specify interactive semantics by composing selections. In Vega-Lite, a selection is an abstraction that defines input event processing, points of interest, and a predicate function for inclusion testing. Selections parameterize visual encodings by serving as input data, defining scale extents, or by driving conditional logic. The Vega-Lite compiler automatically synthesizes requisite data flow and event handling logic, which users can override for further customization. In contrast to existing reactive specifications, Vega-Lite selections decompose an interaction design into concise, enumerable semantic units. We evaluate Vega-Lite through a range of examples, demonstrating succinct specification of both customized interaction methods and common techniques such as panning, zooming, and linked selection.\"\n      ],\n      \"transform\": [\n        {\n          \"type\": \"countpattern\",\n          \"field\": \"data\",\n          \"case\": \"upper\",\n          \"pattern\": \"[\\\\w']{3,}\",\n          \"stopwords\": \"(i|me|my|myself|we|us|our|ours|ourselves|you|your|yours|yourself|yourselves|he|him|his|himself|she|her|hers|herself|it|its|itself|they|them|their|theirs|themselves|what|which|who|whom|whose|this|that|these|those|am|is|are|was|were|be|been|being|have|has|had|having|do|does|did|doing|will|would|should|can|could|ought|i'm|you're|he's|she's|it's|we're|they're|i've|you've|we've|they've|i'd|you'd|he'd|she'd|we'd|they'd|i'll|you'll|he'll|she'll|we'll|they'll|isn't|aren't|wasn't|weren't|hasn't|haven't|hadn't|doesn't|don't|didn't|won't|wouldn't|shan't|shouldn't|can't|cannot|couldn't|mustn't|let's|that's|who's|what's|here's|there's|when's|where's|why's|how's|a|an|the|and|but|if|or|because|as|until|while|of|at|by|for|with|about|against|between|into|through|during|before|after|above|below|to|from|up|upon|down|in|out|on|off|over|under|again|further|then|once|here|there|when|where|why|how|all|any|both|each|few|more|most|other|some|such|no|nor|not|only|own|same|so|than|too|very|say|says|said|shall)\"\n        },\n        {\n          \"type\": \"formula\", \"as\": \"angle\",\n          \"expr\": \"[-45, 0, 45][~~(random() * 3)]\"\n        },\n        {\n          \"type\": \"formula\", \"as\": \"weight\",\n          \"expr\": \"if(datum.text=='VEGA', 600, 300)\"\n        }\n      ]\n    }\n  ],\n\n  \"scales\": [\n    {\n      \"name\": \"color\",\n      \"type\": \"ordinal\",\n      \"domain\": {\"data\": \"table\", \"field\": \"text\"},\n      \"range\": [\"#d5a928\", \"#652c90\", \"#939597\"]\n    }\n  ],\n\n  \"marks\": [\n    {\n      \"type\": \"text\",\n      \"from\": {\"data\": \"table\"},\n      \"encode\": {\n        \"enter\": {\n          \"text\": {\"field\": \"text\"},\n          \"align\": {\"value\": \"center\"},\n          \"baseline\": {\"value\": \"alphabetic\"},\n          \"fill\": {\"scale\": \"color\", \"field\": \"text\"}\n        },\n        \"update\": {\n          \"fillOpacity\": {\"value\": 1}\n        },\n        \"hover\": {\n          \"fillOpacity\": {\"value\": 0.5}\n        }\n      },\n      \"transform\": [\n        {\n          \"type\": \"wordcloud\",\n          \"size\": [800, 400],\n          \"text\": {\"field\": \"text\"},\n          \"rotate\": {\"field\": \"datum.angle\"},\n          \"font\": \"Helvetica Neue, Arial\",\n          \"fontSize\": {\"field\": \"datum.count\"},\n          \"fontWeight\": {\"field\": \"datum.weight\"},\n          \"fontSizeRange\": [12, 56],\n          \"padding\": 2\n        }\n      ]\n    }\n  ]\n}\n",
+          "svg": "assets/examples/word-cloud.svg"
+        }
+      ]
+    },
+    {
+      "type": "vegalite",
+      "name": "Vega-Lite",
+      "href": "https://github.com/vega/vega-lite",
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ],
+      "categories": [
+        "visualization"
+      ],
+      "examples": [
+        {
+          "anchor": "diverging-stacked-bar-chart",
+          "title": "Diverging Stacked Bar Chart",
+          "lang": "json",
+          "source": "{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v4.json\",\n  \"description\": \"A diverging stacked bar chart for sentiments towards a set of eight questions, displayed as percentages with neutral responses straddling the 0% mark\",\n  \"background\": \"transparent\",\n  \"data\": {\n    \"values\": [\n      {\"question\": \"Question 1\", \"type\": \"Strongly disagree\", \"value\": 24, \"percentage\": 0.7},\n      {\"question\": \"Question 1\", \"type\": \"Disagree\", \"value\": 294, \"percentage\": 9.1},\n      {\"question\": \"Question 1\", \"type\": \"Neither agree nor disagree\", \"value\": 594, \"percentage\": 18.5},\n      {\"question\": \"Question 1\", \"type\": \"Agree\", \"value\": 1927, \"percentage\": 59.9},\n      {\"question\": \"Question 1\", \"type\": \"Strongly agree\", \"value\": 376, \"percentage\": 11.7},\n      {\"question\": \"Question 2\", \"type\": \"Strongly disagree\", \"value\": 2, \"percentage\": 18.2},\n      {\"question\": \"Question 2\", \"type\": \"Disagree\", \"value\": 2, \"percentage\": 18.2},\n      {\"question\": \"Question 2\", \"type\": \"Neither agree nor disagree\", \"value\": 0, \"percentage\": 0},\n      {\"question\": \"Question 2\", \"type\": \"Agree\", \"value\": 7, \"percentage\": 63.6},\n      {\"question\": \"Question 2\", \"type\": \"Strongly agree\", \"value\": 11, \"percentage\": 0},\n      {\"question\": \"Question 3\", \"type\": \"Strongly disagree\", \"value\": 2, \"percentage\": 20},\n      {\"question\": \"Question 3\", \"type\": \"Disagree\", \"value\": 0, \"percentage\": 0},\n      {\"question\": \"Question 3\", \"type\": \"Neither agree nor disagree\", \"value\": 2, \"percentage\": 20},\n      {\"question\": \"Question 3\", \"type\": \"Agree\", \"value\": 4, \"percentage\": 40},\n      {\"question\": \"Question 3\", \"type\": \"Strongly agree\", \"value\": 2, \"percentage\": 20},\n      {\"question\": \"Question 4\", \"type\": \"Strongly disagree\", \"value\": 0, \"percentage\": 0},\n      {\"question\": \"Question 4\", \"type\": \"Disagree\", \"value\": 2, \"percentage\": 12.5},\n      {\"question\": \"Question 4\", \"type\": \"Neither agree nor disagree\", \"value\": 1, \"percentage\": 6.3},\n      {\"question\": \"Question 4\", \"type\": \"Agree\", \"value\": 7, \"percentage\": 43.8},\n      {\"question\": \"Question 4\", \"type\": \"Strongly agree\", \"value\": 6, \"percentage\": 37.5},\n      {\"question\": \"Question 5\", \"type\": \"Strongly disagree\", \"value\": 0, \"percentage\": 0},\n      {\"question\": \"Question 5\", \"type\": \"Disagree\", \"value\": 1, \"percentage\": 4.2},\n      {\"question\": \"Question 5\", \"type\": \"Neither agree nor disagree\", \"value\": 3, \"percentage\": 12.5},\n      {\"question\": \"Question 5\", \"type\": \"Agree\", \"value\": 16, \"percentage\": 66.7},\n      {\"question\": \"Question 5\", \"type\": \"Strongly agree\", \"value\": 4, \"percentage\": 16.7},\n      {\"question\": \"Question 6\", \"type\": \"Strongly disagree\", \"value\": 1, \"percentage\": 6.3},\n      {\"question\": \"Question 6\", \"type\": \"Disagree\", \"value\": 1, \"percentage\": 6.3},\n      {\"question\": \"Question 6\", \"type\": \"Neither agree nor disagree\", \"value\": 2, \"percentage\": 12.5},\n      {\"question\": \"Question 6\", \"type\": \"Agree\", \"value\": 9, \"percentage\": 56.3},\n      {\"question\": \"Question 6\", \"type\": \"Strongly agree\", \"value\": 3, \"percentage\": 18.8},\n      {\"question\": \"Question 7\", \"type\": \"Strongly disagree\", \"value\": 0, \"percentage\": 0},\n      {\"question\": \"Question 7\", \"type\": \"Disagree\", \"value\": 0, \"percentage\": 0},\n      {\"question\": \"Question 7\", \"type\": \"Neither agree nor disagree\", \"value\": 1, \"percentage\": 20},\n      {\"question\": \"Question 7\", \"type\": \"Agree\", \"value\": 4, \"percentage\": 80},\n      {\"question\": \"Question 7\", \"type\": \"Strongly agree\", \"value\": 0, \"percentage\": 0},\n      {\"question\": \"Question 8\", \"type\": \"Strongly disagree\", \"value\": 0, \"percentage\": 0},\n      {\"question\": \"Question 8\", \"type\": \"Disagree\", \"value\": 0, \"percentage\": 0},\n      {\"question\": \"Question 8\", \"type\": \"Neither agree nor disagree\", \"value\": 0, \"percentage\": 0},\n      {\"question\": \"Question 8\", \"type\": \"Agree\", \"value\": 0, \"percentage\": 0},\n      {\"question\": \"Question 8\", \"type\": \"Strongly agree\", \"value\": 2, \"percentage\": 100}\n    ]\n  },\n  \"transform\": [\n    {\n      \"calculate\": \"if(datum.type === 'Strongly disagree',-2,0) + if(datum.type==='Disagree',-1,0) + if(datum.type =='Neither agree nor disagree',0,0) + if(datum.type ==='Agree',1,0) + if(datum.type ==='Strongly agree',2,0)\",\n      \"as\": \"q_order\"\n    },\n    {\n      \"calculate\": \"if(datum.type === 'Disagree' || datum.type === 'Strongly disagree', datum.percentage,0) + if(datum.type === 'Neither agree nor disagree', datum.percentage / 2,0)\",\n      \"as\": \"signed_percentage\"\n    },\n    {\"stack\": \"percentage\", \"as\": [\"v1\", \"v2\"], \"groupby\": [\"question\"]},\n    {\n      \"joinaggregate\": [\n        {\n          \"field\": \"signed_percentage\",\n          \"op\": \"sum\",\n          \"as\": \"offset\"\n        }\n      ],\n      \"groupby\": [\"question\"]\n    },\n    {\"calculate\": \"datum.v1 - datum.offset\", \"as\": \"nx\"},\n    {\"calculate\": \"datum.v2 - datum.offset\", \"as\": \"nx2\"}\n  ],\n  \"mark\": \"bar\",\n  \"encoding\": {\n    \"x\": {\n      \"field\": \"nx\",\n      \"type\": \"quantitative\",\n      \"axis\": {\n        \"title\": \"Percentage\"\n      }\n    },\n    \"x2\": {\"field\": \"nx2\"},\n    \"y\": {\n      \"field\": \"question\",\n      \"type\": \"nominal\",\n      \"axis\": {\n        \"title\": \"Question\",\n        \"offset\": 5,\n        \"ticks\": false,\n        \"minExtent\": 60,\n        \"domain\": false\n      }\n    },\n    \"color\": {\n      \"field\": \"type\",\n      \"type\": \"nominal\",\n      \"legend\": {\n        \"title\": \"Response\"\n      },\n      \"scale\": {\n        \"domain\": [\"Strongly disagree\", \"Disagree\", \"Neither agree nor disagree\", \"Agree\", \"Strongly agree\"],\n        \"range\": [\"#c30d24\", \"#f3a583\", \"#cccccc\", \"#94c6da\", \"#1770ab\"],\n        \"type\": \"ordinal\"\n      }\n    }\n  }\n}\n",
+          "svg": "assets/examples/diverging-stacked-bar-chart.svg"
+        }
+      ]
+    },
+    {
+      "type": "wavedrom",
+      "name": "WaveDrom",
+      "href": "https://github.com/wavedrom/wavedrom",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "diagram"
+      ],
+      "examples": [
+        {
+          "anchor": "wavedrom",
+          "title": "Digital Timing diagram",
+          "lang": "json",
+          "source": "{ signal: [\n  { name: \"clk\",         wave: \"p.....|...\" },\n  { name: \"Data\",        wave: \"x.345x|=.x\", data: [\"head\", \"body\", \"tail\", \"data\"] },\n  { name: \"Request\",     wave: \"0.1..0|1.0\" },\n  {},\n  { name: \"Acknowledge\", wave: \"1.....|01.\" }\n]}\n",
+          "svg": "assets/examples/wavedrom.svg"
+        }
+      ]
+    },
+    {
+      "type": "wireviz",
+      "name": "WireViz",
+      "href": "https://github.com/formatc1702/WireViz",
+      "formats": [
+        "png",
+        "svg"
+      ],
+      "categories": [
+        "hardware"
+      ],
+      "examples": [
+        {
+          "anchor": "wiring",
+          "title": "Wiring system",
+          "lang": "yaml",
+          "source": "options:\n  bgcolor: \"#ffffff00\"\n\nconnectors:\n  X1:\n    type: D-Sub\n    subtype: female\n    pinlabels: [DCD, RX, TX, DTR, GND, DSR, RTS, CTS, RI]\n  X2:\n    type: Molex KK 254\n    subtype: female\n    pinlabels: [GND, RX, TX]\n\ncables:\n  W1:\n    gauge: \"0.25 mm2\"\n    length: 0.2\n    color_code: DIN\n    wirecount: 3\n    shield: true\n\nconnections:\n  -\n    - X1: [5,2,3]\n    - W1: [1,2,3]\n    - X2: [1,3,2]\n  -\n    - X1: 5\n    - W1: s",
+          "svg": "assets/examples/wiring.svg"
+        }
+      ]
+    }
+  ]
+}
