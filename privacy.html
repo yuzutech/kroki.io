@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./assets/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./assets/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./assets/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./assets/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./assets/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="./assets/favicon-196x196.png" sizes="196x196"/>
+    <link rel="icon" type="image/png" href="./assets/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="./assets/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="./assets/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="./assets/favicon-128.png" sizes="128x128"/>
+    <meta name="application-name" content="Kroki"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF"/>
+    <meta name="msapplication-TileImage" content="./assets/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo" content="./assets/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo" content="./assets/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo" content="./assets/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo" content="./assets/mstile-310x310.png"/>
+    <title>Kroki! Privacy Policy</title>
+    <link rel="stylesheet" href="./css/main.min.css?v=2.0.0">
+</head>
+<body>
+<section class="section">
+    <div class="container">
+        <a href="/">
+            <img class="title logo" src="assets/logo.svg" alt="logo"/>
+        </a>
+        <h1 class="subtitle">Privacy Policy</h1>
+        <div class="content">
+            <p><em>Effective date: October 25, 2026</em></p>
+            <p>
+                This policy explains what information is handled when you visit the kroki.io website or use the free
+                public Kroki service at <code>https://kroki.io</code>. Both are operated by
+                <a href="https://yuzutech.fr" target="_blank" rel="noopener noreferrer">Yuzu tech</a>.
+                Kroki has no user accounts: we never ask for your name, email address or any other personal details to
+                use the service.
+            </p>
+
+            <h2>What information do we use</h2>
+            <ul>
+                <li>
+                    <strong>Diagram sources.</strong> To render a diagram, the service needs its source. With a
+                    <code>GET</code> request, the source is encoded in the URL (deflate + base64, which is
+                    <em>not</em> encryption: anyone holding the URL can decode it). With a <code>POST</code> request,
+                    the source is sent in the request body. The live editor on the home page also sends what you type
+                    to the service in order to display a preview.
+                </li>
+                <li>
+                    <strong>Technical request data.</strong> Like most web services, our servers and network providers
+                    receive your IP address, the requested URL, the date and time of the request, your user agent and
+                    the referring page.
+                </li>
+                <li>
+                    <strong>Browser storage.</strong> The website stores a single preference in your browser's local
+                    storage (whether the live editor auto-refreshes). It never leaves your browser and is not used to
+                    identify you. The website itself does not set cookies; however, our third-party providers
+                    (see below) may set their own, for instance Cloudflare for security purposes or Carbon Ads when
+                    displaying an advertisement.
+                </li>
+            </ul>
+
+            <h2>How do we use the information</h2>
+            <ul>
+                <li>
+                    Diagram sources are processed in memory to produce the image, which is returned in the response.
+                    We do not store the sources or the generated diagrams, and we do not look at their content.
+                </li>
+                <li>
+                    Access logs (which include the full URL of <code>GET</code> requests, and therefore the encoded
+                    diagram source) are kept for <strong>less than 30 days</strong>, only to operate the service,
+                    troubleshoot errors and fight abuse. The body of <code>POST</code> requests is not logged.
+                </li>
+                <li>We do not sell your information and we do not use it to build profiles.</li>
+            </ul>
+
+            <h2>What information do we share</h2>
+            <p>We rely on a few third-party providers who process technical request data on our behalf:</p>
+            <ul>
+                <li>
+                    <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare</a>
+                    sits in front of kroki.io and handles all requests (network delivery and protection against attacks).
+                </li>
+                <li>
+                    <a href="https://www.exoscale.com/privacy/" target="_blank" rel="noopener noreferrer">Exoscale</a>
+                    hosts the servers that render diagrams.
+                </li>
+                <li>
+                    <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer">Netlify</a>
+                    hosts this website.
+                </li>
+                <li>
+                    <a href="https://www.carbonads.net/privacy" target="_blank" rel="noopener noreferrer">Carbon Ads</a>
+                    displays an advertisement on the home page of this website, which helps fund the service. When the
+                    ad loads, your browser connects to Carbon Ads, which receives your IP address and user agent.
+                    Carbon Ads is not part of the Kroki service itself and never receives your diagram sources.
+                </li>
+            </ul>
+            <p>We may also disclose information if we are required to do so by law.</p>
+
+            <h2>Sensitive diagrams</h2>
+            <p>
+                If your diagrams contain confidential information, we recommend that you
+                <a href="https://docs.kroki.io/kroki/setup/install/" target="_blank" rel="noopener noreferrer">run your own Kroki instance</a>.
+                Kroki is open source and can be self-hosted, in which case no data is sent to us. Tools that use
+                kroki.io by default (editor plugins, browser extensions, documentation generators) usually let you
+                configure the server URL.
+            </p>
+
+            <h2>Your rights</h2>
+            <p>
+                Since Kroki has no accounts, we generally cannot link a request to a person. Under the GDPR, you can
+                nonetheless ask us to access or delete data relating to you, and you have the right to lodge a complaint
+                with the French data protection authority (<a href="https://www.cnil.fr/" target="_blank" rel="noopener noreferrer">CNIL</a>).
+            </p>
+
+            <h2>Changes to this policy</h2>
+            <p>
+                We may update this policy from time to time. The effective date at the top of this page tells you when
+                it was last revised.
+            </p>
+
+            <h2>Contact us</h2>
+            <p>
+                If you have questions or concerns about how your information is handled, please contact us:
+                <a href="mailto:hello@kroki.io">hello@kroki.io</a>
+            </p>
+        </div>
+    </div>
+</section>
+<footer id="footer" class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <img class="logo" src="assets/logo.svg" alt="logo"/> by <a href="https://yuzutech.fr" target="_blank" rel="noopener noreferrer">Yuzu tech</a>
+        </p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+    </div>
+</footer>
+</body>
+</html>
