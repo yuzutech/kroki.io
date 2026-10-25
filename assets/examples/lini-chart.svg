@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-240 -160 480 320" width="480" height="320" class="lini lini-scope-3efac07f">
+  <style>
+    @layer lini.defaults {
+      :root, .lini-scope-3efac07f { --lini-fg: black; --lini-font-family: "Google Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; --lini-font-weight: 500; --lini-grid: rgba(0, 0, 0, 0.1); --lini-muted: #888; --lini-purple-deep: #6e62cc; --lini-purple-soft: #c6c4ff; --lini-rose: #e96490; --lini-stroke: #444; --lini-text-color: var(--lini-fg); --lini-tip-bg: #333; --lini-tip-fg: white; }
+    }
+    .lini-scope-3efac07f, .lini-scope-3efac07f text { font-family: var(--lini-font-family); }
+    .lini-scope-3efac07f { font-size: 15px; font-weight: var(--lini-font-weight); color: var(--lini-text-color); }
+    .lini-scope-3efac07f .lini-block { fill: none; stroke: none; stroke-width: 2; stroke-dasharray: none; }
+    .lini-scope-3efac07f .lini-oval { stroke-dasharray: none; }
+    .lini-scope-3efac07f .lini-line { fill: none; stroke: var(--lini-stroke); stroke-width: 2; stroke-dasharray: none; }
+    .lini-scope-3efac07f .lini-text { fill: currentColor; stroke: none; text-anchor: middle; }
+    .lini-scope-3efac07f .lini-chart-title { font-size: 15px; font-weight: 600; }
+    .lini-scope-3efac07f .lini-chart-text { font-size: 12px; font-weight: normal; }
+    .lini-scope-3efac07f .lini-chart-legend { font-size: 12px; font-weight: 600; }
+    .lini-scope-3efac07f .lini-chart-tip { visibility: hidden; pointer-events: none; }
+    .lini-scope-3efac07f .lini-hit-0:hover ~ .lini-tip-0 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-1:hover ~ .lini-tip-1 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-2:hover ~ .lini-tip-2 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-3:hover ~ .lini-tip-3 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-4:hover ~ .lini-tip-4 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-5:hover ~ .lini-tip-5 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-6:hover ~ .lini-tip-6 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-7:hover ~ .lini-tip-7 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-8:hover ~ .lini-tip-8 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-9:hover ~ .lini-tip-9 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-10:hover ~ .lini-tip-10 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-11:hover ~ .lini-tip-11 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-12:hover ~ .lini-tip-12 { visibility: visible; }
+    .lini-scope-3efac07f .lini-hit-13:hover ~ .lini-tip-13 { visibility: visible; }
+  </style>
+  <defs/>
+  <g class="lini-scene">
+    <g class="lini-node lini-chart lini-block" transform="translate(0,0)">
+      <rect x="-220" y="-140" width="440" height="280" rx="0" ry="0"/>
+      <g class="lini-node lini-line" style="stroke: var(--lini-grid); stroke-width: 1" transform="translate(0,0)">
+        <line x1="-195.192" y1="87.8" x2="208" y2="87.8"/>
+      </g>
+      <g class="lini-node lini-line" style="stroke: var(--lini-grid); stroke-width: 1" transform="translate(0,0)">
+        <line x1="-195.192" y1="50.44" x2="208" y2="50.44"/>
+      </g>
+      <g class="lini-node lini-line" style="stroke: var(--lini-grid); stroke-width: 1" transform="translate(0,0)">
+        <line x1="-195.192" y1="13.08" x2="208" y2="13.08"/>
+      </g>
+      <g class="lini-node lini-line" style="stroke: var(--lini-grid); stroke-width: 1" transform="translate(0,0)">
+        <line x1="-195.192" y1="-24.28" x2="208" y2="-24.28"/>
+      </g>
+      <g class="lini-node lini-line" style="stroke: var(--lini-grid); stroke-width: 1" transform="translate(0,0)">
+        <line x1="-195.192" y1="-61.64" x2="208" y2="-61.64"/>
+      </g>
+      <g class="lini-node lini-line" style="stroke: var(--lini-grid); stroke-width: 1" transform="translate(0,0)">
+        <line x1="-195.192" y1="-99" x2="208" y2="-99"/>
+      </g>
+      <g class="lini-node lini-hit-0 lini-block" style="fill: var(--lini-purple-soft); stroke: var(--lini-purple-deep)" transform="translate(-166.3926,42.968)">
+        <title>Mon · Free: 24</title>
+        <rect x="-17.662" y="-43.832" width="35.3241" height="87.664" rx="6" ry="6"/>
+      </g>
+      <g class="lini-node lini-hit-1 lini-block" style="fill: var(--lini-purple-soft); stroke: var(--lini-purple-deep)" transform="translate(-108.7937,29.892)">
+        <title>Tue · Free: 31</title>
+        <rect x="-17.662" y="-56.908" width="35.3241" height="113.816" rx="6" ry="6"/>
+      </g>
+      <g class="lini-node lini-hit-2 lini-block" style="fill: var(--lini-purple-soft); stroke: var(--lini-purple-deep)" transform="translate(-51.1949,35.496)">
+        <title>Wed · Free: 28</title>
+        <rect x="-17.662" y="-51.304" width="35.3241" height="102.608" rx="6" ry="6"/>
+      </g>
+      <g class="lini-node lini-hit-3 lini-block" style="fill: var(--lini-purple-soft); stroke: var(--lini-purple-deep)" transform="translate(6.404,5.608)">
+        <title>Thu · Free: 44</title>
+        <rect x="-17.662" y="-81.192" width="35.3241" height="162.384" rx="6" ry="6"/>
+      </g>
+      <g class="lini-node lini-hit-4 lini-block" style="fill: var(--lini-purple-soft); stroke: var(--lini-purple-deep)" transform="translate(64.0029,14.948)">
+        <title>Fri · Free: 39</title>
+        <rect x="-17.662" y="-71.852" width="35.3241" height="143.704" rx="6" ry="6"/>
+      </g>
+      <g class="lini-node lini-hit-5 lini-block" style="fill: var(--lini-purple-soft); stroke: var(--lini-purple-deep)" transform="translate(121.6017,46.704)">
+        <title>Sat · Free: 22</title>
+        <rect x="-17.662" y="-40.096" width="35.3241" height="80.192" rx="6" ry="6"/>
+      </g>
+      <g class="lini-node lini-hit-6 lini-block" style="fill: var(--lini-purple-soft); stroke: var(--lini-purple-deep)" transform="translate(179.2006,54.176)">
+        <title>Sun · Free: 18</title>
+        <rect x="-17.662" y="-32.624" width="35.3241" height="65.248" rx="6" ry="6"/>
+      </g>
+      <g class="lini-node lini-line" style="stroke: var(--lini-rose)" transform="translate(0,0)">
+        <polyline points="-166.3926,57.912 -162.7926,57.2115 -159.1927,56.511 -155.5928,55.8105 -151.9929,55.11 -148.3929,54.4095 -144.793,53.709 -141.1931,53.0085 -137.5931,52.308 -133.9932,51.6075 -130.3933,50.907 -126.7934,50.2065 -123.1934,49.506 -119.5935,48.8055 -115.9936,48.105 -112.3936,47.4045 -108.7937,46.704 -105.1938,45.9625 -101.5939,45.1498 -97.9939,44.2823 -94.394,43.3766 -90.7941,42.449 -87.1941,41.5159 -83.5942,40.5938 -79.9943,39.699 -76.3944,38.848 -72.7944,38.0572 -69.1945,37.343 -65.5946,36.7219 -61.9946,36.2102 -58.3947,35.8244 -54.7948,35.5808 -51.1949,35.496 -47.5949,35.538 -43.995,35.6565 -40.3951,35.8408 -36.7951,36.0798 -33.1952,36.3625 -29.5953,36.6781 -25.9954,37.0156 -22.3954,37.364 -18.7955,37.7124 -15.1956,38.0499 -11.5956,38.3655 -7.9957,38.6483 -4.3958,38.8872 -0.7959,39.0715 2.8041,39.19 6.404,39.232 10.0039,38.9803 13.6039,38.2688 17.2038,37.1633 20.8037,35.7295 24.4036,34.033 28.0036,32.1394 31.6035,30.1146 35.2034,28.024 38.8034,25.9334 42.4033,23.9086 46.0032,22.015 49.6031,20.3185 53.2031,18.8847 56.803,17.7792 60.4029,17.0677 64.0029,16.816 67.6028,17.1577 71.2027,18.1306 74.8026,19.6563 78.4026,21.6567 82.0025,24.0533 85.6024,26.7679 89.2024,29.7222 92.8023,32.8378 96.4022,36.0365 100.0021,39.24 103.6021,42.3699 107.202,45.348 110.8019,48.096 114.4019,50.5355 118.0018,52.5883 121.6017,54.176 125.2016,55.4021 128.8016,56.4353 132.4015,57.2953 136.0014,58.0017 139.6014,58.5741 143.2013,59.0323 146.8012,59.3957 150.4011,59.6841 154.0011,59.9172 157.601,60.1145 161.2009,60.2957 164.8009,60.4805 168.4008,60.6885 172.0007,60.9393 175.6006,61.2526 179.2006,61.648"/>
+      </g>
+      <g class="lini-node lini-hit-7 lini-oval" style="fill: var(--lini-rose); stroke: none; stroke-width: 0" transform="translate(-166.3926,57.912)">
+        <title>Paid: Mon: 8</title>
+        <ellipse cx="0" cy="0" rx="5.5" ry="5.5"/>
+      </g>
+      <g class="lini-node lini-hit-8 lini-oval" style="fill: var(--lini-rose); stroke: none; stroke-width: 0" transform="translate(-108.7937,46.704)">
+        <title>Paid: Tue: 11</title>
+        <ellipse cx="0" cy="0" rx="5.5" ry="5.5"/>
+      </g>
+      <g class="lini-node lini-hit-9 lini-oval" style="fill: var(--lini-rose); stroke: none; stroke-width: 0" transform="translate(-51.1949,35.496)">
+        <title>Paid: Wed: 14</title>
+        <ellipse cx="0" cy="0" rx="5.5" ry="5.5"/>
+      </g>
+      <g class="lini-node lini-hit-10 lini-oval" style="fill: var(--lini-rose); stroke: none; stroke-width: 0" transform="translate(6.404,39.232)">
+        <title>Paid: Thu: 13</title>
+        <ellipse cx="0" cy="0" rx="5.5" ry="5.5"/>
+      </g>
+      <g class="lini-node lini-hit-11 lini-oval" style="fill: var(--lini-rose); stroke: none; stroke-width: 0" transform="translate(64.0029,16.816)">
+        <title>Paid: Fri: 19</title>
+        <ellipse cx="0" cy="0" rx="5.5" ry="5.5"/>
+      </g>
+      <g class="lini-node lini-hit-12 lini-oval" style="fill: var(--lini-rose); stroke: none; stroke-width: 0" transform="translate(121.6017,54.176)">
+        <title>Paid: Sat: 9</title>
+        <ellipse cx="0" cy="0" rx="5.5" ry="5.5"/>
+      </g>
+      <g class="lini-node lini-hit-13 lini-oval" style="fill: var(--lini-rose); stroke: none; stroke-width: 0" transform="translate(179.2006,61.648)">
+        <title>Paid: Sun: 7</title>
+        <ellipse cx="0" cy="0" rx="5.5" ry="5.5"/>
+      </g>
+      <text class="lini-text lini-chart-text" x="-205.05" y="87.8" dy="0.358em" style="fill: var(--lini-muted)">0</text>
+      <text class="lini-text lini-chart-text" x="-207.63" y="50.44" dy="0.358em" style="fill: var(--lini-muted)">10</text>
+      <text class="lini-text lini-chart-text" x="-208.194" y="13.08" dy="0.358em" style="fill: var(--lini-muted)">20</text>
+      <text class="lini-text lini-chart-text" x="-208.248" y="-24.28" dy="0.358em" style="fill: var(--lini-muted)">30</text>
+      <text class="lini-text lini-chart-text" x="-208.596" y="-61.64" dy="0.358em" style="fill: var(--lini-muted)">40</text>
+      <text class="lini-text lini-chart-text" x="-208.404" y="-99" dy="0.358em" style="fill: var(--lini-muted)">50</text>
+      <text class="lini-text lini-chart-text" x="-166.3926" y="102.2" dy="0.358em" style="fill: var(--lini-muted)">Mon</text>
+      <text class="lini-text lini-chart-text" x="-108.7937" y="102.2" dy="0.358em" style="fill: var(--lini-muted)">Tue</text>
+      <text class="lini-text lini-chart-text" x="-51.1949" y="102.2" dy="0.358em" style="fill: var(--lini-muted)">Wed</text>
+      <text class="lini-text lini-chart-text" x="6.404" y="102.2" dy="0.358em" style="fill: var(--lini-muted)">Thu</text>
+      <text class="lini-text lini-chart-text" x="64.0029" y="102.2" dy="0.358em" style="fill: var(--lini-muted)">Fri</text>
+      <text class="lini-text lini-chart-text" x="121.6017" y="102.2" dy="0.358em" style="fill: var(--lini-muted)">Sat</text>
+      <text class="lini-text lini-chart-text" x="179.2006" y="102.2" dy="0.358em" style="fill: var(--lini-muted)">Sun</text>
+      <text class="lini-text lini-chart-title" x="0" y="-121.5" dy="0.358em">Signups</text>
+      <g class="lini-node lini-block" style="fill: var(--lini-purple-soft); stroke: var(--lini-purple-deep); stroke-width: 1" transform="translate(-43.352,129.2)">
+        <rect x="-5" y="-5" width="10" height="10" rx="2" ry="2"/>
+      </g>
+      <text class="lini-text lini-chart-legend" x="-20.108" y="129.2" dy="0.358em">Free</text>
+      <g class="lini-node lini-block" style="fill: var(--lini-rose); stroke: var(--lini-rose); stroke-width: 1" transform="translate(14.136,129.2)">
+        <rect x="-5" y="-5" width="10" height="10" rx="2" ry="2"/>
+      </g>
+      <text class="lini-text lini-chart-legend" x="36.744" y="129.2" dy="0.358em">Paid</text>
+      <g class="lini-node lini-chart-tip lini-tip-0 lini-block" transform="translate(0,0)">
+        <rect x="-159.3926" y="13.968" width="85.852" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(-116.4666,24.968)">
+          <rect x="-42.926" y="-11" width="85.852" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="-116.4666" y="24.968" dy="0.358em" style="fill: var(--lini-tip-fg)">Mon · Free: 24</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-1 lini-block" transform="translate(0,0)">
+        <rect x="-101.7937" y="0.892" width="79.624" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(-61.9817,11.892)">
+          <rect x="-39.812" y="-11" width="79.624" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="-61.9817" y="11.892" dy="0.358em" style="fill: var(--lini-tip-fg)">Tue · Free: 31</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-2 lini-block" transform="translate(0,0)">
+        <rect x="-44.1949" y="6.496" width="86.416" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(-0.9869,17.496)">
+          <rect x="-43.208" y="-11" width="86.416" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="-0.9869" y="17.496" dy="0.358em" style="fill: var(--lini-tip-fg)">Wed · Free: 28</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-3 lini-block" transform="translate(0,0)">
+        <rect x="13.404" y="-23.392" width="82.264" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(54.536,-12.392)">
+          <rect x="-41.132" y="-11" width="82.264" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="54.536" y="-12.392" dy="0.358em" style="fill: var(--lini-tip-fg)">Thu · Free: 44</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-4 lini-block" transform="translate(0,0)">
+        <rect x="71.0029" y="-14.052" width="74.62" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(108.3129,-3.052)">
+          <rect x="-37.31" y="-11" width="74.62" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="108.3129" y="-3.052" dy="0.358em" style="fill: var(--lini-tip-fg)">Fri · Free: 39</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-5 lini-block" transform="translate(0,0)">
+        <rect x="128.6017" y="17.704" width="78.244" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(167.7237,28.704)">
+          <rect x="-39.122" y="-11" width="78.244" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="167.7237" y="28.704" dy="0.358em" style="fill: var(--lini-tip-fg)">Sat · Free: 22</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-6 lini-block" transform="translate(0,0)">
+        <rect x="139.896" y="25.176" width="80.104" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(179.948,36.176)">
+          <rect x="-40.052" y="-11" width="80.104" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="179.948" y="36.176" dy="0.358em" style="fill: var(--lini-tip-fg)">Sun · Free: 18</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-7 lini-block" transform="translate(0,0)">
+        <rect x="-159.3926" y="28.912" width="75.004" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(-121.8906,39.912)">
+          <rect x="-37.502" y="-11" width="75.004" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="-121.8906" y="39.912" dy="0.358em" style="fill: var(--lini-tip-fg)">Paid: Mon: 8</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-8 lini-block" transform="translate(0,0)">
+        <rect x="-101.7937" y="17.704" width="74.32" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(-64.6337,28.704)">
+          <rect x="-37.16" y="-11" width="74.32" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="-64.6337" y="28.704" dy="0.358em" style="fill: var(--lini-tip-fg)">Paid: Tue: 11</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-9 lini-block" transform="translate(0,0)">
+        <rect x="-44.1949" y="6.496" width="81.712" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(-3.3389,17.496)">
+          <rect x="-40.856" y="-11" width="81.712" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="-3.3389" y="17.496" dy="0.358em" style="fill: var(--lini-tip-fg)">Paid: Wed: 14</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-10 lini-block" transform="translate(0,0)">
+        <rect x="13.404" y="10.232" width="75.568" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(51.188,21.232)">
+          <rect x="-37.784" y="-11" width="75.568" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="51.188" y="21.232" dy="0.358em" style="fill: var(--lini-tip-fg)">Paid: Thu: 13</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-11 lini-block" transform="translate(0,0)">
+        <rect x="71.0029" y="-12.184" width="69.316" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(105.6609,-1.184)">
+          <rect x="-34.658" y="-11" width="69.316" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="105.6609" y="-1.184" dy="0.358em" style="fill: var(--lini-tip-fg)">Paid: Fri: 19</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-12 lini-block" transform="translate(0,0)">
+        <rect x="128.6017" y="25.176" width="68.26" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(162.7317,36.176)">
+          <rect x="-34.13" y="-11" width="68.26" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="162.7317" y="36.176" dy="0.358em" style="fill: var(--lini-tip-fg)">Paid: Sat: 9</text>
+      </g>
+      <g class="lini-node lini-chart-tip lini-tip-13 lini-block" transform="translate(0,0)">
+        <rect x="149.4" y="32.648" width="70.6" height="22" rx="0" ry="0"/>
+        <g class="lini-node lini-block" style="fill: var(--lini-tip-bg); stroke-width: 0" transform="translate(184.7,43.648)">
+          <rect x="-35.3" y="-11" width="70.6" height="22" rx="3" ry="3"/>
+        </g>
+        <text class="lini-text lini-chart-text" x="184.7" y="43.648" dy="0.358em" style="fill: var(--lini-tip-fg)">Paid: Sun: 7</text>
+      </g>
+    </g>
+  </g>
+  <g class="lini-links"/>
+</svg>

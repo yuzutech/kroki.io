@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-170.4175 -187 340.835 374" width="340.835" height="374" class="lini lini-scope-6170d22a">
+  <style>
+    @layer lini.defaults {
+      :root, .lini-scope-6170d22a { --lini-amber-deep: #9f6900; --lini-amber-wash: #feedca; --lini-caption-color: rgba(0, 0, 0, 0.5); --lini-caption-font-weight: 400; --lini-fg: black; --lini-fill: white; --lini-font-family: "Google Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; --lini-font-weight: 500; --lini-group-fill: rgba(0, 0, 0, 0.03); --lini-group-stroke: rgba(0, 0, 0, 0.4); --lini-lime-deep: #628200; --lini-lime-wash: #e8f4d3; --lini-link-font-weight: 400; --lini-rose-deep: #b8476e; --lini-rose-wash: #ffe3ec; --lini-sky-deep: #0085b3; --lini-sky-wash: #cff6ff; --lini-stroke: #444; --lini-text-color: var(--lini-fg); }
+    }
+    .lini-scope-6170d22a, .lini-scope-6170d22a text { font-family: var(--lini-font-family); }
+    .lini-scope-6170d22a { font-size: 15px; font-weight: var(--lini-font-weight); color: var(--lini-text-color); }
+    .lini-scope-6170d22a .lini-block { fill: none; stroke: none; stroke-width: 2; stroke-dasharray: none; }
+    .lini-scope-6170d22a .lini-oval { fill: var(--lini-fill); stroke: var(--lini-stroke); stroke-width: 2; stroke-dasharray: none; }
+    .lini-scope-6170d22a .lini-slant { fill: var(--lini-fill); stroke: var(--lini-stroke); stroke-width: 2; stroke-dasharray: none; }
+    .lini-scope-6170d22a .lini-text { fill: currentColor; stroke: none; text-anchor: middle; }
+    .lini-scope-6170d22a .lini-box { fill: var(--lini-fill); stroke: var(--lini-stroke); stroke-width: 2; }
+    .lini-scope-6170d22a .lini-group { fill: var(--lini-group-fill); stroke: var(--lini-group-stroke); stroke-width: 1; stroke-dasharray: 5,4; }
+    .lini-scope-6170d22a .lini-caption { color: var(--lini-caption-color); font-size: 12px; font-weight: var(--lini-caption-font-weight); }
+    .lini-scope-6170d22a .lini-link { fill: none; stroke: var(--lini-stroke); stroke-width: 2; stroke-dasharray: none; }
+    .lini-scope-6170d22a .lini-link-dashed { stroke-dasharray: 7,5.5; }
+    .lini-scope-6170d22a .lini-link-label { fill: currentColor; stroke: none; text-anchor: middle; font-size: 11px; font-weight: var(--lini-link-font-weight); }
+    .lini-scope-6170d22a .lini-cut-bg { fill: white; stroke: none; }
+    .lini-scope-6170d22a .lini-cut { fill: black; stroke: none; }
+    .lini-scope-6170d22a .lini-marker { fill: var(--lini-stroke); stroke: none; }
+    .lini-scope-6170d22a .lini-style-rose { fill: var(--lini-rose-wash); stroke: var(--lini-rose-deep); }
+    .lini-scope-6170d22a .lini-style-rose .lini-marker { fill: var(--lini-rose-deep); }
+    .lini-scope-6170d22a .lini-style-sky { fill: var(--lini-sky-wash); stroke: var(--lini-sky-deep); }
+    .lini-scope-6170d22a .lini-style-sky .lini-marker { fill: var(--lini-sky-deep); }
+    .lini-scope-6170d22a .lini-style-amber { fill: var(--lini-amber-wash); stroke: var(--lini-amber-deep); }
+    .lini-scope-6170d22a .lini-style-amber .lini-marker { fill: var(--lini-amber-deep); }
+    .lini-scope-6170d22a .lini-style-lime { fill: var(--lini-lime-wash); stroke: var(--lini-lime-deep); }
+    .lini-scope-6170d22a .lini-style-lime .lini-marker { fill: var(--lini-lime-deep); }
+  </style>
+  <defs/>
+  <g class="lini-scene">
+    <g class="lini-node lini-box lini-block lini-style-rose" data-id="users" transform="translate(0,-138.5)">
+      <rect x="-39.68" y="-27.5" width="79.36" height="55" rx="8" ry="8"/>
+      <text class="lini-text" x="0" y="0" dy="0.358em">Users</text>
+    </g>
+    <g class="lini-node lini-group lini-block" data-id="svc" transform="translate(0,58.5)">
+      <rect x="-149.9175" y="-108" width="299.835" height="216" rx="8" ry="8"/>
+      <g class="lini-node lini-box lini-block lini-style-sky" data-id="api" transform="translate(-76.99,-53.5)">
+        <rect x="-31.6775" y="-27.5" width="63.355" height="55" rx="8" ry="8"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">API</text>
+      </g>
+      <g class="lini-node lini-slant lini-style-amber" data-id="db" transform="translate(71.9275,-53.5)">
+        <polygon points="-43.6214,-27.5 58.3586,-27.5 43.6214,27.5 -58.3586,27.5"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">Postgres</text>
+      </g>
+      <g class="lini-node lini-oval lini-style-lime" data-id="worker" transform="translate(-76.99,53.5)">
+        <ellipse cx="0" cy="0" rx="45.9275" ry="27.5"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">Worker</text>
+      </g>
+      <g class="lini-node lini-box lini-block lini-style-rose" data-id="mail" transform="translate(71.9275,53.5)">
+        <rect x="-34.19" y="-27.5" width="68.38" height="55" rx="8" ry="8"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">Mail</text>
+      </g>
+      <g class="lini-node lini-caption lini-block" transform="translate(-130.0935,-122)">
+        <rect x="-19.824" y="-6" width="39.648" height="12" rx="0" ry="0"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">Service</text>
+      </g>
+    </g>
+  </g>
+  <g class="lini-links">
+    <g class="lini-link" data-from="users" data-to="svc.api">
+      <mask id="lini-label-cut-832354b3" maskUnits="userSpaceOnUse" x="-78.99" y="-140.5" width="40.31" height="119"><rect class="lini-cut-bg" x="-78.99" y="-140.5" width="40.31" height="119"/><rect class="lini-cut" x="-96.1575" y="-106.305" width="38.335" height="14.3"/></mask>
+      <path d="M -40.68 -138.5 L -60.99 -138.5 A 16 16 0 0 0 -76.99 -122.5 L -76.99 -27" mask="url(#lini-label-cut-832354b3)"/>
+      <polygon class="lini-marker lini-marker-arrow" points="-76.99,-23 -81.49,-32 -72.49,-32"/>
+      <text class="lini-link-label" x="-76.99" y="-99.155" dy="0.358em">HTTPS</text>
+    </g>
+    <g class="lini-link" data-from="svc.api" data-to="svc.db">
+      <path d="M -44.3125 5 L 16.4375 5"/>
+      <polygon class="lini-marker lini-marker-arrow" points="20.4375,5 11.4375,9.5 11.4375,0.5"/>
+    </g>
+    <g class="lini-link lini-link-dashed" data-from="svc.api" data-to="svc.worker">
+      <mask id="lini-label-cut-3bc543a9" maskUnits="userSpaceOnUse" x="-78.99" y="31.5" width="4" height="54"><rect class="lini-cut-bg" x="-78.99" y="31.5" width="4" height="54"/><rect class="lini-cut" x="-90.597" y="51.35" width="27.214" height="14.3"/></mask>
+      <path d="M -76.99 33.5 L -76.99 80" mask="url(#lini-label-cut-3bc543a9)"/>
+      <polygon class="lini-marker lini-marker-arrow" points="-76.99,84 -81.49,75 -72.49,75"/>
+      <text class="lini-link-label" x="-76.99" y="58.5" dy="0.358em">jobs</text>
+    </g>
+    <g class="lini-link" data-from="svc.worker" data-to="svc.mail">
+      <path d="M -30.0625 112 L 33.2375 112"/>
+      <polygon class="lini-marker lini-marker-arrow" points="37.2375,112 28.2375,116.5 28.2375,107.5"/>
+    </g>
+  </g>
+</svg>

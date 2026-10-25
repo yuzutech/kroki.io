@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-190 -200 380 400" width="380" height="400" class="lini lini-scope-7cad2db3">
+  <style>
+    @layer lini.defaults {
+      :root, .lini-scope-7cad2db3 { --lini-component-stroke: #8a1c1c; --lini-fg: black; --lini-fill: white; --lini-font-family: "Google Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; --lini-font-weight: 500; --lini-label-ink: #0e6a6a; --lini-sheet: #faf6ea; --lini-stroke: #444; --lini-text-color: var(--lini-fg); --lini-wire: #0a7a2f; }
+    }
+    .lini-scope-7cad2db3, .lini-scope-7cad2db3 text { font-family: var(--lini-font-family); }
+    .lini-scope-7cad2db3 { font-size: 15px; font-weight: var(--lini-font-weight); color: var(--lini-text-color); }
+    .lini-scope-7cad2db3 .lini-canvas { fill: var(--lini-sheet); }
+    .lini-scope-7cad2db3 .lini-block { fill: none; stroke: none; stroke-width: 2; stroke-dasharray: none; }
+    .lini-scope-7cad2db3 .lini-path { fill: var(--lini-fill); stroke: var(--lini-stroke); stroke-width: 2; stroke-dasharray: none; }
+    .lini-scope-7cad2db3 .lini-text { fill: currentColor; stroke: none; text-anchor: middle; }
+    .lini-scope-7cad2db3 .lini-label { color: var(--lini-label-ink); font-size: 11px; }
+    .lini-scope-7cad2db3 .lini-sch-line { fill: none; stroke: var(--lini-component-stroke); stroke-width: 1.5; }
+    .lini-scope-7cad2db3 .lini-sch-solid { fill: var(--lini-component-stroke); stroke: none; }
+    .lini-scope-7cad2db3 .lini-sch-tag-line { fill: none; stroke: var(--lini-label-ink); stroke-width: 1.5; }
+    .lini-scope-7cad2db3 .lini-ref { font-size: 12px; font-weight: 600; }
+    .lini-scope-7cad2db3 .lini-part-value { font-size: 12px; }
+    .lini-scope-7cad2db3 .lini-link { fill: none; stroke: var(--lini-wire); stroke-width: 1.5; stroke-dasharray: none; }
+  </style>
+  <defs/>
+  <rect class="lini-canvas" x="-190" y="-200" width="380" height="400"/>
+  <g class="lini-scene">
+    <g class="lini-node lini-R lini-pose-90 lini-block" data-id="r1" transform="translate(100,-80)">
+      <rect x="-6.75" y="-32.75" width="13.5" height="65.5" rx="0" ry="0"/>
+      <g class="lini-node lini-sch-line lini-path" transform="translate(-6,-32)">
+        <path d="M 12 0 M 0 64 M 6 0 L 6 16 M 12 16 L 12 48 L 0 48 L 0 16 Z M 6 48 L 6 64"/>
+      </g>
+      <g class="lini-node lini-part-value lini-block" transform="translate(38.1,8)">
+        <rect x="-14.1" y="-6" width="28.2" height="12" rx="0" ry="0"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">220R</text>
+      </g>
+      <g class="lini-node lini-block" data-id="p1" transform="translate(0,-32)">
+      </g>
+      <g class="lini-node lini-block" data-id="p2" transform="translate(0,32)">
+      </g>
+      <g class="lini-node lini-ref lini-block" transform="translate(29.16,-8)">
+        <rect x="-5.16" y="-6" width="10.32" height="12" rx="0" ry="0"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">r1</text>
+      </g>
+    </g>
+    <g class="lini-node lini-LED lini-pose-90 lini-block" data-id="d1" transform="translate(100,20)">
+      <rect x="-14.75" y="-32.75" width="29.5" height="65.5" rx="0" ry="0"/>
+      <g class="lini-node lini-sch-line lini-path" transform="translate(-14,-32)">
+        <path d="M 28 0 M 0 64 M 14 0 L 14 24 M 22 24 L 14 40 L 6 24 Z M 22 40 L 6 40 M 14 40 L 14 64 M 22 28 L 28 34 M 25 34 L 28 34 L 28 31 M 20 36 L 26 42 M 23 42 L 26 42 L 26 39"/>
+      </g>
+      <g class="lini-node lini-part-value lini-block" transform="translate(45.738,8)">
+        <rect x="-21.738" y="-6" width="43.476" height="12" rx="0" ry="0"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">STATUS</text>
+      </g>
+      <g class="lini-node lini-block" data-id="a" transform="translate(0,-32)">
+      </g>
+      <g class="lini-node lini-block" data-id="k" transform="translate(0,32)">
+      </g>
+      <g class="lini-node lini-ref lini-block" transform="translate(30.438,-8)">
+        <rect x="-6.438" y="-6" width="12.876" height="12" rx="0" ry="0"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">d1</text>
+      </g>
+    </g>
+    <g class="lini-node lini-Q lini-block" data-id="q1" transform="translate(0,100)">
+      <rect x="-28.75" y="-24.75" width="57.5" height="49.5" rx="0" ry="0"/>
+      <g class="lini-node lini-sch-line lini-path" transform="translate(-28,-24)">
+        <path d="M 0 0 M 56 48 M 10 24 A 20 20 0 1 1 50 24 A 20 20 0 1 1 10 24 M 0 24 L 24 24 M 24 20 L 40 4 L 56 4 M 24 28 L 40 44 L 56 44"/>
+      </g>
+      <g class="lini-node lini-sch-solid lini-path" transform="translate(-28,-24)">
+        <path d="M 0 0 M 56 48 M 22.5 16 L 25.5 16 L 25.5 32 L 22.5 32 Z M 36.02 40.02 L 31.92 31.4 L 27.4 35.92 Z"/>
+      </g>
+      <g class="lini-node lini-part-value lini-block" transform="translate(0,38.75)">
+        <rect x="-21.882" y="-6" width="43.764" height="12" rx="0" ry="0"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">2N3904</text>
+      </g>
+      <g class="lini-node lini-block" data-id="b" transform="translate(-28,0)">
+      </g>
+      <g class="lini-node lini-block" data-id="c" transform="translate(28,-20)">
+      </g>
+      <g class="lini-node lini-block" data-id="e" transform="translate(28,20)">
+      </g>
+      <g class="lini-node lini-ref lini-block" transform="translate(0,-38.75)">
+        <rect x="-6.438" y="-6" width="12.876" height="12" rx="0" ry="0"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">q1</text>
+      </g>
+    </g>
+    <g class="lini-node lini-R lini-pose-90 lini-block" data-id="r2" transform="translate(-100,20)">
+      <rect x="-6.75" y="-32.75" width="13.5" height="65.5" rx="0" ry="0"/>
+      <g class="lini-node lini-sch-line lini-path" transform="translate(-6,-32)">
+        <path d="M 12 0 M 0 64 M 6 0 L 6 16 M 12 16 L 12 48 L 0 48 L 0 16 Z M 6 48 L 6 64"/>
+      </g>
+      <g class="lini-node lini-part-value lini-block" transform="translate(-33.792,8)">
+        <rect x="-9.792" y="-6" width="19.584" height="12" rx="0" ry="0"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">10k</text>
+      </g>
+      <g class="lini-node lini-block" data-id="p1" transform="translate(0,-32)">
+      </g>
+      <g class="lini-node lini-block" data-id="p2" transform="translate(0,32)">
+      </g>
+      <g class="lini-node lini-ref lini-block" transform="translate(-29.724,-8)">
+        <rect x="-5.724" y="-6" width="11.448" height="12" rx="0" ry="0"/>
+        <text class="lini-text" x="0" y="0" dy="0.358em">r2</text>
+      </g>
+    </g>
+    <g class="lini-node lini-v3 lini-label lini-block" data-id="lini-cap-1" transform="translate(111.7295,-150)">
+      <rect x="-20.4795" y="-10.75" width="40.959" height="21.5" rx="0" ry="0"/>
+      <g class="lini-node lini-sch-tag-line lini-path" transform="translate(-19.7295,-10)">
+        <path d="M 0 0 M 16 20 M 8 20 L 8 0 M 3 9 L 8 0 L 13 9"/>
+      </g>
+      <text class="lini-text" x="10.75" y="0" dy="0.358em">3V3</text>
+    </g>
+    <g class="lini-node lini-gnd lini-label lini-block" data-id="lini-cap-2" transform="translate(100,167.5)">
+      <rect x="-8.75" y="-8.25" width="17.5" height="16.5" rx="0" ry="0"/>
+      <g class="lini-node lini-sch-tag-line lini-path" transform="translate(-8,-7.5)">
+        <path d="M 0 0 M 16 15 M 8 0 L 8 6 M 0 6 L 16 6 M 1 6 L 8 15 L 15 6"/>
+      </g>
+    </g>
+    <g class="lini-node lini-gpio lini-label lini-block" data-id="lini-cap-3" transform="translate(-84.2335,-50)">
+      <rect x="-24.5165" y="-10.75" width="49.033" height="21.5" rx="0" ry="0"/>
+      <g class="lini-node lini-sch-tag-line lini-path" transform="translate(-23.7665,-10)">
+        <path d="M 0 0 M 16 20 M 8 20 L 8 0 M 3 9 L 8 0 L 13 9"/>
+      </g>
+      <text class="lini-text" x="10.75" y="0" dy="0.358em">GPIO</text>
+    </g>
+  </g>
+  <g class="lini-links">
+    <g class="lini-link" data-from="lini-cap-1" data-to="r1.p1">
+      <path d="M 100 -140 L 100 -112"/>
+    </g>
+    <g class="lini-link" data-from="r1.p2" data-to="d1.a">
+      <path d="M 100 -48 L 100 -12"/>
+    </g>
+    <g class="lini-link" data-from="d1.k" data-to="q1.c">
+      <path d="M 100 52 L 100 80 L 28 80"/>
+    </g>
+    <g class="lini-link" data-from="q1.e" data-to="lini-cap-2">
+      <path d="M 28 120 L 100 120 L 100 160"/>
+    </g>
+    <g class="lini-link" data-from="lini-cap-3" data-to="r2.p1">
+      <path d="M -100 -40 L -100 -12"/>
+    </g>
+    <g class="lini-link" data-from="r2.p2" data-to="q1.b">
+      <path d="M -100 52 L -100 100 L -28 100"/>
+    </g>
+  </g>
+</svg>
