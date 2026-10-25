@@ -45,6 +45,19 @@ jobs:
           mkdir _site
           cp -R *.html favicon.ico robots.txt css js assets _site/
 
+      - name: Version the stylesheets and scripts
+        # Cloudflare caches css/ and js/ files by their full URL, query string
+        # included. Replace each ?v= with a hash of the file's content, so a
+        # changed file gets a new URL and an unchanged one keeps its cache.
+        working-directory: _site
+        run: |
+          perl -MDigest::SHA -pi -e '
+            s{((?:src|href)="(?:\./)?((?:css|js)/[^"?]+))(?:\?v=[^"]*)?"}{
+              -f $2 ? "$1?v=" . substr(Digest::SHA->new(256)->addfile($2)->hexdigest, 0, 10) . "\"" : $&
+            }ge
+          ' *.html
+          grep -ho '\(css\|js\)/[^"]*?v=[^"]*' *.html | sort -u
+
       - name: Configure SSH
         env:
           SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
