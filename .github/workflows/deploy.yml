@@ -1,0 +1,93 @@
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: List what would change on the servers without changing anything
+        type: boolean
+        default: false
+
+# Never run two deployments at once, and never cancel one halfway through.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy to ${{ matrix.host }}
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://kroki.io
+    strategy:
+      # Keep deploying the other server if one fails, so a single broken
+      # host doesn't leave both of them behind.
+      fail-fast: false
+      matrix:
+        host: [a.kroki.io, b.kroki.io]
+    env:
+      HOST: ${{ matrix.host }}
+      DEPLOY_USER: deploy
+      DRY_RUN: ${{ inputs.dry_run && '--dry-run' || '' }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Stage the public files
+        # Only what the site serves: sources (src/, scripts/), tooling and
+        # repository metadata stay out of the web root.
+        run: |
+          mkdir _site
+          cp -R *.html favicon.ico robots.txt css js assets _site/
+
+      - name: Configure SSH
+        env:
+          SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          if [ -z "$SSH_KEY" ]; then
+            echo "::error::The DEPLOY_SSH_KEY secret is not set"
+            exit 1
+          fi
+          install -m 700 -d ~/.ssh
+          install -m 600 /dev/null ~/.ssh/deploy_key
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+          # Pinned host keys: a server whose key changes is refused rather than trusted.
+          cat > ~/.ssh/known_hosts <<'EOF'
+          a.kroki.io ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIe0XzBxDby04DDKQzWOVdDQFtd5urgo2SOc/fhEzTKl
+          b.kroki.io ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINhnEDkdksz/+s49/8NjaXLYBrBf5yImZptPZGFTPktV
+          EOF
+
+      - name: Upload with rsync
+        # The deploy key is locked to `rrsync /var/www/kroki.io` on the server,
+        # so the destination path is relative to the web root.
+        # --delay-updates moves every updated file into place at the end of the
+        # transfer, so visitors don't get a mix of old and new pages.
+        # .git/ is kept from the former git-based deployment, so a server can
+        # still be reset by hand with `git fetch origin && git reset --hard origin/master`.
+        run: |
+          rsync $DRY_RUN --recursive --links --times --checksum --compress \
+            --chmod=D755,F644 --delete --delay-updates --filter='P .git/' \
+            --itemize-changes \
+            -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
+            _site/ "$DEPLOY_USER@$HOST:./"
+
+      - name: Check the deployed site
+        if: ${{ !inputs.dry_run }}
+        # Ask this server directly, bypassing Cloudflare, and make sure it
+        # serves exactly the files that were just uploaded.
+        run: |
+          for page in index.html examples.html cheatsheet.html; do
+            curl --fail --silent --show-error --max-time 30 \
+              --connect-to "kroki.io:443:$HOST:443" \
+              "https://kroki.io/$page" -o served.html
+            if ! cmp -s "_site/$page" served.html; then
+              echo "::error::$HOST does not serve the deployed $page"
+              exit 1
+            fi
+          done
+          echo "$HOST serves ${GITHUB_SHA::7}"
