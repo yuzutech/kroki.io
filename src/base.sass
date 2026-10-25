@@ -1,3 +1,5 @@
+@use "sass:math"
+
 $section-padding: 1.5rem 1.5rem
 $em-spacer-5: 0.5em !default
 $em-spacer-6: 0.75em !default
@@ -19,7 +21,7 @@ $tooltip-delay: 0.4s !default
 $tooltip-duration: 0.1s !default
 $spacer: 8px !default
 $spacer-0: 0 !default
-$spacer-1: round($spacer / 2) !default
+$spacer-1: math.round(math.div($spacer, 2)) !default
 $spacer-2: $spacer !default
 $spacer-3: $spacer * 2 !default
 
@@ -107,16 +109,16 @@ $red-accent: $palette-error-700 !default
 $http-get: $palette-primary-400 !default
 $http-post: $palette-success-600 !default
 
-@import "../node_modules/bulma/sass/utilities/_all"
-@import "../node_modules/bulma/sass/base/_all"
-@import "../node_modules/bulma/sass/grid/tiles"
-@import "../node_modules/bulma/sass/grid/columns"
-@import "../node_modules/bulma/sass/elements/container"
-@import "../node_modules/bulma/sass/elements/content"
-@import "../node_modules/bulma/sass/elements/table"
-@import "../node_modules/bulma/sass/elements/title"
-@import "../node_modules/bulma/sass/form/_all"
-@import "../node_modules/bulma/sass/layout/section"
-@import "../node_modules/bulma/sass/layout/footer"
-@import "../node_modules/bulma/sass/helpers/visibility"
-@import "../node_modules/bulma/sass/helpers/typography"
+@import "bulma/sass/utilities/_all"
+@import "bulma/sass/base/_all"
+@import "bulma/sass/grid/tiles"
+@import "bulma/sass/grid/columns"
+@import "bulma/sass/elements/container"
+@import "bulma/sass/elements/content"
+@import "bulma/sass/elements/table"
+@import "bulma/sass/elements/title"
+@import "bulma/sass/form/_all"
+@import "bulma/sass/layout/section"
+@import "bulma/sass/layout/footer"
+@import "bulma/sass/helpers/visibility"
+@import "bulma/sass/helpers/typography"

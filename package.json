@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://kroki.io",
   "engines": {
-    "node": ">= 16"
+    "node": ">= 22"
   },
   "author": {
     "name": "Guillaume Grossetie",
@@ -11,24 +11,21 @@
     "url": "https://yuzutech.fr"
   },
   "devDependencies": {
-    "@primer/css": "^21.0.0",
-    "autoprefixer": "10.4.15",
+    "@primer/css": "^21.5.1",
+    "autoprefixer": "10.6.1",
     "bulma": "0.9.4",
-    "clean-css-cli": "5.6.2",
-    "clipboard": "2.0.11",
-    "node-sass": "9.0.0",
+    "clean-css-cli": "5.6.3",
     "pako": "1.0.11",
-    "postcss": "^8.2.10",
-    "postcss-cli": "10.1.0",
-    "prismjs": "^1.23.0",
-    "rimraf": "5.0.1"
+    "postcss": "^8.5.31",
+    "postcss-cli": "12.0.0",
+    "sass": "1.106.1"
   },
   "scripts": {
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/main.css css/main.css",
     "build-cleancss": "cleancss -o css/main.min.css css/main.css",
-    "build-sass": "node-sass --output-style expanded --source-map true src/main.sass css/main.css",
-    "build-clean": "rimraf css",
+    "build-sass": "sass --style=expanded --source-map --load-path=node_modules --quiet-deps --silence-deprecation=import src/main.sass css/main.css",
+    "build-clean": "node -e \"require('fs').rmSync('css', { recursive: true, force: true })\"",
     "generate-examples": "node scripts/generate-examples.js",
     "generate-cheatsheet": "npm install --prefix scripts/cheatsheet && node scripts/cheatsheet/generate.js",
     "deploy": "npm run build",
@@ -36,6 +33,6 @@
   },
   "private": "true",
   "volta": {
-    "node": "18.17.1"
+    "node": "24.22.1"
   }
 }
