@@ -385,6 +385,51 @@
       ]
     },
     {
+      "type": "lini",
+      "name": "Lini",
+      "href": "https://lini.rs",
+      "formats": [
+        "svg"
+      ],
+      "categories": [
+        "diagram",
+        "visualization",
+        "hardware"
+      ],
+      "examples": [
+        {
+          "anchor": "lini-architecture",
+          "title": "Architecture",
+          "lang": "lini",
+          "source": "{\n  direction: column; gap: 60;\n  .rose { fill: --rose-wash; stroke: --rose-deep; }\n  .sky { fill: --sky-wash; stroke: --sky-deep; }\n  .amber { fill: --amber-wash; stroke: --amber-deep; }\n  .lime { fill: --lime-wash; stroke: --lime-deep; }\n}\n\n|box#users| \"Users\" .rose\n|group#svc| \"Service\" { layout: grid; columns: repeat(2); gap: 50; padding: 26; } [\n  |box#api| \"API\" .sky\n  |slant#db| \"Postgres\" .amber\n  |oval#worker| \"Worker\" .lime\n  |box#mail| \"Mail\" .rose\n  api -&gt; db\n  api --&gt; worker \"jobs\"\n  worker -&gt; mail\n]\nusers -&gt; svc.api \"HTTPS\"",
+          "params": {
+            "theme": "light"
+          },
+          "svg": "assets/examples/lini-architecture.svg"
+        },
+        {
+          "anchor": "lini-chart",
+          "title": "Chart",
+          "lang": "lini",
+          "source": "|chart| \"Signups\" { width: 440; height: 280; categories: \"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\", \"Sun\"; } [\n  |bars| \"Free\" { data: 24, 31, 28, 44, 39, 22, 18; fill: --purple-soft; radius: 6; }\n  |line| \"Paid\" { data: 8, 11, 14, 13, 19, 9, 7; stroke: --rose; curve: smooth; marker: circle; }\n]",
+          "params": {
+            "theme": "light"
+          },
+          "svg": "assets/examples/lini-chart.svg"
+        },
+        {
+          "anchor": "lini-schematic",
+          "title": "Schematic",
+          "lang": "lini",
+          "source": "{\n  layout: schematic; padding: 5 20;\n  |v3::label| { symbol: power; } [\"3V3\"]\n  |gpio::label| { symbol: power; } [\"GPIO\"]\n}\n\n|R#r1| \"220R\"\n|LED#d1| \"STATUS\"\n|Q#q1| \"2N3904\"\n|R#r2| \"10k\"\n\n|v3| - r1 - d1.a\nd1.k - q1.c\nq1.e - |gnd|\n|gpio| - r2 - q1.b",
+          "params": {
+            "theme": "light"
+          },
+          "svg": "assets/examples/lini-schematic.svg"
+        }
+      ]
+    },
+    {
       "type": "mermaid",
       "name": "Mermaid",
       "href": "https://github.com/knsv/mermaid",

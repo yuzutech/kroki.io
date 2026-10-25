@@ -95,6 +95,10 @@ document.addEventListener('DOMContentLoaded', function () {
         .replace(/\//g, '_')
       if (diagramType === 'svgbob') {
         urlPath += '?background=transparent'
+      } else if (diagramType === 'lini') {
+        // Lini's default theme follows the OS color scheme, but the editor
+        // canvas is always light: pin the light theme to keep it readable.
+        urlPath += '?theme=light'
       }
       var url = 'https://kroki.io/' + urlPath
       diagramUrlPathElement.innerText = urlPath
@@ -1176,6 +1180,26 @@ document.addEventListener('DOMContentLoaded', function () {
           diagramSourceElement.value = '   +-------+     +-------+\n' +
             '   |  You  |---->| Kroki |\n' +
             '   +-------+     +-------+\n'
+        } else if (diagramType === 'lini') {
+          diagramSourceElement.value = '{\n' +
+            '  direction: column; gap: 60;\n' +
+            '  .rose { fill: --rose-wash; stroke: --rose-deep; }\n' +
+            '  .sky { fill: --sky-wash; stroke: --sky-deep; }\n' +
+            '  .amber { fill: --amber-wash; stroke: --amber-deep; }\n' +
+            '  .lime { fill: --lime-wash; stroke: --lime-deep; }\n' +
+            '}\n' +
+            '\n' +
+            '|box#users| "Users" .rose\n' +
+            '|group#kroki| "Kroki" { layout: grid; columns: repeat(2); gap: 50; padding: 26; } [\n' +
+            '  |box#gateway| "Gateway" .sky\n' +
+            '  |slant#cache| "Cache" .amber\n' +
+            '  |oval#companion| "Companion" .lime\n' +
+            '  |box#svg| "SVG" .rose\n' +
+            '  gateway -> cache\n' +
+            '  gateway --> companion "render"\n' +
+            '  companion -> svg\n' +
+            ']\n' +
+            'users -> kroki.gateway "HTTPS"'
         } else if (diagramType === 'c4plantuml') {
           diagramSourceElement.value = '!include <C4/C4_Context>\n' +
             '\n' +
