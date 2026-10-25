@@ -1,3 +1,5 @@
+@use "sass:color"
+
 .footer
   .logo
     max-height: 1rem
@@ -176,7 +178,7 @@ pre[class*="static-"]
   color: $palette-error-500
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection, code[class*="language-"]::selection, code[class*="language-"] ::selection
-  background: mix($white, $soft-blue, 80%)
+  background: color.mix($white, $soft-blue, 80%)
 
 pre[class*="language-"], :not(pre) > code[class*="language-"]
   background: hsl(0, 0%, 98%)
@@ -322,12 +324,12 @@ svg:not(:root)
   border-color: $accent
 
   &:hover, &.is-hovered
-    background-color: darken($accent, 2.5%)
-    border-color: darken($accent, 2.5%)
+    background-color: color.adjust($accent, $lightness: -2.5%)
+    border-color: color.adjust($accent, $lightness: -2.5%)
 
   &:active, &.is-active
-    background-color: darken($accent, 5%)
-    border-color: darken($accent, 5%)
+    background-color: color.adjust($accent, $lightness: -5%)
+    border-color: color.adjust($accent, $lightness: -5%)
 
 // Diagram type support — compact cards instead of a wide checkmark matrix
 
@@ -775,12 +777,12 @@ svg
   margin: 0.5em 0 1.25em
 
   &:hover, &.is-hovered
-    background-color: darken($accent, 2.5%)
-    border-color: darken($accent, 2.5%)
+    background-color: color.adjust($accent, $lightness: -2.5%)
+    border-color: color.adjust($accent, $lightness: -2.5%)
 
   &:active, &.is-active
-    background-color: darken($accent, 5%)
-    border-color: darken($accent, 5%)
+    background-color: color.adjust($accent, $lightness: -5%)
+    border-color: color.adjust($accent, $lightness: -5%)
 
 .cheatsheet-grid
   display: grid
