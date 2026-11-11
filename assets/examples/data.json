@@ -357,6 +357,9 @@
           "title": "Simple flow",
           "lang": "goat",
           "source": "+-------+     +-------+\n| Alice |----&gt;|  Bob  |\n+-------+     +-------+",
+          "params": {
+            "svg-color-dark-scheme": "#000"
+          },
           "svg": "assets/examples/goat.svg"
         }
       ]

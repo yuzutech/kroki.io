@@ -25,7 +25,7 @@
     }
     @media (prefers-color-scheme: dark) {
         svg {
-            color: #FFF;  /* set value of 'currentColor' */
+            color: #000;  /* set value of 'currentColor' */
         }
     }
     svg {
