@@ -99,6 +99,10 @@ document.addEventListener('DOMContentLoaded', function () {
         // Lini's default theme follows the OS color scheme, but the editor
         // canvas is always light: pin the light theme to keep it readable.
         urlPath += '?theme=light'
+      } else if (diagramType === 'goat') {
+        // GoAT switches lines and text to white in dark mode, but the editor
+        // canvas is always light: keep them black to stay readable.
+        urlPath += '?svg-color-dark-scheme=%23000'
       }
       var url = 'https://kroki.io/' + urlPath
       diagramUrlPathElement.innerText = urlPath
